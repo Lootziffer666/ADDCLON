@@ -11,15 +11,16 @@ Eine **einheitliche Sidebar für ChatGPT und Gemini** mit Prompt-Verwaltung, Ver
 - ✅ Verlauf mit Suche
 - ✅ Token-/Kosten-Schätzung pro Prompt
 - ✅ Export/Import als JSON (inkl. Validierung/Normalisierung beim Import)
+- ✅ Export als Markdown (menschenlesbar) **und** JSON (Backup-kompatibel)
 - ✅ Antwort-Tools (Copy / Clean / Translate / Summarize)
 - ✅ Sidebar Toggle via Shortcut `Ctrl+Shift+Y`
 - ✅ Chrome Storage lokal + optional `chrome.storage.sync`
+- ✅ Eigener Tab mit Free/Pro-Limits (qualitative Übersicht)
 
 ### Noch offen / spätere Ausbaustufen
-- ⏳ Vergleichsansicht (ein Prompt an mehrere Bots parallel)
-- ⏳ Prompt-Ketten/Makros über mehrere Schritte
-- ⏳ Erweiterte Modell-/Preis-Matrix statt fixer Input/Output-Werte
-- ⏳ Zusätzliche Plattformen über ChatGPT/Gemini hinaus
+- ⏳ Automatische Aktualisierung der konkreten Free/Pro-Limits via Provider-Seiten
+- ⏳ Themen-Tagging + Ordner für große Prompt-Bibliotheken
+- ⏳ Session-Zusammenfassungen pro Chat-Verlauf
 
 ---
 
@@ -43,13 +44,23 @@ Eine **einheitliche Sidebar für ChatGPT und Gemini** mit Prompt-Verwaltung, Ver
 - Kostenberechnung mit konfigurierbaren Preisen pro 1.000 Tokens.
 
 ### 5) Export / Import
-- Datenexport als JSON-Datei.
+- Datenexport als Markdown (gut lesbar/teilbar) oder JSON.
 - Import prüft und normalisiert Daten (IDs, Strings, Zahlen/Fallbacks), ungültige Einträge werden verworfen.
+- Dateiname nutzt automatisch ein geschätztes **Hauptthema** statt eines generischen Chat-Namens (wenn erkennbar).
+
+Warum weiterhin JSON?
+- JSON eignet sich als stabiles Maschinenformat für verlustfreies Backup/Restore.
+- JSON ist besser für spätere Migrationen oder automatisierte Verarbeitung.
+- Markdown ist primär für Menschen – JSON primär für saubere Datenübernahme.
 
 ### 6) Antwort-Tools
 - **Copy**: Antworttext in Zwischenablage.
 - **Clean**: Grobe Bereinigung von Antworttext.
 - **Translate** / **Summarize**: Hilfsaktionen für schnelle Weiterverarbeitung.
+
+### 7) Free/Pro-Limits
+- Eigener Tab mit praxisnaher Übersicht für ChatGPT/Gemini (Free vs. Pro).
+- Fokus auf schneller Orientierung statt nur API-Kostenrechnung.
 
 ---
 
@@ -116,9 +127,8 @@ unified_chat_hub_0/
 
 ---
 
-## Nächste sinnvolle Schritte
-1. Preisprofile pro Modell/Provider (statt globaler Input/Output-Preise)
-2. Makro-Engine (Prompt-Ketten mit Variablenfluss)
-3. Multi-Provider-Vergleichsansicht (parallel auslösen, nebeneinander erfassen)
-4. Erweiterte Import/Export-Versionierung
-
+## Nächste wirklich sinnvolle Schritte (praxisnah)
+1. **Live-Limit-Tracker**: Provider-Limits automatisch erfassen/aktualisieren (mit Datum + Quelle).
+2. **Theme-Detection**: Hauptthema pro Session zuverlässiger erkennen und als Tag speichern.
+3. **Prompt-Qualitätshilfen**: One-click „Prompt verbessern“, „kürzen“, „strukturieren“.
+4. **Sichere Backups**: optionale verschlüsselte Exporte für sensible Inhalte.

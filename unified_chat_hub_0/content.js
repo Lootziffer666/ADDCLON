@@ -200,11 +200,119 @@
       history: state.history
     };
 
-    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const topicTitle = inferMainTopicTitle(payload);
+    downloadTextFile({
+      text: JSON.stringify(payload, null, 2),
+      filename: `chathub-${slugify(topicTitle)}-${Date.now()}.json`,
+      mimeType: 'application/json'
+    });
+  }
+
+  function exportMarkdown() {
+    const payload = {
+      exportedAt: new Date().toISOString(),
+      prompts: state.prompts,
+      history: state.history
+    };
+
+    const topicTitle = inferMainTopicTitle(payload);
+    const lines = [];
+    lines.push(`# ChatHub Export – ${topicTitle}`);
+    lines.push('');
+    lines.push(`- Exportiert am: ${new Date(payload.exportedAt).toLocaleString('de-DE')}`);
+    lines.push(`- Plattform: ${platform.name}`);
+    lines.push(`- Prompts: ${payload.prompts.length}`);
+    lines.push(`- Verlaufseinträge: ${payload.history.length}`);
+    lines.push('');
+    lines.push('## Prompts');
+    lines.push('');
+
+    if (payload.prompts.length === 0) {
+      lines.push('_Keine Prompts vorhanden._');
+      lines.push('');
+    } else {
+      payload.prompts.forEach((promptData, index) => {
+        lines.push(`### ${index + 1}. ${promptData.title || 'Ohne Titel'}`);
+        lines.push('');
+        lines.push('```');
+        lines.push(String(promptData.content || '').trim());
+        lines.push('```');
+        lines.push('');
+      });
+    }
+
+    lines.push('## Verlauf (letzte 100)');
+    lines.push('');
+    const recentHistory = payload.history.slice(0, 100);
+    if (recentHistory.length === 0) {
+      lines.push('_Kein Verlauf vorhanden._');
+      lines.push('');
+    } else {
+      recentHistory.forEach((item, index) => {
+        lines.push(`### ${index + 1}. ${item.promptTitle || 'Ohne Titel'}`);
+        lines.push(`- Zeit: ${new Date(item.createdAt).toLocaleString('de-DE')}`);
+        lines.push(`- Plattform: ${item.platform || 'Unbekannt'}`);
+        lines.push(
+          `- Schätzung: ~${item.estimate?.inputTokens || 0} in / ~${item.estimate?.outputTokens || 0} out / $${Number(item.estimate?.cost || 0).toFixed(4)}`
+        );
+        lines.push('');
+        lines.push('```');
+        lines.push(String(item.promptText || '').trim());
+        lines.push('```');
+        lines.push('');
+      });
+    }
+
+    downloadTextFile({
+      text: lines.join('\n'),
+      filename: `chathub-${slugify(topicTitle)}-${Date.now()}.md`,
+      mimeType: 'text/markdown'
+    });
+  }
+
+  function inferMainTopicTitle(payload) {
+    const sourceTexts = [
+      ...payload.history.slice(0, 25).map((h) => String(h.promptText || '')),
+      ...payload.prompts.slice(0, 25).map((p) => String(p.title || ''))
+    ]
+      .join(' ')
+      .toLowerCase();
+
+    const words = sourceTexts.match(/[a-zA-ZäöüÄÖÜß0-9-]{4,}/g) || [];
+    const stopwords = new Set([
+      'dass', 'dies', 'eine', 'einer', 'einem', 'einen', 'oder', 'aber', 'auch', 'noch', 'nicht', 'sowie',
+      'the', 'with', 'from', 'this', 'that', 'your', 'chatgpt', 'gemini', 'prompt', 'prompts', 'text', 'bitte',
+      'schreibe', 'fasse', 'zusammen', 'und', 'oder', 'eine', 'einen', 'mein', 'dein'
+    ]);
+    const freq = new Map();
+
+    words.forEach((word) => {
+      if (stopwords.has(word)) return;
+      freq.set(word, (freq.get(word) || 0) + 1);
+    });
+
+    const best = [...freq.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([word]) => word);
+    if (best.length === 0) return 'Hauptthema-unbestimmt';
+    return best.map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join('-');
+  }
+
+  function slugify(input) {
+    return String(input || 'export')
+      .normalize('NFKD')
+      .replace(/[^\w\s-]/g, '')
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/_+/g, '-')
+      .toLowerCase()
+      .slice(0, 70);
+  }
+
+  function downloadTextFile({ text, filename, mimeType }) {
+    const blob = new Blob([text], { type: mimeType });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `chathub-export-${Date.now()}.json`;
+    a.download = filename;
     a.click();
     URL.revokeObjectURL(url);
   }
@@ -290,6 +398,7 @@
         <button data-tab="prompts" class="active">Prompts</button>
         <button data-tab="history">Verlauf</button>
         <button data-tab="tools">Antwort-Tools</button>
+        <button data-tab="limits">Free/Pro Limits</button>
       </div>
       <div id="chathub-content"></div>
       <div id="chathub-estimate"></div>
@@ -432,7 +541,8 @@
       </div>
       <div class="chathub-row actions">
         <button id="chathub-add-prompt">+ Prompt</button>
-        <button id="chathub-export">Export JSON</button>
+        <button id="chathub-export-md">Export MD</button>
+        <button id="chathub-export-json">Export JSON</button>
         <label class="import-label">Import JSON<input type="file" id="chathub-import" accept="application/json" hidden /></label>
       </div>
       <div class="chathub-list">
@@ -460,7 +570,8 @@
       renderQuickPrompts();
     });
 
-    content.querySelector('#chathub-export').addEventListener('click', exportData);
+    content.querySelector('#chathub-export-md').addEventListener('click', exportMarkdown);
+    content.querySelector('#chathub-export-json').addEventListener('click', exportData);
     content.querySelector('#chathub-import').addEventListener('change', async (event) => {
       const file = event.target.files?.[0];
       if (!file) return;
@@ -587,6 +698,29 @@
     });
   }
 
+  function renderLimits() {
+    const content = document.getElementById('chathub-content');
+    content.innerHTML = `
+      <div class="chathub-card">
+        <div class="chathub-card-title">ChatGPT (Richtwerte)</div>
+        <div class="chathub-card-text">
+          Free: stärker limitierte Nutzung, kleinere Message-Kontingente und Prioritätsdrosselung zu Stoßzeiten.<br />
+          Pro/Plus: höhere Kontingente, stabilere Verfügbarkeit und meist frühere Features.
+        </div>
+      </div>
+      <div class="chathub-card">
+        <div class="chathub-card-title">Gemini (Richtwerte)</div>
+        <div class="chathub-card-text">
+          Free: begrenzte Tages-/Kontextnutzung je nach Modell und Last.<br />
+          Pro/Advanced: größere Nutzungskontingente, priorisierte Antwortzeiten und erweitere Modelloptionen.
+        </div>
+      </div>
+      <div class="chathub-meta">
+        Hinweis: Diese Übersicht ist bewusst qualitativ gehalten, da die konkreten Limits je nach Region, Plan und Anbieter-Updates variieren können.
+      </div>
+    `;
+  }
+
   function updateEstimateBox() {
     const el = document.getElementById('chathub-estimate');
     if (!el) return;
@@ -623,6 +757,7 @@
     if (state.activeTab === 'prompts') renderPrompts();
     if (state.activeTab === 'history') renderHistory();
     if (state.activeTab === 'tools') renderTools();
+    if (state.activeTab === 'limits') renderLimits();
     updateEstimateBox();
     renderQuickPrompts();
   }
