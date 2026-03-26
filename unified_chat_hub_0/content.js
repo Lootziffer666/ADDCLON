@@ -16,7 +16,11 @@
         content: 'Fasse den folgenden Inhalt in 5 Stichpunkten zusammen:\n\n{{text}}'
       }
     ],
-    history: []
+    history: [],
+    limitTracker: {
+      chatgpt: { plan: 'free', remaining: 40, resetAt: '' },
+      gemini: { plan: 'free', remaining: 40, resetAt: '' }
+    }
   };
 
   const DEFAULT_SETTINGS = {
@@ -67,6 +71,7 @@
   let state = {
     prompts: [],
     history: [],
+    limitTracker: { ...DEFAULT_DATA.limitTracker },
     search: '',
     activeTab: 'prompts',
     lastEstimate: null,
@@ -96,17 +101,22 @@
     if (!data.chatHubData) {
       state.prompts = DEFAULT_DATA.prompts;
       state.history = [];
-      await area.set({ chatHubData: { prompts: state.prompts, history: state.history } });
+      state.limitTracker = { ...DEFAULT_DATA.limitTracker };
+      await area.set({ chatHubData: { prompts: state.prompts, history: state.history, limitTracker: state.limitTracker } });
       return;
     }
 
     state.prompts = Array.isArray(data.chatHubData.prompts) ? data.chatHubData.prompts : [];
     state.history = Array.isArray(data.chatHubData.history) ? data.chatHubData.history : [];
+    state.limitTracker = {
+      chatgpt: { ...DEFAULT_DATA.limitTracker.chatgpt, ...(data.chatHubData.limitTracker?.chatgpt || {}) },
+      gemini: { ...DEFAULT_DATA.limitTracker.gemini, ...(data.chatHubData.limitTracker?.gemini || {}) }
+    };
   }
 
   async function saveData() {
     const area = await getStorageArea();
-    await area.set({ chatHubData: { prompts: state.prompts, history: state.history } });
+    await area.set({ chatHubData: { prompts: state.prompts, history: state.history, limitTracker: state.limitTracker } });
   }
 
   function findFirst(selectors) {
@@ -367,12 +377,21 @@
     });
 
     state.history = state.history.slice(0, 500);
+    consumeLimitCounter(platformKey);
     await saveData();
     updateEstimateBox();
 
     if (state.activeTab === 'history') {
       renderHistory();
     }
+  }
+
+  function consumeLimitCounter(key) {
+    if (!key || !state.limitTracker[key]) return;
+    const tracker = state.limitTracker[key];
+    const current = Number(tracker.remaining || 0);
+    if (current <= 0) return;
+    tracker.remaining = current - 1;
   }
 
   function escapeHtml(str) {
@@ -700,25 +719,66 @@
 
   function renderLimits() {
     const content = document.getElementById('chathub-content');
+    const chatgpt = state.limitTracker.chatgpt || DEFAULT_DATA.limitTracker.chatgpt;
+    const gemini = state.limitTracker.gemini || DEFAULT_DATA.limitTracker.gemini;
     content.innerHTML = `
       <div class="chathub-card">
-        <div class="chathub-card-title">ChatGPT (Richtwerte)</div>
+        <div class="chathub-card-title">ChatGPT (Richtwerte + Tracker)</div>
         <div class="chathub-card-text">
           Free: stärker limitierte Nutzung, kleinere Message-Kontingente und Prioritätsdrosselung zu Stoßzeiten.<br />
           Pro/Plus: höhere Kontingente, stabilere Verfügbarkeit und meist frühere Features.
         </div>
+        <div class="chathub-row actions">
+          <select id="limit-chatgpt-plan">
+            <option value="free" ${chatgpt.plan === 'free' ? 'selected' : ''}>Free</option>
+            <option value="pro" ${chatgpt.plan === 'pro' ? 'selected' : ''}>Pro/Plus</option>
+          </select>
+          <input id="limit-chatgpt-remaining" type="number" min="0" value="${Number(chatgpt.remaining || 0)}" placeholder="Rest heute" />
+        </div>
+        <div class="chathub-row">
+          <input id="limit-chatgpt-reset" type="date" value="${escapeHtml(chatgpt.resetAt || '')}" />
+        </div>
       </div>
       <div class="chathub-card">
-        <div class="chathub-card-title">Gemini (Richtwerte)</div>
+        <div class="chathub-card-title">Gemini (Richtwerte + Tracker)</div>
         <div class="chathub-card-text">
           Free: begrenzte Tages-/Kontextnutzung je nach Modell und Last.<br />
           Pro/Advanced: größere Nutzungskontingente, priorisierte Antwortzeiten und erweitere Modelloptionen.
         </div>
+        <div class="chathub-row actions">
+          <select id="limit-gemini-plan">
+            <option value="free" ${gemini.plan === 'free' ? 'selected' : ''}>Free</option>
+            <option value="pro" ${gemini.plan === 'pro' ? 'selected' : ''}>Pro/Advanced</option>
+          </select>
+          <input id="limit-gemini-remaining" type="number" min="0" value="${Number(gemini.remaining || 0)}" placeholder="Rest heute" />
+        </div>
+        <div class="chathub-row">
+          <input id="limit-gemini-reset" type="date" value="${escapeHtml(gemini.resetAt || '')}" />
+        </div>
+      </div>
+      <div class="chathub-row actions">
+        <button id="limits-save">Tracker speichern</button>
       </div>
       <div class="chathub-meta">
-        Hinweis: Diese Übersicht ist bewusst qualitativ gehalten, da die konkreten Limits je nach Region, Plan und Anbieter-Updates variieren können.
+        Hinweis: Diese Übersicht ist qualitativ + manueller Tracker. Exakte Limits variieren je nach Region/Plan und können sich jederzeit ändern.
       </div>
     `;
+
+    content.querySelector('#limits-save').addEventListener('click', async () => {
+      state.limitTracker.chatgpt = {
+        plan: content.querySelector('#limit-chatgpt-plan').value,
+        remaining: Math.max(0, Number(content.querySelector('#limit-chatgpt-remaining').value || 0)),
+        resetAt: content.querySelector('#limit-chatgpt-reset').value || ''
+      };
+      state.limitTracker.gemini = {
+        plan: content.querySelector('#limit-gemini-plan').value,
+        remaining: Math.max(0, Number(content.querySelector('#limit-gemini-remaining').value || 0)),
+        resetAt: content.querySelector('#limit-gemini-reset').value || ''
+      };
+      await saveData();
+      alert('Limit-Tracker gespeichert.');
+      renderLimits();
+    });
   }
 
   function updateEstimateBox() {

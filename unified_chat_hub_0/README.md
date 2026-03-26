@@ -16,6 +16,7 @@ Eine **einheitliche Sidebar für ChatGPT und Gemini** mit Prompt-Verwaltung, Ver
 - ✅ Sidebar Toggle via Shortcut `Ctrl+Shift+Y`
 - ✅ Chrome Storage lokal + optional `chrome.storage.sync`
 - ✅ Eigener Tab mit Free/Pro-Limits (qualitative Übersicht)
+- ✅ Manueller Free/Pro-Limit-Tracker (Restkontingent + Reset-Datum je Plattform)
 
 ### Noch offen / spätere Ausbaustufen
 - ⏳ Automatische Aktualisierung der konkreten Free/Pro-Limits via Provider-Seiten
@@ -61,6 +62,8 @@ Warum weiterhin JSON?
 ### 7) Free/Pro-Limits
 - Eigener Tab mit praxisnaher Übersicht für ChatGPT/Gemini (Free vs. Pro).
 - Fokus auf schneller Orientierung statt nur API-Kostenrechnung.
+- Integrierter Tracker für Restkontingent (je Plattform), inkl. Plan-Auswahl und Reset-Datum.
+- Beim protokollierten Senden wird der Restzähler der aktuellen Plattform automatisch um 1 reduziert.
 
 ---
 
