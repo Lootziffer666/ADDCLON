@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatHub Einstellungen</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 20px; max-width: 700px; }
+      h1 { font-size: 22px; }
+      .card { border: 1px solid #ddd; border-radius: 8px; padding: 14px; margin-bottom: 12px; }
+      label { display: block; margin: 8px 0; }
+      input[type='number'] { width: 130px; }
+      button { margin-top: 10px; padding: 8px 12px; }
+      .ok { color: #0b6b0b; font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <h1>ChatHub Einstellungen</h1>
+
+    <div class="card">
+      <h2>Speicher</h2>
+      <label>
+        <input type="checkbox" id="syncEnabled" />
+        chrome.storage.sync verwenden (optional, begrenzter Platz)
+      </label>
+      <p>Standard: lokal speichern (empfohlen).</p>
+    </div>
+
+    <div class="card">
+      <h2>Kosten-Schätzung pro 1.000 Tokens (USD)</h2>
+      <label>Input: <input type="number" min="0" step="0.0001" id="inputPrice" /></label>
+      <label>Output: <input type="number" min="0" step="0.0001" id="outputPrice" /></label>
+      <button id="save">Speichern</button>
+      <div class="ok" id="status"></div>
+    </div>
+
+    <script src="options.js"></script>
+  </body>
+</html>
