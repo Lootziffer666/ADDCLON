@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "ChatHub Sidebar",
+  "description": "Eine zentrale Sidebar für ChatGPT und Gemini mit Prompt-Bibliothek, Verlauf, Suche und Token-/Kosten-Schätzung.",
+  "version": "0.1.0",
+  "permissions": ["storage", "activeTab", "scripting", "downloads"],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://gemini.google.com/*"
+  ],
+  "action": {
+    "default_title": "ChatHub Sidebar",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://gemini.google.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "toggle_sidebar": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Sidebar ein-/ausblenden"
+    }
+  },
+  "options_page": "options.html"
+}
