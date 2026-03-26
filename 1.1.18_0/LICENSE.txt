@@ -1,0 +1,6 @@
+Copyright (c) 2026 SulfurByte
+
+All rights reserved.
+
+The code contained in this extension is the intellectual property of SulfurByte. 
+Unauthorized copying, modification, distribution, or use of this code is strictly prohibited.

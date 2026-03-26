@@ -1,0 +1,30 @@
+{
+   "extensionDescription": {
+      "description": "Extension description",
+      "message": "Export:Open the chat interface,export independent chat  / Export All:export all chat"
+   },
+   "extensionName": {
+      "description": "Extension name",
+      "message": "Claude Magic Export"
+   },
+   "greeting": {
+      "description": "Greeting message",
+      "message": "Hello, My name is $NAME$",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "John Doe"
+         }
+      }
+   },
+   "hello": {
+      "description": "Placeholder example",
+      "message": "Hello $1"
+   },
+   "loading": {
+      "message": "Loading..."
+   },
+   "toggleTheme": {
+      "message": "Toggle theme"
+   }
+}

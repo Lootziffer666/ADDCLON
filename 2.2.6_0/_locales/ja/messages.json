@@ -1,0 +1,1270 @@
+{
+   "appDesc": {
+      "message": "一括ダウンロード、動画の自動生成、Grok AI メディアライブラリをまとめて管理。"
+   },
+   "appName": {
+      "message": "Grok メディアダウンローダー"
+   },
+   "batchDeleteCancel": {
+      "message": "キャンセル"
+   },
+   "batchDeleteClose": {
+      "message": "閉じる"
+   },
+   "batchDeleteComplete": {
+      "message": "✅ $1 件を正常に削除しました",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "batchDeleteCompleteWithFail": {
+      "message": "✅ 完了：$1 件削除、$2 件失敗",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "batchDeleteConfirm": {
+      "message": "削除を確認"
+   },
+   "batchDeleteConfirmMsg": {
+      "message": "選択した $1 件のアイテムを削除しようとしています。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "batchDeleteConfirmTitle": {
+      "message": "⚠️ 削除の確認"
+   },
+   "batchDeleteOptionDelete": {
+      "message": "投稿を完全に削除"
+   },
+   "batchDeleteOptionDeleteDesc": {
+      "message": "投稿はお気に入りから外され、削除されます"
+   },
+   "batchDeleteOptionUnfavorite": {
+      "message": "お気に入りからのみ削除"
+   },
+   "batchDeleteOptionUnfavoriteDesc": {
+      "message": "投稿はお気に入りから外されますが、削除されません"
+   },
+   "batchDeletePleaseWait": {
+      "message": "お待ちください..."
+   },
+   "batchDeleteProgress": {
+      "message": "削除中... $1/$2",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "batchDeleteWarning": {
+      "message": "⚠️ この操作は元に戻せません！"
+   },
+   "batchSelectDelete": {
+      "message": "🗑️ 削除"
+   },
+   "batchSelectDeselectAll": {
+      "message": "選択解除"
+   },
+   "batchSelectSelectAll": {
+      "message": "すべて選択"
+   },
+   "batchSelectSelected": {
+      "message": "選択中：$1 / $2",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "btnBatchSelectDelete": {
+      "message": "一括選択削除"
+   },
+   "btnBuyLicense": {
+      "message": "ライセンスを購入"
+   },
+   "btnClearHistory": {
+      "message": "ダウンロード履歴をリセット（全ファイルを再ダウンロード）"
+   },
+   "btnClearState": {
+      "message": "ダウンロードプレビューリストをクリア"
+   },
+   "btnClearStream": {
+      "message": "キャプチャをクリア"
+   },
+   "btnCompact": {
+      "message": "簡易"
+   },
+   "btnContinueDownload": {
+      "description": "Button label shown when a previous download was interrupted and can be resumed",
+      "message": "▶ ダウンロード再開"
+   },
+   "btnDownloadStream": {
+      "message": "📥 キャプチャ画像をダウンロード"
+   },
+   "btnExpand": {
+      "message": "全部"
+   },
+   "btnExport": {
+      "message": "📤 エクスポート"
+   },
+   "btnGenerate": {
+      "message": "1. リスト生成"
+   },
+   "btnGenerateLoading": {
+      "message": "生成中..."
+   },
+   "btnImport": {
+      "message": "📥 インポート"
+   },
+   "btnRemoveFav": {
+      "message": "🗑️ 古い項目を削除"
+   },
+   "btnRemoveFavGenerating": {
+      "message": "リスト生成中..."
+   },
+   "btnRemoveFavLoading": {
+      "message": "削除中..."
+   },
+   "btnStart": {
+      "message": "2. ダウンロード開始"
+   },
+   "btnStartDone": {
+      "message": "✅ 完了"
+   },
+   "btnStartLoading": {
+      "message": "ダウンロード中..."
+   },
+   "btnStopDownload": {
+      "message": "⏹ ダウンロード中止"
+   },
+   "btnStopUpgrade": {
+      "message": "⏹ アップグレード中 ($1/$2)、中止?",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "btnUpgradeHD": {
+      "message": "🚀 HDにアップグレード"
+   },
+   "checkboxDeletePost": {
+      "message": "投稿も同時に削除する"
+   },
+   "dataManageTitle": {
+      "message": "データ管理 (Pro):"
+   },
+   "dateFilterTitle": {
+      "message": "日付フィルター (Pro):"
+   },
+   "downloadAll": {
+      "message": "すべてダウンロード"
+   },
+   "downloadModeProject": {
+      "message": "プロジェクト別"
+   },
+   "downloadModeProjectDesc": {
+      "message": "元画像と生成動画を同じプロジェクトフォルダに保存"
+   },
+   "downloadModeProjectHint": {
+      "message": "💡 ダウンロード済みのファイルはスキップされます。プロジェクトフォルダに完全なファイルを表示するには、先にダウンロード履歴をクリアしてください。"
+   },
+   "downloadModeStandard": {
+      "message": "標準"
+   },
+   "downloadModeStandardDesc": {
+      "message": "画像と動画を別々のフォルダに保存"
+   },
+   "downloadModeTitle": {
+      "message": "📂 ダウンロードモード"
+   },
+   "filterDateRange": {
+      "message": "日付範囲"
+   },
+   "filterInfoTitle": {
+      "message": "📋 現在のフィルター:"
+   },
+   "filterLastHours": {
+      "message": "直近"
+   },
+   "footerImages": {
+      "message": "画像:"
+   },
+   "footerManualSetup": {
+      "message": "ブラウザのデフォルト保存先"
+   },
+   "footerOfficialWebsite": {
+      "message": "公式サイト"
+   },
+   "footerPath": {
+      "message": "📁 保存先:"
+   },
+   "footerVersion": {
+      "message": "v$VERSION$ | Powered by Kario LLC",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "footerVideos": {
+      "message": "動画:"
+   },
+   "footerViewLogs": {
+      "message": "ログを見る"
+   },
+   "fromDateLabel": {
+      "message": "開始日:"
+   },
+   "hdPriorityDesc": {
+      "message": "HD版があればHDを、なければSDをダウンロード"
+   },
+   "hdPriorityLabel": {
+      "message": "✨ HD優先"
+   },
+   "hdUpgradeDesc": {
+      "message": "お気に入りの動画を自動的にHD画質にアップグレードします。"
+   },
+   "hdUpgradeHoursUnit": {
+      "message": "時間"
+   },
+   "hdUpgradeTimeFilterLabel": {
+      "message": "直近の動画のみアップグレード"
+   },
+   "hdUpgradeTitle": {
+      "message": "✨ HDアップグレード (Pro):"
+   },
+   "hoursUnitMedia": {
+      "message": "時間以内の画像/動画"
+   },
+   "licenseActivateBtn": {
+      "message": "認証"
+   },
+   "licenseActivated": {
+      "message": "認証済み"
+   },
+   "licensePlaceholder": {
+      "message": "ライセンスキーを入力"
+   },
+   "licenseTitle": {
+      "message": "🔑 ライセンス状態"
+   },
+   "licenseVerifying": {
+      "message": "確認中..."
+   },
+   "mediaTypeImages": {
+      "message": "🖼️ 画像"
+   },
+   "mediaTypeTitle": {
+      "message": "メディアタイプを選択:"
+   },
+   "mediaTypeVideos": {
+      "message": "🎬 動画 (Pro)"
+   },
+   "msgActivateError": {
+      "message": "認証エラー"
+   },
+   "msgActivateFailed": {
+      "message": "❌ 認証に失敗しました"
+   },
+   "msgActivateSuccess": {
+      "message": "✅ 認証されました！ ご支援ありがとうございます"
+   },
+   "msgAllDownloaded": {
+      "message": "すべてのファイルは既にダウンロード済みです。\n\n📊 統計：\n  画像：$1\n  動画：$2\n\n今回はダウンロードされませんでした。\n\n再ダウンロードするには、履歴をクリアしてください。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgBuyPro": {
+      "message": "Pro版ですべての機能を利用"
+   },
+   "msgClearFailed": {
+      "message": "クリアに失敗しました"
+   },
+   "msgClearHistoryFailed": {
+      "message": "履歴のクリアに失敗しました"
+   },
+   "msgConfirmClearHistory": {
+      "message": "⚠️ ダウンロード履歴をリセットしますか？\n\nすべてのダウンロード済みファイルが再ダウンロードされます。\nこの操作は元に戻せません！\n\n続行しますか？"
+   },
+   "msgConfirmClearState": {
+      "message": "現在の状態をクリアしますか？\n\n（ダウンロード履歴はクリアされません）"
+   },
+   "msgConfirmClearStream": {
+      "message": "キャプチャしたすべての画像をクリアしますか？"
+   },
+   "msgConfirmDeletePost": {
+      "message": "⚠️ 警告：「投稿も同時に削除する」が選択されています。\nGrokから投稿が【完全に削除】されます。"
+   },
+   "msgConfirmDownload": {
+      "message": "自動ダウンロードを開始しますか？\n\n画像は一括ダウンロードされます。動画は各ページを開いてダウンロードされます。\nブラウザを閉じないでください。"
+   },
+   "msgConfirmRemove": {
+      "message": "⚠️ $DATE$ 以前のお気に入りを削除しますか？\n\n📊 統計:\n  合計: $TOTAL$\n  削除対象: $REMOVE$\n  保持: $KEEP$\n\n各ページを開いてお気に入りを解除します。\nブラウザを閉じないでください。\n\n元に戻すことはできません！",
+      "placeholders": {
+         "date": {
+            "content": "$1"
+         },
+         "keep": {
+            "content": "$4"
+         },
+         "remove": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgConfirmRemoveRange": {
+      "message": "⚠️ 範囲 $RANGE$ 内のお気に入りを削除しますか？\n\n📊 統計:\n  合計: $TOTAL$\n  削除対象: $REMOVE$\n  保持: $KEEP$\n\n各ページを開いてお気に入りを解除します。\nブラウザを閉じないでください。\n\n元に戻すことはできません！",
+      "placeholders": {
+         "keep": {
+            "content": "$4"
+         },
+         "range": {
+            "content": "$1"
+         },
+         "remove": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDateAll": {
+      "message": "全期間"
+   },
+   "msgDateRange": {
+      "message": "日付: $FROM$ ~ $TO$",
+      "placeholders": {
+         "from": {
+            "content": "$1"
+         },
+         "to": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDownloadCancelConfirm": {
+      "message": "⚠️ ダウンロード進行中\n\nフェーズ：$PHASE$\n進捗：$CURRENT$/$TOTAL$\n\n中断しますか？",
+      "placeholders": {
+         "current": {
+            "content": "$2"
+         },
+         "phase": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$3"
+         }
+      }
+   },
+   "msgDownloadCancelled": {
+      "message": "ダウンロードが中断されました"
+   },
+   "msgDownloadComplete": {
+      "message": "🎉 完了！ 成功: $DOWNLOADED$/$TOTAL$",
+      "placeholders": {
+         "downloaded": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDownloadConfirmHdPriority": {
+      "message": "📊 ダウンロード概要\n\n🖼️ 画像：$1 件ダウンロード予定（$2 件完了済み）\n🎬 動画：$3 件ダウンロード予定（$4 件完了済み）\n    ├ ✨ HD：$5\n    ├ 🎥 720p：$6\n    └ 📦 SD：$7\n\nブラウザを閉じないでください。\nダウンロードを開始しますか？",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         },
+         "3": {
+            "content": "$3"
+         },
+         "4": {
+            "content": "$4"
+         },
+         "5": {
+            "content": "$5"
+         },
+         "6": {
+            "content": "$6"
+         },
+         "7": {
+            "content": "$7"
+         }
+      }
+   },
+   "msgDownloadConfirmProject": {
+      "message": "📊 ダウンロード概要\n\n📂 プロジェクト：$1 件ダウンロード予定（$2 件完了済み）\n\nブラウザを閉じないでください。\nダウンロードを開始しますか？",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDownloadConfirmStandard": {
+      "message": "📊 ダウンロード概要\n\n🖼️ 画像：$1 件ダウンロード予定（$2 件完了済み）\n🎬 SD 動画：$3 件ダウンロード予定（$4 件完了済み）\n🎥 720p 動画：$5 件ダウンロード予定（$6 件完了済み）\n✨ HD 動画：$7 件ダウンロード予定（$8 件完了済み）\n\nブラウザを閉じないでください。\nダウンロードを開始しますか？",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         },
+         "3": {
+            "content": "$3"
+         },
+         "4": {
+            "content": "$4"
+         },
+         "5": {
+            "content": "$5"
+         },
+         "6": {
+            "content": "$6"
+         },
+         "7": {
+            "content": "$7"
+         },
+         "8": {
+            "content": "$8"
+         }
+      }
+   },
+   "msgDownloadScanning": {
+      "message": "スキャン中..."
+   },
+   "msgDownloading": {
+      "message": "ダウンロード中..."
+   },
+   "msgEnterLicenseKey": {
+      "message": "ライセンスキーを入力してください"
+   },
+   "msgExportFailed": {
+      "message": "エクスポートに失敗しました"
+   },
+   "msgExportSuccess": {
+      "message": "✅ データをエクスポートしました！ $COUNT$ 件のレコード",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgFilterChanged": {
+      "message": "⚠️ フィルターが変更されました。リストを再生成してください"
+   },
+   "msgFoundMedia": {
+      "message": "成功！ $CONTENT$ が見つかりました",
+      "placeholders": {
+         "content": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgGenerateFailed": {
+      "message": "生成に失敗しました"
+   },
+   "msgGenerateListProgress": {
+      "description": "Real-time progress shown on Generate List button during API scanning",
+      "message": "スキャン中... $COUNT$ 件取得済み",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgGenerating": {
+      "message": "リストを生成中、お待ちください..."
+   },
+   "msgHistoryCleared": {
+      "message": "履歴をクリアしました"
+   },
+   "msgImportFailed": {
+      "message": "インポートに失敗しました"
+   },
+   "msgImportSuccess": {
+      "message": "✅ データをインポートしました！ 追加: $NEW$ 件\n合計: $BEFORE$ → $AFTER$",
+      "placeholders": {
+         "after": {
+            "content": "$3"
+         },
+         "before": {
+            "content": "$2"
+         },
+         "new": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgNoItemsToRemove": {
+      "message": "✅ $DATE$ 以前のお気に入りはありません\n\n合計: $TOTAL$",
+      "placeholders": {
+         "date": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgNoItemsToRemoveRange": {
+      "message": "✅ 範囲 $RANGE$ 内にお気に入りはありません\n\n合計: $TOTAL$",
+      "placeholders": {
+         "range": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgNoResponse": {
+      "message": "❌ 応答がありません。更新して再試行してください"
+   },
+   "msgOperationFailed": {
+      "message": "❌ 操作に失敗しました"
+   },
+   "msgPhaseImages": {
+      "message": "🖼️ 画像をダウンロード中"
+   },
+   "msgPhaseVideos": {
+      "message": "🎬 動画をダウンロード中"
+   },
+   "msgRefreshRetry": {
+      "message": "ページを更新して再試行してください"
+   },
+   "msgRemoveComplete": {
+      "message": "✅ 削除完了！成功：$SUCCESS$/$TOTAL$",
+      "placeholders": {
+         "success": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgRemovingProgress": {
+      "message": "削除中 $CURRENT$/$TOTAL$...",
+      "placeholders": {
+         "current": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgSelectDate": {
+      "message": "日付を選択してください"
+   },
+   "msgSelectMediaType": {
+      "message": "少なくとも1つのメディアタイプを選択してください"
+   },
+   "msgStartDownload": {
+      "message": "ダウンロードを開始しました！"
+   },
+   "msgStartFailed": {
+      "message": "開始に失敗しました"
+   },
+   "msgStartRemove": {
+      "message": "$COUNT$ 件のお気に入りを削除中...",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgStartRemoveFailed": {
+      "message": "削除の開始に失敗しました"
+   },
+   "msgStateCleared": {
+      "message": "状態をクリアしました"
+   },
+   "msgStreamLimitReached": {
+      "message": "⚠️ キャプチャ上限 ($LIMIT$ 枚) に達しました。ダウンロードしてクリアしてから続けてください。",
+      "placeholders": {
+         "limit": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgStreamStarted": {
+      "message": "キャプチャを開始しました！ページをスクロールして画像をキャプチャしてください。"
+   },
+   "msgStreamStopped": {
+      "message": "キャプチャを停止しました"
+   },
+   "msgUpgradeCancelConfirm": {
+      "message": "⚠️ HDアップグレード進行中 ($CURRENT$/$TOTAL$)\n\n中断しますか？",
+      "placeholders": {
+         "current": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgUpgradeCancelled": {
+      "message": "HDアップグレードが中断されました"
+   },
+   "msgUpgradeComplete": {
+      "message": "✅ アップグレード完了！ 成功: $UPGRADED$/$TOTAL$",
+      "placeholders": {
+         "total": {
+            "content": "$2"
+         },
+         "upgraded": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeConfirm": {
+      "message": "📊 スキャン結果\n\n合計動画数：$TOTAL$\n既にHD：$ALREADY_HD$\nアップグレード必要：$NEED_UPGRADE$\n\nアップグレードを開始しますか？",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "need_upgrade": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeConfirmFiltered": {
+      "message": "📊 スキャン結果\n\n合計動画数：$TOTAL$\n既にHD：$ALREADY_HD$\nアップグレード必要（全体）：$NEED_UPGRADE$\nフィルター（直近 $HOURS$ 時間）：$FILTERED$\n\n$FILTERED$ 本の動画をアップグレードしますか？",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "filtered": {
+            "content": "$4"
+         },
+         "hours": {
+            "content": "$5"
+         },
+         "need_upgrade": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeFailed": {
+      "message": "アップグレード失敗"
+   },
+   "msgUpgradeNoNeed": {
+      "message": "✅ すべての動画は既にHDです！\n\n合計動画数：$TOTAL$\n既にHD：$ALREADY_HD$",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeNoNeedFiltered": {
+      "message": "✅ 直近 $HOURS$ 時間以内にアップグレードが必要な動画はありません。\n\n合計動画数：$TOTAL$\n既にHD：$ALREADY_HD$\nアップグレード必要（全体）：$NEED_UPGRADE$\n\n時間範囲を広げるか、フィルターを解除してください。",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "hours": {
+            "content": "$4"
+         },
+         "need_upgrade": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeScanning": {
+      "message": "お気に入りをスキャン中..."
+   },
+   "msgUpgrading": {
+      "message": "アップグレード中..."
+   },
+   "msgVideoProRequired": {
+      "message": "動画ダウンロードはPro機能です"
+   },
+   "msgWrongPage": {
+      "message": "Grok Imagine のお気に入りページで使用してください。"
+   },
+   "msgWrongPageFav": {
+      "message": "お気に入りページで使用してください"
+   },
+   "msgWrongPageLink": {
+      "message": "お気に入りへ →"
+   },
+   "popupTitle": {
+      "message": "🎬 Grok メディアダウンローダー"
+   },
+   "proFeatureLock": {
+      "message": "🔒 Pro機能"
+   },
+   "promptAsFilenameDesc": {
+      "message": "ファイル名にプロンプトを使用（例：img_20250119_猫が座っている.jpg）"
+   },
+   "promptAsFilenameLabel": {
+      "message": "📝 プロンプトをファイル名に使用"
+   },
+   "queueAddItemTitle": {
+      "message": "アイテム追加"
+   },
+   "queueAddMaxRetries": {
+      "message": "最大リトライ"
+   },
+   "queueAddPostId": {
+      "message": "投稿IDまたはURL"
+   },
+   "queueAddPrompt": {
+      "message": "プロンプト"
+   },
+   "queueAddTarget": {
+      "message": "成功目標"
+   },
+   "queueBatchAddTitle": {
+      "message": "最近の投稿を一括追加"
+   },
+   "queueBatchBtnAdd": {
+      "message": "最近の投稿をキューに追加"
+   },
+   "queueBatchTimeRange": {
+      "message": "時間範囲"
+   },
+   "queueBtnAdd": {
+      "message": "追加"
+   },
+   "queueBtnClearAll": {
+      "message": "すべて削除"
+   },
+   "queueBtnClearPending": {
+      "message": "待機中を削除"
+   },
+   "queueBtnClearStats": {
+      "message": "統計クリア"
+   },
+   "queueBtnPause": {
+      "message": "一時停止"
+   },
+   "queueBtnResume": {
+      "message": "再開"
+   },
+   "queueBtnStart": {
+      "message": "開始"
+   },
+   "queueBtnStop": {
+      "message": "停止"
+   },
+   "queueConfirmClearAll": {
+      "message": "キュー内のすべてのアイテムを削除しますか？"
+   },
+   "queueConfirmClearPending": {
+      "message": "待機中のアイテムをすべて削除しますか？"
+   },
+   "queueConfirmClearStats": {
+      "message": "すべてのプロンプト統計をクリアしますか？"
+   },
+   "queueDefaultRetries": {
+      "message": "デフォルト最大リトライ"
+   },
+   "queueDefaultRetriesLabel": {
+      "message": "デフォルト最大リトライ:"
+   },
+   "queueDefaultTarget": {
+      "message": "デフォルト目標"
+   },
+   "queueDefaultTargetLabel": {
+      "message": "デフォルト成功目標:"
+   },
+   "queueEmptyState": {
+      "message": "キューにアイテムがありません。投稿詳細ページから追加してください。"
+   },
+   "queueItemsTitle": {
+      "message": "キューアイテム"
+   },
+   "queueNoStats": {
+      "message": "プロンプト統計はまだありません"
+   },
+   "queuePromptStatsTitle": {
+      "message": "プロンプト統計"
+   },
+   "queueRateLimited": {
+      "message": "429 リクエスト過多 — しばらく待ってから再試行してください"
+   },
+   "queueResolution": {
+      "message": "解像度"
+   },
+   "queueSettingsTitle": {
+      "message": "設定"
+   },
+   "queueStatusError": {
+      "message": "エラー"
+   },
+   "queueStatusIdle": {
+      "message": "待機中"
+   },
+   "queueStatusPaused": {
+      "message": "一時停止中"
+   },
+   "queueStatusRunning": {
+      "message": "実行中"
+   },
+   "queueTitle": {
+      "message": "動画生成キュー"
+   },
+   "queueUpgradeHint": {
+      "message": "無料の上限に達しました。Proにアップグレードすると無制限にビデオを生成できます。"
+   },
+   "queueUsage": {
+      "message": "使用回数"
+   },
+   "queueUsageHint": {
+      "message": "Favoritesで投稿を開き、🎯をタップして動画設定を行いキューに追加 — または下の一括追加を使用。"
+   },
+   "queueUsageLimitReached": {
+      "message": "無料版の使用上限（50回）に達しました。Proにアップグレードして無制限にご利用ください。"
+   },
+   "queueVideoLength": {
+      "message": "動画の長さ"
+   },
+   "rateLimitPaused": {
+      "message": "⏸️ $1 本の動画をダウンロード後、一時停止しました（速度制限保護）。「ダウンロード開始」をクリックして続行してください。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "rateLimitWarning": {
+      "message": "⚠️ $1 本以上の動画がダウンロード待ちです。速度制限を避けるため、$1 本ごとに自動的に一時停止します。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "removeAll": {
+      "message": "すべて削除"
+   },
+   "removeBeforeLabel": {
+      "message": "指定日以前を削除:"
+   },
+   "removeFavTitle": {
+      "message": "⚠️ 一括削除 (Pro):"
+   },
+   "resumeProgress": {
+      "message": "📥 $1/$2 完了、クリックして続行",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "saveMetadataDesc": {
+      "message": "画像/動画情報を含む.jsonファイルも保存（プロンプト、解像度など）"
+   },
+   "saveMetadataLabel": {
+      "message": "📋 メタデータを保存"
+   },
+   "sectionBulkRemove": {
+      "message": "⚠️ 一括削除"
+   },
+   "sectionClearActions": {
+      "message": "🧹 クリア操作"
+   },
+   "sectionDataManage": {
+      "message": "💾 データ管理"
+   },
+   "sectionDateFilter": {
+      "message": "📅 日付フィルター"
+   },
+   "sectionHdUpgrade": {
+      "message": "✨ HDアップグレード"
+   },
+   "sectionLicense": {
+      "message": "🔑 ライセンス"
+   },
+   "sectionMediaType": {
+      "message": "🎬 メディアタイプ"
+   },
+   "sectionQueueSettings": {
+      "message": "🎯 キュー設定"
+   },
+   "sectionSettings": {
+      "message": "⚙️ 設定"
+   },
+   "sectionStatus": {
+      "message": "📊 ステータス"
+   },
+   "sectionStreamCapture": {
+      "message": "🌊 ストリームキャプチャ"
+   },
+   "settingsPathFrames": {
+      "message": "🎞️ ストーリーフレーム："
+   },
+   "settingsPathImages": {
+      "message": "🖼️ お気に入り画像："
+   },
+   "settingsPathNote": {
+      "message": "📁 パスはブラウザのデフォルトダウンロードフォルダからの相対パス"
+   },
+   "settingsPathProjects": {
+      "message": "📂 プロジェクトダウンロード："
+   },
+   "settingsPathStream": {
+      "message": "📹 ストリームキャプチャ："
+   },
+   "settingsPathVideos": {
+      "message": "🎬 お気に入り動画："
+   },
+   "settingsSave": {
+      "message": "💾 パスを保存"
+   },
+   "settingsSaved": {
+      "message": "✓ パスを保存しました！"
+   },
+   "status720pVideos": {
+      "message": "🎥 720p 動画"
+   },
+   "statusDownloadingImages": {
+      "message": "🖼️ 画像ダウンロード中 ($1/$2)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "statusDownloadingProjects": {
+      "message": "📂 プロジェクトダウンロード中 ($1/$2)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "statusDownloadingVideos": {
+      "message": "🎬 動画ダウンロード中 ($1/$2)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "statusHdVideos": {
+      "message": "✨ HD 動画"
+   },
+   "statusImageDownloaded": {
+      "message": "🖼️ ダウンロード済"
+   },
+   "statusImageHistory": {
+      "message": "🖼️ 画像履歴"
+   },
+   "statusImages": {
+      "message": "🖼️ 画像"
+   },
+   "statusPhase": {
+      "message": "現在のフェーズ"
+   },
+   "statusPhaseComplete": {
+      "message": "✅ 完了"
+   },
+   "statusPhaseProject": {
+      "message": "📂 プロジェクト"
+   },
+   "statusPhaseStandard": {
+      "message": "📦 標準モード"
+   },
+   "statusPhaseSummary": {
+      "message": "🖼️ $1 / 🎬 SD $2 / 🎥 720p $3 / ✨ HD $4",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         },
+         "3": {
+            "content": "$3"
+         },
+         "4": {
+            "content": "$4"
+         }
+      }
+   },
+   "statusProgress": {
+      "message": "進捗"
+   },
+   "statusProjects": {
+      "message": "📂 プロジェクト"
+   },
+   "statusSdVideos": {
+      "message": "🎬 SD 動画"
+   },
+   "statusTotalImages": {
+      "message": "🖼️ 画像総数"
+   },
+   "statusTotalSlashDown": {
+      "message": "合計 / 済み / 未DL"
+   },
+   "statusTotalVideos": {
+      "message": "🎬 動画総数"
+   },
+   "statusVideoDownloaded": {
+      "message": "🎬 ダウンロード済"
+   },
+   "statusVideoHistory": {
+      "message": "🎬 動画履歴"
+   },
+   "storyModeAddToStory": {
+      "message": "Add to Story Mode"
+   },
+   "storyModeAnalyzing": {
+      "message": "動画を分析中..."
+   },
+   "storyModeCannotGetUrl": {
+      "message": "動画URLを取得できません。\n\nお気に入りページからドラッグする場合は、動画の「Add to Story Mode」ボタンをクリックしてください。"
+   },
+   "storyModeClearAll": {
+      "message": "すべてクリア"
+   },
+   "storyModeClearConfirm": {
+      "message": "storyboard全体をクリアします。続行しますか？"
+   },
+   "storyModeConfirmNewProject": {
+      "message": "新しいプロジェクトを開始しますか？ストーリーボード内のすべての動画が削除されます。"
+   },
+   "storyModeContinueEdit": {
+      "message": "編集を続ける"
+   },
+   "storyModeDone": {
+      "message": "完了！"
+   },
+   "storyModeDownloadFrame": {
+      "message": "フレームをダウンロード"
+   },
+   "storyModeDownloadVideo": {
+      "message": "動画をダウンロード"
+   },
+   "storyModeDropOrClick": {
+      "message": "ドロップまたはクリックして動画を追加"
+   },
+   "storyModeDropSubtext": {
+      "message": "ローカルファイルまたはGrok Postからドラッグ"
+   },
+   "storyModeDropVideo": {
+      "message": "ここに動画をドロップ"
+   },
+   "storyModeEmptyState": {
+      "message": "上に動画をドロップしてstoryboardの作成を開始"
+   },
+   "storyModeErrorOccurred": {
+      "message": "エラーが発生しました"
+   },
+   "storyModeExportProRequired": {
+      "message": "最終動画のエクスポートはPro機能です。この機能を使用するにはライセンスを有効化してください。"
+   },
+   "storyModeExportSuccess": {
+      "message": "動画のエクスポートに成功しました！"
+   },
+   "storyModeExportVideo": {
+      "message": "最終動画をエクスポート"
+   },
+   "storyModeExtractingFrames": {
+      "message": "フレームを抽出中..."
+   },
+   "storyModeFetchingVideo": {
+      "message": "Grokから動画を取得中..."
+   },
+   "storyModeFooter": {
+      "message": "Grok AI動画拡張ワークフロー"
+   },
+   "storyModeGenerate": {
+      "message": "生成"
+   },
+   "storyModeIncludeAudio": {
+      "message": "音声トラックを含める"
+   },
+   "storyModeInitializing": {
+      "message": "初期化中..."
+   },
+   "storyModeLastFrame": {
+      "message": "Last Frame"
+   },
+   "storyModeLastFrameClip": {
+      "message": "Last Frame - Clip $CLIP$",
+      "placeholders": {
+         "clip": {
+            "content": "$1"
+         }
+      }
+   },
+   "storyModeLoadingVideo": {
+      "message": "動画 $NUM$ を読み込み中...",
+      "placeholders": {
+         "num": {
+            "content": "$1"
+         }
+      }
+   },
+   "storyModeMasterVideo": {
+      "message": "Master Video"
+   },
+   "storyModeNewProject": {
+      "message": "新規プロジェクト"
+   },
+   "storyModeNoFrameAlert": {
+      "message": "フレームがありません。まず動画を追加してください。"
+   },
+   "storyModeNormalizingVideo": {
+      "message": "動画 $NUM$ を標準化中...",
+      "placeholders": {
+         "num": {
+            "content": "$1"
+         }
+      }
+   },
+   "storyModeOpeningTabs": {
+      "message": "タブを開いています... $1/$2",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "storyModePreparingVideos": {
+      "message": "動画を準備中..."
+   },
+   "storyModeProcessing": {
+      "message": "処理中..."
+   },
+   "storyModePromptAlert": {
+      "message": "動画生成のプロンプトを入力してください。"
+   },
+   "storyModePromptOptional": {
+      "message": "任意 — 空欄ならAIが自動生成"
+   },
+   "storyModePromptPlaceholder": {
+      "message": "動画生成のプロンプトを入力..."
+   },
+   "storyModeReadingFile": {
+      "message": "動画ファイルを読み込み中..."
+   },
+   "storyModeResolutionMismatch": {
+      "message": "⚠️ 解像度不一致の警告\n\n以下のセグメントはMaster ($MASTER_RES$) と異なる解像度です：\n$MISMATCH_LIST$\n\nこれらのセグメントはMasterの解像度に合わせてスケーリングされ、黒い枠が表示される場合があります。\n\n続行しますか？",
+      "placeholders": {
+         "master_res": {
+            "content": "$1"
+         },
+         "mismatch_list": {
+            "content": "$2"
+         }
+      }
+   },
+   "storyModeSendFrame": {
+      "message": "フレームを送信して動画生成"
+   },
+   "storyModeStartingMerge": {
+      "message": "結合を開始中..."
+   },
+   "storyModeStorage": {
+      "message": "ストレージ"
+   },
+   "storyModeStoringVideo": {
+      "message": "動画を保存中..."
+   },
+   "storyModeStoryboard": {
+      "message": "Storyboard"
+   },
+   "storyModeTitle": {
+      "message": "Story Mode Helper"
+   },
+   "storyModeTryAgain": {
+      "message": "再試行"
+   },
+   "storyModeUnknownSpecs": {
+      "message": "仕様不明"
+   },
+   "storyModeVideos": {
+      "message": "本の動画"
+   },
+   "streamCaptureHint": {
+      "message": "💡 grok.com/imagine の生成画面で動作 — Grokが生成する画像をリアルタイムで自動キャプチャ。「ダウンロード」をクリックして保存。"
+   },
+   "streamCaptureTitle": {
+      "message": "🌊 ストリーム画像キャプチャ (Pro)"
+   },
+   "streamCapturedCount": {
+      "message": "キャプチャ数: $COUNT$",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "streamToggleLabel": {
+      "message": "有効にする"
+   },
+   "toDateLabel": {
+      "message": "終了日:"
+   }
+}

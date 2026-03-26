@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superpower for Gemini - User Guide</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Google+Sans+Text:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            /* --- LIGHT THEME (Default) --- */
+            --primary-color: #4285f4;
+            --text-color: #1f1f1f;
+            --secondary-text: #5f6368;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-color: #dadce0;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --placeholder-bg: #e8eaed;
+            --placeholder-text: #bdc1c6;
+
+            /* --- GROUP COLORS --- */
+            --c-core: #4285f4;
+            /* Blue */
+            --c-header: #34a853;
+            /* Green */
+            --c-input: #ea4335;
+            /* Red */
+            --c-sidebar: #fbbc04;
+            /* Yellow/Amber */
+            --c-gems: #a142f4;
+            /* Purple */
+            --c-queue: #24c1e0;
+            /* Teal */
+            --c-utils: #f564a8;
+            --c-shortcuts: #f4511e;
+
+            /* Native browser UI (scrollbars) */
+            color-scheme: light dark;
+        }
+
+        /* --- DARK THEME OVERRIDES --- */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #8ab4f8;
+                --text-color: #e3e3e3;
+                --secondary-text: #c4c7c5;
+                --bg-color: #131314;
+                --card-bg: #1e1f20;
+                --border-color: #444746;
+                --shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+                --placeholder-bg: #2d2e31;
+                --placeholder-text: #8e918f;
+
+                /* Dark Mode Group Colors (Slightly lighter/pastel for contrast) */
+                --c-core: #8ab4f8;
+                --c-header: #81c995;
+                --c-input: #f28b82;
+                --c-sidebar: #fdd663;
+                --c-gems: #c58af9;
+                --c-queue: #78d9ec;
+                --c-utils: #f564a8;
+                --c-shortcuts: #ff7043;
+            }
+
+            h1 {
+                background-image: linear-gradient(45deg, #8ab4f8, #f28b82, #fdd663, #81c995) !important;
+            }
+        }
+
+        body {
+            font-family: 'Google Sans Text', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+            /* 🔥 ZOOM FACTOR */
+            zoom: 1.30;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px 60px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* GLOW ANIMATION */
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background-size: 300% 300%;
+            animation: gradientFlow 5s ease infinite;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            background-image: linear-gradient(45deg, #4285f4, #ea4335, #fbbc05, #34a853);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary-text);
+        }
+
+        .guide-section {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            display: block;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+
+            /* --- COLOR CODING MAGIC --- */
+            border-left: 6px solid transparent;
+            /* Base border width */
+            overflow: hidden;
+            /* Keeps the rounded corners clean */
+        }
+
+        /* Group Classes */
+        .grp-core {
+            border-left-color: var(--c-core);
+        }
+
+        .grp-header {
+            border-left-color: var(--c-header);
+        }
+
+        .grp-input {
+            border-left-color: var(--c-input);
+        }
+
+        .grp-sidebar {
+            border-left-color: var(--c-sidebar);
+        }
+
+        .grp-gems {
+            border-left-color: var(--c-gems);
+        }
+
+        .grp-queue {
+            border-left-color: var(--c-queue);
+        }
+
+        .grp-utils {
+            border-left-color: var(--c-utils);
+        }
+
+        .grp-shortcuts {
+            border-left-color: var(--c-shortcuts);
+        }
+
+        .guide-section.visible {
+            animation: slideUp 0.4s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 1.8rem;
+            margin-top: 0;
+            color: var(--text-color);
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        p.description {
+            margin-bottom: 20px;
+            color: var(--secondary-text);
+            font-size: 1.05rem;
+        }
+
+        /* Subsection headings within guide sections */
+        h3.subsection-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        h3.subsection-title-spaced {
+            font-size: 1.3rem;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        /* Privacy/info list styling */
+        .info-list {
+            margin-left: 20px;
+            color: var(--secondary-text);
+            line-height: 1.8;
+        }
+
+        .info-list-compact {
+            margin-left: 20px;
+            margin-top: 10px;
+            color: var(--secondary-text);
+        }
+
+        /* --- Guideflow Widget Wrapper --- */
+        .guideflow-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            margin-top: 15px;
+            background: var(--placeholder-bg);
+        }
+
+        /* --- LOADER ANIMATION --- */
+        @keyframes spin {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(128, 128, 128, 0.2);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            z-index: 1;
+        }
+
+        iframe {
+            z-index: 2;
+        }
+
+        .content-placeholder {
+            min-height: 100px;
+            background: var(--placeholder-bg);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--placeholder-text);
+            font-style: italic;
+            border: 1px dashed var(--border-color);
+        }
+
+        .back-link,
+        .show-full-manual a {
+            display: inline-block;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.95rem;
+            padding: 10px 24px;
+            border-radius: 100px;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .back-link:hover,
+        .show-full-manual a:hover {
+            background: var(--bg-color);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-link:active,
+        .show-full-manual a:hover:active {
+            transform: translateY(0);
+        }
+
+        /* FOCUSED MODE (Only show target section) */
+        body.focused-mode .header {
+            display: none;
+        }
+
+        body.focused-mode .guide-section {
+            display: none !important;
+        }
+
+        body.focused-mode .guide-section.focused {
+            display: block !important;
+            animation: slideUp 0.4s ease-out;
+        }
+
+        body.focused-mode .show-full-manual {
+            display: block;
+        }
+
+        .show-full-manual {
+            display: none;
+            margin: 0 auto 30px auto;
+            text-align: center;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* SCROLL BUTTONS */
+        .scroll-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        body.focused-mode .scroll-buttons {
+            display: none;
+        }
+
+        .scroll-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .scroll-btn:hover {
+            background: var(--bg-color);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .scroll-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* CLOSE BUTTON (TOP RIGHT) */
+        .close-manual {
+            position: fixed;
+            top: 25px;
+            right: 25px;
+            z-index: 1001;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .close-manual:hover {
+            background: var(--bg-color);
+            border-color: #ea4335;
+            /* Google Red */
+            color: #ea4335;
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .close-manual svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Responsive adjustment for the X button */
+        @media (max-width: 600px) {
+            .close-manual {
+                top: 15px;
+                right: 15px;
+                width: 38px;
+                height: 38px;
+            }
+        }
+
+        /* --- QUICK NAV SIDEBAR --- */
+        .quick-nav {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 240px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 15px 0;
+            box-shadow: var(--shadow);
+            z-index: 900;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-height: 70vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
+        }
+
+        .quick-nav::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .quick-nav::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .quick-nav::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 3px;
+        }
+
+        .quick-nav::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-text);
+        }
+
+        /* FIX STARTS HERE */
+        /* Hide nav in focused mode */
+        body.focused-mode .quick-nav {
+            display: none;
+        }
+
+        /* Hide nav on small screens */
+        @media (max-width: 1300px) {
+            .quick-nav {
+                display: none;
+            }
+        }
+
+        /* FIX ENDS HERE */
+
+        .nav-group {
+            display: flex;
+            flex-direction: column;
+            padding: 0 15px;
+        }
+
+        .nav-group-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--secondary-text);
+            padding-left: 10px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 4px;
+            transition: background 0.2s, transform 0.2s;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-link:hover {
+            background: var(--bg-color);
+            transform: translateX(3px);
+        }
+
+        /* Color Coding for Groups */
+        .nav-group.core .nav-group-title {
+            color: var(--c-core);
+        }
+
+        .nav-group.core .nav-link:hover {
+            border-left-color: var(--c-core);
+        }
+
+        /* CHANGE .header TO .group-header HERE */
+        .nav-group.group-header .nav-group-title {
+            color: var(--c-header);
+        }
+
+        .nav-group.group-header .nav-link:hover {
+            border-left-color: var(--c-header);
+        }
+
+        .nav-group.input .nav-group-title {
+            color: var(--c-input);
+        }
+
+        .nav-group.input .nav-link:hover {
+            border-left-color: var(--c-input);
+        }
+
+
+        .nav-group.sidebar .nav-group-title {
+            color: var(--c-sidebar);
+        }
+
+        .nav-group.sidebar .nav-link:hover {
+            border-left-color: var(--c-sidebar);
+        }
+
+        .nav-group.gems .nav-group-title {
+            color: var(--c-gems);
+        }
+
+        .nav-group.gems .nav-link:hover {
+            border-left-color: var(--c-gems);
+        }
+
+        .nav-group.queue .nav-group-title {
+            color: var(--c-queue);
+        }
+
+        .nav-group.queue .nav-link:hover {
+            border-left-color: var(--c-queue);
+        }
+
+        .nav-group.utils .nav-group-title {
+            color: var(--c-utils);
+        }
+
+        .nav-group.utils .nav-link:hover {
+            border-left-color: var(--c-utils);
+        }
+
+        .nav-group.shortcuts .nav-group-title {
+            color: var(--c-shortcuts);
+        }
+
+        .nav-group.shortcuts .nav-link:hover {
+            border-left-color: var(--c-shortcuts);
+        }
+
+        .nav-group.experimental .nav-group-title {
+            color: #f59e0b;
+        }
+
+        .nav-group.experimental .nav-link:hover {
+            border-left-color: #f59e0b;
+        }
+
+        /* Section styling for experimental */
+        .guide-section.grp-experimental {
+            border-left: 6px solid #f59e0b;
+        }
+
+        .guide-section.grp-pro {
+            border-left: 6px solid var(--c-pro);
+        }
+
+        .nav-group.pro .nav-group-title {
+            color: var(--c-pro);
+        }
+
+        .nav-group.pro .nav-link:hover {
+            border-left-color: var(--c-pro);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- QUICK NAVIGATION SIDEBAR -->
+    <nav class="quick-nav">
+        <!-- Core (Blue) - Superpower Menu Group -->
+        <div class="nav-group core">
+            <span class="nav-group-title">SUPERPOWER MENU</span>
+            <a href="#menu" class="nav-link">Superpower Menu</a>
+            <a href="#folders" class="nav-link">Folders & Management</a>
+            <a href="#trashcan" class="nav-link">Enable Trashcan</a>
+            <a href="#prompts" class="nav-link">Prompts Library</a>
+            <a href="#quick-actions" class="nav-link">Quick Actions</a>
+            <a href="#settings-menu" class="nav-link">Settings in Sidebar</a>
+        </div>
+
+        <!-- Input Enhancements (Red) -->
+        <div class="nav-group input">
+            <span class="nav-group-title">INPUT ENHANCEMENTS</span>
+            <a href="#export" class="nav-link">Export Button</a>
+            <a href="#info" class="nav-link">Info Button & Notes</a>
+            <a href="#wide-chat" class="nav-link">Wide Chat</a>
+            <a href="#optimize" class="nav-link">Prompt Optimizer</a>
+            <a href="#counter" class="nav-link">Word/Character Counter</a>
+            <a href="#daily-counter" class="nav-link">Daily Prompt Counter</a>
+            <a href="#scroll" class="nav-link">Scroll Buttons</a>
+            <a href="#download-audio" class="nav-link">Download Audio</a>
+        </div>
+
+        <!-- Sidebar (Yellow) -->
+        <div class="nav-group sidebar">
+            <span class="nav-group-title">SIDEBAR</span>
+            <a href="#pinned-collapse" class="nav-link">Collapsible Pinned Chats</a>
+            <!-- COMMENTED OUT: Google implemented middle-click natively -->
+            <!-- <a href="#middle-click-new-tab" class="nav-link">Middle Click New Tab</a> -->
+        </div>
+
+        <!-- UI Declutter (combined Sidebar/Gems) -->
+        <div class="nav-group gems">
+            <span class="nav-group-title">UI DECLUTTER</span>
+            <a href="#hide-premade-buttons" class="nav-link">Hide Premade Buttons</a>
+            <!-- COMMENTED OUT: Google removed images from My Stuff, making this feature non-functional -->
+            <!-- <a href="#my-stuff" class="nav-link">Compact My Stuff</a> -->
+            <a href="#location-info" class="nav-link">Hide Location Info</a>
+            <a href="#activity" class="nav-link">Hide Activity</a>
+            <a href="#hide-gems" class="nav-link">Hide Gems (Master toggle)</a>
+            <a href="#hide-gems-gallery" class="nav-link">Hide Premade Gems (Gallery)</a>
+            <a href="#hide-gems-sidebar" class="nav-link">Hide Premade Gems (Sidebar)</a>
+        </div>
+
+        <!-- Message Queue (Teal) -->
+        <div class="nav-group queue">
+            <span class="nav-group-title">MESSAGE QUEUE</span>
+            <a href="#queue" class="nav-link">Message Queueing</a>
+        </div>
+
+        <!-- Experimental (Orange/Warning) -->
+        <div class="nav-group experimental">
+            <span class="nav-group-title">EXPERIMENTAL</span>
+            <a href="#timestamps" class="nav-link">Message Timestamps</a>
+        </div>
+
+        <!-- Advanced (Shortcuts) -->
+        <div class="nav-group shortcuts">
+            <span class="nav-group-title">ADVANCED</span>
+            <!-- TO_BE_COMMENTED_OUT_START
+            <a href="#pro" class="nav-link">Free vs Pro</a>
+            TO_BE_COMMENTED_OUT_END -->
+            <a href="#native-settings" class="nav-link">Native Settings integration</a>
+            <a href="#telemetry" class="nav-link">Anonymous Statistics</a>
+            <a href="#shortcuts" class="nav-link">Keyboard Shortcuts</a>
+            <a href="#model-settings" class="nav-link">Model Settings</a>
+        </div>
+
+    </nav>
+    <button class="close-manual" id="close-manual-top" title="Close Manual">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </button>
+
+    <div class="container">
+        <div class="header">
+            <h1>Superpower for Gemini Manual</h1>
+            <p class="subtitle">Learn how to make the most out of your Gemini experience.</p>
+        </div>
+
+        <div class="show-full-manual" id="show-all-container">
+            <a href="#all" id="show-all-link">← Show Full Manual</a>
+        </div>
+
+        <!-- 🔵 GROUP 1: CORE (Blue) -->
+        <!-- 1. Extension Switch (Master) -->
+        <!-- Note: Adding it to Core group even though it's unique -->
+        <!-- <div id="extension" class="guide-section grp-core">
+            <h2>Extension (Master Switch)</h2>
+            <div class="content-placeholder">Details about the master extension toggle...</div>
+        </div> -->
+
+        <!-- 2. Menu -->
+        <div id="menu" class="guide-section grp-core">
+            <h2>Superpower Menu</h2>
+            <p class="description">The command center for your extension. Click the Superpower for Gemini header in the
+                sidebar to reveal or hide your Folders, Prompt Library, and Settings. Keep your interface clean by
+                collapsing it when not in use.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="qkq375zh4r" src="https://app.guideflow.com/embed/qkq375zh4r" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+        <!-- 3. Folders -->
+        <div id="folders" class="guide-section grp-core">
+            <h2>Folders & Management</h2>
+            <p class="description">Keep your workspace organized. Manage your conversations with custom folders, a
+                dedicated chats menu, and a safe trash bin. Press <strong>Alt + F</strong> to open/close instantly.</p>
+
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 30px 0;">
+
+            <!-- Folders Subsection -->
+            <h3 class="subsection-title">📁 Folders</h3>
+            <p class="description">Create custom folders and subfolders to group your conversations by project, topic,
+                or priority.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="xrgm4z1i1r" src="https://app.guideflow.com/embed/xrgm4z1i1r" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+
+            <!-- Chats Menu Subsection -->
+            <h3 id="chats" class="subsection-title-spaced">
+                💬 Chats
+                Menu</h3>
+            <p class="description">Access all your conversations from a centralized menu. Quickly search, filter, add to
+                folders, delete and
+                navigate through your chat history.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.96691018478728% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="6kwvn38u1p" src="https://app.guideflow.com/embed/6kwvn38u1p" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+
+            <!-- Trash Bin Subsection -->
+            <h3 id="trashcan" class="subsection-title-spaced">🗑️ Trash
+                Bin</h3>
+            <p class="description">Deleted a chat by mistake? No worries. The Trash Bin stores your deleted
+                conversations, allowing you to restore them whenever needed.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="1pzdwg7fmr" src="https://app.guideflow.com/embed/1pzdwg7fmr" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Prompts -->
+        <div id="prompts" class="guide-section grp-core">
+            <h2>Prompts Library</h2>
+            <p class="description">Build your own personal library of reusable templates. Whether it's a simple email
+                structure or a complex coding workflow, save it once and access it instantly. Press <strong>Alt +
+                    P</strong> to open/close instantly.</p>
+
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 30px 0;">
+
+            <!-- Prompts Subsection -->
+            <h3 id="prompts-list" class="subsection-title">⚡️ Prompts
+            </h3>
+            <p class="description">Type <strong>//</strong> in the chat box to access single-step templates. Use
+                variables like <code>{{topic}}</code> to fill in details dynamically when you use them.
+                You can also reference other prompts using <code>[[prompt name]]</code> to build modular templates.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="9r28744szr" src="https://app.guideflow.com/embed/9r28744szr" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+
+            <!-- Chains Subsection -->
+            <h3 id="chains" class="subsection-title-spaced">
+                🔗 Chains
+            </h3>
+            <p class="description">Type <strong>..</strong> to access Prompt Chains. These are multi-step workflows. The
+                extension sends the first prompt, waits for Gemini to finish generating, and automatically sends the
+                next step in the sequence. <strong>NEW:</strong> Each step can now optionally switch the AI model
+                (Fast/Thinking/Pro)
+                or select a tool (Deep Research, Create Images, etc.) before execution using the buttons next to each
+                step.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="lpxgxmjf1k" src="https://app.guideflow.com/embed/lpxgxmjf1k" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+
+            <!-- Quick Actions Subsection -->
+            <h3 id="quick-actions"
+                style="font-size: 1.3rem; margin-top: 40px; margin-bottom: 10px; color: var(--text-color);">
+                🚀 Quick Actions
+            </h3>
+            <p class="description">Configure up to 5 custom Quick Action buttons that appear directly above the chat
+                input area. Assign any prompt or chain to a button for one-click access to your most-used workflows.
+                Each button can have a custom icon and a shortcut.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.96691018478728% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="lpxgnwjc1k" src="https://app.guideflow.com/embed/lpxgnwjc1k" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Settings Menu -->
+        <div id="settings-menu" class="guide-section grp-core">
+            <h2>Settings in Sidebar</h2>
+            <p class="description">Access your controls instantly without leaving the chat. Click on the settings icon
+                in the sidebar to open the settings menu. Press <strong>Alt + S</strong> to open/close instantly.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="5pvzolgsxk" src="https://app.guideflow.com/embed/5pvzolgsxk" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Enhancements: Export -->
+        <div id="export" class="guide-section grp-input">
+            <h2>Export Button</h2>
+            <p class="description">Save your conversations instantly. You can export chats to PDF, Word (.docx), plain
+                Text, or even directly Print them or Copy them to the clipboard.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="gky2z6vu4r" src="https://app.guideflow.com/embed/gky2z6vu4r" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Enhancements: Info Button -->
+        <div id="info" class="guide-section grp-input">
+            <h2>Info Button & Notes</h2>
+            <p class="description">Get detailed statistics about your current chat (Date created, number of messages,
+                ID). You can also
+                attach private notes to any conversation for future reference.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="np11e32szp" src="https://app.guideflow.com/embed/np11e32szp" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Enhancements: Wide Chat -->
+        <div id="wide-chat" class="guide-section grp-input">
+            <h2>Wide Chat</h2>
+            <p class="description">Expand the message area to use the full width of your screen instead of the
+                narrow centered column. Toggle it on and off using the <strong>↔ button</strong> in the
+                top-right header bar (to the left of the Export button).</p>
+        </div>
+
+        <!-- Input Enhancements: Optimize -->
+        <div id="optimize" class="guide-section grp-input">
+            <h2>Prompt Optimizer</h2>
+            <p class="description">Turn simple thoughts into professional prompts. Click "Optimize" to have AI rewrite
+                your request for better clarity, context, and results.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="8kov0l2fwr" src="https://app.guideflow.com/embed/8kov0l2fwr" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. Counter -->
+        <div id="counter" class="guide-section grp-input">
+            <h2>Word/Character Counter</h2>
+            <p class="description">Track your input length in real-time. Click the counter to expand it and view
+                detailed statistics like sentence count, paragraphs, lines, and characters (with/without spaces).</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="8kov0e2twr" src="https://app.guideflow.com/embed/8kov0e2twr" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Daily Prompt Counter (own section) -->
+        <div id="daily-counter" class="guide-section grp-input">
+            <h2>Daily Prompt Counter</h2>
+            <p class="description">Keep track of your daily usage per model. The counter shows how many prompts you've
+                sent
+                using the currently selected model (Fast, Thinking, or Pro) today. The icon changes to match the active
+                model.
+                Hover over the counter to see counts for all models. The count resets automatically at midnight.</p>
+            <p class="description" style="margin-top: 15px;"><strong>📡 Sync Across Devices:</strong> Enable syncing
+                in the Daily Counter settings (gear icon) to keep your count synchronized across all your devices via
+                Chrome Sync. When enabled, your daily count stays consistent whether you're on your desktop, laptop, or
+                any other device using the same Chrome profile with the extension installed.</p>
+        </div>
+
+        <!-- 10. Scroll Buttons -->
+        <div id="scroll" class="guide-section grp-input">
+            <h2>Scroll Buttons</h2>
+            <p class="description">Navigate long threads effortlessly. Use the floating arrows to jump instantly to the
+                very top or bottom of the conversation. Double-click the down arrow to enable auto-scroll and
+                automatically follow new messages.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="1pzd384amr" src="https://app.guideflow.com/embed/1pzd384amr" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Audio -->
+        <div id="download-audio" class="guide-section grp-input">
+            <h2>Download Audio</h2>
+            <p class="description">Save AI responses as audio files. Click the download button next to the Copy button
+                on any AI response to download it as an OGG audio file. The feature uses Gemini's built-in
+                text-to-speech to generate the audio on demand.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.96691018478728% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="np11mg2izp" src="https://app.guideflow.com/embed/np11mg2izp" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="pinned-collapse" class="guide-section grp-sidebar">
+            <h2>Collapsible Pinned Chats</h2>
+            <p class="description">Reclaim vertical space in your sidebar. Collapse the Pinned chats to make room
+                for more unpinned chats in your sidebar.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="ok8q5x7uqk" src="https://app.guideflow.com/embed/ok8q5x7uqk" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TO_BE_COMMENTED_OUT_START
+        Drag Chat to Attach
+        <div id="drag-chat-attach" class="guide-section grp-sidebar">
+            <h2>Drag Chat to Attach</h2>
+            <p class="description">Quickly reference a previous conversation by dragging it from the sidebar onto
+                the input area. This generates a PDF of the dragged chat and attaches it as a file, so Gemini
+                can read and reference the full conversation context.</p>
+            <h3>How to use</h3>
+            <ol>
+                <li>Locate the chat you want to reference in the sidebar.</li>
+                <li>Click and drag it onto the text input area.</li>
+                <li>A loading overlay will appear while the chat content is extracted and a PDF is generated.</li>
+                <li>The PDF is automatically attached to your current conversation.</li>
+            </ol>
+            <p class="description"><strong>Pro feature</strong> &mdash; This feature is available exclusively to
+                Pro users. Free users will see an upgrade prompt when attempting to use it.</p>
+        </div>
+        TO_BE_COMMENTED_OUT_END -->
+
+        <!-- COMMENTED OUT: Google implemented middle-click natively -->
+        <!-- 12b. Middle Click New Tab -->
+        <!-- <div id="middle-click-new-tab" class="guide-section grp-sidebar">
+            <h2>Middle Click New Tab</h2>
+            <p class="description">Open chats in a new tab by middle-clicking them in the sidebar. When enabled
+                (default), middle-clicking a chat will open it in a new focused tab. When disabled, middle-clicking does
+                nothing.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="lpxgx34i1k" src="https://app.guideflow.com/embed/lpxgx34i1k" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div> -->
+
+        <!-- UI Declutter: Hide Premade Buttons -->
+        <div id="hide-premade-buttons" class="guide-section grp-gems">
+            <h2>Hide Premade Buttons</h2>
+            <p class="description">Declutter your new chat view. This option hides Google's premade action
+                buttons like "Create image", "Write anything", "Create video", and other suggestions that appear
+                under the input field when starting a new conversation.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.96691018478728% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="lpxgzymu1k" src="https://app.guideflow.com/embed/lpxgzymu1k" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMMENTED OUT: Google removed images from My Stuff, making this feature non-functional -->
+        <!-- <div id="my-stuff" class="guide-section grp-gems">
+            <h2>Compact My Stuff</h2>
+            <p class="description">Clean up the sidebar by hiding the large images under the "My Stuff" section.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="5pvzoyghxk" src="https://app.guideflow.com/embed/5pvzoyghxk" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div> -->
+
+        <!-- UI Declutter: Location Info -->
+        <div id="location-info" class="guide-section grp-gems">
+            <h2>Hide Location Info</h2>
+            <p class="description">Maximize your sidebar real estate. Hiding the location info at the bottom frees up
+                space to display more chats in your sidebar.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="3r30j19t9r" src="https://app.guideflow.com/embed/3r30j19t9r" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- UI Declutter: Activity -->
+        <div id="activity" class="guide-section grp-gems">
+            <h2>Hide Activity</h2>
+            <p class="description">Remove the "Activity" button from the bottom of the sidebar to gain extra vertical
+                space for your chats.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="lpxgxnmb1k" src="https://app.guideflow.com/embed/lpxgxnmb1k" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- UI Declutter: Hide Gems (General) -->
+        <div id="hide-gems" class="guide-section grp-gems">
+            <h2>Hide Gems (Master Toggle)</h2>
+            <p class="description">Completely hide the Gems interface to remove distractions and maximize the space
+                available for your chats in sidebar.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="dr9m5xxunp" src="https://app.guideflow.com/embed/dr9m5xxunp" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- UI Declutter: Hide Premade Gems Gallery -->
+        <div id="hide-gems-gallery" class="guide-section grp-gems">
+            <h2>Hide Premade Gems (Gallery)</h2>
+            <p class="description">Hide Google's default premade gems from the main view when you open the Gem Manager,
+                keeping it focused on your custom creations.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(51.611635220125784% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="zkl32w6ujk" src="https://app.guideflow.com/embed/zkl32w6ujk" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- UI Declutter: Hide Premade Gems Sidebar -->
+        <div id="hide-gems-sidebar" class="guide-section grp-gems">
+            <h2>Hide Premade Gems (Sidebar)</h2>
+            <p class="description">Remove the default premade gems from the sidebar navigation. This clears up
+                significant space for your custom gems and chats in sidebar.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="vkm5o8lu2r" src="https://app.guideflow.com/embed/vkm5o8lu2r" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Message Queue -->
+        <div id="queue" class="guide-section grp-queue">
+            <h2>Message Queue</h2>
+            <p class="description">Never stop typing. Superpower for Gemini allows you to queue up multiple messages
+                while
+                the AI is still generating, ensuring you never lose your flow.</p>
+
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 30px 0;">
+
+            <!-- Queue Logic -->
+            <h3 class="subsection-title">⏳ Smart Queue</h3>
+            <p class="description">If Gemini is busy, simply type your next message and hit Enter. The extension
+                automatically captures it and sends it the instant Gemini is ready. You can queue as many prompts as you
+                need.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="9r28vy8tzr" src="https://app.guideflow.com/embed/9r28vy8tzr" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+
+            <!-- Queue Window -->
+            <h3 class="subsection-title-spaced">📋 Queue
+                Window</h3>
+            <p class="description">Stay in control. When messages are pending, a floating status window appears in the
+                bottom right corner. It allows you to see exactly what is waiting and lets you cancel individual
+                messages
+                if you change your mind.</p>
+        </div>
+
+
+
+
+        <!-- Experimental: Timestamps -->
+        <div id="timestamps" class="guide-section grp-experimental">
+            <h2>Message Timestamps ⚠️</h2>
+            <p class="description"><strong style="color: #f59e0b;">Experimental Feature:</strong> This feature is still
+                being refined and may not work perfectly on all chats.</p>
+            <p class="description">Display timestamps next to each message showing when it was sent. For new messages,
+                the exact time is recorded. For older messages opened after install, timestamps show "--:--" since the
+                original time is unknown.</p>
+            <p class="description" style="margin-top: 15px;"><strong>Note:</strong> This feature is disabled by default.
+                Enable it in Settings → Experimental to try it out.</p>
+        </div>
+
+        <!-- TO_BE_COMMENTED_OUT_START
+        Pro: Free vs Pro
+        <div id="pro" class="guide-section grp-shortcuts">
+            <h2>Free vs Pro ✨</h2>
+            <p class="description">Superpower for Gemini is free to use with generous limits. Upgrade to Pro for unlimited
+                access and exclusive features.</p>
+
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 30px 0;">
+
+            <h3 class="subsection-title">🆓 Free Tier</h3>
+            <p class="description">All core features are available for free, with the following usage limits:</p>
+            <ul style="margin-left: 20px; margin-top: 10px; color: var(--secondary-text); line-height: 1.8;">
+                <li><strong>Folders</strong> — Up to 3 folders</li>
+                <li><strong>Custom Prompts</strong> — Up to 5 saved prompts</li>
+                <li><strong>Prompt Chains</strong> — Up to 3 saved chains</li>
+                <li><strong>Optimize Prompt</strong> — 3 uses per day</li>
+                <li><strong>Export Chat</strong> — 3 exports per day</li>
+                <li><strong>Message Queue</strong> — Up to 1 queued message at once</li>
+            </ul>
+
+            <h3 class="subsection-title-spaced">👑 Pro Tier</h3>
+            <p class="description">Unlock unlimited access to everything:</p>
+            <ul style="margin-left: 20px; margin-top: 10px; color: var(--secondary-text); line-height: 1.8;">
+                <li><strong>Unlimited</strong> folders, prompts, chains, exports, and queue</li>
+                <li><strong>Custom Optimization Prompt</strong> — Write your own system prompt for the Optimizer</li>
+                <li>All future Pro features included</li>
+            </ul>
+
+            <h3 class="subsection-title-spaced">🔑 Activating Pro</h3>
+            <p class="description">After purchasing, you'll receive a license key. To activate:</p>
+            <ul style="margin-left: 20px; margin-top: 10px; color: var(--secondary-text); line-height: 1.8;">
+                <li>Click the <strong>Upgrade</strong> button (crown icon) in the extension settings header</li>
+                <li>Click <strong>"I have a license key"</strong> in the upgrade modal</li>
+                <li>Paste your license key and click <strong>Activate</strong></li>
+                <li>You can use one license key on up to 3 devices</li>
+            </ul>
+
+            <p class="description" style="margin-top: 15px;"><strong>Note:</strong> Daily limits reset at midnight local
+                time. Permanent limits apply until you upgrade.</p>
+        </div>
+        TO_BE_COMMENTED_OUT_END -->
+
+        <!-- 23. Native Settings -->
+        <div id="native-settings" class="guide-section grp-shortcuts">
+            <h2>Native Settings Integration</h2>
+            <p class="description">A permanent entry point injected directly into Gemini's internal "Settings & Help"
+                menu. This option cannot be hidden, ensuring you always have a "Fail-Safe" way to access your Superpower
+                settings—even if you've accidentally hidden the sidebar shortcut or the extension icon.</p>
+            <div class="guideflow-wrapper">
+                <div style="position: relative; padding-bottom:calc(50.9765625% + 47px); height: 0;">
+                    <div class="loader"></div>
+                    <iframe id="xrgmex5b1r" src="https://app.guideflow.com/embed/xrgmex5b1r" width="100%" height="100%"
+                        style="overflow:hidden;position:absolute;border:none" scrolling="no"
+                        allow="clipboard-read; clipboard-write" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        allowtransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Advanced: Anonymous Statistics -->
+        <div id="telemetry" class="guide-section grp-shortcuts">
+            <h2>Anonymous Statistics</h2>
+            <p class="description">Help us improve Superpower for Gemini by sharing anonymous usage data. When enabled,
+                the
+                extension collects basic, non-identifiable information about which features are used and how often.</p>
+
+            <h3 class="subsection-title-spaced">🔒 Your
+                Privacy is Protected</h3>
+            <ul style="margin-left: 20px; color: var(--secondary-text); line-height: 1.8;">
+                <li><strong>Completely anonymous</strong> — No personal data, emails, or accounts are ever collected
+                </li>
+                <li><strong>No chat content</strong> — We never see your prompts, responses, or conversations</li>
+                <li><strong>Random ID only</strong> — Each installation gets a random UUID that cannot be linked to you
+                </li>
+                <li><strong>Feature usage only</strong> — We only track which features are used (e.g., "Optimize button
+                    clicked")</li>
+                <li><strong>Opt-out anytime</strong> — Disable this setting to stop all data collection immediately</li>
+            </ul>
+
+            <h3 class="subsection-title-spaced">📊 What We
+                Collect</h3>
+            <p class="description">Only anonymous usage statistics like:</p>
+            <ul style="margin-left: 20px; margin-top: 10px; color: var(--secondary-text);">
+                <li>Extension installed/updated events</li>
+                <li>Feature toggle states (on/off)</li>
+                <li>Feature usage counts (e.g., how often Optimize is used)</li>
+                <li>No personally identifiable information (PII) ever</li>
+            </ul>
+        </div>
+
+        <!-- Advanced: Keyboard Shortcuts -->
+        <div id="shortcuts" class="guide-section grp-shortcuts">
+            <h2>Keyboard Shortcuts</h2>
+            <p class="description">Master Gemini with speed. Use these keyboard shortcuts to navigate and control the
+                extension without touching your mouse. You can customize them in the extension settings under "Keyboard
+                Shortcuts".</p>
+
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 30px 0;">
+
+            <!-- Focus Shortcut -->
+            <h3 class="subsection-title">⌨️ Quick Focus</h3>
+            <p class="description">Keep your hands on the keyboard. Press the <strong>/</strong> (forward slash) key at
+                any time to instantly move your cursor to the chat input box.</p>
+
+            <!-- Optimize Shortcut -->
+            <h3 class="subsection-title-spaced">🪄 Optimize
+                Prompt</h3>
+            <p class="description">Instantly improve your prompt's quality. Press <strong>Alt + O</strong> to trigger
+                the Prompt Optimizer for your current input.</p>
+
+            <!-- Fix Grammar Shortcut -->
+            <h3 class="subsection-title-spaced">✓ Fix
+                Grammar</h3>
+            <p class="description">Quickly fix spelling and grammar errors in your text. Press <strong>Alt + G</strong>
+                to send your input to AI for correction without changing the meaning or tone.</p>
+
+            <!-- Quick Open Shortcuts -->
+            <h3 class="subsection-title-spaced">📂 Quick Open</h3>
+            <p class="description">Instantly open menus without clicking:</p>
+            <ul style="margin-top: 10px; margin-left: 20px; color: var(--secondary-text);">
+                <li><strong>Alt + F</strong> — Open <strong>Folders</strong></li>
+                <li><strong>Alt + P</strong> — Open <strong>Prompt Library</strong></li>
+                <li><strong>Alt + S</strong> — Open <strong>Settings</strong></li>
+            </ul>
+
+            <!-- Model Switching Shortcuts -->
+            <h3 class="subsection-title-spaced">🔄 Switch
+                Model</h3>
+            <p class="description">Instantly switch between Gemini models without using the menu:</p>
+            <ul style="margin-top: 10px; margin-left: 20px; color: var(--secondary-text);">
+                <li><strong>Ctrl + Alt + F</strong> — Switch to <strong>Fast</strong> mode</li>
+                <li><strong>Ctrl + Alt + T</strong> — Switch to <strong>Thinking</strong> mode</li>
+                <li><strong>Ctrl + Alt + P</strong> — Switch to <strong>Pro</strong> mode</li>
+            </ul>
+
+            <!-- Tool Switching Shortcuts -->
+            <h3 class="subsection-title-spaced">🛠️ Switch
+                Tool</h3>
+            <p class="description">Quickly switch between different Gemini tools to change the type of output or
+                interaction:</p>
+            <ul style="margin-top: 10px; margin-left: 20px; color: var(--secondary-text);">
+                <li><strong>Alt + N</strong> — Switch to <strong>No Tool</strong></li>
+                <li><strong>Alt + I</strong> — Switch to <strong>Image</strong> (Create image)</li>
+                <li><strong>Alt + C</strong> — Switch to <strong>Canvas</strong></li>
+                <li><strong>Alt + R</strong> — Switch to <strong>Deep Research</strong></li>
+                <li><strong>Alt + V</strong> — Switch to <strong>Video</strong></li>
+            </ul>
+
+            <!-- Open Gemini Shortcut -->
+            <h3 class="subsection-title-spaced">🚀 Open Gemini</h3>
+            <p class="description">Quickly open Gemini in a new tab from anywhere. Press <strong>Alt + Shift +
+                    G</strong>
+                to launch Gemini. This shortcut works globally, even when you're not on the Gemini page.</p>
+
+            <!-- Toggle Sidebar Shortcut -->
+            <h3 class="subsection-title-spaced">📌 Toggle Sidebar</h3>
+            <p class="description">Quickly show or hide the Gemini sidebar. Press <strong>Alt + Q</strong> to toggle the
+                sidebar visibility without using your mouse.</p>
+
+            <!-- Open Custom Instructions Shortcut -->
+            <h3 class="subsection-title-spaced">💡 Open Custom Instructions</h3>
+            <p class="description">Navigate directly to your custom instructions page. Press <strong>Ctrl + Alt +
+                    I</strong> to
+                instantly open the custom instructions editor. This shortcut is disabled by default—enable it in the
+                Keyboard
+                Shortcuts settings.</p>
+
+            <!-- Open New Chat Shortcut -->
+            <h3 class="subsection-title-spaced">➕ Open New Chat</h3>
+            <p class="description">Instantly start a fresh conversation. Press <strong>Ctrl + Alt + N</strong> to
+                open a new chat window, preserving your language settings (like hl=cs). This shortcut is disabled by
+                default—enable it in the
+                Keyboard Shortcuts settings.</p>
+        </div>
+
+        <!-- Advanced: Model Settings -->
+        <div id="model-settings" class="guide-section grp-shortcuts">
+            <h2>Model Settings</h2>
+            <p class="description">Customize which AI model is used for specific features and set a default model when
+                opening Gemini.</p>
+
+            <h3 class="subsection-title-spaced">🚀 Default Model</h3>
+            <p class="description">Automatically switch to your preferred model when opening Gemini:</p>
+            <ul style="margin-top: 10px; margin-left: 20px; color: var(--secondary-text);">
+                <li><strong>None</strong> — Don't switch (keep last used model)</li>
+                <li><strong>Fast</strong> — Always start with Fast mode</li>
+                <li><strong>Thinking</strong> — Always start with Thinking mode</li>
+                <li><strong>Pro</strong> — Always start with Pro mode</li>
+            </ul>
+
+            <h3 class="subsection-title-spaced">🤖 Optimization Model</h3>
+            <p class="description">Choose which Gemini model to use when you click the "Optimize" button or press
+                <strong>Alt + O</strong>:
+            </p>
+            <ul style="margin-top: 10px; margin-left: 20px; color: var(--secondary-text);">
+                <li><strong>Fast</strong> — Quick optimization with Fast mode</li>
+                <li><strong>Thinking</strong> — Slower optimization with Thinking mode</li>
+                <li><strong>Pro</strong> — Slowest optimization with Pro mode</li>
+            </ul>
+
+            <h3 class="subsection-title-spaced">🔒 Temporary Chat Model</h3>
+            <p class="description">Automatically switch to your preferred model when starting a temporary chat:</p>
+            <ul style="margin-top: 10px; margin-left: 20px; color: var(--secondary-text);">
+                <li><strong>None</strong> — Don't switch (use default Fast mode)</li>
+                <li><strong>Fast</strong> — Use Fast mode for temporary chats</li>
+                <li><strong>Thinking</strong> — Use Thinking mode for temporary chats</li>
+                <li><strong>Pro</strong> — Use Pro mode for temporary chats</li>
+            </ul>
+
+            <p class="description" style="margin-top: 15px;">Access these settings by clicking
+                <strong>Configure</strong> next to "Model Settings" in the Advanced section of your extension settings
+                (popup or sidebar).
+            </p>
+        </div>
+
+
+        <div class="nav-buttons">
+            <button class="back-link" id="back-to-gemini">← Back to Gemini</button>
+        </div>
+    </div>
+
+    <div class="scroll-buttons">
+        <button class="scroll-btn" id="scroll-to-top" title="Scroll to Top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 15l-6-6-6 6" />
+            </svg>
+        </button>
+        <button class="scroll-btn" id="scroll-to-bottom" title="Scroll to Bottom">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M6 9l6 6 6-6" />
+            </svg>
+        </button>
+    </div>
+
+    <script src="guide.js"></script>
+</body>
+
+</html>

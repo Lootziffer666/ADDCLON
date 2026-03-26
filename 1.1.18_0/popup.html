@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superpower for Gemini</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header with Icon, Name, Version -->
+        <div class="header">
+            <a href="guide.html" target="_blank" class="header-link">
+                <div class="header-content">
+                    <div data-tooltip-fast-bottom="Open Extension guide" style="display: flex;">
+                        <img src="icons/icon48.png" alt="Superpower for Gemini" class="header-icon">
+                    </div>
+                    <div class="header-text">
+                        <div style="display: flex; align-items: baseline; gap: 6px;">
+                            <h1>Superpower for Gemini</h1>
+                            <span class="version" id="extension-version">v1.0.0</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px; margin-top: 2px;">
+                            <button id="bug-report-btn" class="bug-report-btn" data-tooltip-fast="Report a Bug">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z" />
+                                </svg>
+                            </button>
+                            <!-- <a href="https://sites.google.com/view/superpower-gemini/home" target="_blank"
+                                class="bug-report-btn" data-tooltip-fast="Open Homepage"
+                                style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                                </svg>
+                            </a> -->
+                            <a href="#" id="propose-btn" target="_blank" class="bug-report-btn"
+                                data-tooltip-fast="Propose Features"
+                                style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V16c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-1.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7z" />
+                                    <rect x="9" y="18" width="6" height="1.5" rx="0.5" />
+                                    <rect x="9" y="20.5" width="6" height="1.5" rx="0.5" />
+                                </svg>
+                            </a>
+                            <a href="guide.html" target="_blank" class="bug-report-btn" data-tooltip-fast="Open Guide"
+                                style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z" />
+                                </svg>
+                            </a>
+                            <!-- TO_BE_COMMENTED_OUT_START
+                            <button id="sg-upgrade-btn" class="sg-upgrade-btn" data-tooltip-fast="Upgrade to Pro">
+                                <span class="sg-upgrade-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M5 16h14v2H5v-2zm14-9-4 2-3-4-3 4-4-2 3.32 6.64C7.52 14.04 7.95 14 8.4 14h7.2c.45 0 .88.04 1.08.36L20 7z" />
+                                    </svg>
+                                </span><span class="sg-upgrade-text">Upgrade</span>
+                            </button>
+                            TO_BE_COMMENTED_OUT_END -->
+                            <!-- Donate button commented out until URL is ready
+                            <a href="https://example.com/donate" target="_blank" class="bug-report-btn"
+                                data-tooltip-fast="Donate"
+                                style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                            </a>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="content">
+            <!-- Master Extension Toggle -->
+            <div class="master-toggle-section">
+                <div class="toggle-row master-row"
+                    data-tooltip="Master switch to enable or disable all Superpower for Gemini features.">
+                    <label for="extension-toggle">Extension Enabled</label>
+                    <a href="guide.html" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Extension guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="extension-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Superpower Menu Section -->
+            <div class="settings-section" id="menu-settings">
+                <h3>Superpower Menu</h3>
+                <div class="toggle-row" data-tooltip="Toggle the custom sidebar menu for Folders and Prompts.">
+                    <label for="sidebar-dropdown-toggle">Show Superpower Menu</label>
+                    <a href="guide.html#menu" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Superpower Menu guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="sidebar-dropdown-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-row" data-tooltip="Create and manage folders to organize your chat history.">
+                    <label for="folders-toggle">Enable Folders</label>
+                    <a href="guide.html#folders" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open folders and subfolders guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="folders-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-row indentation-level-1"
+                    data-tooltip="Enable the Recycle Bin to restore deleted chats.">
+                    <label for="trashcan-toggle">Enable Trashcan</label>
+                    <a href="guide.html#trashcan" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Trashcan guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="trashcan-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-row" data-tooltip="Access and save your custom prompt templates.">
+                    <label for="prompts-toggle">Enable Prompts Library</label>
+                    <a href="guide.html#prompts" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Prompts Library guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="prompts-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <!-- Settings Menu Toggle -->
+                <div class="toggle-row" data-tooltip="Toggle the 'Settings' item in the Superpower Menu.">
+                    <label for="settings-menu-toggle">Show Settings in Menu</label>
+                    <a href="guide.html#settings-menu" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Settings guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="settings-menu-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Input Enhancements Section (includes Header Buttons) -->
+            <div class="settings-section" id="input-settings">
+                <h3>Input Enhancements</h3>
+                <div class="toggle-row" data-tooltip="Export chats to PDF, DOCX, or Text files.">
+                    <label for="export-btn-toggle">Show Export Button</label>
+                    <a href="guide.html#export" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Export button guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="export-btn-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-row" data-tooltip="View chat details, message counts, and save custom notes.">
+                    <label for="info-btn-toggle">Show Info Button</label>
+                    <a href="guide.html#info" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Info button guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="info-btn-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-row" data-tooltip="Show the wide chat toggle button in the header bar.">
+                    <label for="wide-chat-btn-toggle">Wide Chat Button</label>
+                    <a href="guide.html#wide-chat" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Wide Chat guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="wide-chat-btn-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-row" data-tooltip="Automatically rewrite and improve your prompts using AI.">
+                    <label for="optimize-toggle">Optimize Button</label>
+                    <a href="guide.html#optimize" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Prompt Optimizer guide">?</span></a>
+                    <!-- TO_BE_COMMENTED_OUT_START
+                    <button class="sg-gear-btn" id="optimize-gear-btn" data-tooltip-fast="Optimization Prompt Settings">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z" />
+                        </svg>
+                    </button>
+                    TO_BE_COMMENTED_OUT_END -->
+                    <label class="switch">
+                        <input type="checkbox" id="optimize-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <!-- TO_BE_COMMENTED_OUT_START
+                <div class="sg-gear-dropdown" id="optimize-gear-dropdown">
+                    <div class="sg-gear-dropdown-inner">
+                        <div class="sg-gear-dropdown-content">
+                            <div class="shortcuts-row">
+                                <span style="display: flex; align-items: center; gap: 0;">Optimization Prompt
+                                    <button class="sg-pro-btn" id="optimize-prompt-pro-crown"
+                                        data-tooltip-fast="Pro Feature Only">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <path
+                                                d="M5 16h14v2H5v-2zm14-9-4 2-3-4-3 4-4-2 3.32 6.64C7.52 14.04 7.95 14 8.4 14h7.2c.45 0 .88.04 1.08.36L20 7z" />
+                                        </svg>
+                                    </button>
+                                </span>
+                                <button id="optimize-prompt-configure-btn" class="action-btn">Configure</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                TO_BE_COMMENTED_OUT_END -->
+                <div class="toggle-row" data-tooltip="Real-time statistics for your current input.">
+                    <label for="counter-toggle">Word/Character Counter</label>
+                    <a href="guide.html#counter" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Word Counter guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="counter-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-row indentation-level-1"
+                    data-tooltip="Show daily count of prompts per model (Fast/Thinking/Pro).">
+                    <label for="daily-counter-toggle">Show Daily Prompt Counter</label>
+                    <a href="guide.html#daily-counter" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Daily Prompt Counter guide">?</span></a>
+                    <button class="sg-gear-btn" id="daily-counter-gear-btn" data-tooltip-fast="Daily Counter Settings">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z" />
+                        </svg>
+                    </button>
+                    <label class="switch">
+                        <input type="checkbox" id="daily-counter-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="sg-gear-dropdown" id="daily-counter-gear-dropdown">
+                    <div class="sg-gear-dropdown-inner">
+                        <div class="sg-gear-dropdown-content">
+                            <div class="toggle-row"
+                                data-tooltip="Sync daily count across all your devices using Chrome sync.">
+                                <label for="sync-daily-counter-toggle">Sync Across Devices</label>
+                                <a href="guide.html#daily-counter" target="_blank" class="sg-help-link"><span
+                                        class="sg-help-btn" data-tooltip-fast="Open Daily Counter guide">?</span></a>
+                                <label class="switch">
+                                    <input type="checkbox" id="sync-daily-counter-toggle">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="toggle-row" data-tooltip="Quick navigation to jump to the top or bottom of long chats.">
+                    <label for="scroll-toggle">Scroll Buttons</label>
+                    <a href="guide.html#scroll" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Scroll Buttons guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="scroll-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-row" data-tooltip="Download AI responses as audio files (OGG format).">
+                    <label for="download-audio-toggle">Download Audio</label>
+                    <a href="guide.html#download-audio" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Download Audio guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="download-audio-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Sidebar Section (simplified) -->
+            <div class="settings-section" id="sidebar-settings">
+                <h3>Sidebar</h3>
+                <div class="toggle-row" data-tooltip="Save space by collapsing the pinned conversations section.">
+                    <label for="pinned-collapse-toggle">Collapsible Pinned Chats</label>
+                    <a href="guide.html#pinned-collapse" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Pinned Chats guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="pinned-collapse-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <!-- TO_BE_COMMENTED_OUT_START
+                <div class="toggle-row"
+                    data-tooltip="Drag a sidebar chat onto the input area to attach it as a PDF reference. Pro feature.">
+                    <label for="drag-chat-input-toggle">Reference Chats by Dragging</label>
+                    <button class="sg-pro-btn" id="drag-chat-pro-crown" data-tooltip-fast="Pro Feature Only">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M5 16h14v2H5v-2zm14-9-4 2-3-4-3 4-4-2 3.32 6.64C7.52 14.04 7.95 14 8.4 14h7.2c.45 0 .88.04 1.08.36L20 7z" />
+                        </svg>
+                    </button>
+                    <a href="guide.html#drag-chat-attach" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Reference Chats by Dragging guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="drag-chat-input-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                TO_BE_COMMENTED_OUT_END -->
+                <!-- COMMENTED OUT: Google implemented middle-click natively -->
+                <!-- <div class="toggle-row"
+                    data-tooltip="Middle-click chats in the sidebar to open them in a new focused tab.">
+                    <label for="middle-click-toggle">Middle Click New Tab</label>
+                    <a href="guide.html#middle-click-new-tab" target="_blank" class="sg-help-link"><span
+                            class="sg-help-btn" data-tooltip-fast="Open Middle Click New Tab guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="middle-click-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div> -->
+            </div>
+
+            <!-- UI Declutter Section (new consolidated section) -->
+            <div class="settings-section" id="declutter-settings">
+                <h3>UI Declutter</h3>
+                <div class="toggle-row"
+                    data-tooltip="Hide Google's premade action buttons like 'Create image', 'Write anything', etc.">
+                    <label for="hide-premade-buttons-toggle">Hide Premade Buttons</label>
+                    <a href="guide.html#hide-premade-buttons" target="_blank" class="sg-help-link"><span
+                            class="sg-help-btn" data-tooltip-fast="Open Hide Premade Buttons guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="hide-premade-buttons-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <!-- COMMENTED OUT: Google removed images from My Stuff, making this feature non-functional -->
+                <!-- <div class="toggle-row"
+                    data-tooltip="Hide the images and previews in 'My Stuff' but keep the button visible.">
+                    <label for="hide-my-stuff-toggle">Compact "My Stuff"</label>
+                    <a href="guide.html#my-stuff" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Compact My Stuff guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="hide-my-stuff-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div> -->
+                <div class="toggle-row"
+                    data-tooltip="Hide the city and country location information at the bottom of the sidebar.">
+                    <label for="location-info-toggle">Hide Location Info</label>
+                    <a href="guide.html#location-info" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Hide Location Info guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="location-info-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-row" data-tooltip="Hide the 'Activity' button at the bottom of the sidebar.">
+                    <label for="activity-toggle">Hide Activity</label>
+                    <a href="guide.html#activity" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Hide Activity guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="activity-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-row" data-tooltip="Hide the entire Gems section from the sidebar.">
+                    <label for="hide-gems-button-toggle">Hide Gems</label>
+                    <a href="guide.html#hide-gems" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Hide Gems guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="hide-gems-button-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-row" data-tooltip="Remove Google's default gems from the Gem Gallery.">
+                    <label for="hide-gems-gallery-toggle">Hide Premade Gems (Gallery)</label>
+                    <a href="guide.html#hide-gems-gallery" target="_blank" class="sg-help-link"><span
+                            class="sg-help-btn" data-tooltip-fast="Open Hide Gems Gallery guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="hide-gems-gallery-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-row" data-tooltip="Remove Google's default gems from the sidebar.">
+                    <label for="hide-gems-sidebar-toggle">Hide Premade Gems (Sidebar)</label>
+                    <a href="guide.html#hide-gems-sidebar" target="_blank" class="sg-help-link"><span
+                            class="sg-help-btn" data-tooltip-fast="Open Hide Gems Sidebar guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="hide-gems-sidebar-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Queue Controls Section -->
+            <div class="settings-section" id="queue-settings" style="display: none;">
+                <h3>Message Queue</h3>
+                <div class="toggle-row"
+                    data-tooltip="Enable message queueing for sending multiple prompts in sequence. You can press 'Enter' to send the next prompt, while Gemini is still generating.">
+                    <label for="queue-toggle">Enable Queueing</label>
+                    <a href="guide.html#queue" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Message Queue guide">?</span></a>
+                    <button class="sg-gear-btn" id="queue-gear-btn" data-tooltip-fast="Queue Settings">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z" />
+                        </svg>
+                    </button>
+                    <label class="switch">
+                        <input type="checkbox" id="queue-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="sg-gear-dropdown" id="queue-gear-dropdown">
+                    <div class="sg-gear-dropdown-inner">
+                        <div class="sg-gear-dropdown-content">
+                            <div class="toggle-row" data-tooltip="Show the queue status window.">
+                                <label for="show-queue-toggle">Show Queue Window</label>
+                                <a href="guide.html#queue" target="_blank" class="sg-help-link"><span
+                                        class="sg-help-btn" data-tooltip-fast="Open Queue guide">?</span></a>
+                                <label class="switch">
+                                    <input type="checkbox" id="show-queue-toggle">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experimental Section -->
+            <div class="settings-section" id="experimental-settings">
+                <h3>Experimental <span data-tooltip-fast="These features may not work perfectly"
+                        style="cursor: help; color: var(--text-hint); margin-left: 24px;">*</span></h3>
+                <div class="toggle-row"
+                    data-tooltip="Show the exact time each message was sent. (Experimental - may show incorrect times for old chats)">
+                    <label for="timestamps-toggle">Message Timestamps</label>
+                    <a href="guide.html#timestamps" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Timestamps guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="timestamps-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Advanced Section -->
+            <div class="settings-section" id="advanced-settings">
+                <h3>Advanced</h3>
+                <div class="toggle-row"
+                    data-tooltip="Send anonymous usage statistics to help improve the extension. No personal data is ever collected.">
+                    <label for="telemetry-toggle">Anonymous Statistics</label>
+                    <a href="guide.html#telemetry" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Telemetry guide">?</span></a>
+                    <label class="switch">
+                        <input type="checkbox" id="telemetry-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="shortcuts-row">
+                    <span>Keyboard Shortcuts</span>
+                    <a href="guide.html#shortcuts" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Keyboard Shortcuts guide">?</span></a>
+                    <button id="shortcuts-btn" class="action-btn">Configure</button>
+                </div>
+                <div class="shortcuts-row" style="margin-top: 12px;">
+                    <span>Model Settings</span>
+                    <a href="guide.html#model-settings" target="_blank" class="sg-help-link"><span class="sg-help-btn"
+                            data-tooltip-fast="Open Model Settings guide">?</span></a>
+                    <button id="model-settings-btn" class="action-btn">Configure</button>
+                </div>
+            </div>
+
+            <!-- Refresh Notice -->
+            <p class="hint" style="text-align: center; margin-top: 12px;">You may need to refresh to see changes
+            </p>
+        </div>
+    </div>
+
+    <!-- Warning Modal -->
+    <div id="warning-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content warning-modal">
+            <div class="modal-header">
+                <h3 id="warning-title">Warning ⚠️</h3>
+                <button class="modal-close-btn" id="warning-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="warning-main-text" style="font-weight: 500; margin-bottom: 10px;">Are you sure you want to
+                    disable Superpower for Gemini?</p>
+                <p id="warning-sub-text" style="font-size: 13px; color: var(--text-hint); line-height: 1.5;">When
+                    disabled, the settings menu will disappear from the sidebar. You can still access settings by
+                    clicking the extension icon or the 'Settings & Help' button at the bottom left > 'Superpower for
+                    Gemini
+                    Settings'.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="warning-cancel-btn" class="secondary-btn">Cancel</button>
+                <button id="warning-confirm-btn" class="primary-btn">Disable</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shortcuts Modal -->
+    <div id="shortcuts-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content shortcuts-modal">
+            <div class="modal-header">
+                <h3>Keyboard Shortcuts</h3>
+                <button class="modal-close-btn" id="shortcuts-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Optimize Prompt</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="optimize-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="optimize-shortcut-input" tabindex="0">Alt+O</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Fix Grammar</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="grammar-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="grammar-shortcut-input" tabindex="0">Alt+G</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Open Folders</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="folders-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="folders-shortcut-input" tabindex="0">Alt+F</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Open Prompt Library</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="prompts-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="prompts-shortcut-input" tabindex="0">Alt+P</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Focus Input</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="focus-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="focus-shortcut-input" tabindex="0">/</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Switch to Fast</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="fast-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="fast-shortcut-input" tabindex="0">Ctrl+Alt+F</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Switch to Thinking</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="thinking-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="thinking-shortcut-input" tabindex="0">Ctrl+Alt+T</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Switch to Pro</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="pro-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="pro-shortcut-input" tabindex="0">Ctrl+Alt+P</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Switch to Image</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="image-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="image-shortcut-input" tabindex="0">Alt+I</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Switch to No Tool</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="no-tool-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="no-tool-shortcut-input" tabindex="0">Alt+N</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Toggle Deep Research</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="deep-research-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="deep-research-shortcut-input" tabindex="0">Alt+R</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Toggle Canvas</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="canvas-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="canvas-shortcut-input" tabindex="0">Alt+C</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Toggle Video</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="video-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="video-shortcut-input" tabindex="0">Alt+V</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Toggle Music</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="music-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="music-shortcut-input" tabindex="0">Alt+M</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Toggle Sidebar</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="sidebar-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="sidebar-shortcut-input" tabindex="0">Alt+Q</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Open Custom Instructions</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="instructions-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="instructions-shortcut-input" tabindex="0">Ctrl+Alt+I</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Open New Chat</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="newchat-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="newchat-shortcut-input" tabindex="0">Ctrl+Alt+N</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+                <div class="shortcut-item">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label>Toggle Temp Chat</label>
+                        <label class="switch switch-sm">
+                            <input type="checkbox" id="temp-chat-shortcut-enabled">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="shortcut-key-input" id="temp-chat-shortcut-input" tabindex="0">Alt+T</div>
+                    <span class="shortcut-hint">Click and press new shortcut</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="shortcuts-reset-btn" class="secondary-btn">Reset to Default</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Model Settings Modal -->
+    <div id="model-settings-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content" style="width: 300px;">
+            <div class="modal-header">
+                <h3>Model Settings</h3>
+                <button class="modal-close-btn" id="model-settings-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-item">
+                    <label for="default-model-select"
+                        style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--text-label);">Default
+                        Model</label>
+                    <p style="font-size: 12px; color: var(--text-hint); margin-bottom: 12px;">Automatically switch to
+                        this model when opening Gemini.</p>
+                    <select id="default-model-select"
+                        style="width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--modal-bg); color: var(--text-main); font-size: 14px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; cursor: pointer; outline: none;">
+                        <option value="none">None (don't switch)</option>
+                        <option value="flash">Fast</option>
+                        <option value="thinking">Thinking</option>
+                        <option value="pro">Pro</option>
+                    </select>
+                </div>
+                <div class="setting-item" style="margin-top: 16px;">
+                    <label for="optimize-model-select"
+                        style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--text-label);">Optimization
+                        Model</label>
+                    <p style="font-size: 12px; color: var(--text-hint); margin-bottom: 12px;">Choose which model to use
+                        when optimizing prompts.</p>
+                    <select id="optimize-model-select"
+                        style="width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--modal-bg); color: var(--text-main); font-size: 14px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; cursor: pointer; outline: none;">
+                        <option value="flash">Fast</option>
+                        <option value="thinking">Thinking</option>
+                        <option value="pro">Pro</option>
+                    </select>
+                </div>
+                <div class="setting-item" style="margin-top: 16px;">
+                    <label for="temp-chat-model-select"
+                        style="display: block; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--text-label);">Temporary
+                        Chat Model</label>
+                    <p style="font-size: 12px; color: var(--text-hint); margin-bottom: 12px;">Automatically switch to
+                        this model when starting a temporary chat.</p>
+                    <select id="temp-chat-model-select"
+                        style="width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--modal-bg); color: var(--text-main); font-size: 14px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; cursor: pointer; outline: none;">
+                        <option value="none">None (don't switch)</option>
+                        <option value="fast">Fast</option>
+                        <option value="thinking">Thinking</option>
+                        <option value="pro">Pro</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

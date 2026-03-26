@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grok Media Downloader</title>
+    <style>
+        body {
+            width: 320px;
+            padding: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 18px;
+            margin: 0 0 16px 0;
+            color: #1a1a1a;
+        }
+
+        .status {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 16px;
+            font-size: 13px;
+        }
+
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .status-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .status-label {
+            color: #666;
+        }
+
+        .status-value {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 8px;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-primary {
+            background: #1a73e8;
+            color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: #1557b0;
+        }
+
+        .btn-success {
+            background: #34a853;
+            color: white;
+        }
+
+        .btn-success:hover:not(:disabled) {
+            background: #2d8e47;
+        }
+
+        .btn-secondary {
+            background: #e8e8e8;
+            color: #1a1a1a;
+        }
+
+        .btn-secondary:hover:not(:disabled) {
+            background: #d8d8d8;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover:not(:disabled) {
+            background: #c82333;
+        }
+
+        .resume-info {
+            font-size: 12px;
+            color: #0d6efd;
+            padding: 4px 8px;
+            margin-top: 4px;
+            background: #e8f0fe;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .remove-favorites-section {
+            background: #fff3cd;
+            border-left: 3px solid #ffc107;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .message {
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            font-size: 13px;
+            display: none;
+        }
+
+        .message.info {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .message.error {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        .filter-info {
+            background: #e8f4fd;
+            border-left: 3px solid #1a73e8;
+            padding: 10px;
+            margin-bottom: 12px;
+            border-radius: 4px;
+        }
+
+        .progress {
+            margin-bottom: 16px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #1a73e8;
+            transition: width 0.3s;
+            border-radius: 4px;
+        }
+
+        .progress-text {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+
+        .divider {
+            height: 1px;
+            background: #e0e0e0;
+            margin: 16px 0;
+        }
+
+        .footer {
+            font-size: 11px;
+            color: #999;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .media-type-selector {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 16px;
+        }
+
+        .checkbox-label {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 16px;
+            cursor: pointer;
+            font-size: 14px;
+            user-select: none;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            margin-right: 6px;
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+        }
+
+        .checkbox-label span {
+            color: #1a1a1a;
+        }
+
+        .date-filter-selector {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 16px;
+        }
+
+        .date-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .date-input {
+            padding: 8px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            font-size: 13px;
+            font-family: inherit;
+        }
+
+        .date-input:disabled {
+            background: #e8e8e8;
+            color: #999;
+            cursor: not-allowed;
+        }
+
+        .date-input:enabled {
+            background: white;
+        }
+
+        .date-input:enabled:focus {
+            outline: none;
+            border-color: #1a73e8;
+        }
+
+        /* License & Pro Features Styles */
+        .control-group {
+            background: #f5f5f5;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .license-input-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .license-input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .small-btn {
+            padding: 8px 12px;
+            width: auto;
+            margin-bottom: 0;
+        }
+
+        .license-status {
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-badge {
+            background: #ffd700;
+            color: #000;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .pro-lock-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            cursor: pointer;
+            z-index: 10;
+            backdrop-filter: blur(2px);
+        }
+
+        .pro-lock-overlay span {
+            background: #333;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Collapsible Section Styles */
+        .collapsible-section {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .collapsible-section summary {
+            padding: 10px 12px;
+            background: #f8f9fa;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+            list-style: none;
+        }
+
+        .collapsible-section summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .collapsible-section summary::after {
+            content: '▼';
+            font-size: 10px;
+            color: #666;
+            transition: transform 0.2s;
+        }
+
+        .collapsible-section[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .collapsible-section summary:hover {
+            background: #f0f0f0;
+        }
+
+        .collapsible-section .section-content {
+            padding: 12px;
+            background: #fff;
+        }
+
+        .collapsible-section.pro-section summary {
+            background: linear-gradient(135deg, #f5f5f5 0%, #fffde7 100%);
+        }
+
+        .collapsible-section.pro-section summary .pro-badge {
+            background: #ffd700;
+            color: #000;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+
+        /* Compact Mode Toggle */
+        .header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .header-row h1 {
+            margin: 0;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .compact-toggle {
+            width: auto !important;
+            background: #f0f0f0;
+            border: 1px solid #d0d0d0;
+            border-radius: 6px;
+            padding: 4px 8px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            flex-shrink: 0;
+            margin-bottom: 0;
+        }
+
+        .compact-toggle:hover {
+            background: #e0e0e0;
+        }
+
+        .compact-toggle.active {
+            background: #1a73e8;
+            color: white;
+            border-color: #1a73e8;
+        }
+
+        /* Hide sections in compact mode */
+        body.compact-mode .advanced-section {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-row">
+        <h1 data-i18n="popupTitle">🎬 Grok Media Downloader</h1>
+        <button id="compactToggle" class="compact-toggle" title="Toggle compact mode">
+            <span id="compactIcon">📦</span><span id="compactLabel" data-i18n="btnCompact">簡</span>
+        </button>
+    </div>
+
+    <!-- Sidepanel Toggle -->
+    <div style="display: flex; gap: 6px; margin-bottom: 8px;">
+        <button id="storyModeHelperBtn" class="btn-primary" style="flex: 1; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            🛠️ Story Mode
+        </button>
+        <button id="queuePanelBtn" class="btn-primary" style="flex: 1; background: linear-gradient(135deg, #f2994a 0%, #f2c94c 100%); color: #333;">
+            🎯 Queue
+        </button>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <div id="filterInfo" class="filter-info" style="display: none;">
+        <div style="font-size: 12px; color: #666; margin-bottom: 4px;" data-i18n="filterInfoTitle">📋 Current Filters:
+        </div>
+        <div id="filterInfoText" style="font-size: 12px; color: #1a73e8; font-weight: 500;"></div>
+    </div>
+
+    <!-- Status Section -->
+    <details class="collapsible-section" id="statusSection" open>
+        <summary><span data-i18n="sectionStatus">📊 Status</span></summary>
+        <div class="section-content">
+            <div class="status" id="status" style="margin-bottom: 0;">
+                <div class="status-item" style="opacity: 0.6; font-size: 11px;">
+                    <span class="status-label"></span>
+                    <span class="status-value" data-i18n="statusTotalSlashDown">Total / Downloaded / Need</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label" data-i18n="statusImages">🖼️ Images</span>
+                    <span class="status-value"><span id="imageTotal">-</span> / <span id="imageDownloaded">-</span> / <span id="imageNeed">-</span></span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label" data-i18n="statusSdVideos">🎬 SD Videos</span>
+                    <span class="status-value"><span id="sdVideoTotal">-</span> / <span id="sdVideoDownloaded">-</span> / <span id="sdVideoNeed">-</span></span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label" data-i18n="status720pVideos">🎥 720p Videos</span>
+                    <span class="status-value"><span id="v720pTotal">-</span> / <span id="v720pDownloaded">-</span> / <span id="v720pNeed">-</span></span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label" data-i18n="statusHdVideos">✨ HD Videos</span>
+                    <span class="status-value"><span id="hdVideoTotal">-</span> / <span id="hdVideoDownloaded">-</span> / <span id="hdVideoNeed">-</span></span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label" data-i18n="statusProjects">📂 Projects</span>
+                    <span class="status-value"><span id="projectCount">-</span></span>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #e0e0e0; margin: 8px 0;"></div>
+            <div class="status" style="margin-bottom: 0;">
+                <div class="status-item">
+                    <span class="status-label" data-i18n="statusPhase">Current Phase</span>
+                    <span class="status-value" id="currentPhase">-</span>
+                </div>
+                <div class="status-item" id="phaseSummaryRow" style="display: none;">
+                    <span class="status-label"></span>
+                    <span class="status-value" id="phaseSummary">-</span>
+                </div>
+            </div>
+            <div class="progress" id="progress" style="display: none; margin-top: 12px; margin-bottom: 0;">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressText">0%</div>
+            </div>
+        </div>
+    </details>
+
+    <!-- Media Type Section -->
+    <details class="collapsible-section" id="mediaTypeSection" open>
+        <summary><span data-i18n="sectionMediaType">🎬 Media Types</span></summary>
+        <div class="section-content">
+            <label class="checkbox-label">
+                <input type="checkbox" id="includeImages" checked>
+                <span data-i18n="mediaTypeImages">🖼️ Images</span>
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" id="includeVideos" checked>
+                <span data-i18n="mediaTypeVideos">🎬 Videos</span>
+                <span id="videoLockIcon" style="display: none; margin-left: 4px; font-size: 12px;">🔒</span>
+            </label>
+        </div>
+    </details>
+
+    <!-- Date Filter Section (Pro) -->
+    <details class="collapsible-section pro-section advanced-section" id="dateFilterSection">
+        <summary>
+            <span><span data-i18n="sectionDateFilter">📅 Date Filter</span><span class="pro-badge">PRO</span></span>
+        </summary>
+        <div class="section-content" style="position: relative;">
+            <label class="radio-label" style="display: block; margin-bottom: 6px;">
+                <input type="radio" name="downloadDateFilter" value="all" id="downloadFilterAll" checked>
+                <span data-i18n="downloadAll">Download All</span>
+            </label>
+            <label class="radio-label" style="display: block; margin-bottom: 4px;">
+                <input type="radio" name="downloadDateFilter" value="dateRange" id="downloadFilterDateRange">
+                <span data-i18n="filterDateRange">Date Range</span>
+            </label>
+            <div style="margin-left: 22px; margin-bottom: 6px;">
+                <div class="date-input-group" style="margin-bottom: 4px;">
+                    <label for="fromDate" style="font-size: 12px; color: #666;" data-i18n="fromDateLabel">From:</label>
+                    <input type="date" id="fromDate" class="date-input" disabled>
+                </div>
+                <div class="date-input-group">
+                    <label for="toDate" style="font-size: 12px; color: #666;" data-i18n="toDateLabel">To:</label>
+                    <input type="date" id="toDate" class="date-input" disabled>
+                </div>
+            </div>
+            <label class="radio-label" style="display: block; margin-bottom: 4px;">
+                <input type="radio" name="downloadDateFilter" value="lastHours" id="downloadFilterLastHours">
+                <span data-i18n="filterLastHours">Last</span>
+            </label>
+            <div style="display: flex; align-items: center; margin-left: 22px; margin-bottom: 4px; gap: 6px;">
+                <input type="number" id="downloadHours" min="1" max="240" value="24" disabled
+                    style="width: 60px; padding: 2px 6px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px;">
+                <span data-i18n="hoursUnitMedia">hours of images/videos</span>
+            </div>
+            <div class="pro-lock-overlay" id="dateFilterLock">
+                <span data-i18n="proFeatureLock">🔒 Pro Feature</span>
+            </div>
+        </div>
+    </details>
+
+    <div id="filterWarning" class="message error" style="display: none;"></div>
+
+    <button id="generateBtn" class="btn-primary" data-i18n="btnGenerate">
+        1. Generate List
+    </button>
+
+    <button id="startBtn" class="btn-success" disabled data-i18n="btnStart">
+        2. Start Download
+    </button>
+    <div id="resumeInfo" class="resume-info" style="display: none;"></div>
+
+    <!-- Clear Actions Section -->
+    <details class="collapsible-section advanced-section" id="clearActionsSection">
+        <summary><span data-i18n="sectionClearActions">🧹 Clear Actions</span></summary>
+        <div class="section-content">
+            <button id="clearBtn" class="btn-secondary" data-i18n="btnClearState">
+                Clear State
+            </button>
+            <button id="clearHistoryBtn" class="btn-secondary" style="margin-bottom: 0;" data-i18n="btnClearHistory">
+                Clear History
+            </button>
+        </div>
+    </details>
+
+    <!-- Stream Capture Section (Pro) -->
+    <details class="collapsible-section pro-section" id="streamCaptureSection">
+        <summary>
+            <span><span data-i18n="sectionStreamCapture">🌊 Stream Capture</span><span class="pro-badge">PRO</span></span>
+        </summary>
+        <div class="section-content" style="position: relative;">
+            <div style="font-size: 10px; color: #888; margin-bottom: 8px; line-height: 1.4;" data-i18n="streamCaptureHint">💡 Auto-capture images as Grok generates them in real-time. Click "Download Captured" to save.</div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-size: 12px; color: #555;" data-i18n="streamCapturedCount">Captured: 0</span>
+                <label class="switch" style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                    <input type="checkbox" id="streamToggle">
+                    <span style="font-size: 12px; font-weight: bold;" data-i18n="streamToggleLabel">Enable</span>
+                </label>
+            </div>
+            <button id="downloadStreamBtn" class="btn-primary" style="background: #2196f3; margin-bottom: 4px;" disabled
+                data-i18n="btnDownloadStream">
+                📥 Download Captured
+            </button>
+            <button id="clearStreamBtn" class="btn-secondary small-btn" style="width: 100%; font-size: 11px; padding: 6px; margin-bottom: 0;"
+                data-i18n="btnClearStream">
+                Clear Captured
+            </button>
+            <div id="streamStatus" style="display: none; margin-top: 8px; font-size: 11px; text-align: center; padding: 4px; border-radius: 4px;"></div>
+            <div class="pro-lock-overlay" id="streamCaptureLock">
+                <span data-i18n="proFeatureLock">🔒 Pro Feature</span>
+            </div>
+        </div>
+    </details>
+
+    <!-- HD Upgrade Section (Pro) -->
+    <details class="collapsible-section pro-section" id="hdUpgradeSection">
+        <summary>
+            <span><span data-i18n="sectionHdUpgrade">✨ HD Upgrade</span><span class="pro-badge">PRO</span></span>
+        </summary>
+        <div class="section-content" style="position: relative;">
+            <div style="font-size: 12px; color: #555; margin-bottom: 8px;" data-i18n="hdUpgradeDesc">Automatically upgrade
+                favorite videos to HD quality.</div>
+            <label class="checkbox-label" style="display: block; margin-bottom: 4px;">
+                <input type="checkbox" id="hdUpgradeTimeFilter">
+                <span data-i18n="hdUpgradeTimeFilterLabel">Only upgrade videos from the last</span>
+            </label>
+            <div style="display: flex; align-items: center; margin-left: 22px; margin-bottom: 8px; gap: 6px;">
+                <input type="number" id="hdUpgradeHours" min="1" max="240" value="24" style="width: 60px; padding: 2px 6px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px;">
+                <span data-i18n="hdUpgradeHoursUnit">hours</span>
+            </div>
+            <button id="upgradeBtn" class="btn-success" style="background: #4caf50; margin-bottom: 0;" data-i18n="btnUpgradeHD">
+                🚀 Upgrade to HD
+            </button>
+            <div class="pro-lock-overlay" id="hdUpgradeLock">
+                <span data-i18n="proFeatureLock">🔒 Pro Feature</span>
+            </div>
+        </div>
+    </details>
+
+    <!-- Bulk Remove Section (Pro) -->
+    <details class="collapsible-section pro-section advanced-section" id="bulkRemoveSection">
+        <summary>
+            <span><span data-i18n="sectionBulkRemove">⚠️ Bulk Remove</span><span class="pro-badge">PRO</span></span>
+        </summary>
+        <div class="section-content" style="position: relative;">
+            <!-- Batch Select Delete Button -->
+            <button id="batchSelectDeleteBtn" class="btn-secondary" style="margin-bottom: 12px; width: 100%; background: #8B4513; color: white; border: none;">
+                ☑️ <span data-i18n="btnBatchSelectDelete">Batch Select & Delete</span>
+            </button>
+            <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 0 0 12px 0;">
+            <label class="radio-label" style="display: block; margin-bottom: 6px;">
+                <input type="radio" name="removeDateFilter" value="all" id="removeFilterAll" checked>
+                <span data-i18n="removeAll">Remove All</span>
+            </label>
+            <label class="radio-label" style="display: block; margin-bottom: 4px;">
+                <input type="radio" name="removeDateFilter" value="dateRange" id="removeFilterDateRange">
+                <span data-i18n="filterDateRange">Date Range</span>
+            </label>
+            <div style="margin-left: 22px; margin-bottom: 6px;">
+                <div class="date-input-group" style="margin-bottom: 4px;">
+                    <label for="removeFromDate" style="font-size: 12px; color: #666;" data-i18n="fromDateLabel">From:</label>
+                    <input type="date" id="removeFromDate" class="date-input" disabled>
+                </div>
+                <div class="date-input-group" style="margin-bottom: 4px;">
+                    <label for="removeToDate" style="font-size: 12px; color: #666;" data-i18n="toDateLabel">To:</label>
+                    <input type="date" id="removeToDate" class="date-input" disabled>
+                </div>
+            </div>
+            <label class="radio-label" style="display: block; margin-bottom: 4px;">
+                <input type="radio" name="removeDateFilter" value="lastHours" id="removeFilterLastHours">
+                <span data-i18n="filterLastHours">Last</span>
+            </label>
+            <div style="display: flex; align-items: center; margin-left: 22px; margin-bottom: 6px; gap: 6px;">
+                <input type="number" id="removeHours" min="1" max="240" value="24" disabled
+                    style="width: 60px; padding: 2px 6px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px;">
+                <span data-i18n="hoursUnitMedia">hours of images/videos</span>
+            </div>
+            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                <label class="checkbox-label"
+                    style="display: flex; align-items: center; gap: 4px; cursor: pointer; margin: 0;">
+                    <input type="checkbox" id="deletePostCheckbox" style="margin: 0; margin-right: 4px;" checked>
+                    <span style="font-size: 11px; color: #d32f2f;" data-i18n="checkboxDeletePost">Also delete
+                        posts</span>
+                </label>
+            </div>
+            <button id="removeBtn" class="btn-danger" style="margin-bottom: 0;" data-i18n="btnRemoveFav">
+                🗑️ Remove Old
+            </button>
+            <div class="pro-lock-overlay" id="removeFavoritesLock">
+                <span data-i18n="proFeatureLock">🔒 Pro Feature</span>
+            </div>
+        </div>
+    </details>
+
+    <!-- Data Management Section (Pro) -->
+    <details class="collapsible-section pro-section advanced-section" id="dataManageSection">
+        <summary>
+            <span><span data-i18n="sectionDataManage">💾 Data Management</span><span class="pro-badge">PRO</span></span>
+        </summary>
+        <div class="section-content" style="position: relative;">
+            <button id="exportBtn" class="btn-secondary" data-i18n="btnExport">
+                📤 Export Data
+            </button>
+            <button id="importBtn" class="btn-secondary" style="margin-bottom: 0;" data-i18n="btnImport">
+                📥 Import Data
+            </button>
+            <div class="pro-lock-overlay" id="dataManageLock">
+                <span data-i18n="proFeatureLock">🔒 Pro Feature</span>
+            </div>
+        </div>
+    </details>
+    <input type="file" id="importFile" accept=".json" style="display: none;">
+
+
+    <!-- Settings Section -->
+    <details class="collapsible-section advanced-section" id="settingsSection">
+        <summary><span data-i18n="sectionSettings">⚙️ Settings</span></summary>
+        <div class="section-content">
+            <!-- Download Mode -->
+            <div style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #e0e0e0;">
+                <div style="font-size: 12px; font-weight: 600; color: #333; margin-bottom: 8px;" data-i18n="downloadModeTitle">📂 Download Mode</div>
+                <label class="checkbox-label" style="display: block; margin-bottom: 6px; margin-right: 0;">
+                    <input type="radio" name="downloadMode" value="standard" id="downloadModeStandard" checked style="margin-right: 6px;">
+                    <span data-i18n="downloadModeStandard">Standard</span>
+                </label>
+                <div style="font-size: 11px; color: #666; margin-bottom: 8px; margin-left: 22px;" data-i18n="downloadModeStandardDesc">Separate folders for images and videos</div>
+                <label class="checkbox-label" style="display: block; margin-right: 0;">
+                    <input type="radio" name="downloadMode" value="project" id="downloadModeProject" style="margin-right: 6px;">
+                    <span data-i18n="downloadModeProject">Group by Project</span>
+                </label>
+                <div style="font-size: 11px; color: #666; margin-left: 22px;" data-i18n="downloadModeProjectDesc">Group source image + generated videos in project folders</div>
+                <div id="projectModeHint" style="display: none; font-size: 10px; color: #e67e22; margin-top: 6px; margin-left: 22px; line-height: 1.4;" data-i18n="downloadModeProjectHint">💡 Already downloaded files will be skipped. To see complete files in project folders, clear download history first.</div>
+            </div>
+
+            <!-- Download Options -->
+            <div style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #e0e0e0;">
+                <label class="checkbox-label" style="margin-right: 0; display: block; margin-bottom: 8px;">
+                    <input type="checkbox" id="hdPriority" checked>
+                    <span data-i18n="hdPriorityLabel">✨ HD Priority</span>
+                </label>
+                <div style="font-size: 11px; color: #666; margin-bottom: 12px; margin-left: 22px;" data-i18n="hdPriorityDesc">Download HD when available, SD as fallback</div>
+
+                <label class="checkbox-label" style="margin-right: 0; display: block;">
+                    <input type="checkbox" id="saveMetadata">
+                    <span data-i18n="saveMetadataLabel">📋 Save Metadata</span>
+                </label>
+                <div style="font-size: 11px; color: #666; margin-bottom: 12px; margin-left: 22px;" data-i18n="saveMetadataDesc">Save .json file with image/video info (prompt, resolution, etc.)</div>
+
+                <label class="checkbox-label" style="margin-right: 0; display: block;">
+                    <input type="checkbox" id="promptAsFilename">
+                    <span data-i18n="promptAsFilenameLabel">📝 Use Prompt as Filename</span>
+                </label>
+                <div style="font-size: 11px; color: #666; margin-left: 22px;" data-i18n="promptAsFilenameDesc">Use prompt text in filename (e.g., img_20250119_a_cat_sitting.jpg)</div>
+            </div>
+
+            <!-- Download Paths -->
+            <div style="font-size: 10px; color: #888; margin-bottom: 10px; padding: 6px; background: #f5f5f5; border-radius: 4px;" data-i18n="settingsPathNote">
+                📁 Paths are relative to browser's default download folder
+            </div>
+
+            <!-- Favorite Images Path -->
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #666; display: block; margin-bottom: 2px;" data-i18n="settingsPathImages">🖼️ Favorite Images:</label>
+                <input type="text" id="pathImages" class="license-input" style="width: 100%; font-size: 11px; padding: 6px;" placeholder="grok_downloads/images" value="grok_downloads/images">
+            </div>
+
+            <!-- Favorite Videos Path -->
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #666; display: block; margin-bottom: 2px;" data-i18n="settingsPathVideos">🎬 Favorite Videos:</label>
+                <input type="text" id="pathVideos" class="license-input" style="width: 100%; font-size: 11px; padding: 6px;" placeholder="grok_downloads/videos" value="grok_downloads/videos">
+            </div>
+
+            <!-- Stream Capture Path -->
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #666; display: block; margin-bottom: 2px;" data-i18n="settingsPathStream">📹 Stream Capture:</label>
+                <input type="text" id="pathStream" class="license-input" style="width: 100%; font-size: 11px; padding: 6px;" placeholder="grok_downloads/stream" value="grok_downloads/stream">
+            </div>
+
+            <!-- Story Frames Path -->
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #666; display: block; margin-bottom: 2px;" data-i18n="settingsPathFrames">🎞️ Story Frames:</label>
+                <input type="text" id="pathFrames" class="license-input" style="width: 100%; font-size: 11px; padding: 6px;" placeholder="grok_downloads/frames" value="grok_downloads/frames">
+            </div>
+
+            <!-- Project Based Download Path -->
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 11px; color: #666; display: block; margin-bottom: 2px;" data-i18n="settingsPathProjects">📂 Project Downloads:</label>
+                <input type="text" id="pathProjects" class="license-input" style="width: 100%; font-size: 11px; padding: 6px;" placeholder="grok_downloads/projects" value="grok_downloads/projects">
+            </div>
+
+            <button id="saveSettingsBtn" class="btn-primary small-btn" style="width: 100%;" data-i18n="settingsSave">💾 Save Paths</button>
+            <div id="settingsStatus" style="display: none; margin-top: 8px; font-size: 11px; color: #4caf50; text-align: center;"></div>
+        </div>
+    </details>
+
+    <!-- License Section -->
+    <details class="collapsible-section advanced-section" id="licenseDetailsSection">
+        <summary><span data-i18n="sectionLicense">🔑 License</span></summary>
+        <div class="section-content">
+            <div id="licenseSection">
+                <div id="buySection" style="margin-bottom: 12px; text-align: center;">
+                    <div style="font-size: 12px; color: #666; margin-bottom: 8px;" data-i18n="msgBuyPro">Get Pro for full
+                        features</div>
+                    <button id="buyBtn" class="btn-success small-btn" style="width: 100%;" data-i18n="btnBuyLicense">Buy
+                        License</button>
+                </div>
+                <div class="license-input-group">
+                    <input type="text" id="licenseKey" data-i18n-placeholder="licensePlaceholder"
+                        placeholder="Enter License Key" class="license-input">
+                    <button id="activateBtn" class="btn-primary small-btn" data-i18n="licenseActivateBtn">Activate</button>
+                </div>
+                <div id="licenseStatus" class="license-status hidden">
+                    <span class="status-badge pro">PRO</span>
+                    <span id="licenseMessage" data-i18n="licenseActivated">Activated</span>
+                </div>
+            </div>
+        </div>
+    </details>
+
+    <div class="footer">
+        <span data-i18n="footerVersion">v1.1.0 | Supports Images</span>
+        <div style="margin-top: 8px;">
+            <a href="https://grokmedia.kario-studio.com/?utm_source=extension&utm_medium=referral&utm_campaign=brand&utm_content=footer_website" target="_blank"
+                style="color: #999; text-decoration: underline;" data-i18n="footerOfficialWebsite">Official Website</a>
+            <span style="color: #666; margin: 0 6px;">|</span>
+            <a href="#" id="viewLogsLink"
+                style="color: #999; text-decoration: underline;" data-i18n="footerViewLogs">View Logs</a>
+        </div>
+    </div>
+
+    <script src="src/logger.js"></script>
+    <script src="src/utils.js"></script>
+    <script src="popup.js"></script>
+</body>
+
+</html>

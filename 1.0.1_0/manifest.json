@@ -1,0 +1,46 @@
+{
+   "action": {
+      "_default_popup": "popup.html",
+      "default_icon": {
+         "128": "icons/icon128.png",
+         "16": "icons/icon16.png",
+         "24": "icons/icon24.png",
+         "256": "icons/icon256.png",
+         "32": "icons/icon32.png",
+         "48": "icons/icon48.png",
+         "512": "icons/icon512.png",
+         "64": "icons/icon64.png"
+      }
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "css": [ "styles.css", "folderStyles.css", "promptEnhancer.css", "pinnedMessages.css", "paywallModal.css" ],
+      "js": [ "config.js", "api-client.js", "themes.js", "folderIcons.js", "folderService.js", "themeService.js", "folderModal.js", "defaultPrompts.js", "promptLibraryService.js", "promptChainService.js", "promptChainModal.js", "promptChainExecutor.js", "promptLibraryModal.js", "promptEditorModal.js", "paywallModal.js", "pinnedMessagesService.js", "pinnedMessages.js", "pinnedMessagesModal.js", "chatExporter.js", "content.js", "promptEnhancer.js" ],
+      "matches": [ "https://grok.com/*", "https://x.com/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Supercharge Grok with folders, chat export, prompt library, and AI prompt enhancement.",
+   "host_permissions": [ "https://grok.com/*", "https://x.com/*", "https://api.hamzaw.com/*" ],
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "24": "icons/icon24.png",
+      "256": "icons/icon256.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "512": "icons/icon512.png",
+      "64": "icons/icon64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuwr/KTEFqm3mPcd545WLgy7SZ/gEJbMGCmK6E+8iFBDkB2sl6XHt+HNmj/oliDfikJRrOkULTrocjeZekOIyoZUG9fpXHVYdFHtlw2/Qh/tZvTg8gwLcFpYQzUw7k+w2ph+OyofLSgzAZ+cBWLdanLcNy3XkjCNQBdVguBPwgknltvuSdqfCQ2uZoxw3xFB/PH9CuPWBgNqhZGDZQJ27WRC0vt5fcR0LAuPp+H7qMP0e9YKZ1jcK/XOrMSPHsSXUGSSeAOet3/9c749srSX9UchTzbD3yooBYB1cqsyjggSYoiE3mz4e34039mHRI/VisB0nBFCZMfwBaVBmWP55qwIDAQAB",
+   "manifest_version": 3,
+   "name": "Toolbox for Grok | Folders, Export, Bulk Delete",
+   "permissions": [ "storage", "activeTab", "contextMenus", "webRequest", "cookies" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1",
+   "web_accessible_resources": [ {
+      "matches": [ "https://grok.com/*", "https://x.com/*" ],
+      "resources": [ "chatExporter.js" ]
+   } ]
+}

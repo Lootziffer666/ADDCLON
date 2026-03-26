@@ -1,0 +1,17 @@
+{
+   "ext_description": {
+      "message": "免费下载 Grok 会话为 PDF、Markdown 等格式。将 Grok 结果下载为 PDF，轻松将 Grok 转换为美丽的 PDF。"
+   },
+   "ext_fulltitle": {
+      "message": "Grok 导出器 - Grok 转换为 PDF、MD 等"
+   },
+   "feedback": {
+      "message": "问题反馈"
+   },
+   "language": {
+      "message": "Chinese, Simplified"
+   },
+   "thanks": {
+      "message": "由 ❤️ 打造。感谢使用。"
+   }
+}

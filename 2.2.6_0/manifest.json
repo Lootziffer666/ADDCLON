@@ -1,0 +1,57 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icons/icon128.png",
+         "16": "icons/icon16.png",
+         "48": "icons/icon48.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "src/intercept.js" ],
+      "matches": [ "https://grok.com/*" ],
+      "run_at": "document_start",
+      "world": "MAIN"
+   }, {
+      "js": [ "src/post-stats-bridge.js" ],
+      "matches": [ "https://grok.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "src/logger.js", "src/utils.js", "src/content-utils.js", "content.js" ],
+      "matches": [ "https://grok.com/imagine", "https://grok.com/imagine/*" ],
+      "run_at": "document_idle"
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+   },
+   "cross_origin_embedder_policy": {
+      "value": "require-corp"
+   },
+   "cross_origin_opener_policy": {
+      "value": "same-origin"
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "host_permissions": [ "https://grok.com/*", "https://*.grok.com/*", "https://*.x.ai/*", "https://api.lemonsqueezy.com/*" ],
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7BC8VxujUGBIatvNVQ8PC5pdUBxIyLk6AZrRrByY/bZXrmqA/aVqs4CyYxjSpSfFE/8RF38K9aTxHTxwlhILQVvG/q5kGUwUCTf4XvnYggUvb7l69NirLuA+O2FoegzTY3PhS7osAgKynQZ2SKSD3YhBuz+jAXyr7hfUBrPXbzKDMCWzPc0b8tWuBXfsRXE5mWPzJ3k+jbO4UXqy1Oqt4Hh70HiDFInbpER3b9PBExW8YhmDXQoqznOaIgLaQzlEJVeIFRjKLlyoNVdt2mI1ekjIk+YmOJRmMYOdRDDj1YVonftAraKodBpEQeTgJhvLcJq5nvmZHSB851K1RX1WUQIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_appName__",
+   "permissions": [ "storage", "unlimitedStorage", "activeTab", "tabs", "scripting", "downloads", "sidePanel", "offscreen" ],
+   "side_panel": {
+      "default_path": "sidepanel/sidepanel.html"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.2.6",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "lib/ffmpeg/*" ]
+   } ]
+}

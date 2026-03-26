@@ -1,0 +1,37 @@
+{
+   "action": {
+      "default_icon": "icon128.png",
+      "default_title": "Claude Usage Tracker - Open debug page"
+   },
+   "author": "lugia19",
+   "background": {
+      "service_worker": "background.js",
+      "type": "module"
+   },
+   "browser_specific_settings": {
+      "gecko": {
+         "id": "claude_usage_tracker@lugia19.com"
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "lib/browser-polyfill.min.js", "lib/o200k_base.js", "content-components/content_utils.js", "content-components/electron_reciever.js", "content-components/ui_dataclasses.js", "content-components/notification_card.js", "content-components/usage_ui.js", "content-components/length_ui.js" ],
+      "matches": [ "https://claude.ai/*" ]
+   } ],
+   "description": "Helps you track your claude.ai usage caps based on tokens sent.",
+   "host_permissions": [ "*://claude.ai/*", "https://raw.githubusercontent.com/*", "https://github.com/*", "https://api.anthropic.com/*" ],
+   "icons": {
+      "128": "icon128.png",
+      "512": "icon512.png"
+   },
+   "incognito": "split",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk0Ewt68UVA9ssmDOPMS41Nl74oC2OnWUUjojRl3RNt16+54lf3Wd8iDk7WOXgUPYRgidAUoqlfsb0qZwY6nl0r7SdWvdwQJIQXCErkCfUx4tQ5EC+SQtSSmIS7gEmc3ETr6g7224zJ6bGpmGuBwInIP6MH48UgFfsnqLxRpHBJjNfdZpuU/fz/vI29cSsJwTd3pY6mvn39HvHHz127E3VFWOTX3ALaqUB7K/Su1s5oe/X0RfzP8OyUNkSQLLMue9euh8iwLDFBm59TPDrAg2dKPp/Afn/Qv6Jt1TMCH30SYuF4azqNQWXzKk8mmdeUILZxi1w6DrNLr2tFbyJipn2wIDAQAB",
+   "manifest_version": 3,
+   "name": "Claude Usage Tracker",
+   "permissions": [ "storage", "alarms", "webRequest", "tabs", "contextMenus", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.1.2",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "default-config.json", "lib/browser-polyfill.min.js", "lib/o200k_base.js", "kofi-button.png", "debug.html", "update_patchnotes.txt", "tracker-styles.css", "injections/rate-limit-watcher.js", "injections/webrequest-polyfill.js", "qol-badge.png" ]
+   } ]
+}

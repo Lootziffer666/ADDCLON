@@ -1,0 +1,1 @@
+chrome.tabs.onUpdated.addListener((e,s,r)=>{r.url?.includes("grok")&&chrome.tabs.sendMessage(e,{type:"NEW_TAB",url:r.url})});chrome.tabs.onCreated.addListener(e=>{e.url?.includes("grok")&&chrome.tabs.sendMessage(123,{type:"NEW_TAB",url:e.url})});

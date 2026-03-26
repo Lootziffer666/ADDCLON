@@ -1,0 +1,271 @@
+{
+   "bulkDeleteTitle": {
+      "description": "Title of the panel that contains the bulk-delete controls.",
+      "message": "一括削除"
+   },
+   "deleteConversations_allFailed": {
+      "description": "Completion message when all chats failed to delete.",
+      "message": "チャットを削除できませんでした。後でもう一度お試しいただくか、チャット数を減らしてください。"
+   },
+   "deleteConversations_cancel": {
+      "description": "Button text to cancel the current operation.",
+      "message": "キャンセル"
+   },
+   "deleteConversations_cancelled": {
+      "description": "Message shown when the user cancels the deletion process.",
+      "message": "削除がキャンセルされました。"
+   },
+   "deleteConversations_cleared": {
+      "description": "A completion message shown after successfully deleting chats.",
+      "message": "完了しました！チャットが削除されました。"
+   },
+   "deleteConversations_deleting": {
+      "description": "A loading message shown while chats are being deleted.",
+      "message": "チャットを削除中..."
+   },
+   "deleteConversations_done": {
+      "description": "A friendly completion message.",
+      "message": "完了！私たちのサービスをお楽しみいただけましたか。"
+   },
+   "deleteConversations_finished": {
+      "description": "A completion message with a bit of flair.",
+      "message": "そして...完了しました！ ✨"
+   },
+   "deleteConversations_licenseValidated": {
+      "description": "Success message shown after a license is successfully validated.",
+      "message": "ライセンスが検証されました！無制限の削除がロック解除されました。"
+   },
+   "deleteConversations_longOperation": {
+      "description": "Warning message when the deletion process is slow.",
+      "message": "操作に予想以上の時間がかかっています。"
+   },
+   "deleteConversations_longOperationSuggestion": {
+      "description": "A suggestion for the user when the operation is slow.",
+      "message": "チャットを少なくするか、インターネット接続を確認してください。"
+   },
+   "deleteConversations_noItems": {
+      "description": "Message shown when there are no items to process from the start.",
+      "message": "処理するアイテムがありません。"
+   },
+   "deleteConversations_noItemsProcessed": {
+      "description": "Message shown when no items were processed.",
+      "message": "アイテムが処理されませんでした。選択を確認してください。"
+   },
+   "deleteConversations_noSelection": {
+      "description": "Error message shown when the user tries to delete without selecting any conversations.",
+      "message": "削除する会話が選択されていません。"
+   },
+   "deleteConversations_partialSuccess": {
+      "description": "Completion message when some chats failed to delete.",
+      "message": "$DELETED$/$TOTAL$ のチャットを削除しました。一部のチャットは削除できませんでした。",
+      "placeholders": {
+         "deleted": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "deleteConversations_preparing": {
+      "description": "Initial progress text. $TOTAL$ is a placeholder for the total number of items.",
+      "message": "準備中... (0/$TOTAL$)",
+      "placeholders": {
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "deleteConversations_progress": {
+      "description": "Progress text shown during deletion. $PROCESSED$, $TOTAL$, $DELETED$, and $FAILED$ are placeholders.",
+      "message": "処理済み $PROCESSED$/$TOTAL$ (削除済み: $DELETED$、失敗: $FAILED$)",
+      "placeholders": {
+         "deleted": {
+            "content": "$3"
+         },
+         "failed": {
+            "content": "$4"
+         },
+         "processed": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "deleteConversations_quotaExhausted": {
+      "description": "Error message shown when the user's free quota is used up.",
+      "message": "無料枠が使い果たされました（50/50の削除を使用）。続行するにはアップグレードしてください。"
+   },
+   "deleteConversations_taskComplete": {
+      "description": "A completion message.",
+      "message": "タスク完了。続ける準備はできていますか？"
+   },
+   "deleteConversations_tidied": {
+      "description": "A completion message indicating success.",
+      "message": "正常に整理されました！"
+   },
+   "deleteConversations_timeout": {
+      "description": "Error message when the deletion takes too long.",
+      "message": "操作がタイムアウトしました。チャットを減らしてもう一度お試しください。"
+   },
+   "deleteConversations_tryAgain": {
+      "description": "Button text to try an operation again.",
+      "message": "もう一度試す"
+   },
+   "deleteConversations_workspaceMessage": {
+      "description": "Completion message shown for workspace accounts.",
+      "message": "教育機関/職場アカウントが検出されました。削除は組織の管理者によって制限される場合があります。"
+   },
+   "deleteN": {
+      "description": "Button text to delete a specific number of conversations. $COUNT$ is a placeholder.",
+      "message": "削除 ($COUNT$)",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "5"
+         }
+      }
+   },
+   "deleteSelected": {
+      "description": "Button text to delete the conversations that are currently selected.",
+      "message": "選択したものを削除"
+   },
+   "deletionError": {
+      "description": "Error message shown when the deletion script cannot be executed.",
+      "message": "削除プロセスを開始できません。ページを更新してもう一度お試しください。"
+   },
+   "dismiss": {
+      "description": "Button text to close or dismiss a notification.",
+      "message": "閉じる"
+   },
+   "dontShowAgain": {
+      "description": "Tooltip for a button that dismisses a warning permanently.",
+      "message": "今後表示しない"
+   },
+   "extensionDescription": {
+      "description": "The description of the extension.",
+      "message": "Geminiチャットの複数選択と一括削除。"
+   },
+   "extensionName": {
+      "description": "The name of the extension.",
+      "message": "Gemini Bulk Delete"
+   },
+   "extensionShortName": {
+      "description": "The short name of the extension.",
+      "message": "Bulk Delete"
+   },
+   "learnMore": {
+      "description": "Link text to learn more about a topic.",
+      "message": "詳細を見る"
+   },
+   "loading": {
+      "description": "Text shown on a button while content is loading.",
+      "message": "読み込み中..."
+   },
+   "multiSelectModeTooltip": {
+      "description": "Tooltip for the toggle switch that enables the batch deletion mode.",
+      "message": "複数選択モードを有効にして複数のチャットを削除します。キーボードショートカット: Shift+A（すべて選択）、Deleteキー（選択したものを削除）、Esc（終了）"
+   },
+   "paywall_alreadyHaveLicense": {
+      "description": "Button/link for users who already have a license.",
+      "message": "すでにライセンスを持っています"
+   },
+   "paywall_back": {
+      "description": "Button to go back to the previous view.",
+      "message": "戻る"
+   },
+   "paywall_close": {
+      "description": "Tooltip for the close button on the paywall modal.",
+      "message": "ウィンドウを閉じる"
+   },
+   "paywall_copied": {
+      "description": "Confirmation text shown after copying.",
+      "message": "コピーしました！"
+   },
+   "paywall_copyButton": {
+      "description": "Text for a button that copies a promo code.",
+      "message": "クリックしてコピー！"
+   },
+   "paywall_enterLicense": {
+      "description": "Heading for the license entry section.",
+      "message": "ライセンスキーを入力"
+   },
+   "paywall_enterLicenseSubtext": {
+      "description": "Subtext for the license entry section.",
+      "message": "ライセンスキーを入力して無制限の削除をロック解除します。"
+   },
+   "paywall_feature1": {
+      "description": "A feature point.",
+      "message": "無制限のチャット削除"
+   },
+   "paywall_feature2": {
+      "description": "A feature point.",
+      "message": "優先サポート"
+   },
+   "paywall_feature3": {
+      "description": "A feature point.",
+      "message": "将来のアップデートを含む"
+   },
+   "paywall_heading": {
+      "description": "Main heading in the paywall modal.",
+      "message": "50回の無料削除をすべて使用しました。"
+   },
+   "paywall_invalidKey": {
+      "description": "Error message for an invalid license key.",
+      "message": "無効なライセンスキー形式"
+   },
+   "paywall_promoCode": {
+      "description": "Label for a promo code.",
+      "message": "コードを使用:"
+   },
+   "paywall_promoTitle": {
+      "description": "Title for a promotional offer.",
+      "message": "早期割引 – 40%オフ"
+   },
+   "paywall_subheading": {
+      "description": "Subheading in the paywall modal.",
+      "message": "アップグレードして無制限の削除をロック解除します。"
+   },
+   "paywall_support": {
+      "description": "A message encouraging users to support development.",
+      "message": "あなたのサポートは拡張機能の継続的な開発に役立ちます。"
+   },
+   "paywall_title": {
+      "description": "The title of the paywall modal.",
+      "message": "無料削除回数を使い切りました"
+   },
+   "paywall_upgradeButton": {
+      "description": "Button to start the upgrade process.",
+      "message": "アップグレードしてライセンスを取得"
+   },
+   "paywall_validateButton": {
+      "description": "Button to validate a license key.",
+      "message": "検証してロック解除"
+   },
+   "paywall_validating": {
+      "description": "Text shown while a license is being validated.",
+      "message": "検証中..."
+   },
+   "selectAllChats": {
+      "description": "Button text to select all conversations.",
+      "message": "すべてのチャットを選択"
+   },
+   "workspaceAlert": {
+      "description": "The full text of the alert shown when a user clicks 'Learn more' on the workspace warning.",
+      "message": "教育機関（.edu）および職場アカウントは通常、組織のGoogle Workspace管理者によってチャットの削除が制御されています。個々のユーザーは、保持ポリシー（通常18か月）で管理者レベルで管理されているため、チャット履歴を削除できません。"
+   },
+   "workspaceWarningConfirm": {
+      "description": "Confirmation message shown to users on workspace accounts before attempting deletion.",
+      "message": "警告: 教育機関または職場のアカウントを使用しているようです。これらのアカウントは通常、組織の管理者によって制御されているため、チャットを削除できません。それでも試しますか？"
+   },
+   "workspaceWarningNote": {
+      "description": "A label for a note or warning.",
+      "message": "注意:"
+   },
+   "workspaceWarningText": {
+      "description": "The text of the warning for workspace account limitations.",
+      "message": "教育機関（.edu）および一部の職場アカウントはチャットを削除できません。これは組織の管理設定によって制御されています。"
+   }
+}

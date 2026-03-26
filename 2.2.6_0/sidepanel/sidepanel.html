@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="storyModeTitle">Story Mode Helper</title>
+    <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎬 <span data-i18n="storyModeTitle">Story Mode Helper</span></h1>
+            <span class="version">v2.1</span>
+        </header>
+
+        <!-- Storage Usage -->
+        <div id="storageBar" class="storage-bar">
+            <div class="storage-info">
+                <span data-i18n="storyModeStorage">Storage</span>
+                <span id="storageText">0 MB / 0 MB</span>
+            </div>
+            <div class="storage-track">
+                <div id="storageFill" class="storage-fill" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Drop Zone for Original Video -->
+        <div id="dropZone" class="drop-zone">
+            <div class="drop-zone-content">
+                <div class="drop-icon">📁</div>
+                <p class="drop-text" data-i18n="storyModeDropVideo">Drop video here</p>
+                <p class="drop-subtext" data-i18n="storyModeDropSubtext">Local file or drag from Grok Favorites</p>
+            </div>
+            <input type="file" id="fileInput" accept="video/*" hidden>
+        </div>
+
+        <!-- Storyboard Section -->
+        <div id="storyboardSection" class="storyboard-section hidden">
+            <div class="section-header">
+                <span class="section-title">📽️ <span data-i18n="storyModeStoryboard">Storyboard</span></span>
+                <button id="clearStoryboardBtn" class="btn-icon-small" data-i18n-title="storyModeClearAll" title="Clear All">🗑️</button>
+            </div>
+
+            <div id="storyboard" class="storyboard">
+                <!-- Storyboard segments will be added here -->
+            </div>
+
+            <!-- Add Segment Drop Zone -->
+            <div id="addSegmentSection" class="add-segment-section">
+                <div id="addSegmentDropZone" class="add-segment-drop-zone">
+                    <span>📁</span>
+                    <span data-i18n="storyModeDropOrClick">Drop or click to add video</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Current Frame Preview & Send to Grok -->
+        <div id="framePreviewSection" class="frame-preview-section hidden">
+            <div class="section-header">
+                <span class="section-title">🖼️ <span data-i18n="storyModeLastFrame">Last Frame</span></span>
+            </div>
+            <div id="framePreview" class="frame-preview">
+                <img id="frameImage" src="" alt="Last frame preview">
+            </div>
+            <div class="frame-grok-actions">
+                <input type="text" id="videoPromptInput" class="prompt-input" data-i18n-placeholder="storyModePromptPlaceholder" placeholder="Enter prompt for video generation...">
+
+                <div class="mode-selector">
+                    <button class="mode-btn active" data-mode="custom">Custom</button>
+                    <button class="mode-btn" data-mode="normal">Normal</button>
+                    <button class="mode-btn" data-mode="extremely-crazy">Fun</button>
+                    <button class="mode-btn" data-mode="extremely-spicy-or-crazy">Spicy ⚡</button>
+                </div>
+                <div class="gen-options-row">
+                    <div>
+                        <label class="gen-option-label">Duration</label>
+                        <div class="mode-selector compact" id="storyDurationSelector">
+                            <button class="mode-btn active" data-duration="6">6s</button>
+                            <button class="mode-btn" data-duration="10">10s ⚡</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="gen-option-label">Resolution</label>
+                        <div class="mode-selector compact" id="storyResolutionSelector">
+                            <button class="mode-btn active" data-resolution="480p">480p</button>
+                            <button class="mode-btn" data-resolution="720p">720p ⚡</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="super-grok-hint" style="font-size:10px;color:#888;margin:2px 0 6px 0;">⚡ = Requests override — require Super Grok. Wrong override may be flagged by Grok if ineligible.</p>
+
+                <div class="count-selector">
+                    <button class="count-btn active" data-count="1">1</button>
+                    <button class="count-btn" data-count="3">3</button>
+                    <button class="count-btn" data-count="5">5</button>
+                    <button class="count-btn" data-count="10">10</button>
+                </div>
+
+                <button id="generateBtn" class="btn btn-primary">
+                    <span>🚀</span> <span data-i18n="storyModeGenerate">Generate</span> <span id="generateCountLabel">1</span> <span data-i18n="storyModeVideos">Video</span>
+                </button>
+
+                <div id="generateProgress" class="generate-progress hidden">
+                    <span id="generateProgressText">Opening tabs... 0/1</span>
+                </div>
+
+                <button id="downloadFrameBtn" class="btn btn-secondary btn-small">
+                    📥 <span data-i18n="storyModeDownloadFrame">Download Frame</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div id="actionSection" class="action-section hidden">
+            <label class="export-option">
+                <input type="checkbox" id="includeAudioCheckbox" checked>
+                <span data-i18n="storyModeIncludeAudio">Include audio track</span>
+            </label>
+            <button id="exportBtn" class="btn btn-success">
+                <span class="btn-icon">🔗</span>
+                <span data-i18n="storyModeExportVideo">Export Final Video</span>
+            </button>
+        </div>
+
+        <!-- Progress Section -->
+        <div id="progressSection" class="progress-section hidden">
+            <div class="progress-header">
+                <span id="progressStage" data-i18n="storyModeProcessing">Processing...</span>
+                <span id="progressPercent">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <p id="progressMessage" class="progress-message" data-i18n="storyModeInitializing">Initializing...</p>
+        </div>
+
+        <!-- Result Section -->
+        <div id="resultSection" class="result-section hidden">
+            <div class="result-icon">✅</div>
+            <p class="result-text" data-i18n="storyModeExportSuccess">Video exported successfully!</p>
+            <button id="downloadBtn" class="btn btn-success">
+                <span class="btn-icon">📥</span>
+                <span data-i18n="storyModeDownloadVideo">Download Video</span>
+            </button>
+            <div class="result-actions-row">
+                <button id="continueEditBtn" class="btn btn-primary" data-i18n="storyModeContinueEdit">Continue Editing</button>
+                <button id="newProjectBtn" class="btn btn-secondary" data-i18n="storyModeNewProject">Start New Project</button>
+            </div>
+        </div>
+
+        <!-- Error Section -->
+        <div id="errorSection" class="error-section hidden">
+            <div class="error-icon">❌</div>
+            <p id="errorMessage" class="error-text" data-i18n="storyModeErrorOccurred">An error occurred</p>
+            <button id="retryBtn" class="btn btn-secondary" data-i18n="storyModeTryAgain">Try Again</button>
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state hidden">
+            <p data-i18n="storyModeEmptyState">Drop a video above to start building your storyboard</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p data-i18n="storyModeFooter">Grok AI Video Extension Workflow</p>
+        </footer>
+    </div>
+
+    <!-- Hidden file input for adding segments -->
+    <input type="file" id="addFileInput" accept="video/*" hidden>
+
+    <script src="sidepanel.js"></script>
+</body>
+</html>

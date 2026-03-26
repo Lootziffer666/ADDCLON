@@ -1,0 +1,36 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "assets/icon128.png",
+         "16": "assets/icon16.png",
+         "32": "assets/icon32.png",
+         "48": "assets/icon48.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "content.js" ],
+      "matches": [ "https://x.com/*", "https://grok.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_ext_description__",
+   "host_permissions": [ "https://*.grokexporter.com/" ],
+   "icons": {
+      "128": "assets/icon128.png",
+      "16": "assets/icon16.png",
+      "32": "assets/icon32.png",
+      "48": "assets/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0nBTBwyWb3EaWRlntcFFMKZKiowxSU9jvKJ4ixDvVRI3d0U/6xrkbPTOJHfXsfQSdZ6v+qRqJSiP/K23Zv6YvKIQd1FCdQO6W1mLHbE5SdBa0ry/2Z3QBxJLhyk2XKPh0I/HPF+XC5iS9mD19pYbUglNhruOxUc0QlRjr8MUMWxAjA3Q1b346Pl9VO4GUOuIFWMFqKRP/WWyZbL3yg8xu3BbPO8/XvCMjsz4jJwOKK8WTUZo78/Ink9Rde58GE51QVHy1zt62SR8wkGdzkLMVymBixQhYlVbgKIFhXr+eatyLcrn+1x8FsNKFem23pn2yqocUgYWneoKePNQ6HnNSQIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_ext_fulltitle__",
+   "options_page": "options.html",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.4.0"
+}

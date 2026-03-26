@@ -1,0 +1,271 @@
+{
+   "bulkDeleteTitle": {
+      "description": "Title of the panel that contains the bulk-delete controls.",
+      "message": "Eliminazione multipla"
+   },
+   "deleteConversations_allFailed": {
+      "description": "Completion message when all chats failed to delete.",
+      "message": "Impossibile eliminare le chat. Riprova più tardi o con meno chat."
+   },
+   "deleteConversations_cancel": {
+      "description": "Button text to cancel the current operation.",
+      "message": "Annulla"
+   },
+   "deleteConversations_cancelled": {
+      "description": "Message shown when the user cancels the deletion process.",
+      "message": "Eliminazione annullata."
+   },
+   "deleteConversations_cleared": {
+      "description": "A completion message shown after successfully deleting chats.",
+      "message": "Tutto fatto! Le tue chat sono state cancellate."
+   },
+   "deleteConversations_deleting": {
+      "description": "A loading message shown while chats are being deleted.",
+      "message": "Eliminazione chat in corso..."
+   },
+   "deleteConversations_done": {
+      "description": "A friendly completion message.",
+      "message": "Fatto! Speriamo che il nostro servizio ti sia piaciuto."
+   },
+   "deleteConversations_finished": {
+      "description": "A completion message with a bit of flair.",
+      "message": "E... abbiamo finito! ✨"
+   },
+   "deleteConversations_licenseValidated": {
+      "description": "Success message shown after a license is successfully validated.",
+      "message": "Licenza validata! Eliminazioni illimitate sbloccate."
+   },
+   "deleteConversations_longOperation": {
+      "description": "Warning message when the deletion process is slow.",
+      "message": "L'operazione sta richiedendo più tempo del previsto."
+   },
+   "deleteConversations_longOperationSuggestion": {
+      "description": "A suggestion for the user when the operation is slow.",
+      "message": "Prova a selezionare meno chat o controlla la tua connessione internet."
+   },
+   "deleteConversations_noItems": {
+      "description": "Message shown when there are no items to process from the start.",
+      "message": "Nessun elemento da elaborare."
+   },
+   "deleteConversations_noItemsProcessed": {
+      "description": "Message shown when no items were processed.",
+      "message": "Nessun elemento è stato elaborato. Controlla la selezione."
+   },
+   "deleteConversations_noSelection": {
+      "description": "Error message shown when the user tries to delete without selecting any conversations.",
+      "message": "Nessuna conversazione selezionata da eliminare."
+   },
+   "deleteConversations_partialSuccess": {
+      "description": "Completion message when some chats failed to delete.",
+      "message": "Eliminate $DELETED$/$TOTAL$ chat. Alcune chat non sono state rimosse.",
+      "placeholders": {
+         "deleted": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "deleteConversations_preparing": {
+      "description": "Initial progress text. $TOTAL$ is a placeholder for the total number of items.",
+      "message": "Preparazione... (0/$TOTAL$)",
+      "placeholders": {
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "deleteConversations_progress": {
+      "description": "Progress text shown during deletion. $PROCESSED$, $TOTAL$, $DELETED$, and $FAILED$ are placeholders.",
+      "message": "Elaborate $PROCESSED$/$TOTAL$ (Eliminate: $DELETED$, Fallite: $FAILED$)",
+      "placeholders": {
+         "deleted": {
+            "content": "$3"
+         },
+         "failed": {
+            "content": "$4"
+         },
+         "processed": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "deleteConversations_quotaExhausted": {
+      "description": "Error message shown when the user's free quota is used up.",
+      "message": "Quota gratuita esaurita (50/50 eliminazioni utilizzate). Aggiorna per continuare."
+   },
+   "deleteConversations_taskComplete": {
+      "description": "A completion message.",
+      "message": "Operazione completata. Pronto per altro?"
+   },
+   "deleteConversations_tidied": {
+      "description": "A completion message indicating success.",
+      "message": "Pulizia completata con successo!"
+   },
+   "deleteConversations_timeout": {
+      "description": "Error message when the deletion takes too long.",
+      "message": "Operazione scaduta. Riprova con meno chat."
+   },
+   "deleteConversations_tryAgain": {
+      "description": "Button text to try an operation again.",
+      "message": "Riprova"
+   },
+   "deleteConversations_workspaceMessage": {
+      "description": "Completion message shown for workspace accounts.",
+      "message": "Account educativo/aziendale rilevato. L'eliminazione potrebbe essere limitata dall'amministratore della tua organizzazione."
+   },
+   "deleteN": {
+      "description": "Button text to delete a specific number of conversations. $COUNT$ is a placeholder.",
+      "message": "Elimina ($COUNT$)",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "5"
+         }
+      }
+   },
+   "deleteSelected": {
+      "description": "Button text to delete the conversations that are currently selected.",
+      "message": "Elimina selezionate"
+   },
+   "deletionError": {
+      "description": "Error message shown when the deletion script cannot be executed.",
+      "message": "Impossibile avviare il processo di eliminazione. Aggiorna la pagina e riprova."
+   },
+   "dismiss": {
+      "description": "Button text to close or dismiss a notification.",
+      "message": "Chiudi"
+   },
+   "dontShowAgain": {
+      "description": "Tooltip for a button that dismisses a warning permanently.",
+      "message": "Non mostrare più"
+   },
+   "extensionDescription": {
+      "description": "The description of the extension.",
+      "message": "Seleziona e cancella in batch le chat di Gemini."
+   },
+   "extensionName": {
+      "description": "The name of the extension.",
+      "message": "Gemini Bulk Delete"
+   },
+   "extensionShortName": {
+      "description": "The short name of the extension.",
+      "message": "Eliminazione Multipla"
+   },
+   "learnMore": {
+      "description": "Link text to learn more about a topic.",
+      "message": "Scopri di più"
+   },
+   "loading": {
+      "description": "Text shown on a button while content is loading.",
+      "message": "Caricamento..."
+   },
+   "multiSelectModeTooltip": {
+      "description": "Tooltip for the toggle switch that enables the batch deletion mode.",
+      "message": "Abilita la modalità selezione multipla per eliminare più chat. Scorciatoie da tastiera: Shift+A (seleziona tutto), tasto Canc (elimina selezionate), Esc (esci)"
+   },
+   "paywall_alreadyHaveLicense": {
+      "description": "Button/link for users who already have a license.",
+      "message": "Ho già una licenza"
+   },
+   "paywall_back": {
+      "description": "Button to go back to the previous view.",
+      "message": "Indietro"
+   },
+   "paywall_close": {
+      "description": "Tooltip for the close button on the paywall modal.",
+      "message": "Chiudi finestra"
+   },
+   "paywall_copied": {
+      "description": "Confirmation text shown after copying.",
+      "message": "Copiato!"
+   },
+   "paywall_copyButton": {
+      "description": "Text for a button that copies a promo code.",
+      "message": "Clicca per copiare!"
+   },
+   "paywall_enterLicense": {
+      "description": "Heading for the license entry section.",
+      "message": "Inserisci Chiave di Licenza"
+   },
+   "paywall_enterLicenseSubtext": {
+      "description": "Subtext for the license entry section.",
+      "message": "Inserisci la tua chiave di licenza per sbloccare eliminazioni illimitate."
+   },
+   "paywall_feature1": {
+      "description": "A feature point.",
+      "message": "Eliminazioni illimitate delle chat"
+   },
+   "paywall_feature2": {
+      "description": "A feature point.",
+      "message": "Supporto prioritario"
+   },
+   "paywall_feature3": {
+      "description": "A feature point.",
+      "message": "Aggiornamenti futuri inclusi"
+   },
+   "paywall_heading": {
+      "description": "Main heading in the paywall modal.",
+      "message": "Hai utilizzato tutte le 50 eliminazioni gratuite."
+   },
+   "paywall_invalidKey": {
+      "description": "Error message for an invalid license key.",
+      "message": "Formato chiave di licenza non valido"
+   },
+   "paywall_promoCode": {
+      "description": "Label for a promo code.",
+      "message": "Usa il codice:"
+   },
+   "paywall_promoTitle": {
+      "description": "Title for a promotional offer.",
+      "message": "Lancio Anticipato – 40% di Sconto"
+   },
+   "paywall_subheading": {
+      "description": "Subheading in the paywall modal.",
+      "message": "Aggiorna per sbloccare eliminazioni illimitate."
+   },
+   "paywall_support": {
+      "description": "A message encouraging users to support development.",
+      "message": "Il tuo supporto aiuta lo sviluppo continuo dell'estensione."
+   },
+   "paywall_title": {
+      "description": "The title of the paywall modal.",
+      "message": "Eliminazioni Gratuite Utilizzate"
+   },
+   "paywall_upgradeButton": {
+      "description": "Button to start the upgrade process.",
+      "message": "Aggiorna e Ottieni Licenza"
+   },
+   "paywall_validateButton": {
+      "description": "Button to validate a license key.",
+      "message": "Valida e Sblocca"
+   },
+   "paywall_validating": {
+      "description": "Text shown while a license is being validated.",
+      "message": "Validazione..."
+   },
+   "selectAllChats": {
+      "description": "Button text to select all conversations.",
+      "message": "Seleziona tutte le chat"
+   },
+   "workspaceAlert": {
+      "description": "The full text of the alert shown when a user clicks 'Learn more' on the workspace warning.",
+      "message": "Gli account educativi (.edu) e aziendali hanno generalmente la cancellazione delle chat controllata dall'amministratore di Google Workspace della tua organizzazione. I singoli utenti non possono eliminare la loro cronologia chat poiché viene gestita a livello di amministratore con politiche di conservazione (tipicamente 18 mesi)."
+   },
+   "workspaceWarningConfirm": {
+      "description": "Confirmation message shown to users on workspace accounts before attempting deletion.",
+      "message": "Attenzione: Sembra che tu stia utilizzando un account educativo o aziendale. Questi account in genere non possono eliminare le chat poiché questo è controllato dall'amministratore della tua organizzazione. Vuoi comunque provare?"
+   },
+   "workspaceWarningNote": {
+      "description": "A label for a note or warning.",
+      "message": "Nota:"
+   },
+   "workspaceWarningText": {
+      "description": "The text of the warning for workspace account limitations.",
+      "message": "Gli account educativi (.edu) e alcuni account aziendali non possono eliminare le chat. Questo è controllato dalle impostazioni dell'amministratore della tua organizzazione."
+   }
+}

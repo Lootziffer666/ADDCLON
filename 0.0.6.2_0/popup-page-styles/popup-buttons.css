@@ -1,0 +1,347 @@
+/*
+popup-buttons.css
+Version: 1.1
+
+This file is responsible for:
+1. Base Button Styling: Generic styling for all <button> elements within the popup interface.
+2. Custom Button Section: Styles for the custom buttons area including the button list container,
+   individual custom button items (with hover and dragging effects), drag handles, and separator items.
+*/
+
+
+/* input for creating new buttons */
+
+.text-input {
+    overflow: hidden;
+    resize: none;
+}
+
+:root {
+    --button-lift-glass-bg: rgba(255, 255, 255, 0.42);
+    --button-lift-glass-tint: rgba(91, 209, 138, 0.36);
+    --button-lift-glass-highlight: rgba(255, 255, 255, 0.72);
+    --button-lift-glass-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+    --button-lift-glass-outline: rgba(91, 209, 138, 0.5);
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* 1. Base Button Styling for All Buttons                                   */
+/* ------------------------------------------------------------------------- */
+
+/* Generic styling for all buttons */
+button {
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: #ffffff;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 14px;
+    transition: background var(--transition-duration) ease,
+        transform 0.2s ease,
+        color var(--transition-duration) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover state for buttons */
+button:hover {
+    background: #e6e6e6;
+}
+
+/* Active state for buttons */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Special styling for buttons with the "danger" class */
+button.danger {
+    color: var(--danger-color);
+    border-color: var(--danger-color);
+    background: #ffffff;
+}
+
+button.danger:hover {
+    background: #f8d7da;
+}
+
+.delete-button.undo-state {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.delete-button.undo-state:hover {
+    background: color-mix(in srgb, var(--primary-color) 90%, #ffffff 10%);
+    border-color: color-mix(in srgb, var(--primary-color) 90%, #ffffff 10%);
+}
+
+.button-item.pending-delete {
+    border-color: var(--primary-color);
+    background: var(--primary-color-faded, #f3ecff);
+}
+
+
+
+
+/* ------------------------------------------------------------------------- */
+/* 2. Custom Buttons Section                                                 */
+/* ------------------------------------------------------------------------- */
+
+/* Group for the "Add Button" form controls */
+.add-button-group {
+    border: 1px dashed var(--primary-color);
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background-color: var(--primary-color-faded);
+}
+
+/* Adjust margins for rows inside the group to avoid double margins */
+.add-button-group .row {
+    margin-bottom: 8px;
+}
+
+/* Remove margin from the last row inside the group */
+.add-button-group .row:last-child {
+    margin-bottom: 0;
+}
+
+/* Container for the custom button list */
+#buttonCardsList {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 8px;
+    min-height: 50px;
+    background-color: #ffffff;
+    transition: background-color var(--transition-duration) ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1 1 auto;
+    scroll-behavior: smooth;
+    transform-style: preserve-3d;
+}
+
+/* Styles for individual custom button items */
+.button-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    margin: 4px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: #ffffff;
+    cursor: grab;
+    position: relative;
+    /* Set initial scale to 1 and enable a smooth transition */
+    transform: scale(1);
+    transition: transform 0.9s ease, background-color 0.9s ease, box-shadow 0.4s ease;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    isolation: isolate;
+}
+
+/*
+ * Override the parent's 'grab' cursor for interactive children.
+ * This ensures that users see the correct cursor (e.g., text, pointer)
+ * over elements they can interact with, improving the UI's affordance.
+ */
+.button-item>input,
+.button-item>textarea,
+.button-item>button,
+.button-item>label {
+    cursor: auto;
+}
+
+/* Hover effect for button items */
+.button-item:hover {
+    background-color: var(--hover-bg-color);
+}
+
+/* Styling when a button item is being dragged */
+/* Styling when a button item is being dragged */
+/* Styling when a button item is being dragged */
+.button-item.dragging {
+    transform: scale(0.8);
+
+    /* Remove background/filter from parent to avoid distorting content */
+    background: transparent;
+
+    /* Shadow and border */
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    cursor: grabbing;
+    z-index: 3;
+    /* overflow: visible allows the liquid edges to show, but hidden keeps it contained. 
+       User wanted "liquid glass", usually implies some edge distortion. 
+       However, keeping hidden prevents layout spill. Let's try hidden first as per original. */
+    overflow: hidden;
+
+    opacity: 1;
+    will-change: transform;
+}
+
+/* The liquid glass background layer */
+.button-item.dragging::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: -1;
+    /* Behind content */
+
+    /* Glass Effect */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Inner shine effect */
+.button-item.dragging::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    box-shadow:
+        inset 2px 2px 3px rgba(255, 255, 255, 0.7),
+        inset -3px -3px 6px rgba(255, 255, 255, 0.4);
+    border-radius: inherit;
+    /* Stacking order: 
+       -1: Glass Background (::before)
+        2: Shine Effect (::after)
+        5: Text & Inputs (Content)
+    */
+    z-index: 2;
+}
+
+.button-item.dragging textarea,
+.button-item.dragging .text-input,
+.button-item.dragging .emoji-input {
+    /* Make inputs slightly more transparent during drag to blend */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #000;
+    /* Ensure text remains visible */
+}
+
+/* Ensure content sits on top of the distorted background */
+.button-item.dragging>* {
+    position: relative;
+    z-index: 5;
+}
+
+/* Special styling for the Settings button card */
+.settings-button-card {
+    /* More conservative padding adjustment */
+    padding: 2px 8px;
+}
+
+.settings-button-card>.text-input {
+    /* This is a div, not a textarea. Make it look like a label. */
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center text horizontally */
+    color: var(--text-muted, #666);
+    font-size: 16px;
+    /* Make text bigger */
+    font-style: normal;
+    /* Remove italic */
+    font-weight: 500;
+    /* Medium weight for better visibility */
+    cursor: default;
+    /* Not grab/text */
+    padding: 6px;
+    /* Moderate padding */
+    border: 1px solid transparent;
+    /* Maintain layout alignment with bordered textareas */
+    box-shadow: none;
+    text-align: center;
+    /* Ensure text is centered */
+    width: 100%;
+    /* Ensure it takes full width for proper centering */
+}
+
+/* Ensure hotkey text in settings card is properly centered */
+.settings-button-card .shortcut-line {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+
+/* Adjust space between elements in settings card for better hotkey positioning */
+.settings-button-card.button-item {
+    gap: 8px;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Meta block: stacks autosend + hotkey vertically                           */
+/* ------------------------------------------------------------------------- */
+.button-item .meta-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content horizontally */
+    gap: 2px;
+}
+
+.button-item .shortcut-line {
+    line-height: 1.2;
+    text-align: center;
+    /* Center hotkey text */
+    width: 100%;
+    /* Ensure the text centers within the full width */
+}
+
+/* ------------------------------------------------------------------------- */
+/* Drag Handle Styling                                                       */
+/* ------------------------------------------------------------------------- */
+
+/* Visual affordance for dragging custom button items */
+.drag-handle {
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Separator Styles                                                          */
+/* ------------------------------------------------------------------------- */
+
+/* Special styles for separator items within the button list */
+.button-item.separator-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 8px 0;
+    padding: 8px;
+    background: #dcdcdc;
+    border: none;
+    cursor: move;
+    transition: background-color var(--transition-duration) ease;
+}
+
+.button-item.separator-item:hover {
+    background: #c0c0c0;
+}
+
+.button-item.separator-item.dragging {
+    opacity: 0.7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------------------------------------------------------------- */
+/* Small Button Variant                                                      */
+/* ------------------------------------------------------------------------- */
+button.small {
+    padding: 4px 8px;
+    font-size: 12px;
+}

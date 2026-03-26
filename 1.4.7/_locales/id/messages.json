@@ -1,0 +1,198 @@
+{
+   "addFolderButton": {
+      "description": "Button hover text to add a new folder.",
+      "message": "Tambahkan folder"
+   },
+   "addPromptButton": {
+      "description": "Button hover text to add a new prompt.",
+      "message": "Tambahkan prompt"
+   },
+   "allPrompts": {
+      "description": "Option for showing all prompts.",
+      "message": "Semua Prompt"
+   },
+   "cancelButton": {
+      "description": "Generic cancel button text.",
+      "message": "BATAL"
+   },
+   "closeSettings": {
+      "description": "Button text to close the settings view.",
+      "message": "TUTUP PENGATURAN"
+   },
+   "collapseAll": {
+      "description": "Button text to collapse all prompts.",
+      "message": "Ciutkan Semua"
+   },
+   "confirmDeleteFolder": {
+      "description": "Confirmation message for deleting a folder.",
+      "message": "Apakah Anda yakin ingin menghapus folder ini? Prompt di dalam folder ini tidak akan dihapus!"
+   },
+   "confirmDeletePrompt": {
+      "description": "Confirmation message for deleting a prompt.",
+      "message": "Apakah Anda yakin ingin menghapus prompt ini?"
+   },
+   "copiedButton": {
+      "description": "Text shown after copying.",
+      "message": "TERSALIN"
+   },
+   "copyButton": {
+      "description": "Copy button text.",
+      "message": "SALIN"
+   },
+   "deleteButton": {
+      "description": "Generic delete button text.",
+      "message": "HAPUS"
+   },
+   "editButton": {
+      "description": "Generic edit button text.",
+      "message": "UBAH"
+   },
+   "enterNewFolderName": {
+      "description": "Prompt message for entering a new folder name.",
+      "message": "Masukkan nama folder baru:"
+   },
+   "expandAll": {
+      "description": "Button text to expand all prompts.",
+      "message": "Perluas Semua"
+   },
+   "exportPrompts": {
+      "description": "Button text to export prompts.",
+      "message": "Ekspor prompt sebagai CSV"
+   },
+   "extDescription": {
+      "description": "The description of the extension.",
+      "message": "Salin, edit, dan simpan templat prompt Anda di database pribadi dan gunakan di sebagian besar situs web AI/LLM"
+   },
+   "extName": {
+      "description": "The name of the extension.",
+      "message": "Manajer Prompt XXL untuk ChatGPT, Claude, Gemini, Perplexity dan lainnya!"
+   },
+   "extShortName": {
+      "description": "The short name of the extension.",
+      "message": "Manajer Prompt XXL"
+   },
+   "folderNamePlaceholder": {
+      "description": "Placeholder for new folder name input.",
+      "message": "Masukkan nama folder"
+   },
+   "hideButton": {
+      "description": "Button text to hide the add prompt form.",
+      "message": "SEMBUNYIKAN"
+   },
+   "iconDragTip": {
+      "description": "Tip about dragging the icon to reposition it.",
+      "message": "Seret ikon ke atas atau ke bawah untuk memposisikan ulang"
+   },
+   "importErrorNoTitlePrompt": {
+      "description": "Error message when CSV for import is missing columns.",
+      "message": "File CSV harus berisi kolom \"Title\" dan \"Prompt\"."
+   },
+   "importErrorParse": {
+      "description": "Error message when CSV for import is empty or cannot be parsed.",
+      "message": "File CSV tidak dapat diurai atau kosong."
+   },
+   "importPrompts": {
+      "description": "Button text to import prompts.",
+      "message": "Impor prompt dari CSV"
+   },
+   "importSuccess": {
+      "description": "Success message after importing prompts from CSV.",
+      "message": "Prompt berhasil diimpor!"
+   },
+   "keyboardShortcuts": {
+      "description": "Header for keyboard shortcuts section in settings.",
+      "message": "Pintasan Keyboard"
+   },
+   "newPromptPlaceholder": {
+      "description": "Placeholder for new prompt text area.",
+      "message": "Tambahkan prompt baru"
+   },
+   "privatePromptsTab": {
+      "description": "Tab title for private prompts.",
+      "message": "Prompt Pribadi"
+   },
+   "promptTitlePlaceholder": {
+      "description": "Placeholder for new prompt title input.",
+      "message": "Masukkan judul prompt"
+   },
+   "publicPromptsComingSoon": {
+      "description": "Info text for public prompts tab.",
+      "message": "\u003Cb>3000+\u003C/b> Prompt Publik \u003Cbr>\u003Cbr> - Segera hadir -"
+   },
+   "publicPromptsTab": {
+      "description": "Tab title for public prompts.",
+      "message": "Prompt Publik"
+   },
+   "rateExtension": {
+      "description": "Button text to rate the extension.",
+      "message": "Beri kami ulasan"
+   },
+   "saveButton": {
+      "description": "Generic save button text.",
+      "message": "SIMPAN"
+   },
+   "searchPromptsPlaceholder": {
+      "description": "Placeholder for search input.",
+      "message": "Cari prompt"
+   },
+   "selectFolder": {
+      "description": "Default option in folder select dropdown.",
+      "message": "Pilih folder"
+   },
+   "shareExtension": {
+      "description": "Button text for sharing.",
+      "message": "Bagikan"
+   },
+   "shortcutClose": {
+      "description": "Description for close/escape shortcut.",
+      "message": "Tutup"
+   },
+   "shortcutSearch": {
+      "description": "Description for search shortcut.",
+      "message": "Tampilkan/sembunyikan pencarian"
+   },
+   "shortcutToggleSidebar": {
+      "description": "Description for toggle sidebar shortcut.",
+      "message": "Tampilkan/sembunyikan sidebar"
+   },
+   "showIconSwitch": {
+      "description": "Switch to show icon on LLMs.",
+      "message": "Tampilkan Ikon"
+   },
+   "showIconSwitchOff": {
+      "description": "Show text if icon is swichted off",
+      "message": "Jangan lupa untuk menyematkan ekstensi di toolbar (ikon puzzle). Anda juga dapat menggunakan Alt+P untuk membuka sidebar!"
+   },
+   "sidebarHeader": {
+      "description": "Header in the sidebar.",
+      "message": "Manajer Prompt XXL"
+   },
+   "sortAZ": {
+      "description": "Sort option for alphabetical order.",
+      "message": "A-Z"
+   },
+   "sortBy": {
+      "description": "Label for sort dropdown.",
+      "message": "Urutkan"
+   },
+   "sortNewest": {
+      "description": "Sort option for newest first.",
+      "message": "Terbaru"
+   },
+   "sortOldest": {
+      "description": "Sort option for oldest first.",
+      "message": "Terlama"
+   },
+   "sortZA": {
+      "description": "Sort option for reverse alphabetical order.",
+      "message": "Z-A"
+   },
+   "supportExtension": {
+      "description": "Button text for support.",
+      "message": "Dukungan"
+   },
+   "untitledPrompt": {
+      "description": "Default title for a prompt.",
+      "message": "Tanpa Judul"
+   }
+}

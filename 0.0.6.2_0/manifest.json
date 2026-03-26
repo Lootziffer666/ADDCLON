@@ -1,0 +1,39 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icon128.png",
+         "16": "icon16.png",
+         "32": "icon32.png",
+         "48": "icon48.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "OneClickPrompts: Open User Interface"
+   },
+   "background": {
+      "service_worker": "config.js",
+      "type": "module"
+   },
+   "content_scripts": [ {
+      "css": [ "floating-panel-files/floating-panel.css", "common-ui-elements/ocp_toast.css", "common-ui-elements/ocp_tooltip.css" ],
+      "js": [ "log.js", "event-handlers.js", "utils.js", "modules/selector-auto-detector/base-heuristics.js", "modules/selector-auto-detector/container-heuristics.js", "modules/selector-auto-detector/heuristics-deepseek.js", "modules/selector-auto-detector/index.js", "modules/selector-auto-detector/selector-guard.js", "/modules/token-models/base.js", "/modules/token-models/registry.js", "/modules/token-models/model-simple.js", "/modules/token-models/model-advanced.js", "/modules/token-models/model-cpt-blend-mix.js", "/modules/token-models/model-single-regex-pass.js", "/modules/token-models/model-ultralight-state-machine.js", "/modules/token-models/model-registry-global.js", "/modules/token-approximator/backend-helpers.js", "/modules/token-approximator/backend-settings.js", "/modules/token-approximator/backend-ui.js", "/modules/token-approximator/backend-worker.js", "/modules/deepseek-heuristics.js", "/modules/backend-tokenApproximator.js", "common-ui-elements/ocp_toast.js", "common-ui-elements/ocp_tooltip.js", "per-website-button-clicking-mechanics/buttons-clicking-shared.js", "per-website-button-clicking-mechanics/buttons-clicking-chatgpt.js", "per-website-button-clicking-mechanics/buttons-clicking-copilot.js", "per-website-button-clicking-mechanics/buttons-clicking-claude.js", "per-website-button-clicking-mechanics/buttons-clicking-deepseek.js", "per-website-button-clicking-mechanics/buttons-clicking-aistudio.js", "per-website-button-clicking-mechanics/buttons-clicking-grok.js", "per-website-button-clicking-mechanics/buttons-clicking-gemini.js", "per-website-button-clicking-mechanics/buttons-clicking-perplexity.js", "buttons.js", "modules/buttons-container-mover.js", "buttons-init-and-render.js", "interface.js", "floating-panel.js", "floating-panel-ui-engine.js", "floating-panel-ui-queue-dnd.js", "floating-panel-ui-queue.js", "floating-panel-ui-creation.js", "floating-panel-ui-interaction.js", "floating-panel-settings.js", "buttons-injection.js", "init.js" ],
+      "matches": [ "https://chat.openai.com/*", "https://chatgpt.com/*", "https://claude.ai/*", "https://copilot.microsoft.com/*", "https://chat.deepseek.com/*", "https://aistudio.google.com/*", "https://grok.com/*", "https://gemini.google.com/*", "https://www.perplexity.ai/*", "https://perplexity.ai/*" ]
+   } ],
+   "description": "One Click Prompts for AI chat interfaces",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu9TEZL7rxGJSMf0UcSi367dfKcPcAuNzQhKdm5vQy34gbhErcpjl65ItkK0OdsOji4+6fgRDRki/8EURECXqcIf6pynEHZtyyEDg8MHaTeFhJ8vsnap/2PtMY2T4QZ6jpgw2jrX5jqwgOItCwS5t673VTeSYww2C3/AF3SjEAKeUZpPWIzYj3aBx/dXx6B24iO0B+j3j7CidcPmv40vivolDmznAGnaQrW8Wn/wXgQSk+G2rIW/YNDIJJV4DcFpEXnqzr1vHtI+prBNG5gAZ1oN+HHMfdayBo3sHpDA84Ql51Ea6YmWSTPPEj0AiNX5+IfVIhaaIEMWdknqiuOdnHwIDAQAB",
+   "manifest_version": 3,
+   "name": "OneClickPrompts",
+   "options_page": "popup.html",
+   "permissions": [ "storage", "contextMenus", "power" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.6.2",
+   "web_accessible_resources": [ {
+      "matches": [ "https://chat.openai.com/*", "https://chatgpt.com/*", "https://claude.ai/*", "https://copilot.microsoft.com/*", "https://chat.deepseek.com/*", "https://aistudio.google.com/*", "https://grok.com/*", "https://gemini.google.com/*", "https://www.perplexity.ai/*", "https://perplexity.ai/*" ],
+      "resources": [ "floating-panel-files/floating-panel.html", "modules/selector-auto-detector/selector-save.js", "per-website-button-clicking-mechanics/perplexity-injector.js" ]
+   } ]
+}

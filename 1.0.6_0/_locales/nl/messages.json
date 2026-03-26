@@ -1,0 +1,271 @@
+{
+   "bulkDeleteTitle": {
+      "description": "Title of the panel that contains the bulk-delete controls.",
+      "message": "Bulk-verwijderen"
+   },
+   "deleteConversations_allFailed": {
+      "description": "Completion message when all chats failed to delete.",
+      "message": "Kon geen chats verwijderen. Probeer het later opnieuw of met minder chats."
+   },
+   "deleteConversations_cancel": {
+      "description": "Button text to cancel the current operation.",
+      "message": "Annuleren"
+   },
+   "deleteConversations_cancelled": {
+      "description": "Message shown when the user cancels the deletion process.",
+      "message": "Verwijdering geannuleerd."
+   },
+   "deleteConversations_cleared": {
+      "description": "A completion message shown after successfully deleting chats.",
+      "message": "Klaar! Uw chats zijn gewist."
+   },
+   "deleteConversations_deleting": {
+      "description": "A loading message shown while chats are being deleted.",
+      "message": "Chats verwijderen..."
+   },
+   "deleteConversations_done": {
+      "description": "A friendly completion message.",
+      "message": "Klaar! We hopen dat u tevreden was met onze service."
+   },
+   "deleteConversations_finished": {
+      "description": "A completion message with a bit of flair.",
+      "message": "En... we zijn klaar! ✨"
+   },
+   "deleteConversations_licenseValidated": {
+      "description": "Success message shown after a license is successfully validated.",
+      "message": "Licentie gevalideerd! Onbeperkte verwijderingen ontgrendeld."
+   },
+   "deleteConversations_longOperation": {
+      "description": "Warning message when the deletion process is slow.",
+      "message": "De bewerking duurt langer dan verwacht."
+   },
+   "deleteConversations_longOperationSuggestion": {
+      "description": "A suggestion for the user when the operation is slow.",
+      "message": "Probeer minder chats te selecteren of controleer uw internetverbinding."
+   },
+   "deleteConversations_noItems": {
+      "description": "Message shown when there are no items to process from the start.",
+      "message": "Geen items om te verwerken."
+   },
+   "deleteConversations_noItemsProcessed": {
+      "description": "Message shown when no items were processed.",
+      "message": "Geen items verwerkt. Controleer de selectie."
+   },
+   "deleteConversations_noSelection": {
+      "description": "Error message shown when the user tries to delete without selecting any conversations.",
+      "message": "Geen gesprekken geselecteerd om te verwijderen."
+   },
+   "deleteConversations_partialSuccess": {
+      "description": "Completion message when some chats failed to delete.",
+      "message": "$DELETED$/$TOTAL$ chats verwijderd. Sommige chats konden niet worden verwijderd.",
+      "placeholders": {
+         "deleted": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "deleteConversations_preparing": {
+      "description": "Initial progress text. $TOTAL$ is a placeholder for the total number of items.",
+      "message": "Voorbereiden... (0/$TOTAL$)",
+      "placeholders": {
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "deleteConversations_progress": {
+      "description": "Progress text shown during deletion. $PROCESSED$, $TOTAL$, $DELETED$, and $FAILED$ are placeholders.",
+      "message": "Verwerkt $PROCESSED$/$TOTAL$ (Verwijderd: $DELETED$, Mislukt: $FAILED$)",
+      "placeholders": {
+         "deleted": {
+            "content": "$3"
+         },
+         "failed": {
+            "content": "$4"
+         },
+         "processed": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "deleteConversations_quotaExhausted": {
+      "description": "Error message shown when the user's free quota is used up.",
+      "message": "Gratis quota uitgeput (50/50 verwijderingen gebruikt). Upgrade om verder te gaan."
+   },
+   "deleteConversations_taskComplete": {
+      "description": "A completion message.",
+      "message": "Taak voltooid. Klaar voor meer?"
+   },
+   "deleteConversations_tidied": {
+      "description": "A completion message indicating success.",
+      "message": "Succesvol opgeruimd!"
+   },
+   "deleteConversations_timeout": {
+      "description": "Error message when the deletion takes too long.",
+      "message": "Bewerking time-out. Probeer het opnieuw met minder chats."
+   },
+   "deleteConversations_tryAgain": {
+      "description": "Button text to try an operation again.",
+      "message": "Opnieuw proberen"
+   },
+   "deleteConversations_workspaceMessage": {
+      "description": "Completion message shown for workspace accounts.",
+      "message": "Educatief/Workspace-account gedetecteerd. Verwijdering kan worden beperkt door uw organisatiebeheerder."
+   },
+   "deleteN": {
+      "description": "Button text to delete a specific number of conversations. $COUNT$ is a placeholder.",
+      "message": "Verwijder ($COUNT$)",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "5"
+         }
+      }
+   },
+   "deleteSelected": {
+      "description": "Button text to delete the conversations that are currently selected.",
+      "message": "Geselecteerde verwijderen"
+   },
+   "deletionError": {
+      "description": "Error message shown when the deletion script cannot be executed.",
+      "message": "Kan het verwijderingsproces niet starten. Vernieuw de pagina en probeer het opnieuw."
+   },
+   "dismiss": {
+      "description": "Button text to close or dismiss a notification.",
+      "message": "Sluiten"
+   },
+   "dontShowAgain": {
+      "description": "Tooltip for a button that dismisses a warning permanently.",
+      "message": "Dit niet meer tonen"
+   },
+   "extensionDescription": {
+      "description": "The description of the extension.",
+      "message": "Meerdere Gemini-chats selecteren en in bulk verwijderen."
+   },
+   "extensionName": {
+      "description": "The name of the extension.",
+      "message": "Gemini Bulk Delete"
+   },
+   "extensionShortName": {
+      "description": "The short name of the extension.",
+      "message": "Bulk Delete"
+   },
+   "learnMore": {
+      "description": "Link text to learn more about a topic.",
+      "message": "Meer informatie"
+   },
+   "loading": {
+      "description": "Text shown on a button while content is loading.",
+      "message": "Laden..."
+   },
+   "multiSelectModeTooltip": {
+      "description": "Tooltip for the toggle switch that enables the batch deletion mode.",
+      "message": "Schakel multi-selectiemodus in om meerdere chats te verwijderen. Sneltoetsen: Shift+A (alles selecteren), Delete-toets (geselecteerde verwijderen), Esc (afsluiten)"
+   },
+   "paywall_alreadyHaveLicense": {
+      "description": "Button/link for users who already have a license.",
+      "message": "Ik heb al een licentie"
+   },
+   "paywall_back": {
+      "description": "Button to go back to the previous view.",
+      "message": "Terug"
+   },
+   "paywall_close": {
+      "description": "Tooltip for the close button on the paywall modal.",
+      "message": "Modal sluiten"
+   },
+   "paywall_copied": {
+      "description": "Confirmation text shown after copying.",
+      "message": "Gekopieerd!"
+   },
+   "paywall_copyButton": {
+      "description": "Text for a button that copies a promo code.",
+      "message": "Klik om te kopiëren!"
+   },
+   "paywall_enterLicense": {
+      "description": "Heading for the license entry section.",
+      "message": "Licentiesleutel invoeren"
+   },
+   "paywall_enterLicenseSubtext": {
+      "description": "Subtext for the license entry section.",
+      "message": "Voer uw licentiesleutel in om onbeperkte verwijderingen te ontgrendelen."
+   },
+   "paywall_feature1": {
+      "description": "A feature point.",
+      "message": "Onbeperkte chatverwijderingen"
+   },
+   "paywall_feature2": {
+      "description": "A feature point.",
+      "message": "Prioriteitsondersteuning"
+   },
+   "paywall_feature3": {
+      "description": "A feature point.",
+      "message": "Toekomstige updates inbegrepen"
+   },
+   "paywall_heading": {
+      "description": "Main heading in the paywall modal.",
+      "message": "U heeft alle 50 gratis verwijderingen gebruikt."
+   },
+   "paywall_invalidKey": {
+      "description": "Error message for an invalid license key.",
+      "message": "Ongeldig licentiesleutelformaat"
+   },
+   "paywall_promoCode": {
+      "description": "Label for a promo code.",
+      "message": "Gebruik code:"
+   },
+   "paywall_promoTitle": {
+      "description": "Title for a promotional offer.",
+      "message": "Early-Bird Launch – 40% korting"
+   },
+   "paywall_subheading": {
+      "description": "Subheading in the paywall modal.",
+      "message": "Upgrade om onbeperkte verwijderingen te ontgrendelen."
+   },
+   "paywall_support": {
+      "description": "A message encouraging users to support development.",
+      "message": "Uw steun helpt bij de voortdurende ontwikkeling van de extensie."
+   },
+   "paywall_title": {
+      "description": "The title of the paywall modal.",
+      "message": "Gratis verwijderingen opgebruikt"
+   },
+   "paywall_upgradeButton": {
+      "description": "Button to start the upgrade process.",
+      "message": "Upgrade & Verkrijg Licentie"
+   },
+   "paywall_validateButton": {
+      "description": "Button to validate a license key.",
+      "message": "Valideren & Ontgrendelen"
+   },
+   "paywall_validating": {
+      "description": "Text shown while a license is being validated.",
+      "message": "Valideren..."
+   },
+   "selectAllChats": {
+      "description": "Button text to select all conversations.",
+      "message": "Alle chats selecteren"
+   },
+   "workspaceAlert": {
+      "description": "The full text of the alert shown when a user clicks 'Learn more' on the workspace warning.",
+      "message": "Educatieve (.edu) en workspace-accounts hebben doorgaans chatverwijdering die wordt beheerd door uw Google Workspace-beheerder. Individuele gebruikers kunnen hun chatgeschiedenis niet verwijderen omdat dit wordt beheerd op beheerdersniveau met retentiebeleid (doorgaans 18 maanden)."
+   },
+   "workspaceWarningConfirm": {
+      "description": "Confirmation message shown to users on workspace accounts before attempting deletion.",
+      "message": "Waarschuwing: Het lijkt erop dat u een educatief of workspace-account gebruikt. Deze accounts kunnen doorgaans geen chats verwijderen omdat dit wordt beheerd door uw organisatiebeheerder. Wilt u het toch proberen?"
+   },
+   "workspaceWarningNote": {
+      "description": "A label for a note or warning.",
+      "message": "Opmerking:"
+   },
+   "workspaceWarningText": {
+      "description": "The text of the warning for workspace account limitations.",
+      "message": "Educatieve (.edu) en sommige workspace-accounts kunnen geen chats verwijderen. Dit wordt beheerd door de beheerdersinstellingen van uw organisatie."
+   }
+}

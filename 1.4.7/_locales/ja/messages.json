@@ -1,0 +1,198 @@
+{
+   "addFolderButton": {
+      "description": "Button hover text to add a new folder.",
+      "message": "フォルダを追加"
+   },
+   "addPromptButton": {
+      "description": "Button hover text to add a new prompt.",
+      "message": "プロンプトを追加"
+   },
+   "allPrompts": {
+      "description": "Option for showing all prompts.",
+      "message": "すべてのプロンプト"
+   },
+   "cancelButton": {
+      "description": "Generic cancel button text.",
+      "message": "キャンセル"
+   },
+   "closeSettings": {
+      "description": "Button text to close the settings view.",
+      "message": "設定を閉じる"
+   },
+   "collapseAll": {
+      "description": "Button text to collapse all prompts.",
+      "message": "すべて折りたたむ"
+   },
+   "confirmDeleteFolder": {
+      "description": "Confirmation message for deleting a folder.",
+      "message": "このフォルダを削除してもよろしいですか？このフォルダ内のプロンプトは削除されません！"
+   },
+   "confirmDeletePrompt": {
+      "description": "Confirmation message for deleting a prompt.",
+      "message": "このプロンプトを削除してもよろしいですか？"
+   },
+   "copiedButton": {
+      "description": "Text shown after copying.",
+      "message": "コピー済み"
+   },
+   "copyButton": {
+      "description": "Copy button text.",
+      "message": "コピー"
+   },
+   "deleteButton": {
+      "description": "Generic delete button text.",
+      "message": "削除"
+   },
+   "editButton": {
+      "description": "Generic edit button text.",
+      "message": "編集"
+   },
+   "enterNewFolderName": {
+      "description": "Prompt message for entering a new folder name.",
+      "message": "新しいフォルダ名を入力してください："
+   },
+   "expandAll": {
+      "description": "Button text to expand all prompts.",
+      "message": "すべて展開"
+   },
+   "exportPrompts": {
+      "description": "Button text to export prompts.",
+      "message": "プロンプトをCSVとしてエクスポート"
+   },
+   "extDescription": {
+      "description": "The description of the extension.",
+      "message": "プロンプトテンプレートを個人データベースにコピー、編集、保存し、ほとんどのAI/LLMウェブサイトで利用できます。"
+   },
+   "extName": {
+      "description": "The name of the extension.",
+      "message": "ChatGPT、Claude、Gemini、Perplexity、GrokなどのためのXXLプロンプトマネージャー！"
+   },
+   "extShortName": {
+      "description": "The short name of the extension.",
+      "message": "XXLプロンプトマネージャー"
+   },
+   "folderNamePlaceholder": {
+      "description": "Placeholder for new folder name input.",
+      "message": "フォルダ名を入力"
+   },
+   "hideButton": {
+      "description": "Button text to hide the add prompt form.",
+      "message": "非表示"
+   },
+   "iconDragTip": {
+      "description": "Tip about dragging the icon to reposition it.",
+      "message": "アイコンを上下にドラッグして位置を変更できます"
+   },
+   "importErrorNoTitlePrompt": {
+      "description": "Error message when CSV for import is missing columns.",
+      "message": "CSVファイルには「Title」と「Prompt」の列が必要です。"
+   },
+   "importErrorParse": {
+      "description": "Error message when CSV for import is empty or cannot be parsed.",
+      "message": "CSVファイルを解析できなかったか、空です。"
+   },
+   "importPrompts": {
+      "description": "Button text to import prompts.",
+      "message": "CSVからプロンプトをインポート"
+   },
+   "importSuccess": {
+      "description": "Success message after importing prompts from CSV.",
+      "message": "プロンプトが正常にインポートされました！"
+   },
+   "keyboardShortcuts": {
+      "description": "Header for keyboard shortcuts section in settings.",
+      "message": "キーボードショートカット"
+   },
+   "newPromptPlaceholder": {
+      "description": "Placeholder for new prompt text area.",
+      "message": "新しいプロンプトを追加"
+   },
+   "privatePromptsTab": {
+      "description": "Tab title for private prompts.",
+      "message": "プライベートプロンプト"
+   },
+   "promptTitlePlaceholder": {
+      "description": "Placeholder for new prompt title input.",
+      "message": "プロンプトのタイトルを入力"
+   },
+   "publicPromptsComingSoon": {
+      "description": "Info text for public prompts tab.",
+      "message": "\u003Cb>3000+\u003C/b> 公開プロンプト \u003Cbr>\u003Cbr> - 近日公開 -"
+   },
+   "publicPromptsTab": {
+      "description": "Tab title for public prompts.",
+      "message": "公開プロンプト"
+   },
+   "rateExtension": {
+      "description": "Button text to rate the extension.",
+      "message": "レビューを残す"
+   },
+   "saveButton": {
+      "description": "Generic save button text.",
+      "message": "保存"
+   },
+   "searchPromptsPlaceholder": {
+      "description": "Placeholder for search input.",
+      "message": "プロンプトを検索"
+   },
+   "selectFolder": {
+      "description": "Default option in folder select dropdown.",
+      "message": "フォルダを選択"
+   },
+   "shareExtension": {
+      "description": "Button text for sharing.",
+      "message": "共有"
+   },
+   "shortcutClose": {
+      "description": "Description for close/escape shortcut.",
+      "message": "閉じる"
+   },
+   "shortcutSearch": {
+      "description": "Description for search shortcut.",
+      "message": "検索の切り替え"
+   },
+   "shortcutToggleSidebar": {
+      "description": "Description for toggle sidebar shortcut.",
+      "message": "サイドバーの切り替え"
+   },
+   "showIconSwitch": {
+      "description": "Switch to show icon on LLMs.",
+      "message": "アイコンを表示"
+   },
+   "showIconSwitchOff": {
+      "description": "Show text if icon is swichted off",
+      "message": "ツールバーに拡張機能をピン留めすることを忘れずに（パズルアイコン）。Alt+Pでサイドバーを開くこともできます！"
+   },
+   "sidebarHeader": {
+      "description": "Header in the sidebar.",
+      "message": "XXLプロンプトマネージャー"
+   },
+   "sortAZ": {
+      "description": "Sort option for alphabetical order.",
+      "message": "A-Z"
+   },
+   "sortBy": {
+      "description": "Label for sort dropdown.",
+      "message": "並べ替え"
+   },
+   "sortNewest": {
+      "description": "Sort option for newest first.",
+      "message": "新しい順"
+   },
+   "sortOldest": {
+      "description": "Sort option for oldest first.",
+      "message": "古い順"
+   },
+   "sortZA": {
+      "description": "Sort option for reverse alphabetical order.",
+      "message": "Z-A"
+   },
+   "supportExtension": {
+      "description": "Button text for support.",
+      "message": "サポート"
+   },
+   "untitledPrompt": {
+      "description": "Default title for a prompt.",
+      "message": "無題"
+   }
+}

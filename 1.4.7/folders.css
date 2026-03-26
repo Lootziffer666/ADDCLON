@@ -1,0 +1,231 @@
+#folders-section {
+  margin: 10px;
+}
+
+#folder-select-list {
+  color: #D2D5D2;
+  background-color: #444654;
+  border-radius: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M5%208l5%205%205-5z%22%20fill%3D%22%23D2D5D2%22/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 5px top 50%;
+}
+
+.add-folder {
+  display: none; /* Initially hidden, shown by JS */
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  gap: 5px;
+}
+
+#new-folder-name {
+  color: #D2D5D2;
+  background-color: #444654;
+  flex-grow: 1;
+  padding: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  resize: vertical;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+#new-folder-name:focus {
+  border-color: #ccc !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#save-folder {
+  width: 100%;
+  display: block;
+  margin-top: 5px;
+  background-color: #444654;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+#save-folder:hover {
+  background-color: #0E9E7C;
+}
+
+#cancel-add-folder {
+  width: 100%;
+  display: block;
+  margin-top: 5px;
+  background-color: transparent;
+  color: #D2D5D2;
+  border: 1px solid #444654;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+#cancel-add-folder:hover {
+  background-color: #444654;
+  color: #fff;
+}
+
+#add-folder-button {
+  width: calc(100% - 20px);
+  display: block;
+  margin: 10px;
+  background-color: #444654;
+  color: #D2D2D5;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+#add-folder-button:hover {
+  color: #fff;
+  background-color: #0E9E7C;
+}
+
+#folder-actions-container {
+  display: flex;
+  gap: 5px;
+  padding: 5px 0;
+  width: 100%;
+}
+
+#folder-actions-container button {
+  width: 50%;
+  background-color: #444654;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+#folder-actions-container button:hover {
+  background-color: #0E9E7C;
+}
+
+#folder-actions-container #delete-folder-action:hover {
+    background-color: #DD395B;
+}
+
+/* Prompt Controls - Expand All & Sort By */
+#prompt-controls-container {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0;
+  width: 100%;
+  align-items: center;
+}
+
+#expand-all-button {
+  flex: 1;
+  background-color: #444654;
+  border-radius: 5px;
+  color: #D2D5D2;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#expand-all-button:hover {
+  background-color: #0E9E7C;
+  color: #fff;
+}
+
+#expand-all-button.expanded {
+  background-color: #5D5D6D;
+}
+
+#expand-all-button .expand-icon {
+  font-size: 0.6rem;
+  transition: transform 0.2s;
+}
+
+#expand-all-button.expanded .expand-icon {
+  transform: rotate(180deg);
+}
+
+#sort-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#sort-container label {
+  color: #8E8EA0;
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+#sort-prompts {
+  color: #D2D5D2;
+  background-color: #444654;
+  border-radius: 5px;
+  padding: 6px 24px 6px 8px;
+  font-size: 0.75rem;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%2212%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M3%205l3%203%203-3z%22%20fill%3D%22%23D2D5D2%22/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  min-width: 70px;
+}
+
+#sort-prompts:hover {
+  background-color: #5D5D6D;
+}
+
+#sort-prompts:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #0E9E7C;
+}
+
+.prompt-folder-info {
+  display: none;
+  font-size: 0.9rem;
+  color: #D2D5D2;
+  padding: 5px;
+  background-color: #444654;
+}
+
+.prompt-item.expanded .prompt-folder-info {
+  display: block;
+}
+
+.prompt-item.editing .prompt-folder-info {
+  display: none;
+}

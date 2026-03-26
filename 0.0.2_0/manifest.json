@@ -1,0 +1,32 @@
+{
+   "action": {
+      "default_icon": "128.png",
+      "default_title": "Click to open panel"
+   },
+   "background": {
+      "service_worker": "background.iife.js",
+      "type": "module"
+   },
+   "default_locale": "en",
+   "description": "__MSG_extensionDescription__",
+   "host_permissions": [ "https://claude.ai/*" ],
+   "icons": {
+      "128": "128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0wix1s7urgxJmjrTOZx2t1wKb4Ug+qerypfJizDFS5Gg5J++oC7YRGgut3S52xVxi6ipdar0FSgTualqZ+R3HZTNRDfCENuAGId7zLo3wedVot8f87/aJH4LlNjJPf6YyFrgXHVQ8BqzRBxTUTcX5fF0rr5BUUuR6wIs2PPHKh2jNCyycZsRIGFQEDS0Pn2NAjAN2j3MUtbNNsiAZ2JpswpkbaQMsKIpe9jSjq5RYQV/KC/Hu1SZtLpQzeLYyHy57NLbVdq7SNm1A3g8QRAadArK2gA1qzJxFE6buQb0O/xaYXeZ5pKO/ucSkSs5mKWukY018z5piPVQChkUpEmALQIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_extensionName__",
+   "permissions": [ "scripting", "tabs", "downloads", "sidePanel" ],
+   "side_panel": {
+      "default_behavior": {
+         "openPanelOnActionClick": true
+      },
+      "default_path": "side-panel/index.html"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.2",
+   "web_accessible_resources": [ {
+      "matches": [ "*://*/*" ],
+      "resources": [ "*.js", "*.css", "*.svg", "icon-128.png", "icon-34.png" ]
+   } ]
+}

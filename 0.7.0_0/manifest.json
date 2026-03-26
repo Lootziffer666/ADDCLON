@@ -1,0 +1,29 @@
+{
+   "action": {
+      "default_popup": "popup.html",
+      "default_title": "Default Popup Title"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "css": [ "content-scripts/content.css" ],
+      "js": [ "content-scripts/content.js" ],
+      "matches": [ "https://gemini.google.com/*" ]
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_extDescription__",
+   "host_permissions": [ "https://gemini.google.com/*" ],
+   "icons": {
+      "128": "icon-128.png",
+      "16": "icon-16.png",
+      "32": "icon-32.png",
+      "48": "icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4kBQqoArZsw1vLSgRFe99aaQVSwJWCNM4Gy2VUSuWeB3LNdKBmieIYrjSWz2dOpxQ5FrB6VB4VAgefrEVzE7plUj/x4P7+JNe8YJtzfzxLvERSXk4nEkerPGU60Y8vrqPFvg5SoVq1AubA7sE/ifJen4CgqSFEy6JpKwJMi+J+dvanLgP5+RNgIWSTSRR5q6z1zgsS2gxG+zPl7BYFmA37gfXWWABpXiwTpKFB3t4SCzfU0/Vk/qQ26FU3YgHSV33glPN5ZErovKr9EussJnBKiDA/hSBmK+Bo3QR5vzCgDF/EmQBnKsIncUOIm7Lw8nmnJQh47lazXUPEXUzBXnBQIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_extName__",
+   "permissions": [  ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.7.0"
+}

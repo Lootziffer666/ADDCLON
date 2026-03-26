@@ -1,0 +1,33 @@
+{
+   "action": {
+      "default_popup": "popup.html",
+      "default_title": "Grok Rate Limit Display"
+   },
+   "author": "Blankspeaker",
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "https://grok.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Displays remaining queries on grok.com",
+   "host_permissions": [ "https://grok.com/*" ],
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqbdeWTy2lSXmUD1HFnDVScbZZ4JeP+fzM14nLttXttvhZ2BTpkn+xojDJEgO7AcRbxP6X9W+KisSq0Dael4WyhgFNvFPYw3fW+3TEIzS8HOA2ii+d01VcQk5QKD0w5qekqO/w5/iDKR54bfR4yv2CsGJMj8wuAC6ryhe3VKpH13WwJ7uOJ6pwhMkk5CcmtDnjSN3PIoPdPad1Mr1ipOXkCuHQLKC6JzCDSbYEdkvFqn/4fENhbxOgzlCC8KLhJ2kBiHgKsScq+acAUaOlvp/5Gj3jkSK02rjdU8zJhAwnqtZy97l5Deq3W8Fkb+J2b+K83Ex/SblWE42RA+TaSW9FQIDAQAB",
+   "manifest_version": 3,
+   "name": "Grok Rate Limit Display",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5.5",
+   "web_accessible_resources": [ {
+      "matches": [ "https://grok.com/*" ],
+      "resources": [ "interceptor.js" ]
+   } ]
+}

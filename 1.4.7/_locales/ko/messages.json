@@ -1,0 +1,198 @@
+{
+   "addFolderButton": {
+      "description": "Button hover text to add a new folder.",
+      "message": "폴더 추가"
+   },
+   "addPromptButton": {
+      "description": "Button hover text to add a new prompt.",
+      "message": "프롬프트 추가"
+   },
+   "allPrompts": {
+      "description": "Option for showing all prompts.",
+      "message": "모든 프롬프트"
+   },
+   "cancelButton": {
+      "description": "Generic cancel button text.",
+      "message": "취소"
+   },
+   "closeSettings": {
+      "description": "Button text to close the settings view.",
+      "message": "설정 닫기"
+   },
+   "collapseAll": {
+      "description": "Button text to collapse all prompts.",
+      "message": "모두 접기"
+   },
+   "confirmDeleteFolder": {
+      "description": "Confirmation message for deleting a folder.",
+      "message": "이 폴더를 삭제하시겠습니까? 이 폴더의 프롬프트는 삭제되지 않습니다!"
+   },
+   "confirmDeletePrompt": {
+      "description": "Confirmation message for deleting a prompt.",
+      "message": "이 프롬프트를 삭제하시겠습니까?"
+   },
+   "copiedButton": {
+      "description": "Text shown after copying.",
+      "message": "복사됨"
+   },
+   "copyButton": {
+      "description": "Copy button text.",
+      "message": "복사"
+   },
+   "deleteButton": {
+      "description": "Generic delete button text.",
+      "message": "삭제"
+   },
+   "editButton": {
+      "description": "Generic edit button text.",
+      "message": "편집"
+   },
+   "enterNewFolderName": {
+      "description": "Prompt message for entering a new folder name.",
+      "message": "새 폴더 이름 입력:"
+   },
+   "expandAll": {
+      "description": "Button text to expand all prompts.",
+      "message": "모두 펼치기"
+   },
+   "exportPrompts": {
+      "description": "Button text to export prompts.",
+      "message": "CSV로 프롬프트 내보내기"
+   },
+   "extDescription": {
+      "description": "The description of the extension.",
+      "message": "개인 데이터베이스에 프롬프트 템플릿을 복사, 편집 및 저장하고 대부분의 AI/LLM 웹사이트에서 사용하세요."
+   },
+   "extName": {
+      "description": "The name of the extension.",
+      "message": "ChatGPT, Claude, Gemini, Perplexity, Kimi, DeepSeek 등을 위한 XXL 프롬프트 관리자!"
+   },
+   "extShortName": {
+      "description": "The short name of the extension.",
+      "message": "XXL 프롬프트 관리자"
+   },
+   "folderNamePlaceholder": {
+      "description": "Placeholder for new folder name input.",
+      "message": "폴더 이름 입력"
+   },
+   "hideButton": {
+      "description": "Button text to hide the add prompt form.",
+      "message": "숨기기"
+   },
+   "iconDragTip": {
+      "description": "Tip about dragging the icon to reposition it.",
+      "message": "아이콘을 위아래로 드래그하여 위치를 변경하세요"
+   },
+   "importErrorNoTitlePrompt": {
+      "description": "Error message when CSV for import is missing columns.",
+      "message": "CSV 파일에 \"제목\" 및 \"프롬프트\" 열이 포함되어야 합니다."
+   },
+   "importErrorParse": {
+      "description": "Error message when CSV for import is empty or cannot be parsed.",
+      "message": "CSV 파일을 구문 분석할 수 없거나 비어 있습니다."
+   },
+   "importPrompts": {
+      "description": "Button text to import prompts.",
+      "message": "CSV에서 프롬프트 가져오기"
+   },
+   "importSuccess": {
+      "description": "Success message after importing prompts from CSV.",
+      "message": "프롬프트를 성공적으로 가져왔습니다!"
+   },
+   "keyboardShortcuts": {
+      "description": "Header for keyboard shortcuts section in settings.",
+      "message": "키보드 단축키"
+   },
+   "newPromptPlaceholder": {
+      "description": "Placeholder for new prompt text area.",
+      "message": "새 프롬프트 추가"
+   },
+   "privatePromptsTab": {
+      "description": "Tab title for private prompts.",
+      "message": "개인 프롬프트"
+   },
+   "promptTitlePlaceholder": {
+      "description": "Placeholder for new prompt title input.",
+      "message": "프롬프트 제목 입력"
+   },
+   "publicPromptsComingSoon": {
+      "description": "Info text for public prompts tab.",
+      "message": "\u003Cb>3000+\u003C/b> 공개 프롬프트 \u003Cbr>\u003Cbr> - 곧 제공될 예정 -"
+   },
+   "publicPromptsTab": {
+      "description": "Tab title for public prompts.",
+      "message": "공개 프롬프트"
+   },
+   "rateExtension": {
+      "description": "Button text to rate the extension.",
+      "message": "평가 남기기"
+   },
+   "saveButton": {
+      "description": "Generic save button text.",
+      "message": "저장"
+   },
+   "searchPromptsPlaceholder": {
+      "description": "Placeholder for search input.",
+      "message": "프롬프트 검색"
+   },
+   "selectFolder": {
+      "description": "Default option in folder select dropdown.",
+      "message": "폴더 선택"
+   },
+   "shareExtension": {
+      "description": "Button text for sharing.",
+      "message": "공유하기"
+   },
+   "shortcutClose": {
+      "description": "Description for close/escape shortcut.",
+      "message": "닫기"
+   },
+   "shortcutSearch": {
+      "description": "Description for search shortcut.",
+      "message": "검색 전환"
+   },
+   "shortcutToggleSidebar": {
+      "description": "Description for toggle sidebar shortcut.",
+      "message": "사이드바 전환"
+   },
+   "showIconSwitch": {
+      "description": "Switch to show icon on LLMs.",
+      "message": "아이콘 표시"
+   },
+   "showIconSwitchOff": {
+      "description": "Show text if icon is swichted off",
+      "message": "툴바에 확장 프로그램을 고정하는 것을 잊지 마세요 (퍼즐 아이콘). Alt+P를 눌러 사이드바를 열 수도 있습니다!"
+   },
+   "sidebarHeader": {
+      "description": "Header in the sidebar.",
+      "message": "XXL 프롬프트 관리자"
+   },
+   "sortAZ": {
+      "description": "Sort option for alphabetical order.",
+      "message": "A-Z"
+   },
+   "sortBy": {
+      "description": "Label for sort dropdown.",
+      "message": "정렬"
+   },
+   "sortNewest": {
+      "description": "Sort option for newest first.",
+      "message": "최신순"
+   },
+   "sortOldest": {
+      "description": "Sort option for oldest first.",
+      "message": "오래된순"
+   },
+   "sortZA": {
+      "description": "Sort option for reverse alphabetical order.",
+      "message": "Z-A"
+   },
+   "supportExtension": {
+      "description": "Button text for support.",
+      "message": "지원"
+   },
+   "untitledPrompt": {
+      "description": "Default title for a prompt.",
+      "message": "무제"
+   }
+}

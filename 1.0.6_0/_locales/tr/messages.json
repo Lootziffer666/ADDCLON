@@ -1,0 +1,271 @@
+{
+   "bulkDeleteTitle": {
+      "description": "Title of the panel that contains the bulk-delete controls.",
+      "message": "Toplu silme"
+   },
+   "deleteConversations_allFailed": {
+      "description": "Completion message when all chats failed to delete.",
+      "message": "Sohbetler silinemedi. Lütfen daha sonra tekrar deneyin veya daha az sohbet seçin."
+   },
+   "deleteConversations_cancel": {
+      "description": "Button text to cancel the current operation.",
+      "message": "İptal"
+   },
+   "deleteConversations_cancelled": {
+      "description": "Message shown when the user cancels the deletion process.",
+      "message": "Silme işlemi iptal edildi."
+   },
+   "deleteConversations_cleared": {
+      "description": "A completion message shown after successfully deleting chats.",
+      "message": "Tamam! Sohbetleriniz temizlendi."
+   },
+   "deleteConversations_deleting": {
+      "description": "A loading message shown while chats are being deleted.",
+      "message": "Sohbetler siliniyor..."
+   },
+   "deleteConversations_done": {
+      "description": "A friendly completion message.",
+      "message": "Tamamlandı! Hizmetimizi beğendiğinizi umuyoruz."
+   },
+   "deleteConversations_finished": {
+      "description": "A completion message with a bit of flair.",
+      "message": "Ve... bitti! ✨"
+   },
+   "deleteConversations_licenseValidated": {
+      "description": "Success message shown after a license is successfully validated.",
+      "message": "Lisans doğrulandı! Sınırsız silme işlemi açıldı."
+   },
+   "deleteConversations_longOperation": {
+      "description": "Warning message when the deletion process is slow.",
+      "message": "İşlem beklenenden uzun sürüyor."
+   },
+   "deleteConversations_longOperationSuggestion": {
+      "description": "A suggestion for the user when the operation is slow.",
+      "message": "Daha az sohbet seçmeyi deneyin veya internet bağlantınızı kontrol edin."
+   },
+   "deleteConversations_noItems": {
+      "description": "Message shown when there are no items to process from the start.",
+      "message": "İşlenecek öğe yok."
+   },
+   "deleteConversations_noItemsProcessed": {
+      "description": "Message shown when no items were processed.",
+      "message": "Hiçbir öğe işlenmedi. Seçimi kontrol edin."
+   },
+   "deleteConversations_noSelection": {
+      "description": "Error message shown when the user tries to delete without selecting any conversations.",
+      "message": "Silinecek sohbet seçilmedi."
+   },
+   "deleteConversations_partialSuccess": {
+      "description": "Completion message when some chats failed to delete.",
+      "message": "$DELETED$/$TOTAL$ sohbet silindi. Bazı sohbetler kaldırılamadı.",
+      "placeholders": {
+         "deleted": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "deleteConversations_preparing": {
+      "description": "Initial progress text. $TOTAL$ is a placeholder for the total number of items.",
+      "message": "Hazırlanıyor... (0/$TOTAL$)",
+      "placeholders": {
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "deleteConversations_progress": {
+      "description": "Progress text shown during deletion. $PROCESSED$, $TOTAL$, $DELETED$, and $FAILED$ are placeholders.",
+      "message": "İşlenen $PROCESSED$/$TOTAL$ (Silinen: $DELETED$, Başarısız: $FAILED$)",
+      "placeholders": {
+         "deleted": {
+            "content": "$3"
+         },
+         "failed": {
+            "content": "$4"
+         },
+         "processed": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "deleteConversations_quotaExhausted": {
+      "description": "Error message shown when the user's free quota is used up.",
+      "message": "Ücretsiz kota tükendi (50/50 silme işlemi kullanıldı). Devam etmek için yükseltme yapın."
+   },
+   "deleteConversations_taskComplete": {
+      "description": "A completion message.",
+      "message": "Görev tamamlandı. Daha fazlası için hazır mısınız?"
+   },
+   "deleteConversations_tidied": {
+      "description": "A completion message indicating success.",
+      "message": "Başarıyla temizlendi!"
+   },
+   "deleteConversations_timeout": {
+      "description": "Error message when the deletion takes too long.",
+      "message": "İşlem zaman aşımına uğradı. Lütfen daha az sohbetle tekrar deneyin."
+   },
+   "deleteConversations_tryAgain": {
+      "description": "Button text to try an operation again.",
+      "message": "Tekrar Dene"
+   },
+   "deleteConversations_workspaceMessage": {
+      "description": "Completion message shown for workspace accounts.",
+      "message": "Eğitim/İşyeri hesabı tespit edildi. Silme işlemi kuruluşunuzun yöneticisi tarafından kısıtlanmış olabilir."
+   },
+   "deleteN": {
+      "description": "Button text to delete a specific number of conversations. $COUNT$ is a placeholder.",
+      "message": "Sil ($COUNT$)",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "5"
+         }
+      }
+   },
+   "deleteSelected": {
+      "description": "Button text to delete the conversations that are currently selected.",
+      "message": "Seçilenleri sil"
+   },
+   "deletionError": {
+      "description": "Error message shown when the deletion script cannot be executed.",
+      "message": "Silme işlemi başlatılamadı. Lütfen sayfayı yenileyip tekrar deneyin."
+   },
+   "dismiss": {
+      "description": "Button text to close or dismiss a notification.",
+      "message": "Kapat"
+   },
+   "dontShowAgain": {
+      "description": "Tooltip for a button that dismisses a warning permanently.",
+      "message": "Bunu bir daha gösterme"
+   },
+   "extensionDescription": {
+      "description": "The description of the extension.",
+      "message": "Çoklu Gemini sohbetlerini seçin ve toplu olarak silin."
+   },
+   "extensionName": {
+      "description": "The name of the extension.",
+      "message": "Toplu Gemini Silme"
+   },
+   "extensionShortName": {
+      "description": "The short name of the extension.",
+      "message": "Toplu Silme"
+   },
+   "learnMore": {
+      "description": "Link text to learn more about a topic.",
+      "message": "Daha fazla bilgi"
+   },
+   "loading": {
+      "description": "Text shown on a button while content is loading.",
+      "message": "Yükleniyor..."
+   },
+   "multiSelectModeTooltip": {
+      "description": "Tooltip for the toggle switch that enables the batch deletion mode.",
+      "message": "Birden çok sohbeti silmek için çoklu seçim modunu etkinleştirin. Klavye kısayolları: Shift+A (tümünü seç), Sil tuşu (seçilenleri sil), Esc (çık)"
+   },
+   "paywall_alreadyHaveLicense": {
+      "description": "Button/link for users who already have a license.",
+      "message": "Zaten lisansım var"
+   },
+   "paywall_back": {
+      "description": "Button to go back to the previous view.",
+      "message": "Geri"
+   },
+   "paywall_close": {
+      "description": "Tooltip for the close button on the paywall modal.",
+      "message": "Modalı kapat"
+   },
+   "paywall_copied": {
+      "description": "Confirmation text shown after copying.",
+      "message": "Kopyalandı!"
+   },
+   "paywall_copyButton": {
+      "description": "Text for a button that copies a promo code.",
+      "message": "Kopyalamak için tıklayın!"
+   },
+   "paywall_enterLicense": {
+      "description": "Heading for the license entry section.",
+      "message": "Lisans Anahtarı Girin"
+   },
+   "paywall_enterLicenseSubtext": {
+      "description": "Subtext for the license entry section.",
+      "message": "Sınırsız silme işlemini açmak için lisans anahtarınızı girin."
+   },
+   "paywall_feature1": {
+      "description": "A feature point.",
+      "message": "Sınırsız sohbet silme"
+   },
+   "paywall_feature2": {
+      "description": "A feature point.",
+      "message": "Öncelikli destek"
+   },
+   "paywall_feature3": {
+      "description": "A feature point.",
+      "message": "Gelecekteki güncellemeler dahil"
+   },
+   "paywall_heading": {
+      "description": "Main heading in the paywall modal.",
+      "message": "50 ücretsiz silme işleminizi kullandınız."
+   },
+   "paywall_invalidKey": {
+      "description": "Error message for an invalid license key.",
+      "message": "Geçersiz lisans anahtarı formatı"
+   },
+   "paywall_promoCode": {
+      "description": "Label for a promo code.",
+      "message": "Kodu kullan:"
+   },
+   "paywall_promoTitle": {
+      "description": "Title for a promotional offer.",
+      "message": "Erken Kuş Lansmanı – %40 İndirim"
+   },
+   "paywall_subheading": {
+      "description": "Subheading in the paywall modal.",
+      "message": "Sınırsız silme işlemini açmak için yükseltin."
+   },
+   "paywall_support": {
+      "description": "A message encouraging users to support development.",
+      "message": "Desteğiniz uzantının sürekli geliştirilmesine yardımcı olur."
+   },
+   "paywall_title": {
+      "description": "The title of the paywall modal.",
+      "message": "Ücretsiz Silme İşlemleri Kullanıldı"
+   },
+   "paywall_upgradeButton": {
+      "description": "Button to start the upgrade process.",
+      "message": "Yükselt ve Lisans Al"
+   },
+   "paywall_validateButton": {
+      "description": "Button to validate a license key.",
+      "message": "Doğrula ve Aç"
+   },
+   "paywall_validating": {
+      "description": "Text shown while a license is being validated.",
+      "message": "Doğrulanıyor..."
+   },
+   "selectAllChats": {
+      "description": "Button text to select all conversations.",
+      "message": "Tüm sohbetleri seç"
+   },
+   "workspaceAlert": {
+      "description": "The full text of the alert shown when a user clicks 'Learn more' on the workspace warning.",
+      "message": "Eğitim (.edu) ve işyeri hesaplarında sohbet silme genellikle kuruluşunuzun Google Workspace yöneticisi tarafından kontrol edilir. Bireysel kullanıcılar sohbet geçmişlerini silemezler çünkü bu, yönetici düzeyinde saklama politikalarıyla (genellikle 18 ay) yönetilir."
+   },
+   "workspaceWarningConfirm": {
+      "description": "Confirmation message shown to users on workspace accounts before attempting deletion.",
+      "message": "Uyarı: Görünüşe göre bir eğitim veya işyeri hesabı kullanıyorsunuz. Bu hesaplar genellikle sohbetleri silemez çünkü bu, kuruluşunuzun yöneticisi tarafından kontrol edilir. Yine de denemek istiyor musunuz?"
+   },
+   "workspaceWarningNote": {
+      "description": "A label for a note or warning.",
+      "message": "Not:"
+   },
+   "workspaceWarningText": {
+      "description": "The text of the warning for workspace account limitations.",
+      "message": "Eğitim (.edu) ve bazı işyeri hesapları sohbetleri silemez. Bu, kuruluşunuzun yönetici ayarları tarafından kontrol edilir."
+   }
+}

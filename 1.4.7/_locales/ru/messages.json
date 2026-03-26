@@ -1,0 +1,198 @@
+{
+   "addFolderButton": {
+      "description": "Button hover text to add a new folder.",
+      "message": "Добавить папку"
+   },
+   "addPromptButton": {
+      "description": "Button hover text to add a new prompt.",
+      "message": "Добавить подсказку"
+   },
+   "allPrompts": {
+      "description": "Option for showing all prompts.",
+      "message": "Все подсказки"
+   },
+   "cancelButton": {
+      "description": "Generic cancel button text.",
+      "message": "ОТМЕНА"
+   },
+   "closeSettings": {
+      "description": "Button text to close the settings view.",
+      "message": "ЗАКРЫТЬ НАСТРОЙКИ"
+   },
+   "collapseAll": {
+      "description": "Button text to collapse all prompts.",
+      "message": "Свернуть все"
+   },
+   "confirmDeleteFolder": {
+      "description": "Confirmation message for deleting a folder.",
+      "message": "Вы уверены, что хотите удалить эту папку? Подсказки в этой папке не будут удалены!"
+   },
+   "confirmDeletePrompt": {
+      "description": "Confirmation message for deleting a prompt.",
+      "message": "Вы уверены, что хотите удалить эту подсказку?"
+   },
+   "copiedButton": {
+      "description": "Text shown after copying.",
+      "message": "СКОПИРОВАНО"
+   },
+   "copyButton": {
+      "description": "Copy button text.",
+      "message": "КОПИРОВАТЬ"
+   },
+   "deleteButton": {
+      "description": "Generic delete button text.",
+      "message": "УДАЛИТЬ"
+   },
+   "editButton": {
+      "description": "Generic edit button text.",
+      "message": "ИЗМЕНИТЬ"
+   },
+   "enterNewFolderName": {
+      "description": "Prompt message for entering a new folder name.",
+      "message": "Введите новое имя папки:"
+   },
+   "expandAll": {
+      "description": "Button text to expand all prompts.",
+      "message": "Развернуть все"
+   },
+   "exportPrompts": {
+      "description": "Button text to export prompts.",
+      "message": "Экспорт подсказок в CSV"
+   },
+   "extDescription": {
+      "description": "The description of the extension.",
+      "message": "Копируйте, редактируйте и сохраняйте шаблоны подсказок в личной базе данных и используйте их на большинстве веб-сайтов AI/LLM."
+   },
+   "extName": {
+      "description": "The name of the extension.",
+      "message": "XXL Менеджер подсказок для ChatGPT, Claude, Gemini, Perplexity и других!"
+   },
+   "extShortName": {
+      "description": "The short name of the extension.",
+      "message": "XXL Менеджер подсказок"
+   },
+   "folderNamePlaceholder": {
+      "description": "Placeholder for new folder name input.",
+      "message": "Введите имя папки"
+   },
+   "hideButton": {
+      "description": "Button text to hide the add prompt form.",
+      "message": "СКРЫТЬ"
+   },
+   "iconDragTip": {
+      "description": "Tip about dragging the icon to reposition it.",
+      "message": "Перетащите иконку вверх или вниз, чтобы изменить её положение"
+   },
+   "importErrorNoTitlePrompt": {
+      "description": "Error message when CSV for import is missing columns.",
+      "message": "CSV-файл должен содержать столбцы «Title» и «Prompt»."
+   },
+   "importErrorParse": {
+      "description": "Error message when CSV for import is empty or cannot be parsed.",
+      "message": "Не удалось проанализировать CSV-файл или он пуст."
+   },
+   "importPrompts": {
+      "description": "Button text to import prompts.",
+      "message": "Импорт подсказок из CSV"
+   },
+   "importSuccess": {
+      "description": "Success message after importing prompts from CSV.",
+      "message": "Подсказки успешно импортированы!"
+   },
+   "keyboardShortcuts": {
+      "description": "Header for keyboard shortcuts section in settings.",
+      "message": "Горячие клавиши"
+   },
+   "newPromptPlaceholder": {
+      "description": "Placeholder for new prompt text area.",
+      "message": "Добавить новую подсказку"
+   },
+   "privatePromptsTab": {
+      "description": "Tab title for private prompts.",
+      "message": "Личные подсказки"
+   },
+   "promptTitlePlaceholder": {
+      "description": "Placeholder for new prompt title input.",
+      "message": "Введите заголовок подсказки"
+   },
+   "publicPromptsComingSoon": {
+      "description": "Info text for public prompts tab.",
+      "message": "\u003Cb>3000+\u003C/b> Общедоступных подсказок \u003Cbr>\u003Cbr> - Скоро -"
+   },
+   "publicPromptsTab": {
+      "description": "Tab title for public prompts.",
+      "message": "Общедоступные подсказки"
+   },
+   "rateExtension": {
+      "description": "Button text to rate the extension.",
+      "message": "Оставьте нам отзыв"
+   },
+   "saveButton": {
+      "description": "Generic save button text.",
+      "message": "СОХРАНИТЬ"
+   },
+   "searchPromptsPlaceholder": {
+      "description": "Placeholder for search input.",
+      "message": "Поиск подсказок"
+   },
+   "selectFolder": {
+      "description": "Default option in folder select dropdown.",
+      "message": "Выберите папку"
+   },
+   "shareExtension": {
+      "description": "Button text for sharing.",
+      "message": "Поделиться"
+   },
+   "shortcutClose": {
+      "description": "Description for close/escape shortcut.",
+      "message": "Закрыть"
+   },
+   "shortcutSearch": {
+      "description": "Description for search shortcut.",
+      "message": "Показать/скрыть поиск"
+   },
+   "shortcutToggleSidebar": {
+      "description": "Description for toggle sidebar shortcut.",
+      "message": "Показать/скрыть боковую панель"
+   },
+   "showIconSwitch": {
+      "description": "Switch to show icon on LLMs.",
+      "message": "Показать значок"
+   },
+   "showIconSwitchOff": {
+      "description": "Show text if icon is swichted off",
+      "message": "Не забудьте закрепить расширение на панели инструментов (значок пазла). Также можно использовать Alt+P для открытия боковой панели!"
+   },
+   "sidebarHeader": {
+      "description": "Header in the sidebar.",
+      "message": "XXL Менеджер подсказок"
+   },
+   "sortAZ": {
+      "description": "Sort option for alphabetical order.",
+      "message": "А-Я"
+   },
+   "sortBy": {
+      "description": "Label for sort dropdown.",
+      "message": "Сортировать"
+   },
+   "sortNewest": {
+      "description": "Sort option for newest first.",
+      "message": "Новые"
+   },
+   "sortOldest": {
+      "description": "Sort option for oldest first.",
+      "message": "Старые"
+   },
+   "sortZA": {
+      "description": "Sort option for reverse alphabetical order.",
+      "message": "Я-А"
+   },
+   "supportExtension": {
+      "description": "Button text for support.",
+      "message": "Поддержка"
+   },
+   "untitledPrompt": {
+      "description": "Default title for a prompt.",
+      "message": "Без названия"
+   }
+}

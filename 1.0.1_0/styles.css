@@ -1,0 +1,563 @@
+/* Grok Toolbox Extension - Styles */
+/* Adaptive theme styling to match Grok.com's design system */
+
+/* CSS Variables - set dynamically by content.js based on theme detection */
+:root {
+    --grok-toolbox-bg: #151515;
+    --grok-toolbox-text: #fcfcfc;
+    --grok-toolbox-border: rgba(252, 252, 252, 0.1);
+    --grok-toolbox-hover: rgba(252, 252, 252, 0.08);
+    --grok-toolbox-active: rgba(252, 252, 252, 0.15);
+    --grok-toolbox-button-bg: rgba(252, 252, 252, 0.15);
+    --grok-toolbox-button-hover: rgba(252, 252, 252, 0.2);
+}
+
+/* Main toolbox button styling - already using Grok's native classes */
+#grok-toolbox-button {
+    position: relative;
+}
+
+/* Dropdown menu container */
+.grok-toolbox-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 8px;
+    right: 8px;
+    background-color: var(--grok-toolbox-bg);
+    border: 1px solid var(--grok-toolbox-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 200ms ease-out, transform 200ms ease-out;
+    overflow: hidden;
+    min-width: 200px;
+}
+
+/* Dropdown animation when shown */
+.grok-toolbox-dropdown.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Menu items */
+.grok-toolbox-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    color: var(--grok-toolbox-text);
+    cursor: pointer;
+    transition: background-color 150ms ease-out, color 150ms ease-out;
+    font-size: 14px;
+    font-family: var(--font-universal-sans), ui-sans-serif, system-ui, sans-serif;
+    border-bottom: 1px solid var(--grok-toolbox-border);
+    opacity: 0.9;
+}
+
+/* Remove border from last item */
+.grok-toolbox-menu-item:last-child {
+    border-bottom: none;
+}
+
+/* Menu item hover state */
+.grok-toolbox-menu-item:hover {
+    background-color: var(--grok-toolbox-hover);
+    opacity: 1;
+}
+
+/* Menu item active state */
+.grok-toolbox-menu-item:active {
+    background-color: var(--grok-toolbox-active);
+}
+
+/* Menu item icon */
+.grok-toolbox-menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.grok-toolbox-menu-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+}
+
+/* Menu item label */
+.grok-toolbox-menu-label {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Arrow rotation animation */
+#grok-toolbox-arrow {
+    pointer-events: none;
+}
+
+/* Chevron icon styling */
+.grok-toolbox-chevron {
+    opacity: 0.7;
+    transition: opacity 150ms ease-out;
+}
+
+#grok-toolbox-button:hover .grok-toolbox-chevron {
+    opacity: 1;
+}
+
+/* Adjustments for collapsed sidebar state */
+[data-state="collapsed"] .grok-toolbox-dropdown {
+    left: calc(100% + 8px);
+    right: auto;
+    min-width: 180px;
+}
+
+/* Ensure proper layering */
+#grok-toolbox-container {
+    position: relative;
+}
+
+/* Add subtle separator styling if needed */
+.grok-toolbox-separator {
+    height: 1px;
+    background-color: hsla(0, 0%, 100%, 0.06);
+    margin: 4px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grok-toolbox-dropdown {
+        min-width: 160px;
+    }
+    
+    .grok-toolbox-menu-item {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+/* Animation for button press feedback */
+#grok-toolbox-button:active {
+    transform: scale(0.98);
+    transition: transform 100ms ease-out;
+}
+
+/* Remove border from item before settings to prevent double line */
+.grok-toolbox-menu-item[data-action="prompt-library"] {
+    border-bottom: none;
+}
+
+/* Special styling for settings item */
+.grok-toolbox-menu-item[data-action="settings"] {
+    border-top: 1px solid var(--grok-toolbox-border);
+    margin-top: 4px;
+    padding-top: 14px;
+}
+
+/* Loading state for future implementation */
+.grok-toolbox-loading {
+    opacity: 0.5;
+    pointer-events: none;
+    position: relative;
+}
+
+.grok-toolbox-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid var(--grok-toolbox-border);
+    border-top-color: var(--grok-toolbox-text);
+    border-radius: 50%;
+    animation: grok-toolbox-spin 0.6s linear infinite;
+}
+
+@keyframes grok-toolbox-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Tooltip styles for future implementation */
+.grok-toolbox-tooltip {
+    position: absolute;
+    background-color: var(--grok-toolbox-bg);
+    color: var(--grok-toolbox-text);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 200ms ease-out;
+    z-index: 1001;
+    border: 1px solid var(--grok-toolbox-border);
+}
+
+.grok-toolbox-tooltip.show {
+    opacity: 1;
+}
+
+/* Badge/notification indicator for future use */
+.grok-toolbox-badge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-color: var(--grok-toolbox-button-bg);
+    color: var(--grok-toolbox-text);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 4px;
+    border-radius: 8px;
+    min-width: 16px;
+    text-align: center;
+    line-height: 1;
+}
+
+/* Membership Badge Styles - Inline badge like Gemini Toolbox */
+.grok-membership-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 6px;
+    line-height: 1.2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: all 150ms ease-out;
+    white-space: nowrap;
+}
+
+/* FREE Badge - Subtle gray */
+.grok-membership-badge-free {
+    background-color: var(--grok-toolbox-hover);
+    color: var(--grok-toolbox-text);
+    opacity: 0.7;
+    border: 1px solid var(--grok-toolbox-border);
+}
+
+/* PREMIUM Badge - Slightly brighter, similar style */
+.grok-membership-badge-premium {
+    background-color: var(--grok-toolbox-button-bg);
+    color: var(--grok-toolbox-text);
+    opacity: 0.85;
+    border: 1px solid var(--grok-toolbox-border);
+}
+
+/* ===== CHAT EXPORT MODAL STYLES ===== */
+
+/* Export modal backdrop */
+.grok-export-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+    z-index: 99998;
+    opacity: 0;
+    transition: opacity 200ms ease-out;
+}
+
+.grok-export-modal-backdrop.show {
+    opacity: 1;
+}
+
+/* Export modal container */
+.grok-export-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    background: var(--grok-toolbox-bg);
+    border: 1px solid var(--grok-toolbox-border);
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    z-index: 99999;
+    width: 90%;
+    max-width: 500px;
+    opacity: 0;
+    transition: all 200ms ease-out;
+}
+
+.grok-export-modal.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Modal header */
+.grok-export-modal-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--grok-toolbox-border);
+    position: relative;
+}
+
+.grok-export-modal-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--grok-toolbox-text);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.95;
+}
+
+.grok-export-modal-subtitle {
+    font-size: 13px;
+    color: var(--grok-toolbox-text);
+    opacity: 0.6;
+    margin-top: 4px;
+}
+
+/* Close button */
+.grok-export-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: var(--grok-toolbox-hover);
+    border-radius: 8px;
+    color: var(--grok-toolbox-text);
+    opacity: 0.6;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 150ms ease-out;
+}
+
+.grok-export-modal-close:hover {
+    background: var(--grok-toolbox-active);
+    opacity: 0.9;
+}
+
+/* Modal body */
+.grok-export-modal-body {
+    padding: 24px;
+}
+
+/* Export format grid */
+.grok-export-formats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+/* Export format button */
+.grok-export-format-btn {
+    background: var(--grok-toolbox-hover);
+    border: 1px solid var(--grok-toolbox-border);
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 150ms ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.grok-export-format-btn:hover {
+    background: var(--grok-toolbox-active);
+    border-color: var(--grok-toolbox-border);
+    transform: translateY(-2px);
+}
+
+.grok-export-format-btn:active {
+    transform: translateY(0);
+}
+
+.grok-export-format-btn.recommended {
+    border-color: var(--grok-toolbox-border);
+    background: var(--grok-toolbox-active);
+}
+
+.grok-export-format-btn.recommended:hover {
+    border-color: var(--grok-toolbox-border);
+    background: var(--grok-toolbox-button-hover);
+}
+
+/* Format icon */
+.grok-export-format-icon {
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+
+/* Format name */
+.grok-export-format-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--grok-toolbox-text);
+    opacity: 0.9;
+}
+
+/* Format description */
+.grok-export-format-desc {
+    font-size: 11px;
+    color: var(--grok-toolbox-text);
+    opacity: 0.5;
+    text-align: center;
+    margin-top: 2px;
+}
+
+/* Recommended badge */
+.grok-export-recommended {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: var(--grok-toolbox-button-bg);
+    color: var(--grok-toolbox-text);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Export options */
+.grok-export-options {
+    border-top: 1px solid var(--grok-toolbox-border);
+    padding-top: 20px;
+    display: none; /* Hidden by default, shown when needed */
+}
+
+.grok-export-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.grok-export-option label {
+    font-size: 13px;
+    color: var(--grok-toolbox-text);
+    opacity: 0.8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Loading state */
+.grok-export-loading {
+    display: none;
+    text-align: center;
+    padding: 40px;
+}
+
+.grok-export-loading.show {
+    display: block;
+}
+
+.grok-export-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--grok-toolbox-border);
+    border-top-color: var(--grok-toolbox-text);
+    border-radius: 50%;
+    animation: grok-export-spin 0.8s linear infinite;
+    margin: 0 auto 16px;
+}
+
+@keyframes grok-export-spin {
+    to { transform: rotate(360deg); }
+}
+
+.grok-export-loading-text {
+    font-size: 14px;
+    color: var(--grok-toolbox-text);
+    opacity: 0.7;
+}
+
+/* Export notification (toast) */
+.grok-export-notification {
+    min-width: 250px;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.grok-export-notification[data-type="success"] {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.grok-export-notification[data-type="error"] {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.grok-export-notification[data-type="warning"] {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .grok-export-formats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grok-export-modal {
+        width: 95%;
+    }
+    
+    .grok-export-format-icon {
+        font-size: 28px;
+    }
+}
+
+/* Focus styles for accessibility */
+#grok-toolbox-button:focus-visible {
+    outline: 2px solid var(--grok-toolbox-border);
+    outline-offset: 2px;
+}
+
+.grok-toolbox-menu-item:focus-visible {
+    outline: 2px solid var(--grok-toolbox-border);
+    outline-offset: -2px;
+}
+
+/* Ensure dropdown stays within viewport */
+@media (max-height: 600px) {
+    .grok-toolbox-dropdown {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+}
+
+/* Custom scrollbar for dropdown if needed */
+.grok-toolbox-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.grok-toolbox-dropdown::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.grok-toolbox-dropdown::-webkit-scrollbar-thumb {
+    background-color: var(--grok-toolbox-border);
+    border-radius: 3px;
+    opacity: 0.15;
+}
+
+.grok-toolbox-dropdown::-webkit-scrollbar-thumb:hover {
+    background-color: var(--grok-toolbox-border);
+    opacity: 0.25;
+}

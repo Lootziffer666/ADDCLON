@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toolbox for Grok</title>
+    <style>
+        body {
+            width: 350px;
+            min-height: 400px;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: hsl(220 6% 9%);
+            color: hsla(0, 0%, 100%, 0.9);
+        }
+        
+        .header {
+            background-color: hsl(220 6% 11%);
+            padding: 16px;
+            border-bottom: 1px solid hsla(0, 0%, 100%, 0.06);
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo {
+            width: 24px;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo svg {
+            color: hsl(21 65% 60%);
+        }
+        
+        .header .grok-membership-badge {
+            font-size: 10px;
+            padding: 2px 7px;
+        }
+        
+        .content {
+            padding: 16px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background-color: hsl(220 6% 11%);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid hsla(0, 0%, 100%, 0.06);
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: 600;
+            color: hsl(21 65% 60%);
+        }
+        
+        .stat-label {
+            font-size: 11px;
+            color: hsla(0, 0%, 100%, 0.6);
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+        
+        .quick-actions {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: hsla(0, 0%, 100%, 0.8);
+        }
+        
+        .action-button {
+            width: 100%;
+            padding: 10px;
+            background-color: hsl(220 6% 11%);
+            border: 1px solid hsla(0, 0%, 100%, 0.06);
+            color: hsla(0, 0%, 100%, 0.9);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 8px;
+            transition: all 150ms ease-out;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .action-button:hover {
+            background-color: hsla(0, 0%, 100%, 0.08);
+            border-color: hsla(0, 0%, 100%, 0.1);
+        }
+        
+        .action-button:active {
+            transform: scale(0.98);
+        }
+        
+        .action-icon {
+            font-size: 16px;
+        }
+        
+        .settings-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 12px;
+            color: hsla(0, 0%, 100%, 0.6);
+            text-decoration: none;
+            font-size: 13px;
+            border-top: 1px solid hsla(0, 0%, 100%, 0.06);
+            transition: color 150ms ease-out;
+        }
+        
+        .settings-link:hover {
+            color: hsla(0, 0%, 100%, 0.9);
+        }
+        
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            background-color: hsla(120, 100%, 25%, 0.2);
+            border: 1px solid hsla(120, 100%, 25%, 0.3);
+            border-radius: 6px;
+            font-size: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background-color: hsl(120, 100%, 40%);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            <span class="logo">
+                <svg width="24" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M270.0 139.5 L240.5 139.0 L240.5 95.0 L255.0 70.5 L270.5 94.0 L270.0 139.5 Z M49.0 190.5 L35.5 177.0 L30.5 158.0 L72.0 138.5 L104.0 103.5 L132.0 93.5 L163.0 92.5 
+                    L201.5 109.0 L169.0 109.5 L149.0 118.5 L138.5 132.0 L150.5 154.0 L116.0 174.5 L96.0 156.5 L49.0 190.5 Z M426.0 133.5 L394.5 125.0 L421.0 100.5 L442.0 92.5 L426.0 133.5 Z M374.0 
+                    213.5 L348.5 190.0 L362.5 159.0 L363.5 129.0 L444.0 145.5 L452.5 136.0 L465.0 96.5 L480.5 126.0 L479.5 148.0 L469.5 168.0 L457.0 179.5 L395.0 198.5 L374.0 213.5 Z M286.0 232.5 
+                    L225.5 232.0 L225.5 204.0 L240.5 198.0 L241.0 148.5 L270.5 149.0 L270.5 198.0 L285.5 204.0 L286.0 232.5 Z M399.5 185.0 L406.5 171.0 L393.0 156.5 L382.0 155.5 L377.5 169.0 L399.5 
+                    185.0 Z M188.0 232.5 L152.0 232.5 L119.5 182.0 L155.0 162.5 L188.0 232.5 Z M356.0 232.5 L302.5 232.0 L342.0 195.5 L366.5 220.0 L356.0 232.5 Z M431.0 282.5 L80.0 282.5 L64.5 270.0 
+                    L63.5 242.0 L447.0 241.5 L446.5 270.0 L431.0 282.5 Z M379.0 440.5 L132.0 440.5 L115.0 434.5 L94.5 406.0 L93.5 292.0 L126.5 292.0 L127.5 345.0 L138.0 358.5 L157.0 362.5 L177.5 343.0
+                    L178.0 291.5 L333.0 291.5 L334.5 346.0 L345.0 358.5 L363.0 362.5 L383.5 345.0 L384.5 292.0 L417.0 291.5 L416.5 406.0 L400.0 431.5 L379.0 440.5 Z M156.0 353.5 L145.0 352.5 L135.5 
+                    341.0 L136.0 291.5 L168.5 292.0 L168.5 342.0 L156.0 353.5 Z M363.0 353.5 L350.0 351.5 L342.5 342.0 L343.0 291.5 L375.5 292.0 L375.5 341.0 L363.0 353.5 Z" fill="currentColor" fill-rule="evenodd"/>
+                </svg>
+            </span>
+            <span>Toolbox for Grok</span>
+            <span class="grok-membership-badge grok-membership-badge-free" id="popup-membership-badge" data-plan="free" title="Free Plan">Free</span>
+        </h1>
+    </div>
+    
+    <div class="content">
+        <div class="status">
+            <span class="status-dot"></span>
+            <span>Active on grok.com</span>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="chats-exported">0</div>
+                <div class="stat-label">Chats</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="folders-created">0</div>
+                <div class="stat-label">Folders</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="prompts-saved">0</div>
+                <div class="stat-label">Prompts</div>
+            </div>
+        </div>
+        
+        <div class="quick-actions">
+            <div class="section-title">Quick Actions</div>
+            <button class="action-button" id="open-grok">
+                <span class="action-icon">🚀</span>
+                <span>Open Grok.com</span>
+            </button>
+            <button class="action-button" id="export-all">
+                <span class="action-icon">💾</span>
+                <span>Export All Chats</span>
+            </button>
+            <button class="action-button" id="manage-prompts">
+                <span class="action-icon">📚</span>
+                <span>Manage Prompt Library</span>
+            </button>
+        </div>
+    </div>
+    
+    <a href="#" class="settings-link" id="open-settings">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41"/>
+        </svg>
+        <span>Extension Settings</span>
+    </a>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

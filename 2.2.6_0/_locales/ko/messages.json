@@ -1,0 +1,1270 @@
+{
+   "appDesc": {
+      "message": "일괄 다운로드, 자동 영상 생성, Grok AI 미디어 라이브러리를 하나의 확장 프로그램으로 관리하세요."
+   },
+   "appName": {
+      "message": "Grok Media Downloader"
+   },
+   "batchDeleteCancel": {
+      "message": "취소"
+   },
+   "batchDeleteClose": {
+      "message": "닫기"
+   },
+   "batchDeleteComplete": {
+      "message": "✅ $1개 항목 삭제 완료",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "batchDeleteCompleteWithFail": {
+      "message": "✅ 완료: $1개 삭제, $2개 실패",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "batchDeleteConfirm": {
+      "message": "삭제 확인"
+   },
+   "batchDeleteConfirmMsg": {
+      "message": "선택한 $1개 항목을 삭제하려고 합니다.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "batchDeleteConfirmTitle": {
+      "message": "⚠️ 삭제 확인"
+   },
+   "batchDeleteOptionDelete": {
+      "message": "게시물 영구 삭제"
+   },
+   "batchDeleteOptionDeleteDesc": {
+      "message": "게시물이 즐겨찾기에서 제거되고 삭제됩니다"
+   },
+   "batchDeleteOptionUnfavorite": {
+      "message": "즐겨찾기에서만 제거"
+   },
+   "batchDeleteOptionUnfavoriteDesc": {
+      "message": "게시물이 즐겨찾기에서 제거되지만 삭제되지 않습니다"
+   },
+   "batchDeletePleaseWait": {
+      "message": "잠시만 기다려주세요..."
+   },
+   "batchDeleteProgress": {
+      "message": "삭제 중... $1/$2",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "batchDeleteWarning": {
+      "message": "⚠️ 이 작업은 취소할 수 없습니다!"
+   },
+   "batchSelectDelete": {
+      "message": "🗑️ 삭제"
+   },
+   "batchSelectDeselectAll": {
+      "message": "선택 해제"
+   },
+   "batchSelectSelectAll": {
+      "message": "전체 선택"
+   },
+   "batchSelectSelected": {
+      "message": "선택됨: $1 / $2",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "btnBatchSelectDelete": {
+      "message": "일괄 선택 삭제"
+   },
+   "btnBuyLicense": {
+      "message": "라이선스 구매"
+   },
+   "btnClearHistory": {
+      "message": "다운로드 기록 초기화 (모든 파일 재다운로드)"
+   },
+   "btnClearState": {
+      "message": "다운로드 미리보기 목록 지우기"
+   },
+   "btnClearStream": {
+      "message": "캡처 삭제"
+   },
+   "btnCompact": {
+      "message": "간략"
+   },
+   "btnContinueDownload": {
+      "description": "Button label shown when a previous download was interrupted and can be resumed",
+      "message": "▶ 다운로드 계속"
+   },
+   "btnDownloadStream": {
+      "message": "캡처된 항목 다운로드"
+   },
+   "btnExpand": {
+      "message": "전체"
+   },
+   "btnExport": {
+      "message": "데이터 내보내기"
+   },
+   "btnGenerate": {
+      "message": "1. 목록 생성"
+   },
+   "btnGenerateLoading": {
+      "message": "생성 중..."
+   },
+   "btnImport": {
+      "message": "데이터 가져오기"
+   },
+   "btnRemoveFav": {
+      "message": "오래된 항목 제거"
+   },
+   "btnRemoveFavGenerating": {
+      "message": "목록 생성 중..."
+   },
+   "btnRemoveFavLoading": {
+      "message": "제거 중..."
+   },
+   "btnStart": {
+      "message": "2. 다운로드 시작"
+   },
+   "btnStartDone": {
+      "message": "완료됨"
+   },
+   "btnStartLoading": {
+      "message": "다운로드 중..."
+   },
+   "btnStopDownload": {
+      "message": "⏹ 다운로드 중지"
+   },
+   "btnStopUpgrade": {
+      "message": "⏹ 업그레이드 중 ($1/$2), 중지?",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "btnUpgradeHD": {
+      "message": "HD로 업그레이드"
+   },
+   "checkboxDeletePost": {
+      "message": "게시물도 삭제"
+   },
+   "dataManageTitle": {
+      "message": "데이터 관리 (Pro):"
+   },
+   "dateFilterTitle": {
+      "message": "날짜 필터 (Pro):"
+   },
+   "downloadAll": {
+      "message": "모두 다운로드"
+   },
+   "downloadModeProject": {
+      "message": "프로젝트별"
+   },
+   "downloadModeProjectDesc": {
+      "message": "원본 이미지와 생성된 동영상을 같은 프로젝트 폴더에 저장"
+   },
+   "downloadModeProjectHint": {
+      "message": "💡 이미 다운로드된 파일은 건너뜁니다. 프로젝트 폴더에서 전체 파일을 보려면 먼저 다운로드 기록을 삭제하세요."
+   },
+   "downloadModeStandard": {
+      "message": "표준"
+   },
+   "downloadModeStandardDesc": {
+      "message": "이미지와 동영상을 별도 폴더에 저장"
+   },
+   "downloadModeTitle": {
+      "message": "📂 다운로드 모드"
+   },
+   "filterDateRange": {
+      "message": "날짜 범위"
+   },
+   "filterInfoTitle": {
+      "message": "현재 필터:"
+   },
+   "filterLastHours": {
+      "message": "최근"
+   },
+   "footerImages": {
+      "message": "이미지:"
+   },
+   "footerManualSetup": {
+      "message": "브라우저 기본 다운로드 경로"
+   },
+   "footerOfficialWebsite": {
+      "message": "공식 웹사이트"
+   },
+   "footerPath": {
+      "message": "경로:"
+   },
+   "footerVersion": {
+      "message": "v$VERSION$ | Powered by Kario LLC",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "footerVideos": {
+      "message": "비디오:"
+   },
+   "footerViewLogs": {
+      "message": "로그 보기"
+   },
+   "fromDateLabel": {
+      "message": "시작일:"
+   },
+   "hdPriorityDesc": {
+      "message": "HD가 있으면 HD를, 없으면 SD를 다운로드"
+   },
+   "hdPriorityLabel": {
+      "message": "✨ HD 우선"
+   },
+   "hdUpgradeDesc": {
+      "message": "즐겨찾기 비디오를 자동으로 HD 품질로 업그레이드합니다."
+   },
+   "hdUpgradeHoursUnit": {
+      "message": "시간"
+   },
+   "hdUpgradeTimeFilterLabel": {
+      "message": "최근 동영상만 업그레이드"
+   },
+   "hdUpgradeTitle": {
+      "message": "HD 업그레이드 (Pro):"
+   },
+   "hoursUnitMedia": {
+      "message": "시간 이내의 이미지/동영상"
+   },
+   "licenseActivateBtn": {
+      "message": "활성화"
+   },
+   "licenseActivated": {
+      "message": "활성화됨"
+   },
+   "licensePlaceholder": {
+      "message": "라이선스 키 입력"
+   },
+   "licenseTitle": {
+      "message": "라이선스 상태"
+   },
+   "licenseVerifying": {
+      "message": "확인 중..."
+   },
+   "mediaTypeImages": {
+      "message": "이미지"
+   },
+   "mediaTypeTitle": {
+      "message": "미디어 유형 선택:"
+   },
+   "mediaTypeVideos": {
+      "message": "비디오 (Pro)"
+   },
+   "msgActivateError": {
+      "message": "활성화 오류"
+   },
+   "msgActivateFailed": {
+      "message": "활성화 실패"
+   },
+   "msgActivateSuccess": {
+      "message": "활성화되었습니다! 지원해 주셔서 감사합니다"
+   },
+   "msgAllDownloaded": {
+      "message": "모든 파일이 이미 다운로드되었습니다.\n\n📊 통계:\n  이미지: $1\n  동영상: $2\n\n이번에는 다운로드된 파일이 없습니다.\n\n다시 다운로드하려면 기록을 삭제해 주세요.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgBuyPro": {
+      "message": "Pro로 모든 기능 이용하기"
+   },
+   "msgClearFailed": {
+      "message": "초기화 실패"
+   },
+   "msgClearHistoryFailed": {
+      "message": "기록 삭제 실패"
+   },
+   "msgConfirmClearHistory": {
+      "message": "⚠️ 다운로드 기록을 초기화하시겠습니까?\n\n이전에 다운로드한 모든 파일이 다시 다운로드됩니다.\n이 작업은 되돌릴 수 없습니다!\n\n계속하시겠습니까?"
+   },
+   "msgConfirmClearState": {
+      "message": "현재 상태를 초기화하시겠습니까?\n\n(다운로드 기록은 삭제되지 않습니다)"
+   },
+   "msgConfirmClearStream": {
+      "message": "모든 캡처된 스트림 이미지를 삭제하시겠습니까?"
+   },
+   "msgConfirmDeletePost": {
+      "message": "경고: '게시물도 삭제'를 선택했습니다.\n게시물이 Grok에서 영구적으로 삭제됩니다."
+   },
+   "msgConfirmDownload": {
+      "message": "자동 다운로드를 시작하시겠습니까?\n\n이미지는 일괄 다운로드됩니다. 비디오는 하나씩 다운로드됩니다.\n브라우저를 닫지 마세요."
+   },
+   "msgConfirmRemove": {
+      "message": "$DATE$ 이전 즐겨찾기를 제거하시겠습니까?\n\n통계:\n  전체: $TOTAL$\n  제거할 항목: $REMOVE$\n  유지할 항목: $KEEP$\n\n각 페이지를 방문하여 즐겨찾기를 해제합니다.\n브라우저를 닫지 마세요.\n\n되돌릴 수 없습니다!",
+      "placeholders": {
+         "date": {
+            "content": "$1"
+         },
+         "keep": {
+            "content": "$4"
+         },
+         "remove": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgConfirmRemoveRange": {
+      "message": "범위 $RANGE$ 내 즐겨찾기를 제거하시겠습니까?\n\n통계:\n  전체: $TOTAL$\n  제거할 항목: $REMOVE$\n  유지할 항목: $KEEP$\n\n각 페이지를 방문하여 즐겨찾기를 해제합니다.\n브라우저를 닫지 마세요.\n\n되돌릴 수 없습니다!",
+      "placeholders": {
+         "keep": {
+            "content": "$4"
+         },
+         "range": {
+            "content": "$1"
+         },
+         "remove": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDateAll": {
+      "message": "모든 날짜"
+   },
+   "msgDateRange": {
+      "message": "날짜: $FROM$ ~ $TO$",
+      "placeholders": {
+         "from": {
+            "content": "$1"
+         },
+         "to": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDownloadCancelConfirm": {
+      "message": "⚠️ 다운로드 진행 중\n\n단계: $PHASE$\n진행: $CURRENT$/$TOTAL$\n\n중단하시겠습니까?",
+      "placeholders": {
+         "current": {
+            "content": "$2"
+         },
+         "phase": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$3"
+         }
+      }
+   },
+   "msgDownloadCancelled": {
+      "message": "다운로드가 중단되었습니다"
+   },
+   "msgDownloadComplete": {
+      "message": "완료! 성공: $DOWNLOADED$/$TOTAL$",
+      "placeholders": {
+         "downloaded": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDownloadConfirmHdPriority": {
+      "message": "📊 다운로드 요약\n\n🖼️ 이미지: $1개 다운로드 예정 ($2개 완료)\n🎬 동영상: $3개 다운로드 예정 ($4개 완료)\n    ├ ✨ HD: $5\n    ├ 🎥 720p: $6\n    └ 📦 SD: $7\n\n브라우저를 닫지 마세요.\n다운로드를 시작하시겠습니까?",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         },
+         "3": {
+            "content": "$3"
+         },
+         "4": {
+            "content": "$4"
+         },
+         "5": {
+            "content": "$5"
+         },
+         "6": {
+            "content": "$6"
+         },
+         "7": {
+            "content": "$7"
+         }
+      }
+   },
+   "msgDownloadConfirmProject": {
+      "message": "📊 다운로드 요약\n\n📂 프로젝트: $1개 다운로드 예정 ($2개 완료)\n\n브라우저를 닫지 마세요.\n다운로드를 시작하시겠습니까?",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDownloadConfirmStandard": {
+      "message": "📊 다운로드 요약\n\n🖼️ 이미지: $1개 다운로드 예정 ($2개 완료)\n🎬 SD 동영상: $3개 다운로드 예정 ($4개 완료)\n🎥 720p 동영상: $5개 다운로드 예정 ($6개 완료)\n✨ HD 동영상: $7개 다운로드 예정 ($8개 완료)\n\n브라우저를 닫지 마세요.\n다운로드를 시작하시겠습니까?",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         },
+         "3": {
+            "content": "$3"
+         },
+         "4": {
+            "content": "$4"
+         },
+         "5": {
+            "content": "$5"
+         },
+         "6": {
+            "content": "$6"
+         },
+         "7": {
+            "content": "$7"
+         },
+         "8": {
+            "content": "$8"
+         }
+      }
+   },
+   "msgDownloadScanning": {
+      "message": "스캔 중..."
+   },
+   "msgDownloading": {
+      "message": "다운로드 중..."
+   },
+   "msgEnterLicenseKey": {
+      "message": "라이선스 키를 입력하세요"
+   },
+   "msgExportFailed": {
+      "message": "내보내기 실패"
+   },
+   "msgExportSuccess": {
+      "message": "데이터 내보내기 완료! $COUNT$개 레코드 포함",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgFilterChanged": {
+      "message": "필터가 변경되었습니다. 목록을 다시 생성하세요"
+   },
+   "msgFoundMedia": {
+      "message": "성공! 발견: $CONTENT$",
+      "placeholders": {
+         "content": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgGenerateFailed": {
+      "message": "생성 실패"
+   },
+   "msgGenerateListProgress": {
+      "description": "Real-time progress shown on Generate List button during API scanning",
+      "message": "스캔 중... $COUNT$개 항목 발견",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgGenerating": {
+      "message": "목록 생성 중, 잠시만 기다려 주세요..."
+   },
+   "msgHistoryCleared": {
+      "message": "기록 삭제됨"
+   },
+   "msgImportFailed": {
+      "message": "가져오기 실패"
+   },
+   "msgImportSuccess": {
+      "message": "데이터 가져오기 완료! $NEW$개 레코드 추가\n전체: $BEFORE$ → $AFTER$",
+      "placeholders": {
+         "after": {
+            "content": "$3"
+         },
+         "before": {
+            "content": "$2"
+         },
+         "new": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgNoItemsToRemove": {
+      "message": "$DATE$ 이전 즐겨찾기 없음\n\n전체: $TOTAL$",
+      "placeholders": {
+         "date": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgNoItemsToRemoveRange": {
+      "message": "범위 $RANGE$ 내 즐겨찾기 없음\n\n전체: $TOTAL$",
+      "placeholders": {
+         "range": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgNoResponse": {
+      "message": "응답 없음, 새로고침 후 다시 시도하세요"
+   },
+   "msgOperationFailed": {
+      "message": "작업 실패"
+   },
+   "msgPhaseImages": {
+      "message": "이미지 다운로드 중"
+   },
+   "msgPhaseVideos": {
+      "message": "비디오 다운로드 중"
+   },
+   "msgRefreshRetry": {
+      "message": "페이지를 새로고침하고 다시 시도하세요"
+   },
+   "msgRemoveComplete": {
+      "message": "제거 완료! 성공: $SUCCESS$/$TOTAL$",
+      "placeholders": {
+         "success": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgRemovingProgress": {
+      "message": "제거 중 $CURRENT$/$TOTAL$...",
+      "placeholders": {
+         "current": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgSelectDate": {
+      "message": "날짜를 선택하세요"
+   },
+   "msgSelectMediaType": {
+      "message": "최소 하나의 미디어 유형을 선택하세요"
+   },
+   "msgStartDownload": {
+      "message": "다운로드 시작!"
+   },
+   "msgStartFailed": {
+      "message": "시작 실패"
+   },
+   "msgStartRemove": {
+      "message": "$COUNT$개 즐겨찾기 제거 중...",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgStartRemoveFailed": {
+      "message": "제거 시작 실패"
+   },
+   "msgStateCleared": {
+      "message": "상태 초기화됨"
+   },
+   "msgStreamLimitReached": {
+      "message": "캡처 한도에 도달했습니다 ($LIMIT$개 이미지). 다운로드 후 삭제하여 계속하세요.",
+      "placeholders": {
+         "limit": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgStreamStarted": {
+      "message": "캡처 시작! 스크롤하여 이미지를 캡처하세요."
+   },
+   "msgStreamStopped": {
+      "message": "캡처 중지됨"
+   },
+   "msgUpgradeCancelConfirm": {
+      "message": "⚠️ HD 업그레이드 진행 중 ($CURRENT$/$TOTAL$)\n\n중단하시겠습니까?",
+      "placeholders": {
+         "current": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgUpgradeCancelled": {
+      "message": "HD 업그레이드가 중단되었습니다"
+   },
+   "msgUpgradeComplete": {
+      "message": "업그레이드 완료! 업그레이드됨: $UPGRADED$/$TOTAL$",
+      "placeholders": {
+         "total": {
+            "content": "$2"
+         },
+         "upgraded": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeConfirm": {
+      "message": "📊 스캔 결과\n\n총 동영상 수: $TOTAL$\n이미 HD: $ALREADY_HD$\n업그레이드 필요: $NEED_UPGRADE$\n\n업그레이드를 시작하시겠습니까?",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "need_upgrade": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeConfirmFiltered": {
+      "message": "📊 스캔 결과\n\n총 동영상 수: $TOTAL$\n이미 HD: $ALREADY_HD$\n업그레이드 필요 (전체): $NEED_UPGRADE$\n필터 (최근 $HOURS$시간): $FILTERED$\n\n$FILTERED$개 동영상을 업그레이드하시겠습니까?",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "filtered": {
+            "content": "$4"
+         },
+         "hours": {
+            "content": "$5"
+         },
+         "need_upgrade": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeFailed": {
+      "message": "업그레이드 실패"
+   },
+   "msgUpgradeNoNeed": {
+      "message": "✅ 모든 동영상이 이미 HD입니다!\n\n총 동영상 수: $TOTAL$\n이미 HD: $ALREADY_HD$",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeNoNeedFiltered": {
+      "message": "✅ 최근 $HOURS$시간 내에 업그레이드가 필요한 동영상이 없습니다.\n\n총 동영상 수: $TOTAL$\n이미 HD: $ALREADY_HD$\n업그레이드 필요 (전체): $NEED_UPGRADE$\n\n시간 범위를 늘리거나 필터를 해제해 주세요.",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "hours": {
+            "content": "$4"
+         },
+         "need_upgrade": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeScanning": {
+      "message": "즐겨찾기 스캔 중..."
+   },
+   "msgUpgrading": {
+      "message": "업그레이드 중..."
+   },
+   "msgVideoProRequired": {
+      "message": "비디오 다운로드는 Pro 기능입니다"
+   },
+   "msgWrongPage": {
+      "message": "Grok Imagine 즐겨찾기 페이지에서 이 확장 프로그램을 사용하세요."
+   },
+   "msgWrongPageFav": {
+      "message": "즐겨찾기 페이지에서 사용하세요"
+   },
+   "msgWrongPageLink": {
+      "message": "즐겨찾기로 이동 →"
+   },
+   "popupTitle": {
+      "message": "Grok Media Downloader"
+   },
+   "proFeatureLock": {
+      "message": "Pro 기능"
+   },
+   "promptAsFilenameDesc": {
+      "message": "파일명에 프롬프트 사용 (예: img_20250119_고양이가_앉아있다.jpg)"
+   },
+   "promptAsFilenameLabel": {
+      "message": "📝 프롬프트를 파일명으로 사용"
+   },
+   "queueAddItemTitle": {
+      "message": "항목 추가"
+   },
+   "queueAddMaxRetries": {
+      "message": "최대 재시도"
+   },
+   "queueAddPostId": {
+      "message": "게시물 ID 또는 URL"
+   },
+   "queueAddPrompt": {
+      "message": "프롬프트"
+   },
+   "queueAddTarget": {
+      "message": "성공 목표"
+   },
+   "queueBatchAddTitle": {
+      "message": "최근 게시물 일괄 추가"
+   },
+   "queueBatchBtnAdd": {
+      "message": "최근 게시물 대기열에 추가"
+   },
+   "queueBatchTimeRange": {
+      "message": "시간 범위"
+   },
+   "queueBtnAdd": {
+      "message": "추가"
+   },
+   "queueBtnClearAll": {
+      "message": "전체 삭제"
+   },
+   "queueBtnClearPending": {
+      "message": "대기 항목 삭제"
+   },
+   "queueBtnClearStats": {
+      "message": "통계 삭제"
+   },
+   "queueBtnPause": {
+      "message": "일시정지"
+   },
+   "queueBtnResume": {
+      "message": "재개"
+   },
+   "queueBtnStart": {
+      "message": "시작"
+   },
+   "queueBtnStop": {
+      "message": "중지"
+   },
+   "queueConfirmClearAll": {
+      "message": "큐의 모든 항목을 삭제하시겠습니까?"
+   },
+   "queueConfirmClearPending": {
+      "message": "모든 대기 항목을 삭제하시겠습니까?"
+   },
+   "queueConfirmClearStats": {
+      "message": "모든 프롬프트 통계를 삭제하시겠습니까?"
+   },
+   "queueDefaultRetries": {
+      "message": "기본 최대 재시도"
+   },
+   "queueDefaultRetriesLabel": {
+      "message": "기본 최대 재시도:"
+   },
+   "queueDefaultTarget": {
+      "message": "기본 목표"
+   },
+   "queueDefaultTargetLabel": {
+      "message": "기본 성공 목표:"
+   },
+   "queueEmptyState": {
+      "message": "대기열에 항목이 없습니다. 게시물 상세 페이지에서 추가하세요."
+   },
+   "queueItemsTitle": {
+      "message": "대기열 항목"
+   },
+   "queueNoStats": {
+      "message": "프롬프트 통계가 아직 없습니다"
+   },
+   "queuePromptStatsTitle": {
+      "message": "프롬프트 통계"
+   },
+   "queueRateLimited": {
+      "message": "429 요청 과다 — 잠시 후 다시 시도해 주세요"
+   },
+   "queueResolution": {
+      "message": "해상도"
+   },
+   "queueSettingsTitle": {
+      "message": "설정"
+   },
+   "queueStatusError": {
+      "message": "오류"
+   },
+   "queueStatusIdle": {
+      "message": "대기"
+   },
+   "queueStatusPaused": {
+      "message": "일시정지됨"
+   },
+   "queueStatusRunning": {
+      "message": "실행 중"
+   },
+   "queueTitle": {
+      "message": "동영상 생성 대기열"
+   },
+   "queueUpgradeHint": {
+      "message": "무료 사용 한도에 도달했습니다. Pro로 업그레이드하면 무제한 비디오 생성이 가능합니다."
+   },
+   "queueUsage": {
+      "message": "사용량"
+   },
+   "queueUsageHint": {
+      "message": "Favorites에서 게시물을 열고 🎯을 눌러 영상 설정 후 대기열에 추가하거나, 아래에서 최근 게시물을 일괄 추가하세요."
+   },
+   "queueUsageLimitReached": {
+      "message": "무료 사용 한도(50회)에 도달했습니다. Pro로 업그레이드하여 무제한으로 이용하세요."
+   },
+   "queueVideoLength": {
+      "message": "영상 길이"
+   },
+   "rateLimitPaused": {
+      "message": "⏸️ $1개 동영상 다운로드 후 일시정지됨 (속도 제한 보호). '다운로드 시작'을 클릭하여 계속하세요.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "rateLimitWarning": {
+      "message": "⚠️ $1개 이상의 동영상 다운로드 예정. 속도 제한 방지를 위해 $1개마다 자동 일시정지됩니다.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "removeAll": {
+      "message": "모두 제거"
+   },
+   "removeBeforeLabel": {
+      "message": "이전 항목 제거:"
+   },
+   "removeFavTitle": {
+      "message": "일괄 제거 (Pro):"
+   },
+   "resumeProgress": {
+      "message": "📥 $1/$2 완료, 클릭하여 계속",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "saveMetadataDesc": {
+      "message": "이미지/동영상 정보가 포함된 .json 파일도 저장 (프롬프트, 해상도 등)"
+   },
+   "saveMetadataLabel": {
+      "message": "📋 메타데이터 저장"
+   },
+   "sectionBulkRemove": {
+      "message": "⚠️ 일괄 제거"
+   },
+   "sectionClearActions": {
+      "message": "🧹 초기화"
+   },
+   "sectionDataManage": {
+      "message": "💾 데이터 관리"
+   },
+   "sectionDateFilter": {
+      "message": "📅 날짜 필터"
+   },
+   "sectionHdUpgrade": {
+      "message": "✨ HD 업그레이드"
+   },
+   "sectionLicense": {
+      "message": "🔑 라이선스"
+   },
+   "sectionMediaType": {
+      "message": "🎬 미디어 유형"
+   },
+   "sectionQueueSettings": {
+      "message": "🎯 대기열 설정"
+   },
+   "sectionSettings": {
+      "message": "⚙️ 설정"
+   },
+   "sectionStatus": {
+      "message": "📊 상태"
+   },
+   "sectionStreamCapture": {
+      "message": "🌊 스트림 캡처"
+   },
+   "settingsPathFrames": {
+      "message": "🎞️ 스토리 프레임:"
+   },
+   "settingsPathImages": {
+      "message": "🖼️ 즐겨찾기 이미지:"
+   },
+   "settingsPathNote": {
+      "message": "📁 경로는 브라우저 기본 다운로드 폴더 기준"
+   },
+   "settingsPathProjects": {
+      "message": "📂 프로젝트 다운로드:"
+   },
+   "settingsPathStream": {
+      "message": "📹 스트림 캡처:"
+   },
+   "settingsPathVideos": {
+      "message": "🎬 즐겨찾기 동영상:"
+   },
+   "settingsSave": {
+      "message": "💾 경로 저장"
+   },
+   "settingsSaved": {
+      "message": "✓ 경로가 저장되었습니다!"
+   },
+   "status720pVideos": {
+      "message": "🎥 720p 동영상"
+   },
+   "statusDownloadingImages": {
+      "message": "🖼️ 이미지 다운로드 중 ($1/$2)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "statusDownloadingProjects": {
+      "message": "📂 프로젝트 다운로드 중 ($1/$2)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "statusDownloadingVideos": {
+      "message": "🎬 동영상 다운로드 중 ($1/$2)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "statusHdVideos": {
+      "message": "✨ HD 동영상"
+   },
+   "statusImageDownloaded": {
+      "message": "다운로드됨"
+   },
+   "statusImageHistory": {
+      "message": "이미지 기록"
+   },
+   "statusImages": {
+      "message": "🖼️ 이미지"
+   },
+   "statusPhase": {
+      "message": "현재 단계"
+   },
+   "statusPhaseComplete": {
+      "message": "✅ 완료"
+   },
+   "statusPhaseProject": {
+      "message": "📂 프로젝트 모드"
+   },
+   "statusPhaseStandard": {
+      "message": "📦 표준 모드"
+   },
+   "statusPhaseSummary": {
+      "message": "🖼️ $1 / 🎬 SD $2 / 🎥 720p $3 / ✨ HD $4",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         },
+         "3": {
+            "content": "$3"
+         },
+         "4": {
+            "content": "$4"
+         }
+      }
+   },
+   "statusProgress": {
+      "message": "진행률"
+   },
+   "statusProjects": {
+      "message": "📂 프로젝트"
+   },
+   "statusSdVideos": {
+      "message": "🎬 SD 동영상"
+   },
+   "statusTotalImages": {
+      "message": "전체 이미지"
+   },
+   "statusTotalSlashDown": {
+      "message": "전체 / 완료 / 미완료"
+   },
+   "statusTotalVideos": {
+      "message": "전체 비디오"
+   },
+   "statusVideoDownloaded": {
+      "message": "다운로드됨"
+   },
+   "statusVideoHistory": {
+      "message": "비디오 기록"
+   },
+   "storyModeAddToStory": {
+      "message": "스토리 모드에 추가"
+   },
+   "storyModeAnalyzing": {
+      "message": "비디오 분석 중..."
+   },
+   "storyModeCannotGetUrl": {
+      "message": "비디오 URL을 가져올 수 없습니다.\n\n즐겨찾기 페이지에서 드래그하는 경우 \"스토리 모드에 추가\" 버튼을 클릭하세요."
+   },
+   "storyModeClearAll": {
+      "message": "모두 삭제"
+   },
+   "storyModeClearConfirm": {
+      "message": "전체 스토리보드가 삭제됩니다. 계속하시겠습니까?"
+   },
+   "storyModeConfirmNewProject": {
+      "message": "새 프로젝트를 시작하시겠습니까? 스토리보드의 모든 비디오가 삭제됩니다."
+   },
+   "storyModeContinueEdit": {
+      "message": "편집 계속"
+   },
+   "storyModeDone": {
+      "message": "완료!"
+   },
+   "storyModeDownloadFrame": {
+      "message": "프레임 다운로드"
+   },
+   "storyModeDownloadVideo": {
+      "message": "비디오 다운로드"
+   },
+   "storyModeDropOrClick": {
+      "message": "놓거나 클릭하여 비디오 추가"
+   },
+   "storyModeDropSubtext": {
+      "message": "로컬 파일 또는 Grok Post에서 드래그"
+   },
+   "storyModeDropVideo": {
+      "message": "여기에 비디오를 놓으세요"
+   },
+   "storyModeEmptyState": {
+      "message": "위에 비디오를 놓아 스토리보드를 시작하세요"
+   },
+   "storyModeErrorOccurred": {
+      "message": "오류가 발생했습니다"
+   },
+   "storyModeExportProRequired": {
+      "message": "최종 비디오 내보내기는 Pro 기능입니다. 이 기능을 사용하려면 라이선스를 활성화하세요."
+   },
+   "storyModeExportSuccess": {
+      "message": "비디오 내보내기 성공!"
+   },
+   "storyModeExportVideo": {
+      "message": "최종 비디오 내보내기"
+   },
+   "storyModeExtractingFrames": {
+      "message": "프레임 추출 중..."
+   },
+   "storyModeFetchingVideo": {
+      "message": "Grok에서 비디오 가져오는 중..."
+   },
+   "storyModeFooter": {
+      "message": "Grok AI Video Extension Workflow"
+   },
+   "storyModeGenerate": {
+      "message": "생성"
+   },
+   "storyModeIncludeAudio": {
+      "message": "오디오 트랙 포함"
+   },
+   "storyModeInitializing": {
+      "message": "초기화 중..."
+   },
+   "storyModeLastFrame": {
+      "message": "마지막 프레임"
+   },
+   "storyModeLastFrameClip": {
+      "message": "마지막 프레임 - 클립 $CLIP$",
+      "placeholders": {
+         "clip": {
+            "content": "$1"
+         }
+      }
+   },
+   "storyModeLoadingVideo": {
+      "message": "비디오 $NUM$ 로드 중...",
+      "placeholders": {
+         "num": {
+            "content": "$1"
+         }
+      }
+   },
+   "storyModeMasterVideo": {
+      "message": "마스터 비디오"
+   },
+   "storyModeNewProject": {
+      "message": "새 프로젝트 시작"
+   },
+   "storyModeNoFrameAlert": {
+      "message": "사용 가능한 프레임이 없습니다. 먼저 비디오를 추가하세요."
+   },
+   "storyModeNormalizingVideo": {
+      "message": "비디오 $NUM$ 정규화 중...",
+      "placeholders": {
+         "num": {
+            "content": "$1"
+         }
+      }
+   },
+   "storyModeOpeningTabs": {
+      "message": "탭 열기... $1/$2",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "storyModePreparingVideos": {
+      "message": "비디오 준비 중..."
+   },
+   "storyModeProcessing": {
+      "message": "처리 중..."
+   },
+   "storyModePromptAlert": {
+      "message": "비디오 생성을 위한 프롬프트를 입력하세요."
+   },
+   "storyModePromptOptional": {
+      "message": "선택사항 — 비우면 AI가 자동 생성"
+   },
+   "storyModePromptPlaceholder": {
+      "message": "비디오 생성을 위한 프롬프트 입력..."
+   },
+   "storyModeReadingFile": {
+      "message": "비디오 파일 읽는 중..."
+   },
+   "storyModeResolutionMismatch": {
+      "message": "해상도 불일치 경고\n\n다음 세그먼트의 해상도가 마스터($MASTER_RES$)와 다릅니다:\n$MISMATCH_LIST$\n\n이 세그먼트는 마스터 해상도에 맞게 조정되며 검은색 테두리가 생길 수 있습니다.\n\n계속하시겠습니까?",
+      "placeholders": {
+         "master_res": {
+            "content": "$1"
+         },
+         "mismatch_list": {
+            "content": "$2"
+         }
+      }
+   },
+   "storyModeSendFrame": {
+      "message": "프레임 전송 & 비디오 생성"
+   },
+   "storyModeStartingMerge": {
+      "message": "병합 시작..."
+   },
+   "storyModeStorage": {
+      "message": "저장소"
+   },
+   "storyModeStoringVideo": {
+      "message": "비디오 저장 중..."
+   },
+   "storyModeStoryboard": {
+      "message": "스토리보드"
+   },
+   "storyModeTitle": {
+      "message": "스토리 모드 도우미"
+   },
+   "storyModeTryAgain": {
+      "message": "다시 시도"
+   },
+   "storyModeUnknownSpecs": {
+      "message": "알 수 없는 사양"
+   },
+   "storyModeVideos": {
+      "message": "개 비디오"
+   },
+   "streamCaptureHint": {
+      "message": "💡 grok.com/imagine 생성 페이지에서 작동 — Grok이 생성하는 이미지를 실시간으로 자동 캡처합니다. \"다운로드\"를 클릭하여 저장하세요."
+   },
+   "streamCaptureTitle": {
+      "message": "스트림 캡처 (Pro)"
+   },
+   "streamCapturedCount": {
+      "message": "캡처됨: $COUNT$",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "streamToggleLabel": {
+      "message": "활성화"
+   },
+   "toDateLabel": {
+      "message": "종료일:"
+   }
+}

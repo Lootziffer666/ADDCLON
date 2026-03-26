@@ -1,0 +1,271 @@
+{
+   "bulkDeleteTitle": {
+      "description": "Title of the panel that contains the bulk-delete controls.",
+      "message": "Массовое удаление"
+   },
+   "deleteConversations_allFailed": {
+      "description": "Completion message when all chats failed to delete.",
+      "message": "Не удалось удалить чаты. Попробуйте снова позже или с меньшим количеством чатов."
+   },
+   "deleteConversations_cancel": {
+      "description": "Button text to cancel the current operation.",
+      "message": "Отменить"
+   },
+   "deleteConversations_cancelled": {
+      "description": "Message shown when the user cancels the deletion process.",
+      "message": "Удаление отменено."
+   },
+   "deleteConversations_cleared": {
+      "description": "A completion message shown after successfully deleting chats.",
+      "message": "Готово! Ваши чаты очищены."
+   },
+   "deleteConversations_deleting": {
+      "description": "A loading message shown while chats are being deleted.",
+      "message": "Удаление чатов..."
+   },
+   "deleteConversations_done": {
+      "description": "A friendly completion message.",
+      "message": "Готово! Надеемся, вам понравился наш сервис."
+   },
+   "deleteConversations_finished": {
+      "description": "A completion message with a bit of flair.",
+      "message": "И... мы закончили! ✨"
+   },
+   "deleteConversations_licenseValidated": {
+      "description": "Success message shown after a license is successfully validated.",
+      "message": "Лицензия подтверждена! Разблокированы неограниченные удаления."
+   },
+   "deleteConversations_longOperation": {
+      "description": "Warning message when the deletion process is slow.",
+      "message": "Операция занимает больше времени, чем ожидалось."
+   },
+   "deleteConversations_longOperationSuggestion": {
+      "description": "A suggestion for the user when the operation is slow.",
+      "message": "Попробуйте выбрать меньше чатов или проверьте подключение к интернету."
+   },
+   "deleteConversations_noItems": {
+      "description": "Message shown when there are no items to process from the start.",
+      "message": "Нет элементов для обработки."
+   },
+   "deleteConversations_noItemsProcessed": {
+      "description": "Message shown when no items were processed.",
+      "message": "Ни одного элемента не было обработано. Проверьте выбор."
+   },
+   "deleteConversations_noSelection": {
+      "description": "Error message shown when the user tries to delete without selecting any conversations.",
+      "message": "Не выбраны диалоги для удаления."
+   },
+   "deleteConversations_partialSuccess": {
+      "description": "Completion message when some chats failed to delete.",
+      "message": "Удалено $DELETED$/$TOTAL$ чатов. Некоторые чаты не удалось удалить.",
+      "placeholders": {
+         "deleted": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "deleteConversations_preparing": {
+      "description": "Initial progress text. $TOTAL$ is a placeholder for the total number of items.",
+      "message": "Подготовка... (0/$TOTAL$)",
+      "placeholders": {
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "deleteConversations_progress": {
+      "description": "Progress text shown during deletion. $PROCESSED$, $TOTAL$, $DELETED$, and $FAILED$ are placeholders.",
+      "message": "Обработано $PROCESSED$/$TOTAL$ (Удалено: $DELETED$, Не удалось: $FAILED$)",
+      "placeholders": {
+         "deleted": {
+            "content": "$3"
+         },
+         "failed": {
+            "content": "$4"
+         },
+         "processed": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "deleteConversations_quotaExhausted": {
+      "description": "Error message shown when the user's free quota is used up.",
+      "message": "Бесплатная квота исчерпана (использовано 50/50 удалений). Обновитесь для продолжения."
+   },
+   "deleteConversations_taskComplete": {
+      "description": "A completion message.",
+      "message": "Задача выполнена. Готовы к следующей?"
+   },
+   "deleteConversations_tidied": {
+      "description": "A completion message indicating success.",
+      "message": "Успешно приведено в порядок!"
+   },
+   "deleteConversations_timeout": {
+      "description": "Error message when the deletion takes too long.",
+      "message": "Время ожидания истекло. Попробуйте снова с меньшим количеством чатов."
+   },
+   "deleteConversations_tryAgain": {
+      "description": "Button text to try an operation again.",
+      "message": "Попробовать снова"
+   },
+   "deleteConversations_workspaceMessage": {
+      "description": "Completion message shown for workspace accounts.",
+      "message": "Обнаружена учебная/корпоративная учётная запись. Удаление может быть ограничено администратором вашей организации."
+   },
+   "deleteN": {
+      "description": "Button text to delete a specific number of conversations. $COUNT$ is a placeholder.",
+      "message": "Удалить ($COUNT$)",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "5"
+         }
+      }
+   },
+   "deleteSelected": {
+      "description": "Button text to delete the conversations that are currently selected.",
+      "message": "Удалить выбранные"
+   },
+   "deletionError": {
+      "description": "Error message shown when the deletion script cannot be executed.",
+      "message": "Не удалось запустить процесс удаления. Пожалуйста, обновите страницу и попробуйте снова."
+   },
+   "dismiss": {
+      "description": "Button text to close or dismiss a notification.",
+      "message": "Скрыть"
+   },
+   "dontShowAgain": {
+      "description": "Tooltip for a button that dismisses a warning permanently.",
+      "message": "Больше не показывать"
+   },
+   "extensionDescription": {
+      "description": "The description of the extension.",
+      "message": "Множественный выбор и массовое удаление чатов Gemini."
+   },
+   "extensionName": {
+      "description": "The name of the extension.",
+      "message": "Gemini Bulk Delete"
+   },
+   "extensionShortName": {
+      "description": "The short name of the extension.",
+      "message": "Bulk Delete"
+   },
+   "learnMore": {
+      "description": "Link text to learn more about a topic.",
+      "message": "Узнать больше"
+   },
+   "loading": {
+      "description": "Text shown on a button while content is loading.",
+      "message": "Загрузка..."
+   },
+   "multiSelectModeTooltip": {
+      "description": "Tooltip for the toggle switch that enables the batch deletion mode.",
+      "message": "Включить режим множественного выбора для удаления нескольких чатов. Горячие клавиши: Shift+A (выбрать все), Delete (удалить выбранные), Esc (выйти)"
+   },
+   "paywall_alreadyHaveLicense": {
+      "description": "Button/link for users who already have a license.",
+      "message": "У меня уже есть лицензия"
+   },
+   "paywall_back": {
+      "description": "Button to go back to the previous view.",
+      "message": "Назад"
+   },
+   "paywall_close": {
+      "description": "Tooltip for the close button on the paywall modal.",
+      "message": "Закрыть модальное окно"
+   },
+   "paywall_copied": {
+      "description": "Confirmation text shown after copying.",
+      "message": "Скопировано!"
+   },
+   "paywall_copyButton": {
+      "description": "Text for a button that copies a promo code.",
+      "message": "Нажмите, чтобы скопировать!"
+   },
+   "paywall_enterLicense": {
+      "description": "Heading for the license entry section.",
+      "message": "Введите лицензионный ключ"
+   },
+   "paywall_enterLicenseSubtext": {
+      "description": "Subtext for the license entry section.",
+      "message": "Введите ваш лицензионный ключ, чтобы разблокировать неограниченные удаления."
+   },
+   "paywall_feature1": {
+      "description": "A feature point.",
+      "message": "Неограниченные удаления чатов"
+   },
+   "paywall_feature2": {
+      "description": "A feature point.",
+      "message": "Приоритетная поддержка"
+   },
+   "paywall_feature3": {
+      "description": "A feature point.",
+      "message": "Будущие обновления включены"
+   },
+   "paywall_heading": {
+      "description": "Main heading in the paywall modal.",
+      "message": "Вы использовали все 50 бесплатных удалений."
+   },
+   "paywall_invalidKey": {
+      "description": "Error message for an invalid license key.",
+      "message": "Неверный формат лицензионного ключа"
+   },
+   "paywall_promoCode": {
+      "description": "Label for a promo code.",
+      "message": "Используйте код:"
+   },
+   "paywall_promoTitle": {
+      "description": "Title for a promotional offer.",
+      "message": "Раннее предложение – Скидка 40%"
+   },
+   "paywall_subheading": {
+      "description": "Subheading in the paywall modal.",
+      "message": "Обновитесь, чтобы разблокировать неограниченные удаления."
+   },
+   "paywall_support": {
+      "description": "A message encouraging users to support development.",
+      "message": "Ваша поддержка помогает в дальнейшей разработке расширения."
+   },
+   "paywall_title": {
+      "description": "The title of the paywall modal.",
+      "message": "Бесплатные удаления использованы"
+   },
+   "paywall_upgradeButton": {
+      "description": "Button to start the upgrade process.",
+      "message": "Обновить и получить лицензию"
+   },
+   "paywall_validateButton": {
+      "description": "Button to validate a license key.",
+      "message": "Проверить и разблокировать"
+   },
+   "paywall_validating": {
+      "description": "Text shown while a license is being validated.",
+      "message": "Проверка..."
+   },
+   "selectAllChats": {
+      "description": "Button text to select all conversations.",
+      "message": "Выбрать все чаты"
+   },
+   "workspaceAlert": {
+      "description": "The full text of the alert shown when a user clicks 'Learn more' on the workspace warning.",
+      "message": "Учебные (.edu) и корпоративные учётные записи обычно имеют удаление чатов под контролем администратора Google Workspace вашей организации. Отдельные пользователи не могут удалять историю чатов, поскольку это управляется на уровне администратора через политики хранения (обычно 18 месяцев)."
+   },
+   "workspaceWarningConfirm": {
+      "description": "Confirmation message shown to users on workspace accounts before attempting deletion.",
+      "message": "Предупреждение: Похоже, вы используете учебную или корпоративную учётную запись. Обычно такие учётные записи не могут удалять чаты, поскольку это контролируется администратором вашей организации. Всё равно попробовать?"
+   },
+   "workspaceWarningNote": {
+      "description": "A label for a note or warning.",
+      "message": "Примечание:"
+   },
+   "workspaceWarningText": {
+      "description": "The text of the warning for workspace account limitations.",
+      "message": "Учебные (.edu) и некоторые корпоративные учётные записи не могут удалять чаты. Это контролируется настройками администратора вашей организации."
+   }
+}

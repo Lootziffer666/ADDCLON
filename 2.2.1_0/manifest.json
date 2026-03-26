@@ -1,0 +1,35 @@
+{
+   "author": "RaymonDev",
+   "background": {
+      "service_worker": "background.js"
+   },
+   "browser_specific_settings": {
+      "gecko": {
+         "id": "folders-for-gemini-v1@ramong.dev",
+         "strict_min_version": "109.0"
+      }
+   },
+   "content_scripts": [ {
+      "css": [ "styles.css" ],
+      "js": [ "content.js" ],
+      "matches": [ "https://gemini.google.com/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Organize your Gemini chats into folders. Drag & drop, custom colors, and native integration.",
+   "host_permissions": [ "https://gemini.google.com/*" ],
+   "icons": {
+      "128": "assets/icon128.png",
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjyQeyolHCkLHNfKzFwF58ZUo+UGZ14BzgklrUhkuh1T/LF1KC3dDJ9jLqajMNc+m+N61uvNuFLHHx8chFYO3CPo+fQHzMq5/t/AHYOpwcAqzc06xX7CZSTqjLx6HWGzGD6RDNAcVN9veT/xVOCHbIwjdiZjohO7NHcZMDiILOwlgn03/LBS+jFHoq3IK76qZrT9CKKuJkGgaaCPvNozO1bFXD8zP14jUcKr2GPDUi+t0geKAowVO9bm76JiX9X07AnUrCtQDgc2y6e/sFJrHzHdejw1VVMAwglvB7Z3czgbG58ri3v+nLEJJk4aTiNPDvhvQYv2UNZaIsr2cPcZTfwIDAQAB",
+   "manifest_version": 3,
+   "name": "Folders for Gemini",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.2.1",
+   "web_accessible_resources": [ {
+      "matches": [ "https://gemini.google.com/*" ],
+      "resources": [ "assets/*" ]
+   } ]
+}

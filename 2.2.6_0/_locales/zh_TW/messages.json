@@ -1,0 +1,1270 @@
+{
+   "appDesc": {
+      "message": "批次下載、自動生成影片，一站式管理你的 Grok AI 媒體庫。"
+   },
+   "appName": {
+      "message": "Grok 媒體下載器"
+   },
+   "batchDeleteCancel": {
+      "message": "取消"
+   },
+   "batchDeleteClose": {
+      "message": "關閉"
+   },
+   "batchDeleteComplete": {
+      "message": "✅ 成功刪除 $1 個項目",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "batchDeleteCompleteWithFail": {
+      "message": "✅ 完成：$1 個已刪除，$2 個失敗",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "batchDeleteConfirm": {
+      "message": "確認刪除"
+   },
+   "batchDeleteConfirmMsg": {
+      "message": "您即將刪除 $1 個選中的項目。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "batchDeleteConfirmTitle": {
+      "message": "⚠️ 確認刪除"
+   },
+   "batchDeleteOptionDelete": {
+      "message": "永久刪除貼文"
+   },
+   "batchDeleteOptionDeleteDesc": {
+      "message": "貼文將取消收藏並刪除"
+   },
+   "batchDeleteOptionUnfavorite": {
+      "message": "僅從收藏移除"
+   },
+   "batchDeleteOptionUnfavoriteDesc": {
+      "message": "貼文將取消收藏但不會刪除"
+   },
+   "batchDeletePleaseWait": {
+      "message": "請稍候..."
+   },
+   "batchDeleteProgress": {
+      "message": "刪除中... $1/$2",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "batchDeleteWarning": {
+      "message": "⚠️ 此操作無法撤銷！"
+   },
+   "batchSelectDelete": {
+      "message": "🗑️ 刪除"
+   },
+   "batchSelectDeselectAll": {
+      "message": "取消全選"
+   },
+   "batchSelectSelectAll": {
+      "message": "全選"
+   },
+   "batchSelectSelected": {
+      "message": "已選擇：$1 / $2",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "btnBatchSelectDelete": {
+      "message": "批量勾選刪除"
+   },
+   "btnBuyLicense": {
+      "message": "購買授權"
+   },
+   "btnClearHistory": {
+      "message": "重置下載歷史（將重新下載所有檔案）"
+   },
+   "btnClearState": {
+      "message": "清除下載預覽清單"
+   },
+   "btnClearStream": {
+      "message": "清除已擷取"
+   },
+   "btnCompact": {
+      "message": "簡"
+   },
+   "btnContinueDownload": {
+      "description": "Button label shown when a previous download was interrupted and can be resumed",
+      "message": "▶ 繼續下載"
+   },
+   "btnDownloadStream": {
+      "message": "📥 下載已擷取圖片"
+   },
+   "btnExpand": {
+      "message": "全"
+   },
+   "btnExport": {
+      "message": "📤 匯出數據"
+   },
+   "btnGenerate": {
+      "message": "1. 生成下載列表"
+   },
+   "btnGenerateLoading": {
+      "message": "生成中..."
+   },
+   "btnImport": {
+      "message": "📥 匯入數據"
+   },
+   "btnRemoveFav": {
+      "message": "🗑️ 移除舊收藏"
+   },
+   "btnRemoveFavGenerating": {
+      "message": "生成列表中..."
+   },
+   "btnRemoveFavLoading": {
+      "message": "移除中..."
+   },
+   "btnStart": {
+      "message": "2. 開始下載"
+   },
+   "btnStartDone": {
+      "message": "✅ 下載完成"
+   },
+   "btnStartLoading": {
+      "message": "下載中..."
+   },
+   "btnStopDownload": {
+      "message": "⏹ 中斷下載"
+   },
+   "btnStopUpgrade": {
+      "message": "⏹ 升級中 ($1/$2)，中斷升級?",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "btnUpgradeHD": {
+      "message": "🚀 升級為 HD"
+   },
+   "checkboxDeletePost": {
+      "message": "同時刪除貼文"
+   },
+   "dataManageTitle": {
+      "message": "數據管理 (Pro)："
+   },
+   "dateFilterTitle": {
+      "message": "日期篩選 (Pro)："
+   },
+   "downloadAll": {
+      "message": "下載全部"
+   },
+   "downloadModeProject": {
+      "message": "依專案分組"
+   },
+   "downloadModeProjectDesc": {
+      "message": "將來源圖片與生成的視頻放在同一專案資料夾"
+   },
+   "downloadModeProjectHint": {
+      "message": "💡 已下載的檔案不會重複下載。如需在專案資料夾內看到完整檔案，請先清除下載紀錄。"
+   },
+   "downloadModeStandard": {
+      "message": "標準模式"
+   },
+   "downloadModeStandardDesc": {
+      "message": "圖片和視頻分開存放到不同資料夾"
+   },
+   "downloadModeTitle": {
+      "message": "📂 下載模式"
+   },
+   "filterDateRange": {
+      "message": "日期區間"
+   },
+   "filterInfoTitle": {
+      "message": "📋 當前列表過濾條件："
+   },
+   "filterLastHours": {
+      "message": "最近"
+   },
+   "footerImages": {
+      "message": "圖片："
+   },
+   "footerManualSetup": {
+      "message": "使用瀏覽器預設下載目錄"
+   },
+   "footerOfficialWebsite": {
+      "message": "官方網站"
+   },
+   "footerPath": {
+      "message": "📁 下載路徑："
+   },
+   "footerVersion": {
+      "message": "v$VERSION$ | Powered by Kario LLC",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "footerVideos": {
+      "message": "視頻："
+   },
+   "footerViewLogs": {
+      "message": "查看日誌"
+   },
+   "fromDateLabel": {
+      "message": "從："
+   },
+   "hdPriorityDesc": {
+      "message": "優先下載 HD 版本，無 HD 時下載 SD"
+   },
+   "hdPriorityLabel": {
+      "message": "✨ HD 優先"
+   },
+   "hdUpgradeDesc": {
+      "message": "自動將收藏的視頻升級為 HD 畫質。"
+   },
+   "hdUpgradeHoursUnit": {
+      "message": "小時內的視頻"
+   },
+   "hdUpgradeTimeFilterLabel": {
+      "message": "僅升級最近"
+   },
+   "hdUpgradeTitle": {
+      "message": "✨ HD 畫質升級 (Pro)："
+   },
+   "hoursUnitMedia": {
+      "message": "小時內的圖片/視頻"
+   },
+   "licenseActivateBtn": {
+      "message": "激活"
+   },
+   "licenseActivated": {
+      "message": "已激活"
+   },
+   "licensePlaceholder": {
+      "message": "輸入 License Key"
+   },
+   "licenseTitle": {
+      "message": "🔑 授權狀態"
+   },
+   "licenseVerifying": {
+      "message": "驗證中..."
+   },
+   "mediaTypeImages": {
+      "message": "🖼️ 圖片"
+   },
+   "mediaTypeTitle": {
+      "message": "選擇要下載的類型："
+   },
+   "mediaTypeVideos": {
+      "message": "🎬 視頻 (Pro)"
+   },
+   "msgActivateError": {
+      "message": "激活錯誤"
+   },
+   "msgActivateFailed": {
+      "message": "❌ 激活失敗"
+   },
+   "msgActivateSuccess": {
+      "message": "✅ 激活成功！感謝您的支持"
+   },
+   "msgAllDownloaded": {
+      "message": "所有檔案都已下載過。\n\n📊 統計：\n  圖片：$1\n  視頻：$2\n\n本次未下載任何檔案。\n\n如需重新下載，請先清除歷史記錄。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgBuyPro": {
+      "message": "獲取 Pro 解鎖全部功能"
+   },
+   "msgClearFailed": {
+      "message": "清除失敗"
+   },
+   "msgClearHistoryFailed": {
+      "message": "清除歷史失敗"
+   },
+   "msgConfirmClearHistory": {
+      "message": "⚠️ 重置下載歷史？\n\n這會讓系統重新下載所有已完成的檔案。\n此操作無法撤銷！\n\n確定要繼續嗎？"
+   },
+   "msgConfirmClearState": {
+      "message": "確定要清除當前狀態嗎？\n\n（不會清除下載歷史記錄）"
+   },
+   "msgConfirmClearStream": {
+      "message": "確定要清除所有已擷取的串流圖片嗎？"
+   },
+   "msgConfirmDeletePost": {
+      "message": "⚠️ 警告：您勾選了「同時刪除貼文」。\n這些貼文將從 Grok 【永久刪除】。"
+   },
+   "msgConfirmDownload": {
+      "message": "確定要開始自動下載嗎？\n\n圖片將批量下載，視頻將自動訪問頁面下載。\n過程中請勿關閉瀏覽器。"
+   },
+   "msgConfirmRemove": {
+      "message": "⚠️ 確定要移除 $DATE$ 之前的收藏嗎？\n\n📊 統計信息：\n  總收藏數: $TOTAL$\n  將移除: $REMOVE$\n  保留: $KEEP$\n\n此操作將自動訪問每個詳情頁並取消收藏。\n過程中請勿關閉瀏覽器。\n\n此操作無法撤銷！",
+      "placeholders": {
+         "date": {
+            "content": "$1"
+         },
+         "keep": {
+            "content": "$4"
+         },
+         "remove": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgConfirmRemoveRange": {
+      "message": "⚠️ 確定要移除範圍 $RANGE$ 內的收藏嗎？\n\n📊 統計信息：\n  總收藏數: $TOTAL$\n  將移除: $REMOVE$\n  保留: $KEEP$\n\n此操作將自動訪問每個詳情頁並取消收藏。\n過程中請勿關閉瀏覽器。\n\n此操作無法撤銷！",
+      "placeholders": {
+         "keep": {
+            "content": "$4"
+         },
+         "range": {
+            "content": "$1"
+         },
+         "remove": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDateAll": {
+      "message": "全部日期"
+   },
+   "msgDateRange": {
+      "message": "日期：$FROM$ ~ $TO$",
+      "placeholders": {
+         "from": {
+            "content": "$1"
+         },
+         "to": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDownloadCancelConfirm": {
+      "message": "⚠️ 下載正在進行中\n\n階段：$PHASE$\n進度：$CURRENT$/$TOTAL$\n\n是否要中斷？",
+      "placeholders": {
+         "current": {
+            "content": "$2"
+         },
+         "phase": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$3"
+         }
+      }
+   },
+   "msgDownloadCancelled": {
+      "message": "下載已中斷"
+   },
+   "msgDownloadComplete": {
+      "message": "🎉 下載完成！成功：$DOWNLOADED$/$TOTAL$",
+      "placeholders": {
+         "downloaded": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDownloadConfirmHdPriority": {
+      "message": "📊 下載摘要\n\n🖼️ 圖片：$1 待下載（$2 已完成）\n🎬 影片：$3 待下載（$4 已完成）\n    ├ ✨ HD：$5\n    ├ 🎥 720p：$6\n    └ 📦 SD：$7\n\n過程中請勿關閉瀏覽器。\n確定開始下載？",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         },
+         "3": {
+            "content": "$3"
+         },
+         "4": {
+            "content": "$4"
+         },
+         "5": {
+            "content": "$5"
+         },
+         "6": {
+            "content": "$6"
+         },
+         "7": {
+            "content": "$7"
+         }
+      }
+   },
+   "msgDownloadConfirmProject": {
+      "message": "📊 下載摘要\n\n📂 專案：$1 待下載（$2 已完成）\n\n過程中請勿關閉瀏覽器。\n確定開始下載？",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDownloadConfirmStandard": {
+      "message": "📊 下載摘要\n\n🖼️ 圖片：$1 待下載（$2 已完成）\n🎬 SD 影片：$3 待下載（$4 已完成）\n🎥 720p 影片：$5 待下載（$6 已完成）\n✨ HD 影片：$7 待下載（$8 已完成）\n\n過程中請勿關閉瀏覽器。\n確定開始下載？",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         },
+         "3": {
+            "content": "$3"
+         },
+         "4": {
+            "content": "$4"
+         },
+         "5": {
+            "content": "$5"
+         },
+         "6": {
+            "content": "$6"
+         },
+         "7": {
+            "content": "$7"
+         },
+         "8": {
+            "content": "$8"
+         }
+      }
+   },
+   "msgDownloadScanning": {
+      "message": "掃描中..."
+   },
+   "msgDownloading": {
+      "message": "下載中..."
+   },
+   "msgEnterLicenseKey": {
+      "message": "請輸入 License Key"
+   },
+   "msgExportFailed": {
+      "message": "匯出失敗"
+   },
+   "msgExportSuccess": {
+      "message": "✅ 數據已匯出！包含 $COUNT$ 條記錄",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgFilterChanged": {
+      "message": "⚠️ 過濾條件已改變，請重新生成列表"
+   },
+   "msgFoundMedia": {
+      "message": "成功！找到 $CONTENT$",
+      "placeholders": {
+         "content": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgGenerateFailed": {
+      "message": "生成失敗"
+   },
+   "msgGenerateListProgress": {
+      "description": "Real-time progress shown on Generate List button during API scanning",
+      "message": "掃描中... 已取得 $COUNT$ 筆資料",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgGenerating": {
+      "message": "正在生成列表，請稍候..."
+   },
+   "msgHistoryCleared": {
+      "message": "歷史記錄已清除"
+   },
+   "msgImportFailed": {
+      "message": "匯入失敗"
+   },
+   "msgImportSuccess": {
+      "message": "✅ 數據已匯入！新增 $NEW$ 條記錄\n總數：$BEFORE$ → $AFTER$",
+      "placeholders": {
+         "after": {
+            "content": "$3"
+         },
+         "before": {
+            "content": "$2"
+         },
+         "new": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgNoItemsToRemove": {
+      "message": "✅ $DATE$ 之前沒有需要移除的收藏\n\n總收藏數：$TOTAL$",
+      "placeholders": {
+         "date": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgNoItemsToRemoveRange": {
+      "message": "✅ 在範圍 $RANGE$ 內沒有需要移除的收藏\n\n總收藏數：$TOTAL$",
+      "placeholders": {
+         "range": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgNoResponse": {
+      "message": "❌ 沒有收到回應，請刷新頁面重試"
+   },
+   "msgOperationFailed": {
+      "message": "❌ 操作失敗"
+   },
+   "msgPhaseImages": {
+      "message": "🖼️ 正在下載圖片"
+   },
+   "msgPhaseVideos": {
+      "message": "🎬 正在下載視頻"
+   },
+   "msgRefreshRetry": {
+      "message": "請刷新頁面後重試"
+   },
+   "msgRemoveComplete": {
+      "message": "✅ 移除完成！成功：$SUCCESS$/$TOTAL$",
+      "placeholders": {
+         "success": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgRemovingProgress": {
+      "message": "移除中 $CURRENT$/$TOTAL$...",
+      "placeholders": {
+         "current": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgSelectDate": {
+      "message": "請選擇日期"
+   },
+   "msgSelectMediaType": {
+      "message": "請至少選擇一種媒體類型"
+   },
+   "msgStartDownload": {
+      "message": "開始下載！"
+   },
+   "msgStartFailed": {
+      "message": "啟動失敗"
+   },
+   "msgStartRemove": {
+      "message": "正在移除 $COUNT$ 個收藏...",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgStartRemoveFailed": {
+      "message": "啟動移除失敗"
+   },
+   "msgStateCleared": {
+      "message": "狀態已清除"
+   },
+   "msgStreamLimitReached": {
+      "message": "⚠️ 已達到擷取上限 ($LIMIT$ 張)。請先下載並清除後再繼續。",
+      "placeholders": {
+         "limit": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgStreamStarted": {
+      "message": "擷取模式已啟動！請捲動頁面以擷取圖片。"
+   },
+   "msgStreamStopped": {
+      "message": "擷取已停止"
+   },
+   "msgUpgradeCancelConfirm": {
+      "message": "⚠️ HD 升級正在進行中 ($CURRENT$/$TOTAL$)\n\n是否要中斷？",
+      "placeholders": {
+         "current": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgUpgradeCancelled": {
+      "message": "HD 升級已中斷"
+   },
+   "msgUpgradeComplete": {
+      "message": "✅ 升級完成！成功：$UPGRADED$/$TOTAL$",
+      "placeholders": {
+         "total": {
+            "content": "$2"
+         },
+         "upgraded": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeConfirm": {
+      "message": "📊 掃描結果\n\n總視頻數：$TOTAL$\n已是 HD：$ALREADY_HD$\n需要升級：$NEED_UPGRADE$\n\n是否開始升級？",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "need_upgrade": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeConfirmFiltered": {
+      "message": "📊 掃描結果\n\n總視頻數：$TOTAL$\n已是 HD：$ALREADY_HD$\n需要升級（全部）：$NEED_UPGRADE$\n過濾（最近 $HOURS$ 小時）：$FILTERED$\n\n是否升級 $FILTERED$ 個視頻？",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "filtered": {
+            "content": "$4"
+         },
+         "hours": {
+            "content": "$5"
+         },
+         "need_upgrade": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeFailed": {
+      "message": "升級失敗"
+   },
+   "msgUpgradeNoNeed": {
+      "message": "✅ 所有視頻都已是 HD！\n\n總視頻數：$TOTAL$\n已是 HD：$ALREADY_HD$",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeNoNeedFiltered": {
+      "message": "✅ 最近 $HOURS$ 小時內沒有需要升級的視頻。\n\n總視頻數：$TOTAL$\n已是 HD：$ALREADY_HD$\n需要升級（全部）：$NEED_UPGRADE$\n\n請嘗試增加時間範圍或取消勾選過濾器。",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "hours": {
+            "content": "$4"
+         },
+         "need_upgrade": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeScanning": {
+      "message": "正在掃描收藏..."
+   },
+   "msgUpgrading": {
+      "message": "正在升級..."
+   },
+   "msgVideoProRequired": {
+      "message": "下載視頻是 Pro 功能"
+   },
+   "msgWrongPage": {
+      "message": "請在 Grok Imagine 收藏夾頁面使用此功能。"
+   },
+   "msgWrongPageFav": {
+      "message": "請在收藏夾頁面使用此功能"
+   },
+   "msgWrongPageLink": {
+      "message": "前往收藏夾 →"
+   },
+   "popupTitle": {
+      "message": "🎬 Grok 媒體下載器"
+   },
+   "proFeatureLock": {
+      "message": "🔒 Pro 功能"
+   },
+   "promptAsFilenameDesc": {
+      "message": "使用提示詞作為檔名（例如：img_20250119_一隻貓坐著.jpg）"
+   },
+   "promptAsFilenameLabel": {
+      "message": "📝 以提示詞作為檔名"
+   },
+   "queueAddItemTitle": {
+      "message": "新增項目"
+   },
+   "queueAddMaxRetries": {
+      "message": "最大重試"
+   },
+   "queueAddPostId": {
+      "message": "文章 ID 或網址"
+   },
+   "queueAddPrompt": {
+      "message": "提示詞"
+   },
+   "queueAddTarget": {
+      "message": "成功目標"
+   },
+   "queueBatchAddTitle": {
+      "message": "批次加入最近貼文"
+   },
+   "queueBatchBtnAdd": {
+      "message": "加入最近貼文到佇列"
+   },
+   "queueBatchTimeRange": {
+      "message": "時間範圍"
+   },
+   "queueBtnAdd": {
+      "message": "新增"
+   },
+   "queueBtnClearAll": {
+      "message": "全部清除"
+   },
+   "queueBtnClearPending": {
+      "message": "清除待處理"
+   },
+   "queueBtnClearStats": {
+      "message": "清除統計"
+   },
+   "queueBtnPause": {
+      "message": "暫停"
+   },
+   "queueBtnResume": {
+      "message": "繼續"
+   },
+   "queueBtnStart": {
+      "message": "開始"
+   },
+   "queueBtnStop": {
+      "message": "停止"
+   },
+   "queueConfirmClearAll": {
+      "message": "刪除佇列中所有項目？"
+   },
+   "queueConfirmClearPending": {
+      "message": "刪除所有待處理項目？"
+   },
+   "queueConfirmClearStats": {
+      "message": "清除所有提示詞統計？"
+   },
+   "queueDefaultRetries": {
+      "message": "預設最大重試"
+   },
+   "queueDefaultRetriesLabel": {
+      "message": "預設最大重試:"
+   },
+   "queueDefaultTarget": {
+      "message": "預設目標"
+   },
+   "queueDefaultTargetLabel": {
+      "message": "預設成功目標:"
+   },
+   "queueEmptyState": {
+      "message": "佇列中沒有項目。請從文章詳情頁新增。"
+   },
+   "queueItemsTitle": {
+      "message": "佇列項目"
+   },
+   "queueNoStats": {
+      "message": "尚無提示詞統計"
+   },
+   "queuePromptStatsTitle": {
+      "message": "提示詞統計"
+   },
+   "queueRateLimited": {
+      "message": "429 請求過多 — 請稍後再試"
+   },
+   "queueResolution": {
+      "message": "影片解析度"
+   },
+   "queueSettingsTitle": {
+      "message": "設定"
+   },
+   "queueStatusError": {
+      "message": "錯誤"
+   },
+   "queueStatusIdle": {
+      "message": "閒置"
+   },
+   "queueStatusPaused": {
+      "message": "已暫停"
+   },
+   "queueStatusRunning": {
+      "message": "執行中"
+   },
+   "queueTitle": {
+      "message": "影片生成佇列"
+   },
+   "queueUpgradeHint": {
+      "message": "免費額度已用完。升級 Pro 即可無限產生影片。"
+   },
+   "queueUsage": {
+      "message": "使用量"
+   },
+   "queueUsageHint": {
+      "message": "在 Favorites 開啟貼文，點選 🎯 設定影片條件並加入佇列——或使用下方批次加入最近貼文。"
+   },
+   "queueUsageLimitReached": {
+      "message": "已達免費使用上限（50 次），請升級 Pro 以解鎖無限使用。"
+   },
+   "queueVideoLength": {
+      "message": "影片時長"
+   },
+   "rateLimitPaused": {
+      "message": "⏸️ 已下載 $1 部影片後暫停（速率限制保護）。點擊「開始下載」繼續。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "rateLimitWarning": {
+      "message": "⚠️ 超過 $1 部影片待下載，每 $1 部會自動暫停以避免速率限制。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "removeAll": {
+      "message": "移除全部"
+   },
+   "removeBeforeLabel": {
+      "message": "移除此日期之前的收藏："
+   },
+   "removeFavTitle": {
+      "message": "⚠️ 批量移除收藏 (Pro)："
+   },
+   "resumeProgress": {
+      "message": "📥 已完成 $1/$2，點擊繼續下載",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "saveMetadataDesc": {
+      "message": "同時儲存 .json 檔案，包含圖片/影片資訊（提示詞、解析度等）"
+   },
+   "saveMetadataLabel": {
+      "message": "📋 儲存 Metadata"
+   },
+   "sectionBulkRemove": {
+      "message": "⚠️ 批量移除"
+   },
+   "sectionClearActions": {
+      "message": "🧹 清除操作"
+   },
+   "sectionDataManage": {
+      "message": "💾 數據管理"
+   },
+   "sectionDateFilter": {
+      "message": "📅 日期篩選"
+   },
+   "sectionHdUpgrade": {
+      "message": "✨ HD 升級"
+   },
+   "sectionLicense": {
+      "message": "🔑 授權"
+   },
+   "sectionMediaType": {
+      "message": "🎬 媒體類型"
+   },
+   "sectionQueueSettings": {
+      "message": "🎯 佇列設定"
+   },
+   "sectionSettings": {
+      "message": "⚙️ 設定"
+   },
+   "sectionStatus": {
+      "message": "📊 狀態"
+   },
+   "sectionStreamCapture": {
+      "message": "🌊 串流擷取"
+   },
+   "settingsPathFrames": {
+      "message": "🎞️ 故事畫格："
+   },
+   "settingsPathImages": {
+      "message": "🖼️ 收藏圖片："
+   },
+   "settingsPathNote": {
+      "message": "📁 路徑相對於瀏覽器預設下載資料夾"
+   },
+   "settingsPathProjects": {
+      "message": "📂 專案下載："
+   },
+   "settingsPathStream": {
+      "message": "📹 串流擷取："
+   },
+   "settingsPathVideos": {
+      "message": "🎬 收藏視頻："
+   },
+   "settingsSave": {
+      "message": "💾 儲存路徑"
+   },
+   "settingsSaved": {
+      "message": "✓ 路徑已儲存！"
+   },
+   "status720pVideos": {
+      "message": "🎥 720p 影片"
+   },
+   "statusDownloadingImages": {
+      "message": "🖼️ 下載圖片中 ($1/$2)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "statusDownloadingProjects": {
+      "message": "📂 下載專案中 ($1/$2)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "statusDownloadingVideos": {
+      "message": "🎬 下載影片中 ($1/$2)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "statusHdVideos": {
+      "message": "✨ HD 影片"
+   },
+   "statusImageDownloaded": {
+      "message": "🖼️ 本次已下載"
+   },
+   "statusImageHistory": {
+      "message": "🖼️ 圖片歷史"
+   },
+   "statusImages": {
+      "message": "🖼️ 圖片"
+   },
+   "statusPhase": {
+      "message": "當前階段"
+   },
+   "statusPhaseComplete": {
+      "message": "✅ 完成"
+   },
+   "statusPhaseProject": {
+      "message": "📂 專案模式"
+   },
+   "statusPhaseStandard": {
+      "message": "📦 標準模式"
+   },
+   "statusPhaseSummary": {
+      "message": "🖼️ $1 / 🎬 SD $2 / 🎥 720p $3 / ✨ HD $4",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         },
+         "3": {
+            "content": "$3"
+         },
+         "4": {
+            "content": "$4"
+         }
+      }
+   },
+   "statusProgress": {
+      "message": "當前進度"
+   },
+   "statusProjects": {
+      "message": "📂 專案"
+   },
+   "statusSdVideos": {
+      "message": "🎬 SD 影片"
+   },
+   "statusTotalImages": {
+      "message": "🖼️ 總圖片數"
+   },
+   "statusTotalSlashDown": {
+      "message": "總計 / 已下載 / 未下載"
+   },
+   "statusTotalVideos": {
+      "message": "🎬 總視頻數"
+   },
+   "statusVideoDownloaded": {
+      "message": "🎬 本次已下載"
+   },
+   "statusVideoHistory": {
+      "message": "🎬 視頻歷史"
+   },
+   "storyModeAddToStory": {
+      "message": "Add to Story Mode"
+   },
+   "storyModeAnalyzing": {
+      "message": "正在分析影片..."
+   },
+   "storyModeCannotGetUrl": {
+      "message": "無法取得影片 URL。\n\n如果是從收藏頁面拖放，請直接點擊影片上的「Add to Story Mode」按鈕。"
+   },
+   "storyModeClearAll": {
+      "message": "清除全部"
+   },
+   "storyModeClearConfirm": {
+      "message": "這將清除整個 storyboard。確定繼續嗎？"
+   },
+   "storyModeConfirmNewProject": {
+      "message": "要開始新專案嗎？這將清除 Storyboard 中的所有影片。"
+   },
+   "storyModeContinueEdit": {
+      "message": "繼續編輯"
+   },
+   "storyModeDone": {
+      "message": "完成！"
+   },
+   "storyModeDownloadFrame": {
+      "message": "下載畫格"
+   },
+   "storyModeDownloadVideo": {
+      "message": "下載影片"
+   },
+   "storyModeDropOrClick": {
+      "message": "拖放或點擊以新增影片"
+   },
+   "storyModeDropSubtext": {
+      "message": "本機檔案或從 Grok Post 拖放"
+   },
+   "storyModeDropVideo": {
+      "message": "將影片拖放到這裡"
+   },
+   "storyModeEmptyState": {
+      "message": "將影片拖放到上方以開始建立 storyboard"
+   },
+   "storyModeErrorOccurred": {
+      "message": "發生錯誤"
+   },
+   "storyModeExportProRequired": {
+      "message": "匯出最終影片是 Pro 功能，請先啟動授權以使用此功能。"
+   },
+   "storyModeExportSuccess": {
+      "message": "影片匯出成功！"
+   },
+   "storyModeExportVideo": {
+      "message": "匯出最終影片"
+   },
+   "storyModeExtractingFrames": {
+      "message": "正在擷取畫格..."
+   },
+   "storyModeFetchingVideo": {
+      "message": "正在從 Grok 取得影片..."
+   },
+   "storyModeFooter": {
+      "message": "Grok AI 影片延伸工作流程"
+   },
+   "storyModeGenerate": {
+      "message": "生成"
+   },
+   "storyModeIncludeAudio": {
+      "message": "包含音軌"
+   },
+   "storyModeInitializing": {
+      "message": "初始化中..."
+   },
+   "storyModeLastFrame": {
+      "message": "Last Frame"
+   },
+   "storyModeLastFrameClip": {
+      "message": "Last Frame - Clip $CLIP$",
+      "placeholders": {
+         "clip": {
+            "content": "$1"
+         }
+      }
+   },
+   "storyModeLoadingVideo": {
+      "message": "正在載入影片 $NUM$...",
+      "placeholders": {
+         "num": {
+            "content": "$1"
+         }
+      }
+   },
+   "storyModeMasterVideo": {
+      "message": "Master Video"
+   },
+   "storyModeNewProject": {
+      "message": "開始新專案"
+   },
+   "storyModeNoFrameAlert": {
+      "message": "沒有可用的畫格。請先新增影片。"
+   },
+   "storyModeNormalizingVideo": {
+      "message": "正在標準化影片 $NUM$...",
+      "placeholders": {
+         "num": {
+            "content": "$1"
+         }
+      }
+   },
+   "storyModeOpeningTabs": {
+      "message": "開啟分頁中... $1/$2",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "storyModePreparingVideos": {
+      "message": "正在準備影片..."
+   },
+   "storyModeProcessing": {
+      "message": "處理中..."
+   },
+   "storyModePromptAlert": {
+      "message": "請輸入影片生成提示詞。"
+   },
+   "storyModePromptOptional": {
+      "message": "選填 — 留空則由 AI 自動生成"
+   },
+   "storyModePromptPlaceholder": {
+      "message": "輸入影片生成提示詞..."
+   },
+   "storyModeReadingFile": {
+      "message": "正在讀取影片檔案..."
+   },
+   "storyModeResolutionMismatch": {
+      "message": "⚠️ 分辨率不一致警告\n\n以下片段的分辨率與 Master ($MASTER_RES$) 不同：\n$MISMATCH_LIST$\n\n這些片段會被縮放以匹配 Master 分辨率，可能會產生黑邊。\n\n確定要繼續嗎？",
+      "placeholders": {
+         "master_res": {
+            "content": "$1"
+         },
+         "mismatch_list": {
+            "content": "$2"
+         }
+      }
+   },
+   "storyModeSendFrame": {
+      "message": "傳送畫格並生成影片"
+   },
+   "storyModeStartingMerge": {
+      "message": "正在開始合併..."
+   },
+   "storyModeStorage": {
+      "message": "儲存空間"
+   },
+   "storyModeStoringVideo": {
+      "message": "正在儲存影片..."
+   },
+   "storyModeStoryboard": {
+      "message": "Storyboard"
+   },
+   "storyModeTitle": {
+      "message": "Story Mode Helper"
+   },
+   "storyModeTryAgain": {
+      "message": "重試"
+   },
+   "storyModeUnknownSpecs": {
+      "message": "規格未知"
+   },
+   "storyModeVideos": {
+      "message": "個影片"
+   },
+   "streamCaptureHint": {
+      "message": "💡 適用於 grok.com/imagine 生成頁面 — 即時自動擷取 Grok 生成的圖片，無需加入收藏。擷取後點擊「下載擷取」儲存。"
+   },
+   "streamCaptureTitle": {
+      "message": "🌊 串流圖片擷取 (Pro)"
+   },
+   "streamCapturedCount": {
+      "message": "已擷取：$COUNT$",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "streamToggleLabel": {
+      "message": "啟用"
+   },
+   "toDateLabel": {
+      "message": "到："
+   }
+}

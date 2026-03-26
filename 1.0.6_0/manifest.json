@@ -1,0 +1,39 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "assets/icon16.png",
+         "32": "assets/icon32.png"
+      }
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "scripts/injector.js" ],
+      "matches": [ "https://gemini.google.com/*" ],
+      "run_at": "document_idle"
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+   },
+   "default_locale": "en",
+   "description": "__MSG_extensionDescription__",
+   "host_permissions": [ "https://gemini.google.com/*", "https://api.lemonsqueezy.com/v1/licenses/validate" ],
+   "icons": {
+      "128": "assets/icon128.png",
+      "16": "assets/icon16.png",
+      "32": "assets/icon32.png",
+      "48": "assets/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArfWhkCto4FFgxA43tM7lHVWK6F8RceAvli8CsUrYtSsGJ8Ez0RxHp8xePNHGCgmfhOWf8WFOeehQ+/pdxB3iat7iQsOjOo0ngJTvlHwu4iScKbVWwR9OJp9yWgONu0u+q7uDzFnpQIf8Bfmd4sXW7RZ4bob3DMVJVTZL8nlZOH7R417SPhBGSDCG/uZnUpHjccA7VD0bBYQd3nsPC5JSPYkxMPmVMmRrxytnLwQuRUBYzCpgACQgkfklckljpgEjGLrln3Czlpgdtax7GsGx7yO51MbIV/eSUreVYkXByuwPD2tVeNm73E1f1+Kr0IO2tj9srFRJAvTEOBnSXbp4QQIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_extensionName__",
+   "permissions": [ "scripting", "storage" ],
+   "short_name": "__MSG_extensionShortName__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.6",
+   "web_accessible_resources": [ {
+      "matches": [ "https://gemini.google.com/*" ],
+      "resources": [ "scripts/delete-conversations.js", "scripts/paywall-modal.js", "scripts/license-validator.js", "style/tokens.css" ]
+   } ]
+}

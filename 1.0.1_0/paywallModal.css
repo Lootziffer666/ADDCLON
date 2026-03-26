@@ -1,0 +1,470 @@
+/* Grok Toolbox - Premium Paywall Modal Styles */
+/* Matches Grok's native UI design system */
+
+.grok-toolbox-paywall-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    display: none;
+    font-family: var(--font-universal-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.grok-toolbox-paywall-modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Backdrop - matches Grok's folder modal */
+.paywall-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: backdropFadeIn 0.3s ease;
+}
+
+/* Container - matches Grok's modal style */
+.paywall-modal-container {
+    background: var(--grok-toolbox-bg, #151515);
+    border: 1px solid var(--grok-toolbox-border, rgba(252, 252, 252, 0.1));
+    border-radius: 16px;
+    max-width: 640px;
+    width: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    opacity: 0;
+    animation: modalSlideIn 0.3s ease forwards;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header - matches Grok's folder modal header */
+.paywall-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--grok-toolbox-border, rgba(252, 252, 252, 0.1));
+    flex-shrink: 0;
+}
+
+.paywall-modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--grok-toolbox-text, #fcfcfc);
+    margin: 0;
+}
+
+.paywall-close-btn {
+    background: none;
+    border: none;
+    color: var(--grok-toolbox-text, #fcfcfc);
+    opacity: 0.6;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+
+.paywall-close-btn:hover {
+    background: var(--grok-toolbox-hover, rgba(252, 252, 252, 0.08));
+    opacity: 1;
+}
+
+/* Body */
+.paywall-modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem 1.5rem;
+}
+
+/* Feature Banner - Grok-style accent box */
+.paywall-feature-banner {
+    background: var(--grok-toolbox-hover, rgba(252, 252, 252, 0.08));
+    border: 1px solid var(--grok-toolbox-border, rgba(252, 252, 252, 0.1));
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.paywall-feature-description {
+    color: var(--grok-toolbox-text, #fcfcfc);
+    opacity: 0.8;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.paywall-feature-description strong {
+    color: var(--grok-toolbox-text, #fcfcfc);
+    opacity: 1;
+    font-weight: 600;
+}
+
+/* Features Grid - Grok-style list */
+.paywall-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.paywall-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem;
+    background: transparent;
+    border: 1px solid var(--grok-toolbox-border, rgba(252, 252, 252, 0.1));
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.paywall-feature-item:hover {
+    background: var(--grok-toolbox-hover, rgba(252, 252, 252, 0.08));
+}
+
+.paywall-feature-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    color: var(--grok-toolbox-text, #fcfcfc);
+    opacity: 0.8;
+}
+
+.paywall-feature-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.paywall-feature-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+    flex: 1;
+}
+
+.paywall-feature-text strong {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--grok-toolbox-text, #fcfcfc);
+    line-height: 1.3;
+}
+
+.paywall-feature-limit {
+    font-size: 0.75rem;
+    color: var(--grok-toolbox-text, #fcfcfc);
+    opacity: 0.6;
+    line-height: 1.3;
+}
+
+/* Plans Section - Grok-style cards */
+.paywall-plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.paywall-plan {
+    position: relative;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--grok-toolbox-border, rgba(252, 252, 252, 0.1));
+    background: transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.paywall-plan:hover {
+    background: var(--grok-toolbox-hover, rgba(252, 252, 252, 0.08));
+    transform: translateY(-2px);
+}
+
+/* Annual Plan - Highlighted with Grok's accent */
+.paywall-plan-annual {
+    background: var(--grok-toolbox-button-bg, rgba(252, 252, 252, 0.15));
+    border-color: var(--grok-toolbox-text, #fcfcfc);
+}
+
+.paywall-plan-annual:hover {
+    background: var(--grok-toolbox-button-hover, rgba(252, 252, 252, 0.2));
+}
+
+/* Plan Badge */
+.paywall-plan-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    gap: 4px;
+}
+
+.paywall-badge-save,
+.paywall-badge-value,
+.paywall-badge-popular {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--grok-toolbox-text, #fcfcfc);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.paywall-badge-save {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--grok-toolbox-text, #fcfcfc);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.paywall-badge-value {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--grok-toolbox-text, #fcfcfc);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.paywall-badge-popular {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--grok-toolbox-text, #fcfcfc);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Plan Trial Badge */
+.paywall-plan-trial {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #22c55e;
+    letter-spacing: 0;
+    margin-bottom: 0.75rem;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    display: block;
+}
+
+/* Plan Label */
+.paywall-plan-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--grok-toolbox-text, #fcfcfc);
+    opacity: 0.5;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+/* Plan Price */
+.paywall-plan-price {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--grok-toolbox-text, #fcfcfc);
+    margin-bottom: 0.25rem;
+    line-height: 1;
+    margin-top: 2rem;
+}
+
+.paywall-plan-billing {
+    font-size: 0.75rem;
+    color: var(--grok-toolbox-text, #fcfcfc);
+    opacity: 0.6;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+/* Plan Button - Grok style */
+.paywall-plan-button {
+    width: 100%;
+    padding: 0.625rem 1rem;
+    background: var(--grok-toolbox-button-bg, rgba(252, 252, 252, 0.15));
+    color: var(--grok-toolbox-text, #fcfcfc);
+    border: 1px solid var(--grok-toolbox-border, rgba(252, 252, 252, 0.1));
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.paywall-plan-button:hover:not(:disabled) {
+    background: var(--grok-toolbox-button-hover, rgba(252, 252, 252, 0.2));
+    transform: translateY(-1px);
+}
+
+.paywall-plan-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.paywall-plan-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Annual Button - More prominent */
+.paywall-plan-button-annual {
+    background: var(--grok-toolbox-text, #fcfcfc);
+    color: var(--grok-toolbox-bg, #151515);
+    border-color: var(--grok-toolbox-text, #fcfcfc);
+    font-weight: 600;
+}
+
+.paywall-plan-button-annual:hover:not(:disabled) {
+    background: var(--grok-toolbox-text, #fcfcfc);
+    opacity: 0.9;
+    box-shadow: 0 4px 12px rgba(252, 252, 252, 0.2);
+}
+
+/* Guarantee Text */
+.paywall-guarantee {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--grok-toolbox-text, #fcfcfc);
+    opacity: 0.5;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+/* Continue Free Button - Grok style */
+.paywall-continue-free {
+    width: 100%;
+    padding: 0.625rem 1rem;
+    background: transparent;
+    border: 1px solid var(--grok-toolbox-border, rgba(252, 252, 252, 0.1));
+    border-radius: 8px;
+    color: var(--grok-toolbox-text, #fcfcfc);
+    opacity: 0.7;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.paywall-continue-free:hover {
+    background: var(--grok-toolbox-hover, rgba(252, 252, 252, 0.08));
+    opacity: 1;
+}
+
+/* Toast Notifications */
+.paywall-toast {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 1000000;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.3s ease;
+}
+
+.paywall-toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.paywall-toast-success {
+    background-color: #10b981;
+    color: white;
+}
+
+.paywall-toast-error {
+    background-color: #ef4444;
+    color: white;
+}
+
+.paywall-toast-info {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Animations - matching Grok's modal animations */
+@keyframes backdropFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Scrollbar Styling - Grok style */
+.paywall-modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.paywall-modal-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.paywall-modal-body::-webkit-scrollbar-thumb {
+    background: var(--grok-toolbox-border, rgba(252, 252, 252, 0.1));
+    border-radius: 3px;
+}
+
+.paywall-modal-body::-webkit-scrollbar-thumb:hover {
+    background: var(--grok-toolbox-text, rgba(252, 252, 252, 0.2));
+}
+
+/* Responsive Design - Grok style */
+@media (max-width: 640px) {
+    .paywall-modal-container {
+        max-width: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+    
+    .paywall-modal-header {
+        padding: 1rem;
+    }
+    
+    .paywall-modal-body {
+        padding: 1rem;
+    }
+    
+    .paywall-features-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .paywall-plans {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .paywall-plan-price {
+        font-size: 1.5rem;
+    }
+}

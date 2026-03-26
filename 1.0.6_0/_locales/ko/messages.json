@@ -1,0 +1,271 @@
+{
+   "bulkDeleteTitle": {
+      "description": "Title of the panel that contains the bulk-delete controls.",
+      "message": "대량 삭제"
+   },
+   "deleteConversations_allFailed": {
+      "description": "Completion message when all chats failed to delete.",
+      "message": "채팅을 삭제할 수 없습니다. 나중에 다시 시도하거나 더 적은 채팅으로 시도해주세요."
+   },
+   "deleteConversations_cancel": {
+      "description": "Button text to cancel the current operation.",
+      "message": "취소"
+   },
+   "deleteConversations_cancelled": {
+      "description": "Message shown when the user cancels the deletion process.",
+      "message": "삭제가 취소되었습니다."
+   },
+   "deleteConversations_cleared": {
+      "description": "A completion message shown after successfully deleting chats.",
+      "message": "완료! 채팅이 정리되었습니다."
+   },
+   "deleteConversations_deleting": {
+      "description": "A loading message shown while chats are being deleted.",
+      "message": "채팅 삭제 중..."
+   },
+   "deleteConversations_done": {
+      "description": "A friendly completion message.",
+      "message": "완료! 저희 서비스가 도움이 되었기를 바랍니다."
+   },
+   "deleteConversations_finished": {
+      "description": "A completion message with a bit of flair.",
+      "message": "그리고... 완료되었습니다! ✨"
+   },
+   "deleteConversations_licenseValidated": {
+      "description": "Success message shown after a license is successfully validated.",
+      "message": "라이선스가 검증되었습니다! 무제한 삭제가 해제되었습니다."
+   },
+   "deleteConversations_longOperation": {
+      "description": "Warning message when the deletion process is slow.",
+      "message": "작업이 예상보다 오래 걸리고 있습니다."
+   },
+   "deleteConversations_longOperationSuggestion": {
+      "description": "A suggestion for the user when the operation is slow.",
+      "message": "더 적은 채팅을 선택하거나 인터넷 연결을 확인해보세요."
+   },
+   "deleteConversations_noItems": {
+      "description": "Message shown when there are no items to process from the start.",
+      "message": "처리할 항목이 없습니다."
+   },
+   "deleteConversations_noItemsProcessed": {
+      "description": "Message shown when no items were processed.",
+      "message": "처리된 항목이 없습니다. 선택을 확인해주세요."
+   },
+   "deleteConversations_noSelection": {
+      "description": "Error message shown when the user tries to delete without selecting any conversations.",
+      "message": "삭제할 대화가 선택되지 않았습니다."
+   },
+   "deleteConversations_partialSuccess": {
+      "description": "Completion message when some chats failed to delete.",
+      "message": "$DELETED$/$TOTAL$ 채팅을 삭제했습니다. 일부 채팅은 제거할 수 없었습니다.",
+      "placeholders": {
+         "deleted": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "deleteConversations_preparing": {
+      "description": "Initial progress text. $TOTAL$ is a placeholder for the total number of items.",
+      "message": "준비 중... (0/$TOTAL$)",
+      "placeholders": {
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "deleteConversations_progress": {
+      "description": "Progress text shown during deletion. $PROCESSED$, $TOTAL$, $DELETED$, and $FAILED$ are placeholders.",
+      "message": "처리됨 $PROCESSED$/$TOTAL$ (삭제됨: $DELETED$, 실패: $FAILED$)",
+      "placeholders": {
+         "deleted": {
+            "content": "$3"
+         },
+         "failed": {
+            "content": "$4"
+         },
+         "processed": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "deleteConversations_quotaExhausted": {
+      "description": "Error message shown when the user's free quota is used up.",
+      "message": "무료 할당량이 소진되었습니다 (50/50 삭제 사용됨). 계속하려면 업그레이드하세요."
+   },
+   "deleteConversations_taskComplete": {
+      "description": "A completion message.",
+      "message": "작업 완료. 더 하시겠습니까?"
+   },
+   "deleteConversations_tidied": {
+      "description": "A completion message indicating success.",
+      "message": "성공적으로 정리되었습니다!"
+   },
+   "deleteConversations_timeout": {
+      "description": "Error message when the deletion takes too long.",
+      "message": "작업 시간이 초과되었습니다. 더 적은 채팅으로 다시 시도해주세요."
+   },
+   "deleteConversations_tryAgain": {
+      "description": "Button text to try an operation again.",
+      "message": "다시 시도"
+   },
+   "deleteConversations_workspaceMessage": {
+      "description": "Completion message shown for workspace accounts.",
+      "message": "교육/워크스페이스 계정이 감지되었습니다. 조직 관리자에 의해 삭제가 제한될 수 있습니다."
+   },
+   "deleteN": {
+      "description": "Button text to delete a specific number of conversations. $COUNT$ is a placeholder.",
+      "message": "삭제 ($COUNT$)",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "5"
+         }
+      }
+   },
+   "deleteSelected": {
+      "description": "Button text to delete the conversations that are currently selected.",
+      "message": "선택된 항목 삭제"
+   },
+   "deletionError": {
+      "description": "Error message shown when the deletion script cannot be executed.",
+      "message": "삭제 프로세스를 시작할 수 없습니다. 페이지를 새로고침한 후 다시 시도해주세요."
+   },
+   "dismiss": {
+      "description": "Button text to close or dismiss a notification.",
+      "message": "닫기"
+   },
+   "dontShowAgain": {
+      "description": "Tooltip for a button that dismisses a warning permanently.",
+      "message": "다시 표시하지 않음"
+   },
+   "extensionDescription": {
+      "description": "The description of the extension.",
+      "message": "Gemini 채팅을 다중 선택하여 일괄 삭제합니다."
+   },
+   "extensionName": {
+      "description": "The name of the extension.",
+      "message": "Gemini 대량 삭제"
+   },
+   "extensionShortName": {
+      "description": "The short name of the extension.",
+      "message": "대량 삭제"
+   },
+   "learnMore": {
+      "description": "Link text to learn more about a topic.",
+      "message": "자세히 알아보기"
+   },
+   "loading": {
+      "description": "Text shown on a button while content is loading.",
+      "message": "로딩 중..."
+   },
+   "multiSelectModeTooltip": {
+      "description": "Tooltip for the toggle switch that enables the batch deletion mode.",
+      "message": "여러 채팅을 삭제하려면 다중 선택 모드를 활성화하세요. 키보드 단축키: Shift+A (모두 선택), Delete 키 (선택된 항목 삭제), Esc (종료)"
+   },
+   "paywall_alreadyHaveLicense": {
+      "description": "Button/link for users who already have a license.",
+      "message": "이미 라이선스가 있습니다"
+   },
+   "paywall_back": {
+      "description": "Button to go back to the previous view.",
+      "message": "뒤로"
+   },
+   "paywall_close": {
+      "description": "Tooltip for the close button on the paywall modal.",
+      "message": "모달 닫기"
+   },
+   "paywall_copied": {
+      "description": "Confirmation text shown after copying.",
+      "message": "복사됨!"
+   },
+   "paywall_copyButton": {
+      "description": "Text for a button that copies a promo code.",
+      "message": "클릭하여 복사!"
+   },
+   "paywall_enterLicense": {
+      "description": "Heading for the license entry section.",
+      "message": "라이선스 키 입력"
+   },
+   "paywall_enterLicenseSubtext": {
+      "description": "Subtext for the license entry section.",
+      "message": "무제한 삭제를 해제하려면 라이선스 키를 입력하세요."
+   },
+   "paywall_feature1": {
+      "description": "A feature point.",
+      "message": "무제한 채팅 삭제"
+   },
+   "paywall_feature2": {
+      "description": "A feature point.",
+      "message": "우선 지원"
+   },
+   "paywall_feature3": {
+      "description": "A feature point.",
+      "message": "향후 업데이트 포함"
+   },
+   "paywall_heading": {
+      "description": "Main heading in the paywall modal.",
+      "message": "50회 무료 삭제를 모두 사용하셨습니다."
+   },
+   "paywall_invalidKey": {
+      "description": "Error message for an invalid license key.",
+      "message": "잘못된 라이선스 키 형식"
+   },
+   "paywall_promoCode": {
+      "description": "Label for a promo code.",
+      "message": "코드 사용:"
+   },
+   "paywall_promoTitle": {
+      "description": "Title for a promotional offer.",
+      "message": "얼리버드 런칭 – 40% 할인"
+   },
+   "paywall_subheading": {
+      "description": "Subheading in the paywall modal.",
+      "message": "무제한 삭제를 해제하려면 업그레이드하세요."
+   },
+   "paywall_support": {
+      "description": "A message encouraging users to support development.",
+      "message": "귀하의 지원은 확장 프로그램의 지속적인 개발에 도움이 됩니다."
+   },
+   "paywall_title": {
+      "description": "The title of the paywall modal.",
+      "message": "무료 삭제 사용 완료"
+   },
+   "paywall_upgradeButton": {
+      "description": "Button to start the upgrade process.",
+      "message": "업그레이드 및 라이선스 받기"
+   },
+   "paywall_validateButton": {
+      "description": "Button to validate a license key.",
+      "message": "검증 및 해제"
+   },
+   "paywall_validating": {
+      "description": "Text shown while a license is being validated.",
+      "message": "검증 중..."
+   },
+   "selectAllChats": {
+      "description": "Button text to select all conversations.",
+      "message": "모든 채팅 선택"
+   },
+   "workspaceAlert": {
+      "description": "The full text of the alert shown when a user clicks 'Learn more' on the workspace warning.",
+      "message": "교육기관(.edu) 및 워크스페이스 계정은 일반적으로 조직의 Google Workspace 관리자가 채팅 삭제를 제어합니다. 개별 사용자는 보존 정책(일반적으로 18개월)에 따라 관리자 수준에서 관리되므로 채팅 기록을 삭제할 수 없습니다."
+   },
+   "workspaceWarningConfirm": {
+      "description": "Confirmation message shown to users on workspace accounts before attempting deletion.",
+      "message": "경고: 교육용 또는 워크스페이스 계정을 사용하고 계신 것 같습니다. 이러한 계정은 일반적으로 조직 관리자가 채팅 삭제를 제어하므로 채팅을 삭제할 수 없습니다. 그래도 시도해보시겠습니까?"
+   },
+   "workspaceWarningNote": {
+      "description": "A label for a note or warning.",
+      "message": "참고:"
+   },
+   "workspaceWarningText": {
+      "description": "The text of the warning for workspace account limitations.",
+      "message": "교육기관(.edu) 및 일부 워크스페이스 계정은 채팅을 삭제할 수 없습니다. 이는 조직의 관리자 설정에 의해 제어됩니다."
+   }
+}

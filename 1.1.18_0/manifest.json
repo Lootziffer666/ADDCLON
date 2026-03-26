@@ -1,0 +1,50 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icons/icon128.png",
+         "16": "icons/icon16.png",
+         "48": "icons/icon48.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "commands": {
+      "open-gemini": {
+         "description": "Open Gemini in a new tab",
+         "suggested_key": {
+            "default": "Alt+Shift+G"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "spoof_injector.js" ],
+      "matches": [ "*://gemini.google.com/*" ],
+      "run_at": "document_start",
+      "world": "MAIN"
+   }, {
+      "css": [ "content.css" ],
+      "js": [ "lib/docx.umd.min.js", "lib/jspdf.umd.min.js", "lib/jspdf-autotable.min.js", "lib/pdf-fonts.js", "content.js" ],
+      "matches": [ "*://gemini.google.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_extDescription__",
+   "host_permissions": [ "*://gemini.google.com/*" ],
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj1VLNPh5bVqro+JT3qsI+8Jcw/KcF3d5tfurfn2mh69U8ay5HbP0xkv6qrN7ddMz9uebmsKfTQ6zRQf+s99j2wpsnwmz1GjxRNVmr13pjYOtxmmXOCYc+u+PJMC2LW0ygMLhgyijEkifl9OwrbLSsMhWG0BfqKiuVlh6sZOK5cwZRttz3Nj/5XGFBbhETQLYpVsQEqoD8BOXHJgM8zIDeDpNoNJB0SftKF4sYlbF8Vgcj4LcoAlc8iKlmcb8EMUodjQOzOd6k8fU70u+oxrX4GYz54zKxYu9cwlVFAdRRYxtk9Hha1sS+cUvTg3Z8b0SctJNMEPEvY5uq6ZsbT8RmwIDAQAB",
+   "manifest_version": 3,
+   "name": "Superpower for Gemini™",
+   "permissions": [ "activeTab", "tabs", "storage", "scripting", "webRequest", "unlimitedStorage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.18",
+   "web_accessible_resources": [ {
+      "matches": [ "*://gemini.google.com/*" ],
+      "resources": [ "content.css", "popup.css", "icons/icon48.png", "guide.html", "guide.js", "welcome.html", "welcome.js", "lib/docx.umd.min.js", "lib/jspdf.umd.min.js", "lib/jspdf-autotable.min.js", "lib/pdf-fonts.js" ]
+   } ]
+}

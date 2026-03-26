@@ -1,0 +1,35 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "icons/icon-16.png",
+         "32": "icons/icon-32.png"
+      },
+      "default_title": "No Code Web Scraper"
+   },
+   "background": {
+      "service_worker": "background.js",
+      "type": "module"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Scrape any website visually. Click elements, preview data, export to Excel/CSV. No coding required.",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA+zTbYzpUJukJhiOW3i8n1DEbc5UBuWuwPWv4N5t6MOa69ZvX1wBHjAxFEs4ndb/wv/WNf7EYPbT4FM0te1ZJRYlwhfQofxXRTg7kadYm8+5SG0ID8MU/4JkOB608lcJB6d0VEOT8qFtw9Iq8F6sa0R75Ov0xYkHssaDVhW2SYNzvOW3ajVBGJ179JUwHldbV94uBCfGZJvwQrvbDdTUIt22gyinFfPzpuGW/7H8o88GSBsWoFRYsb7VJR7kHftgWWCHq/HUSRdKyQMQ44N5An95HdE8tjFQfw/dx+QgDozrAIiyG/X23fzIizY+tx0DTFXXLGFjvMoDfqiKU/0WywwIDAQAB",
+   "manifest_version": 3,
+   "name": "No Code Web Scraper",
+   "permissions": [ "activeTab", "sidePanel", "storage", "downloads", "tabs", "scripting" ],
+   "side_panel": {
+      "default_path": "src/sidepanel/index.html"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

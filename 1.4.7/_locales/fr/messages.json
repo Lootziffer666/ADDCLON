@@ -1,0 +1,198 @@
+{
+   "addFolderButton": {
+      "description": "Button hover text to add a new folder.",
+      "message": "Ajouter un dossier"
+   },
+   "addPromptButton": {
+      "description": "Button hover text to add a new prompt.",
+      "message": "Ajouter un prompt"
+   },
+   "allPrompts": {
+      "description": "Option for showing all prompts.",
+      "message": "Tous les prompts"
+   },
+   "cancelButton": {
+      "description": "Generic cancel button text.",
+      "message": "ANNULER"
+   },
+   "closeSettings": {
+      "description": "Button text to close the settings view.",
+      "message": "FERMER LES PARAMÈTRES"
+   },
+   "collapseAll": {
+      "description": "Button text to collapse all prompts.",
+      "message": "Tout réduire"
+   },
+   "confirmDeleteFolder": {
+      "description": "Confirmation message for deleting a folder.",
+      "message": "Êtes-vous sûr de vouloir supprimer ce dossier? Les prompts dans ce dossier ne seront pas supprimés!"
+   },
+   "confirmDeletePrompt": {
+      "description": "Confirmation message for deleting a prompt.",
+      "message": "Êtes-vous sûr de vouloir supprimer ce prompt?"
+   },
+   "copiedButton": {
+      "description": "Text shown after copying.",
+      "message": "COPIÉ"
+   },
+   "copyButton": {
+      "description": "Copy button text.",
+      "message": "COPIER"
+   },
+   "deleteButton": {
+      "description": "Generic delete button text.",
+      "message": "SUPPR"
+   },
+   "editButton": {
+      "description": "Generic edit button text.",
+      "message": "MODIFIER"
+   },
+   "enterNewFolderName": {
+      "description": "Prompt message for entering a new folder name.",
+      "message": "Saisir le nouveau nom du dossier:"
+   },
+   "expandAll": {
+      "description": "Button text to expand all prompts.",
+      "message": "Tout développer"
+   },
+   "exportPrompts": {
+      "description": "Button text to export prompts.",
+      "message": "Exporter les prompts en CSV"
+   },
+   "extDescription": {
+      "description": "The description of the extension.",
+      "message": "Copiez, modifiez et enregistrez vos modèles de prompts dans une base de données personnelle et utilisez-les sur la plupart des sites web d'IA/LLM"
+   },
+   "extName": {
+      "description": "The name of the extension.",
+      "message": "Gestionnaire de prompts XXL pour ChatGPT, Claude, Mistral, Perplexity, ..."
+   },
+   "extShortName": {
+      "description": "The short name of the extension.",
+      "message": "Gestionnaire de prompts XXL"
+   },
+   "folderNamePlaceholder": {
+      "description": "Placeholder for new folder name input.",
+      "message": "Saisir le nom du dossier"
+   },
+   "hideButton": {
+      "description": "Button text to hide the add prompt form.",
+      "message": "MASQUER"
+   },
+   "iconDragTip": {
+      "description": "Tip about dragging the icon to reposition it.",
+      "message": "Faites glisser l'icône vers le haut ou le bas pour la repositionner"
+   },
+   "importErrorNoTitlePrompt": {
+      "description": "Error message when CSV for import is missing columns.",
+      "message": "Le fichier CSV doit contenir les colonnes \"Title\" et \"Prompt\"."
+   },
+   "importErrorParse": {
+      "description": "Error message when CSV for import is empty or cannot be parsed.",
+      "message": "Le fichier CSV n'a pas pu être analysé ou est vide."
+   },
+   "importPrompts": {
+      "description": "Button text to import prompts.",
+      "message": "Importer les prompts depuis un CSV"
+   },
+   "importSuccess": {
+      "description": "Success message after importing prompts from CSV.",
+      "message": "Prompts importés avec succès!"
+   },
+   "keyboardShortcuts": {
+      "description": "Header for keyboard shortcuts section in settings.",
+      "message": "Raccourcis clavier"
+   },
+   "newPromptPlaceholder": {
+      "description": "Placeholder for new prompt text area.",
+      "message": "Ajouter un nouveau prompt"
+   },
+   "privatePromptsTab": {
+      "description": "Tab title for private prompts.",
+      "message": "Prompts privés"
+   },
+   "promptTitlePlaceholder": {
+      "description": "Placeholder for new prompt title input.",
+      "message": "Saisir le titre du prompt"
+   },
+   "publicPromptsComingSoon": {
+      "description": "Info text for public prompts tab.",
+      "message": "\u003Cb>3000+\u003C/b> Prompts publics \u003Cbr>\u003Cbr> - Bientôt disponible -"
+   },
+   "publicPromptsTab": {
+      "description": "Tab title for public prompts.",
+      "message": "Prompts publics"
+   },
+   "rateExtension": {
+      "description": "Button text to rate the extension.",
+      "message": "Laissez-nous un avis"
+   },
+   "saveButton": {
+      "description": "Generic save button text.",
+      "message": "ENREGISTRER"
+   },
+   "searchPromptsPlaceholder": {
+      "description": "Placeholder for search input.",
+      "message": "Rechercher des prompts"
+   },
+   "selectFolder": {
+      "description": "Default option in folder select dropdown.",
+      "message": "Sélectionner un dossier"
+   },
+   "shareExtension": {
+      "description": "Button text for sharing.",
+      "message": "Partager"
+   },
+   "shortcutClose": {
+      "description": "Description for close/escape shortcut.",
+      "message": "Fermer"
+   },
+   "shortcutSearch": {
+      "description": "Description for search shortcut.",
+      "message": "Afficher/masquer la recherche"
+   },
+   "shortcutToggleSidebar": {
+      "description": "Description for toggle sidebar shortcut.",
+      "message": "Afficher/masquer la barre latérale"
+   },
+   "showIconSwitch": {
+      "description": "Switch to show icon on LLMs.",
+      "message": "Afficher l'icône"
+   },
+   "showIconSwitchOff": {
+      "description": "Show text if icon is swichted off",
+      "message": "N'oubliez pas d'épingler l'extension dans la barre d'outils (icône puzzle). Vous pouvez aussi utiliser Alt+P pour ouvrir la barre latérale !"
+   },
+   "sidebarHeader": {
+      "description": "Header in the sidebar.",
+      "message": "Prompts XXL"
+   },
+   "sortAZ": {
+      "description": "Sort option for alphabetical order.",
+      "message": "A-Z"
+   },
+   "sortBy": {
+      "description": "Label for sort dropdown.",
+      "message": "Trier"
+   },
+   "sortNewest": {
+      "description": "Sort option for newest first.",
+      "message": "Plus récent"
+   },
+   "sortOldest": {
+      "description": "Sort option for oldest first.",
+      "message": "Plus ancien"
+   },
+   "sortZA": {
+      "description": "Sort option for reverse alphabetical order.",
+      "message": "Z-A"
+   },
+   "supportExtension": {
+      "description": "Button text for support.",
+      "message": "Support"
+   },
+   "untitledPrompt": {
+      "description": "Default title for a prompt.",
+      "message": "Sans titre"
+   }
+}

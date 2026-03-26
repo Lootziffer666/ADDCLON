@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="queueTitle">Video Gen Queue</title>
+    <link rel="stylesheet" href="queue.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎯 <span data-i18n="queueTitle">Video Gen Queue</span></h1>
+            <span class="version">
+                <div class="usage-hint-icon" tabindex="0" aria-label="Usage hint">
+                    ?
+                    <div class="usage-hint-tooltip" data-i18n="queueUsageHint">Open a post on Favorites, tap 🎯 to configure and add to queue — or batch add recent posts below.</div>
+                </div>
+                v1.0
+            </span>
+        </header>
+
+        <!-- Queue Controls -->
+        <div class="queue-controls">
+            <div class="controls-row">
+                <button id="startQueueBtn" class="btn btn-success">
+                    <span id="startQueueIcon">▶️</span>
+                    <span id="startQueueLabel" data-i18n="queueBtnStart">Start</span>
+                </button>
+                <button id="stopQueueBtn" class="btn btn-secondary" disabled>
+                    ⏹ <span data-i18n="queueBtnStop">Stop</span>
+                </button>
+                <button id="clearPendingBtn" class="btn btn-danger-outline btn-small">
+                    🗑 <span data-i18n="queueBtnClearPending">Clear Pending</span>
+                </button>
+                <button id="clearAllBtn" class="btn btn-secondary btn-small">
+                    🧹 <span data-i18n="queueBtnClearAll">Clear All</span>
+                </button>
+            </div>
+            <div id="queueStatusBar" class="queue-status-bar">
+                <span id="queueStatusText" class="status-idle" data-i18n="queueStatusIdle">Idle</span>
+                <span id="queueProgressText"></span>
+                <span id="queueUsageText" class="queue-usage-text"></span>
+            </div>
+            <div id="queueUpgradeHint" class="upgrade-hint hidden">
+                🔒 <span data-i18n="queueUpgradeHint">Free limit reached. Upgrade to Pro for unlimited video generation.</span>
+            </div>
+        </div>
+
+        <!-- Batch Add Recent Posts -->
+        <details class="collapsible-section" id="batchAddSection">
+            <summary><span>📥 <span data-i18n="queueBatchAddTitle">Batch Add Recent</span></span></summary>
+            <div class="section-content">
+                <label data-i18n="queueBatchTimeRange">Time Range</label>
+                <div class="toggle-row toggle-row-wrap" id="batchHoursToggle">
+                    <button type="button" class="toggle-btn" data-value="1">1h</button>
+                    <button type="button" class="toggle-btn" data-value="3">3h</button>
+                    <button type="button" class="toggle-btn active" data-value="6">6h</button>
+                    <button type="button" class="toggle-btn" data-value="12">12h</button>
+                    <button type="button" class="toggle-btn" data-value="24">24h</button>
+                    <button type="button" class="toggle-btn" data-value="48">48h</button>
+                    <button type="button" class="toggle-btn" data-value="72">72h</button>
+                </div>
+                <label data-i18n="queueMode">Mode</label>
+                <div class="toggle-row" id="batchModeToggle">
+                    <button type="button" class="toggle-btn active" data-value="custom">Custom</button>
+                    <button type="button" class="toggle-btn" data-value="normal">Normal</button>
+                    <button type="button" class="toggle-btn" data-value="extremely-crazy">Fun</button>
+                    <button type="button" class="toggle-btn" data-value="extremely-spicy-or-crazy">Spicy ⚡</button>
+                </div>
+                <div id="batchSpicyWarning" class="spicy-warning" style="display: none;">
+                    ⚠️ Request override — uploaded images may be flagged, use at own risk
+                </div>
+                <label data-i18n="queueAddPrompt">Prompt</label>
+                <textarea id="batchPromptInput" placeholder="Enter video generation prompt..."></textarea>
+                <div class="form-row">
+                    <div>
+                        <label data-i18n="queueAddTarget">Target Success</label>
+                        <input type="number" id="batchTargetInput" min="1" max="100" value="1">
+                    </div>
+                    <div>
+                        <label data-i18n="queueAddMaxRetries">Max Retries</label>
+                        <input type="number" id="batchRetriesInput" min="1" max="100" value="5">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label data-i18n="queueVideoLength">Duration</label>
+                        <div class="toggle-row" id="batchDurationToggle">
+                            <button type="button" class="toggle-btn active" data-value="6">6s</button>
+                            <button type="button" class="toggle-btn" data-value="10">10s ⚡</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label data-i18n="queueResolution">Resolution</label>
+                        <div class="toggle-row" id="batchResolutionToggle">
+                            <button type="button" class="toggle-btn active" data-value="480p">480p</button>
+                            <button type="button" class="toggle-btn" data-value="720p">720p ⚡</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="super-grok-hint">⚡ = Requests override — require Super Grok. Wrong override may be flagged by Grok if ineligible.</p>
+                <button id="batchAddBtn" class="btn btn-primary">
+                    📥 <span data-i18n="queueBatchBtnAdd">Add Recent to Queue</span>
+                </button>
+                <div id="batchAddProgress" class="batch-progress" style="display: none;">
+                    <div class="batch-progress-text" id="batchProgressText">Scanning...</div>
+                    <div class="batch-progress-bar">
+                        <div class="batch-progress-fill" id="batchProgressFill" style="width: 0%;"></div>
+                    </div>
+                </div>
+                <div id="batchAddStatus" class="form-status"></div>
+            </div>
+        </details>
+
+        <!-- Queue Items List -->
+        <div class="queue-section">
+            <div class="section-header">
+                <span class="section-title">📋 <span data-i18n="queueItemsTitle">Queue Items</span></span>
+                <span id="queueItemCount" class="item-count">0</span>
+            </div>
+            <div id="queueItemsList" class="queue-items-list">
+                <div id="queueEmptyState" class="empty-state">
+                    <p data-i18n="queueEmptyState">No items in queue. Add items from post detail pages.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Item Form (hidden: users don't know what Post ID to fill) -->
+        <details class="collapsible-section" id="addItemSection" style="display: none;">
+            <summary><span>➕ <span data-i18n="queueAddItemTitle">Add Item</span></span></summary>
+            <div class="section-content">
+                <label data-i18n="queueAddPostId">Post ID or URL</label>
+                <input type="text" id="addPostIdInput" placeholder="Post ID or https://grok.com/imagine/post/...">
+                <label data-i18n="queueAddPrompt">Prompt</label>
+                <textarea id="addPromptInput" placeholder="Enter video generation prompt..."></textarea>
+                <label data-i18n="queueMode">Mode</label>
+                <div class="toggle-row" id="addModeToggle">
+                    <button type="button" class="toggle-btn active" data-value="custom">Custom</button>
+                    <button type="button" class="toggle-btn" data-value="normal">Normal</button>
+                    <button type="button" class="toggle-btn" data-value="extremely-crazy">Fun</button>
+                    <button type="button" class="toggle-btn" data-value="extremely-spicy-or-crazy">Spicy ⚡</button>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label data-i18n="queueAddTarget">Target Success</label>
+                        <input type="number" id="addTargetInput" min="1" max="100" value="1">
+                    </div>
+                    <div>
+                        <label data-i18n="queueAddMaxRetries">Max Retries</label>
+                        <input type="number" id="addRetriesInput" min="1" max="100" value="5">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label data-i18n="queueVideoLength">Duration</label>
+                        <div class="toggle-row" id="addDurationToggle">
+                            <button type="button" class="toggle-btn active" data-value="6">6s</button>
+                            <button type="button" class="toggle-btn" data-value="10">10s ⚡</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label data-i18n="queueResolution">Resolution</label>
+                        <div class="toggle-row" id="addResolutionToggle">
+                            <button type="button" class="toggle-btn active" data-value="480p">480p</button>
+                            <button type="button" class="toggle-btn" data-value="720p">720p ⚡</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="super-grok-hint">⚡ = Requests override — require Super Grok. Wrong override may be flagged by Grok if ineligible.</p>
+                <button id="addItemBtn" class="btn btn-primary">
+                    ➕ <span data-i18n="queueBtnAdd">Add</span>
+                </button>
+                <div id="addItemStatus" class="form-status"></div>
+            </div>
+        </details>
+
+        <!-- Global Settings -->
+        <details class="collapsible-section" id="settingsSection">
+            <summary><span>⚙️ <span data-i18n="queueSettingsTitle">Settings</span></span></summary>
+            <div class="section-content">
+                <div class="form-row">
+                    <div>
+                        <label data-i18n="queueDefaultTarget">Default Target</label>
+                        <input type="number" id="settingDefaultTarget" min="1" max="100" value="1">
+                    </div>
+                    <div>
+                        <label data-i18n="queueDefaultRetries">Default Max Retries</label>
+                        <input type="number" id="settingDefaultRetries" min="1" max="100" value="5">
+                    </div>
+                </div>
+                <label data-i18n="queueMode">Mode</label>
+                <div class="toggle-row" id="settingModeToggle">
+                    <button type="button" class="toggle-btn active" data-value="custom">Custom</button>
+                    <button type="button" class="toggle-btn" data-value="normal">Normal</button>
+                    <button type="button" class="toggle-btn" data-value="extremely-crazy">Fun</button>
+                    <button type="button" class="toggle-btn" data-value="extremely-spicy-or-crazy">Spicy ⚡</button>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label data-i18n="queueVideoLength">Duration</label>
+                        <div class="toggle-row" id="settingDurationToggle">
+                            <button type="button" class="toggle-btn active" data-value="6">6s</button>
+                            <button type="button" class="toggle-btn" data-value="10">10s ⚡</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label data-i18n="queueResolution">Resolution</label>
+                        <div class="toggle-row" id="settingResolutionToggle">
+                            <button type="button" class="toggle-btn active" data-value="480p">480p</button>
+                            <button type="button" class="toggle-btn" data-value="720p">720p ⚡</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="super-grok-hint">⚡ = Requests override — require Super Grok. Wrong override may be flagged by Grok if ineligible.</p>
+                <div id="settingsStatus" class="form-status"></div>
+            </div>
+        </details>
+
+        <!-- Prompt Stats (hidden: not useful enough yet) -->
+        <details class="collapsible-section" id="promptStatsSection" style="display: none;">
+            <summary><span>📊 <span data-i18n="queuePromptStatsTitle">Prompt Stats</span></span></summary>
+            <div class="section-content">
+                <div id="promptStatsList" class="prompt-stats-list">
+                    <div class="empty-state">
+                        <p data-i18n="queueNoStats">No prompt stats yet</p>
+                    </div>
+                </div>
+                <button id="clearStatsBtn" class="btn btn-secondary btn-small" style="margin-top: 8px;">
+                    🗑 <span data-i18n="queueBtnClearStats">Clear Stats</span>
+                </button>
+            </div>
+        </details>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Grok Video Gen Queue</p>
+        </footer>
+    </div>
+
+    <script src="queue.js"></script>
+</body>
+</html>

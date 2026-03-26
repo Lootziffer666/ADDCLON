@@ -1,0 +1,17 @@
+{
+   "ext_description": {
+      "message": "Grokの会話をPDFやMarkdownなどで無料でダウンロードできます。Grokの結果をPDFとしてダウンロード。Grokを美しいPDFに簡単に変換します。"
+   },
+   "ext_fulltitle": {
+      "message": "Grokエクスポーター - GrokをPDF、MDなどに変換"
+   },
+   "feedback": {
+      "message": "フィードバック"
+   },
+   "language": {
+      "message": "Japanese"
+   },
+   "thanks": {
+      "message": "❤️で作成しました。ご利用いただきありがとうございます。"
+   }
+}

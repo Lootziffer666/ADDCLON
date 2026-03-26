@@ -1,0 +1,271 @@
+{
+   "bulkDeleteTitle": {
+      "description": "Title of the panel that contains the bulk-delete controls.",
+      "message": "批量删除"
+   },
+   "deleteConversations_allFailed": {
+      "description": "Completion message when all chats failed to delete.",
+      "message": "无法删除聊天。请稍后重试或减少聊天数量。"
+   },
+   "deleteConversations_cancel": {
+      "description": "Button text to cancel the current operation.",
+      "message": "取消"
+   },
+   "deleteConversations_cancelled": {
+      "description": "Message shown when the user cancels the deletion process.",
+      "message": "删除已取消。"
+   },
+   "deleteConversations_cleared": {
+      "description": "A completion message shown after successfully deleting chats.",
+      "message": "全部完成！您的聊天已清除。"
+   },
+   "deleteConversations_deleting": {
+      "description": "A loading message shown while chats are being deleted.",
+      "message": "正在删除聊天..."
+   },
+   "deleteConversations_done": {
+      "description": "A friendly completion message.",
+      "message": "完成！希望您喜欢我们的服务。"
+   },
+   "deleteConversations_finished": {
+      "description": "A completion message with a bit of flair.",
+      "message": "并且...我们完成了！ ✨"
+   },
+   "deleteConversations_licenseValidated": {
+      "description": "Success message shown after a license is successfully validated.",
+      "message": "许可证已验证！无限删除已解锁。"
+   },
+   "deleteConversations_longOperation": {
+      "description": "Warning message when the deletion process is slow.",
+      "message": "操作花费的时间比预期的长。"
+   },
+   "deleteConversations_longOperationSuggestion": {
+      "description": "A suggestion for the user when the operation is slow.",
+      "message": "尝试选择较少的聊天或检查您的互联网连接。"
+   },
+   "deleteConversations_noItems": {
+      "description": "Message shown when there are no items to process from the start.",
+      "message": "没有要处理的项目。"
+   },
+   "deleteConversations_noItemsProcessed": {
+      "description": "Message shown when no items were processed.",
+      "message": "没有处理任何项目。请检查选择。"
+   },
+   "deleteConversations_noSelection": {
+      "description": "Error message shown when the user tries to delete without selecting any conversations.",
+      "message": "没有选择要删除的对话。"
+   },
+   "deleteConversations_partialSuccess": {
+      "description": "Completion message when some chats failed to delete.",
+      "message": "已删除 $DELETED$/$TOTAL$ 个聊天。某些聊天无法删除。",
+      "placeholders": {
+         "deleted": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "deleteConversations_preparing": {
+      "description": "Initial progress text. $TOTAL$ is a placeholder for the total number of items.",
+      "message": "准备中... (0/$TOTAL$)",
+      "placeholders": {
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "deleteConversations_progress": {
+      "description": "Progress text shown during deletion. $PROCESSED$, $TOTAL$, $DELETED$, and $FAILED$ are placeholders.",
+      "message": "已处理 $PROCESSED$/$TOTAL$ (已删除：$DELETED$，失败：$FAILED$)",
+      "placeholders": {
+         "deleted": {
+            "content": "$3"
+         },
+         "failed": {
+            "content": "$4"
+         },
+         "processed": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "deleteConversations_quotaExhausted": {
+      "description": "Error message shown when the user's free quota is used up.",
+      "message": "免费配额已用尽（已使用50/50次删除）。升级以继续。"
+   },
+   "deleteConversations_taskComplete": {
+      "description": "A completion message.",
+      "message": "任务完成。准备好继续了吗？"
+   },
+   "deleteConversations_tidied": {
+      "description": "A completion message indicating success.",
+      "message": "成功整理！"
+   },
+   "deleteConversations_timeout": {
+      "description": "Error message when the deletion takes too long.",
+      "message": "操作超时。请尝试减少聊天数量后重试。"
+   },
+   "deleteConversations_tryAgain": {
+      "description": "Button text to try an operation again.",
+      "message": "重试"
+   },
+   "deleteConversations_workspaceMessage": {
+      "description": "Completion message shown for workspace accounts.",
+      "message": "检测到教育/工作空间账户。删除可能受到您组织管理员的限制。"
+   },
+   "deleteN": {
+      "description": "Button text to delete a specific number of conversations. $COUNT$ is a placeholder.",
+      "message": "删除 ($COUNT$)",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "5"
+         }
+      }
+   },
+   "deleteSelected": {
+      "description": "Button text to delete the conversations that are currently selected.",
+      "message": "删除所选"
+   },
+   "deletionError": {
+      "description": "Error message shown when the deletion script cannot be executed.",
+      "message": "无法启动删除过程。请刷新页面并重试。"
+   },
+   "dismiss": {
+      "description": "Button text to close or dismiss a notification.",
+      "message": "关闭"
+   },
+   "dontShowAgain": {
+      "description": "Tooltip for a button that dismisses a warning permanently.",
+      "message": "不再显示"
+   },
+   "extensionDescription": {
+      "description": "The description of the extension.",
+      "message": "多选并批量删除Gemini聊天记录。"
+   },
+   "extensionName": {
+      "description": "The name of the extension.",
+      "message": "Gemini Bulk Delete"
+   },
+   "extensionShortName": {
+      "description": "The short name of the extension.",
+      "message": "Bulk Delete"
+   },
+   "learnMore": {
+      "description": "Link text to learn more about a topic.",
+      "message": "了解更多"
+   },
+   "loading": {
+      "description": "Text shown on a button while content is loading.",
+      "message": "加载中..."
+   },
+   "multiSelectModeTooltip": {
+      "description": "Tooltip for the toggle switch that enables the batch deletion mode.",
+      "message": "启用多选模式以删除多个聊天。键盘快捷键：Shift+A（全选）、Delete键（删除所选）、Esc（退出）"
+   },
+   "paywall_alreadyHaveLicense": {
+      "description": "Button/link for users who already have a license.",
+      "message": "我已经有许可证"
+   },
+   "paywall_back": {
+      "description": "Button to go back to the previous view.",
+      "message": "返回"
+   },
+   "paywall_close": {
+      "description": "Tooltip for the close button on the paywall modal.",
+      "message": "关闭窗口"
+   },
+   "paywall_copied": {
+      "description": "Confirmation text shown after copying.",
+      "message": "已复制！"
+   },
+   "paywall_copyButton": {
+      "description": "Text for a button that copies a promo code.",
+      "message": "点击复制！"
+   },
+   "paywall_enterLicense": {
+      "description": "Heading for the license entry section.",
+      "message": "输入许可证密钥"
+   },
+   "paywall_enterLicenseSubtext": {
+      "description": "Subtext for the license entry section.",
+      "message": "输入您的许可证密钥以解锁无限删除。"
+   },
+   "paywall_feature1": {
+      "description": "A feature point.",
+      "message": "无限聊天删除"
+   },
+   "paywall_feature2": {
+      "description": "A feature point.",
+      "message": "优先支持"
+   },
+   "paywall_feature3": {
+      "description": "A feature point.",
+      "message": "包含未来更新"
+   },
+   "paywall_heading": {
+      "description": "Main heading in the paywall modal.",
+      "message": "您已使用所有50次免费删除。"
+   },
+   "paywall_invalidKey": {
+      "description": "Error message for an invalid license key.",
+      "message": "无效的许可证密钥格式"
+   },
+   "paywall_promoCode": {
+      "description": "Label for a promo code.",
+      "message": "使用代码："
+   },
+   "paywall_promoTitle": {
+      "description": "Title for a promotional offer.",
+      "message": "早鸟优惠 – 享受40%折扣"
+   },
+   "paywall_subheading": {
+      "description": "Subheading in the paywall modal.",
+      "message": "升级以解锁无限删除。"
+   },
+   "paywall_support": {
+      "description": "A message encouraging users to support development.",
+      "message": "您的支持有助于扩展的持续开发。"
+   },
+   "paywall_title": {
+      "description": "The title of the paywall modal.",
+      "message": "免费删除次数已用完"
+   },
+   "paywall_upgradeButton": {
+      "description": "Button to start the upgrade process.",
+      "message": "升级并获取许可证"
+   },
+   "paywall_validateButton": {
+      "description": "Button to validate a license key.",
+      "message": "验证并解锁"
+   },
+   "paywall_validating": {
+      "description": "Text shown while a license is being validated.",
+      "message": "验证中..."
+   },
+   "selectAllChats": {
+      "description": "Button text to select all conversations.",
+      "message": "选择所有聊天"
+   },
+   "workspaceAlert": {
+      "description": "The full text of the alert shown when a user clicks 'Learn more' on the workspace warning.",
+      "message": "教育（.edu）和工作空间账户通常由您组织的Google Workspace管理员控制聊天删除。个人用户无法删除其聊天历史记录，因为这在管理员级别通过保留政策（通常为18个月）进行管理。"
+   },
+   "workspaceWarningConfirm": {
+      "description": "Confirmation message shown to users on workspace accounts before attempting deletion.",
+      "message": "警告：您似乎正在使用教育或工作空间账户。这些账户通常无法删除聊天，因为这由您组织的管理员控制。您仍然要尝试吗？"
+   },
+   "workspaceWarningNote": {
+      "description": "A label for a note or warning.",
+      "message": "注意："
+   },
+   "workspaceWarningText": {
+      "description": "The text of the warning for workspace account limitations.",
+      "message": "教育（.edu）和某些工作空间账户无法删除聊天。这由您组织的管理员设置控制。"
+   }
+}

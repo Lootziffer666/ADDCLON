@@ -1,0 +1,198 @@
+{
+   "addFolderButton": {
+      "description": "Button hover text to add a new folder.",
+      "message": "Thêm thư mục"
+   },
+   "addPromptButton": {
+      "description": "Button hover text to add a new prompt.",
+      "message": "Thêm lời nhắc"
+   },
+   "allPrompts": {
+      "description": "Option for showing all prompts.",
+      "message": "Tất cả lời nhắc"
+   },
+   "cancelButton": {
+      "description": "Generic cancel button text.",
+      "message": "HỦY"
+   },
+   "closeSettings": {
+      "description": "Button text to close the settings view.",
+      "message": "ĐÓNG CÀI ĐẶT"
+   },
+   "collapseAll": {
+      "description": "Button text to collapse all prompts.",
+      "message": "Thu gọn tất cả"
+   },
+   "confirmDeleteFolder": {
+      "description": "Confirmation message for deleting a folder.",
+      "message": "Bạn có chắc chắn muốn xóa thư mục này không? Lời nhắc trong thư mục này sẽ không bị xóa!"
+   },
+   "confirmDeletePrompt": {
+      "description": "Confirmation message for deleting a prompt.",
+      "message": "Bạn có chắc chắn muốn xóa lời nhắc này không?"
+   },
+   "copiedButton": {
+      "description": "Text shown after copying.",
+      "message": "ĐÃ SAO CHÉP"
+   },
+   "copyButton": {
+      "description": "Copy button text.",
+      "message": "SAO CHÉP"
+   },
+   "deleteButton": {
+      "description": "Generic delete button text.",
+      "message": "XÓA"
+   },
+   "editButton": {
+      "description": "Generic edit button text.",
+      "message": "CHỈNH SỬA"
+   },
+   "enterNewFolderName": {
+      "description": "Prompt message for entering a new folder name.",
+      "message": "Nhập tên thư mục mới:"
+   },
+   "expandAll": {
+      "description": "Button text to expand all prompts.",
+      "message": "Mở rộng tất cả"
+   },
+   "exportPrompts": {
+      "description": "Button text to export prompts.",
+      "message": "Xuất lời nhắc dưới dạng CSV"
+   },
+   "extDescription": {
+      "description": "The description of the extension.",
+      "message": "Sao chép, chỉnh sửa và lưu các mẫu lời nhắc của bạn trong một cơ sở dữ liệu cá nhân và sử dụng chúng trên hầu hết các trang web AI/LLM"
+   },
+   "extName": {
+      "description": "The name of the extension.",
+      "message": "Trình quản lý Lời nhắc XXL cho ChatGPT, Claude, Gemini, Grok và hơn thế nữa"
+   },
+   "extShortName": {
+      "description": "The short name of the extension.",
+      "message": "Trình quản lý Lời nhắc XXL"
+   },
+   "folderNamePlaceholder": {
+      "description": "Placeholder for new folder name input.",
+      "message": "Nhập tên thư mục"
+   },
+   "hideButton": {
+      "description": "Button text to hide the add prompt form.",
+      "message": "ẨN"
+   },
+   "iconDragTip": {
+      "description": "Tip about dragging the icon to reposition it.",
+      "message": "Kéo biểu tượng lên hoặc xuống để thay đổi vị trí"
+   },
+   "importErrorNoTitlePrompt": {
+      "description": "Error message when CSV for import is missing columns.",
+      "message": "Tệp CSV phải chứa các cột \"Tiêu đề\" và \"Lời nhắc\"."
+   },
+   "importErrorParse": {
+      "description": "Error message when CSV for import is empty or cannot be parsed.",
+      "message": "Không thể phân tích cú pháp tệp CSV hoặc tệp trống."
+   },
+   "importPrompts": {
+      "description": "Button text to import prompts.",
+      "message": "Nhập lời nhắc từ CSV"
+   },
+   "importSuccess": {
+      "description": "Success message after importing prompts from CSV.",
+      "message": "Nhập lời nhắc thành công!"
+   },
+   "keyboardShortcuts": {
+      "description": "Header for keyboard shortcuts section in settings.",
+      "message": "Phím tắt"
+   },
+   "newPromptPlaceholder": {
+      "description": "Placeholder for new prompt text area.",
+      "message": "Thêm lời nhắc mới"
+   },
+   "privatePromptsTab": {
+      "description": "Tab title for private prompts.",
+      "message": "Lời nhắc riêng tư"
+   },
+   "promptTitlePlaceholder": {
+      "description": "Placeholder for new prompt title input.",
+      "message": "Nhập tiêu đề lời nhắc"
+   },
+   "publicPromptsComingSoon": {
+      "description": "Info text for public prompts tab.",
+      "message": "\u003Cb>3000+\u003C/b> Lời nhắc công khai \u003Cbr>\u003Cbr> - Sắp có -"
+   },
+   "publicPromptsTab": {
+      "description": "Tab title for public prompts.",
+      "message": "Lời nhắc công khai"
+   },
+   "rateExtension": {
+      "description": "Button text to rate the extension.",
+      "message": "Để lại cho chúng tôi một đánh giá"
+   },
+   "saveButton": {
+      "description": "Generic save button text.",
+      "message": "LƯU"
+   },
+   "searchPromptsPlaceholder": {
+      "description": "Placeholder for search input.",
+      "message": "Tìm kiếm lời nhắc"
+   },
+   "selectFolder": {
+      "description": "Default option in folder select dropdown.",
+      "message": "Chọn một thư mục"
+   },
+   "shareExtension": {
+      "description": "Button text for sharing.",
+      "message": "Chia sẻ"
+   },
+   "shortcutClose": {
+      "description": "Description for close/escape shortcut.",
+      "message": "Đóng"
+   },
+   "shortcutSearch": {
+      "description": "Description for search shortcut.",
+      "message": "Bật/tắt tìm kiếm"
+   },
+   "shortcutToggleSidebar": {
+      "description": "Description for toggle sidebar shortcut.",
+      "message": "Bật/tắt thanh bên"
+   },
+   "showIconSwitch": {
+      "description": "Switch to show icon on LLMs.",
+      "message": "Hiển thị biểu tượng"
+   },
+   "showIconSwitchOff": {
+      "description": "Show text if icon is swichted off",
+      "message": "Đừng quên ghim tiện ích mở rộng vào thanh công cụ (biểu tượng xếp hình). Bạn cũng có thể dùng Alt+P để mở thanh bên!"
+   },
+   "sidebarHeader": {
+      "description": "Header in the sidebar.",
+      "message": "Trình quản lý Lời nhắc XXL"
+   },
+   "sortAZ": {
+      "description": "Sort option for alphabetical order.",
+      "message": "A-Z"
+   },
+   "sortBy": {
+      "description": "Label for sort dropdown.",
+      "message": "Sắp xếp"
+   },
+   "sortNewest": {
+      "description": "Sort option for newest first.",
+      "message": "Mới nhất"
+   },
+   "sortOldest": {
+      "description": "Sort option for oldest first.",
+      "message": "Cũ nhất"
+   },
+   "sortZA": {
+      "description": "Sort option for reverse alphabetical order.",
+      "message": "Z-A"
+   },
+   "supportExtension": {
+      "description": "Button text for support.",
+      "message": "Hỗ trợ"
+   },
+   "untitledPrompt": {
+      "description": "Default title for a prompt.",
+      "message": "Chưa có tiêu đề"
+   }
+}

@@ -1,0 +1,1076 @@
+/*
+popup-components.css
+Version: 1.0
+
+This file is responsible for UI components within the Max Extension Settings popup.
+It includes styles for the console, save status text, profile selection dropdown,
+export/import buttons, confirmation and error dialogs, and toast notifications.
+Key areas:
+- .console: Styling for the user-visible console.
+- .small-hoovering-text: Save status messages.
+- #profileSelect: Profile selection dropdown.
+- .empty-message: Placeholder for empty button lists.
+- #exportProfile, #importProfile: Export/Import buttons.
+- .confirmation and .error: Dialog boxes for user feedback.
+- .toast and .toast-container: Toast notifications.
+- .collapsible: Collapsible sections with toggle functionality.
+*/
+
+:root {
+    /* Base tokens */
+    --section-header-bg: #f5f5f5;
+    --manual-bg: #f8f8f8;
+    --code-bg: #efefef;
+    --text-muted: #666;
+
+    /* Module tokens */
+    --ocp-module-gap: 8px;
+    --ocp-module-radius: 4px;
+    --ocp-module-pad: 10px;
+    --ocp-module-border: 1px solid var(--border-color);
+    --ocp-module-header-bg: var(--section-header-bg, #f5f5f5);
+}
+
+/* ===== Module container & layout ===== */
+#modulesSection>.section-content {
+    /* Controls inter-module spacing */
+}
+
+#modulesSection>.section-content>.ocp-module {
+    margin-bottom: var(--ocp-module-gap);
+}
+
+#modulesSection>.section-content>.ocp-module:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== Module internals (no outer spacing here) ===== */
+.ocp-module__header {
+    background: var(--ocp-module-header-bg);
+    border-radius: var(--ocp-module-radius);
+    padding: var(--ocp-module-pad);
+    margin-bottom: 0;
+    /* keep gaps on the container, not here */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ocp-module__content {
+    padding: var(--ocp-module-pad);
+    border: var(--ocp-module-border);
+    border-radius: 0 0 var(--ocp-module-radius) var(--ocp-module-radius);
+}
+
+/* Collapse behavior (state class on section) */
+.ocp-module:not(.expanded) .ocp-module__content {
+    display: none !important;
+    padding: 0 !important;
+    border: 0 !important;
+    margin: 0 !important;
+}
+
+/* Optional: arrow rotation */
+.ocp-module.expanded .toggle-icon {
+    transform: rotate(90deg);
+}
+
+/* Specific module tweaks (only if necessary) */
+.ocp-module--danger .ocp-module__header {
+    /* example modifier */
+    /* different bg, etc. */
+}
+
+/* ------------------------------------------------------------------------- */
+/* Mouse Click Effect                                                        */
+/* ------------------------------------------------------------------------- */
+.mouse-effect {
+    position: fixed;
+    /* Use fixed positioning so scroll doesn't matter */
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    /* Center on cursor and start scaled down */
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+    pointer-events: none;
+    /* So it doesn't interfere with other clicks */
+    z-index: 9999;
+    animation: mouse-ripple 0.5s ease-out forwards;
+}
+
+@keyframes mouse-ripple {
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(4);
+    }
+}
+
+@keyframes blink-background {
+    50% {
+        background-color: var(--blink-bg-color, #d9e9ff);
+        /* A slightly brighter blue for the confirmation blink */
+    }
+}
+
+/* ------------------------------------------------------------------------- */
+/* Console Styling                                                           */
+/* ------------------------------------------------------------------------- */
+.console {
+    font-family: Consolas, monospace;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: #333333;
+    color: #cccccc;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.console div {
+    padding: 4px 8px;
+    border-bottom: 1px solid #444444;
+}
+
+.console div:hover {
+    background: #444444;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Small Text, like version*/
+/* ------------------------------------------------------------------------- */
+.small-hoovering-text {
+    text-align: right;
+    color: #666666;
+    font-size: 12px;
+    margin-top: 16px;
+}
+
+.menu-version {
+    margin-top: 0;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* Profile Selection Dropdown Styling                                        */
+/* ------------------------------------------------------------------------- */
+#profileSelect {
+    flex: 1;
+    background-repeat: no-repeat;
+    padding-right: 30px;
+    transition: border-color var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+}
+
+#profileSelect:hover {
+    border-color: var(--primary-color);
+}
+
+#profileSelect:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(122, 92, 200, 0.1);
+}
+
+/* ------------------------------------------------------------------------- */
+/* Empty Message for Button List                                             */
+/* ------------------------------------------------------------------------- */
+.empty-message {
+    padding: 10px;
+    color: #888;
+    font-style: italic;
+    width: 100%;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Export and Import Buttons                                                 */
+/* ------------------------------------------------------------------------- */
+/* Removed redundant ID-specific styles for #exportProfile and #importProfile
+   to inherit the base button styles from popup-buttons.css */
+
+/* ------------------------------------------------------------------------- */
+/* Dialog Base Styling                                                       */
+/* ------------------------------------------------------------------------- */
+.dialog {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.dialog p {
+    font-size: 14px;
+}
+
+.dialog button {
+    margin-right: 12px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease, transform var(--transition-duration) ease;
+}
+
+.dialog button:hover {
+    transform: scale(1.02);
+}
+
+.dialog button:active {
+    transform: scale(0.98);
+}
+
+/* ------------------------------------------------------------------------- */
+/* Confirmation Dialog Styling                                               */
+/* ------------------------------------------------------------------------- */
+.dialog-confirmation {
+    border-color: var(--primary-color);
+    background-color: #f0f8ff;
+    --blink-bg-color: #d9e9ff;
+    animation: blink-background 1.5s ease-in-out infinite;
+}
+
+.dialog-confirmation p {
+    margin: 0 0 16px 0;
+    color: var(--text-color);
+}
+
+.dialog-confirmation button {
+    background-color: var(--primary-color);
+}
+
+.dialog-confirmation button:hover {
+    background-color: #6a4abd;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Error Dialog Styling                                                      */
+/* ------------------------------------------------------------------------- */
+.dialog-error {
+    border-color: var(--danger-color);
+    background-color: #ffe6e6;
+}
+
+.dialog-error p {
+    margin: 0;
+    color: var(--danger-color);
+}
+
+.dialog-error button {
+    background-color: var(--danger-color);
+}
+
+.dialog-error button:hover {
+    background-color: #c9302c;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Wrapper for the Button List (if needed)                                  */
+/* ------------------------------------------------------------------------- */
+.button-list-wrapper {
+    position: relative;
+    transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ------------------------------------------------------------------------- */
+/* Advanced Selector Configuration                                          */
+/* ------------------------------------------------------------------------- */
+.selector-config-textarea {
+    width: 100%;
+    height: 300px;
+    font-family: monospace;
+    white-space: pre;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin: 8px 0;
+    font-size: 12px;
+    line-height: 1.4;
+    resize: vertical;
+}
+
+#selectorWebsiteSelect {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    /* keep default for non-modules */
+}
+
+#advancedSection .row {
+    margin-bottom: 12px;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Collapsible Sections - SUPER MODERN Premium Animation                    */
+/* ------------------------------------------------------------------------- */
+
+/* Define animation keyframes */
+@keyframes collapsible-shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes collapsible-glow-pulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(122, 92, 200, 0),
+            0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px 2px rgba(122, 92, 200, 0.15),
+            0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+}
+
+@keyframes collapsible-icon-bounce {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes collapsible-reveal-shine {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) skewX(-15deg);
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(200%) skewX(-15deg);
+    }
+}
+
+/* Section header - premium glass effect with hover states */
+.collapsible .section-header {
+    cursor: pointer;
+    padding: 12px 16px;
+    background: linear-gradient(135deg,
+            rgba(245, 245, 250, 0.95) 0%,
+            rgba(240, 240, 248, 0.9) 50%,
+            rgba(235, 235, 245, 0.95) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
+    border: 1px solid rgba(122, 92, 200, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        0 1px 2px rgba(0, 0, 0, 0.02),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition:
+        margin-bottom 500ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-radius 500ms cubic-bezier(0.4, 0, 0.2, 1),
+        background 300ms ease,
+        border-color 300ms ease,
+        box-shadow 300ms ease,
+        transform 200ms ease;
+}
+
+/* Shimmer overlay on header */
+.collapsible .section-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            transparent 100%);
+    background-size: 200% 100%;
+    opacity: 0;
+    transition: opacity 300ms ease;
+    pointer-events: none;
+}
+
+/* Hover state - glow and lift */
+.collapsible .section-header:hover {
+    background: linear-gradient(135deg,
+            rgba(248, 246, 255, 0.98) 0%,
+            rgba(245, 242, 255, 0.95) 50%,
+            rgba(240, 238, 252, 0.98) 100%);
+    border-color: rgba(122, 92, 200, 0.2);
+    box-shadow:
+        0 4px 20px rgba(122, 92, 200, 0.12),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    transform: translateY(-1px);
+}
+
+.collapsible .section-header:hover::before {
+    opacity: 1;
+    animation: collapsible-shimmer 1.5s ease-in-out;
+}
+
+/* Active/pressed state */
+.collapsible .section-header:active {
+    transform: translateY(0) scale(0.995);
+    box-shadow:
+        0 2px 10px rgba(122, 92, 200, 0.1),
+        0 1px 4px rgba(0, 0, 0, 0.03),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* Expanded header styling */
+.collapsible.expanded .section-header {
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(135deg,
+            rgba(122, 92, 200, 0.08) 0%,
+            rgba(122, 92, 200, 0.04) 50%,
+            rgba(122, 92, 200, 0.06) 100%);
+    border-color: rgba(122, 92, 200, 0.15);
+    animation: collapsible-glow-pulse 2s ease-in-out 1;
+}
+
+/* Modern Toggle Icon - CSS chevron instead of text character */
+.toggle-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(135deg,
+            rgba(122, 92, 200, 0.1) 0%,
+            rgba(122, 92, 200, 0.05) 100%);
+    transition:
+        transform 500ms cubic-bezier(0.34, 1.56, 0.64, 1),
+        background 300ms ease,
+        box-shadow 300ms ease;
+    font-size: 0;
+    /* Hide the ▶ text */
+    color: transparent;
+}
+
+/* Create chevron arrow with CSS */
+.toggle-icon::before,
+.toggle-icon::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background: linear-gradient(90deg,
+            var(--primary-color, #7a5cc8) 0%,
+            rgba(122, 92, 200, 0.8) 100%);
+    border-radius: 2px;
+    transition:
+        transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1),
+        background 300ms ease,
+        width 300ms ease;
+}
+
+.toggle-icon::before {
+    transform: translateX(1px) translateY(-2px) rotate(45deg);
+}
+
+.toggle-icon::after {
+    transform: translateX(1px) translateY(2px) rotate(-45deg);
+}
+
+/* Icon hover effects */
+.collapsible .section-header:hover .toggle-icon {
+    background: linear-gradient(135deg,
+            rgba(122, 92, 200, 0.2) 0%,
+            rgba(122, 92, 200, 0.1) 100%);
+    box-shadow: 0 0 12px rgba(122, 92, 200, 0.25);
+}
+
+.collapsible .section-header:hover .toggle-icon::before,
+.collapsible .section-header:hover .toggle-icon::after {
+    background: linear-gradient(90deg,
+            var(--primary-color, #7a5cc8) 0%,
+            rgba(160, 130, 230, 1) 100%);
+}
+
+/* Expanded state - rotate and morph to minus/down arrow */
+.collapsible.expanded .toggle-icon {
+    transform: rotate(90deg);
+    background: linear-gradient(135deg,
+            rgba(122, 92, 200, 0.25) 0%,
+            rgba(122, 92, 200, 0.15) 100%);
+    box-shadow:
+        0 0 15px rgba(122, 92, 200, 0.3),
+        inset 0 0 4px rgba(122, 92, 200, 0.1);
+    animation: collapsible-icon-bounce 400ms ease;
+}
+
+.collapsible.expanded .toggle-icon::before,
+.collapsible.expanded .toggle-icon::after {
+    background: linear-gradient(90deg,
+            var(--primary-color, #7a5cc8) 0%,
+            rgba(140, 110, 220, 1) 100%);
+}
+
+/* Section Content - Premium reveal animation */
+.collapsible>.section-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 16px;
+    border: 0 solid rgba(122, 92, 200, 0.1);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    --unwrap-duration: 700ms;
+    transform-origin: top center;
+    transform: translateY(-12px) scaleY(0.9) perspective(1000px) rotateX(-5deg);
+    filter: blur(6px) saturate(0.9);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(252, 251, 255, 0.95) 50%,
+            rgba(250, 248, 255, 0.98) 100%);
+    box-shadow:
+        0 8px 32px rgba(122, 92, 200, 0.06),
+        0 2px 8px rgba(0, 0, 0, 0.02);
+    transition:
+        max-height var(--unwrap-duration) cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 400ms cubic-bezier(0.4, 0, 0.2, 1) 80ms,
+        padding var(--unwrap-duration) cubic-bezier(0.4, 0, 0.2, 1),
+        border-width 400ms ease 50ms,
+        transform var(--unwrap-duration) cubic-bezier(0.34, 1.56, 0.64, 1),
+        filter 500ms cubic-bezier(0.4, 0, 0.2, 1),
+        clip-path var(--unwrap-duration) cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 500ms ease;
+}
+
+/* Gradient overlay for depth */
+.collapsible>.section-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(135deg,
+            rgba(122, 92, 200, 0.06) 0%,
+            rgba(122, 92, 200, 0.02) 30%,
+            transparent 60%);
+    opacity: 0;
+    transform: translateY(-15px) scaleY(0.9);
+    transition: opacity 500ms ease, transform 600ms ease;
+}
+
+/* Reveal shine effect */
+.collapsible>.section-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.5) 50%,
+            transparent 100%);
+    opacity: 0;
+    pointer-events: none;
+    transform: skewX(-15deg);
+}
+
+/* Expanded content - smooth reveal */
+.collapsible.expanded>.section-content {
+    max-height: 5000px;
+    opacity: 1;
+    padding: 16px;
+    border-width: 1px;
+    transform: translateY(0) scaleY(1) perspective(1000px) rotateX(0deg);
+    filter: blur(0) saturate(1);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    box-shadow:
+        0 16px 48px rgba(122, 92, 200, 0.1),
+        0 4px 16px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transition:
+        max-height var(--unwrap-duration) cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 100ms,
+        padding var(--unwrap-duration) cubic-bezier(0.4, 0, 0.2, 1),
+        border-width 300ms ease,
+        transform var(--unwrap-duration) cubic-bezier(0.34, 1.56, 0.64, 1),
+        filter 500ms cubic-bezier(0.4, 0, 0.2, 1) 50ms,
+        clip-path var(--unwrap-duration) cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 600ms ease;
+}
+
+.collapsible.expanded>.section-content::before {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+}
+
+.collapsible.expanded>.section-content::after {
+    animation: collapsible-reveal-shine 800ms ease-out 100ms;
+}
+
+/* Section header base styles */
+.section-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Expand hint text - premium fade */
+.expand-text {
+    font-size: 0.85em;
+    color: var(--text-muted, #888);
+    font-style: italic;
+    font-weight: 400;
+    margin-left: 8px;
+    opacity: 0.7;
+    transition:
+        opacity 400ms ease,
+        transform 400ms ease;
+}
+
+.collapsible .section-header:hover .expand-text {
+    opacity: 1;
+    color: var(--primary-color, #7a5cc8);
+}
+
+.collapsible.expanded>.section-header .expand-text {
+    opacity: 0;
+    transform: translateX(-10px);
+    pointer-events: none;
+    position: absolute;
+    visibility: hidden;
+}
+
+.text-inside-container {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.manual-text {
+    background-color: var(--manual-bg, #f8f8f8);
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.manual-text ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.manual-text pre code {
+    display: block;
+    background-color: var(--code-bg, #efefef);
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+    font-size: 0.85em;
+    white-space: pre-wrap;
+}
+
+/* Nested Collapsible Sections */
+.subsection-header {
+    background-color: var(--manual-bg, #f7ecff) !important;
+    /* Light grayish-blue background */
+    border: 1px solid var(--border-color);
+    margin-bottom: 12px !important;
+    padding: 12px 16px !important;
+    justify-content: flex-start !important;
+    gap: 8px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    /* Add this line to ensure text is visible */
+}
+
+
+
+/* ---------- Consistent spacing for Modules area only ---------- */
+
+/* Ensure uniform spacing between modules in all states */
+#modulesSection>.section-content>.collapsible,
+#modulesSection>.section-content>.ocp-module {
+    margin-bottom: var(--ocp-module-gap);
+    /* consistent gap using variable */
+}
+
+#modulesSection>.section-content>.collapsible:last-child,
+#modulesSection>.section-content>.ocp-module:last-child {
+    margin-bottom: 0;
+    /* no extra space after the last module */
+}
+
+/* Remove the bottom margin from individual headers in Modules only */
+#modulesSection>.section-content>.collapsible .section-header,
+#modulesSection>.section-content>.ocp-module .ocp-module__header {
+    margin-bottom: 0;
+}
+
+.subsection-header h3 {
+    font-size: 15px;
+    margin: 0;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+#advancedHelpSection .section-content {
+    border: none;
+    padding: 0 10px 10px 10px;
+}
+
+.crosschat-setting-group {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 22px 16px 16px;
+    margin: 16px 0;
+    background: transparent;
+}
+
+.crosschat-setting-group legend {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: var(--manual-bg, #f5f5f5);
+    font-weight: 600;
+    color: var(--text-color);
+    min-height: 44px;
+}
+
+.crosschat-setting-group legend .switch-label {
+    color: inherit;
+}
+
+.crosschat-setting-group.is-disabled {
+    border-color: var(--border-muted, #d4d4d4);
+    background: rgba(128, 128, 128, 0.16);
+}
+
+.crosschat-setting-group.is-disabled>.row {
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.crosschat-setting-group.is-disabled legend {
+    background: var(--manual-bg, #f5f5f5);
+    pointer-events: auto;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Floating Window Settings List                                             */
+/* ------------------------------------------------------------------------- */
+.floating-sites-list {
+    margin: 16px 0;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #fff;
+    /* Light mode background */
+}
+
+.floating-site-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.floating-site-item:last-child {
+    border-bottom: none;
+}
+
+.floating-site-item span {
+    font-size: 1.1em;
+    /* Responsive, scales with parent font size */
+}
+
+/* ------------------------------------------------------------------------- */
+/* Utility Classes for Display and Visibility                               */
+/* ------------------------------------------------------------------------- */
+
+/* Permanently hidden elements (file inputs, compatibility fields) */
+.visually-hidden {
+    display: none !important;
+}
+
+/* JavaScript-toggleable elements (dialogs, messages, collapsible content) */
+.is-hidden {
+    display: none;
+}
+
+/* Margin utilities */
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+.ml-8 {
+    margin-left: 8px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.my-16 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* Flex utilities */
+.justify-end {
+    justify-content: flex-end;
+}
+
+.flex-column-start {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Typography utilities */
+.text-sm {
+    font-size: 0.9em;
+}
+
+.text-xs {
+    font-size: 0.85em;
+}
+
+.text-muted {
+    color: #666;
+}
+
+.text-secondary {
+    color: #555;
+}
+
+.emoji-font {
+    font-family: 'Segoe UI Emoji', sans-serif;
+}
+
+/* More Margin/Padding utilities */
+.ml-12 {
+    margin-left: 12px;
+}
+
+.mt-4 {
+    margin-top: 4px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-4 {
+    margin-bottom: 4px;
+}
+
+.mb-6 {
+    margin-bottom: 6px;
+}
+
+.mb-12 {
+    margin-bottom: 12px;
+}
+
+.my-4 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.my-6 {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.pt-12 {
+    padding-top: 12px;
+}
+
+.min-w-120 {
+    min-width: 120px;
+}
+
+/* Component classes */
+.settings-box {
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+.settings-box-header {
+    margin: 0 0 8px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.border-top-light {
+    border-top: 1px solid #f0f0f0;
+}
+
+.border-bottom-dashed {
+    border-bottom: 1px dashed #eee;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Model Details Styling                                                     */
+/* ------------------------------------------------------------------------- */
+.model-description {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #eee;
+}
+
+.model-description-text {
+    font-size: 0.85em;
+    color: #555;
+    margin: 4px 0 6px 0;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Token Approximator Model Details Toggle                                   */
+/* ------------------------------------------------------------------------- */
+.model-details-container {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+/* JS-manipulated: This element's text content changes and the 'expanded' class is toggled */
+.model-details-toggle {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* 
+This is wrap /unwrap logic for small texts
+*/
+.collapsible.expanded .model-details-toggle .toggle-icon-symbol-replaced-with-graphic {
+    transform: rotate(0deg);
+}
+
+/* JS-manipulated: The 'expanded' class is added to .model-details-toggle when details are shown */
+.collapsible.expanded .model-details-toggle.expanded .toggle-icon-symbol-replaced-with-graphic {
+    transform: rotate(90deg);
+    animation: collapsible-icon-bounce 400ms ease;
+}
+
+/* JS-manipulated: The 'is-visible' class is toggled via JS */
+.model-details-content {
+    /* Hidden state defaults */
+    display: block;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-top: 0;
+
+    /* Smooth transition for unroll/rollin effect */
+    transition:
+        max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.4s ease-in-out,
+        margin-top 0.4s ease-in-out;
+}
+
+.model-details-content.is-visible {
+    /* Visible state */
+    max-height: 1000px;
+    /* Large enough to fit content */
+    opacity: 1;
+    margin-top: 10px;
+}
+
+/* 
+   Class for the icon span. 
+   The name indicates that the text symbol (▶) is hidden and replaced by a CSS graphic.
+   Inherits base behavior from .toggle-icon but adds specific spacing.
+*/
+.toggle-icon-symbol-replaced-with-graphic {
+    font-size: 10px;
+    margin-right: 4px;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Compact Inputs and Buttons (for inline settings)                          */
+/* ------------------------------------------------------------------------- */
+.input-number-compact {
+    width: 80px;
+    padding: 6px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.input-color-compact {
+    width: 50px;
+    height: 32px;
+    padding: 2px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.btn-compact {
+    padding: 6px 12px;
+    font-size: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--manual-bg, #f5f5f5);
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-compact:hover {
+    background: var(--border-color);
+    border-color: var(--primary-color);
+}

@@ -1,0 +1,1273 @@
+{
+   "appDesc": {
+      "message": "Batch download, auto-generate videos, and manage your entire Grok AI media library — all in one extension."
+   },
+   "appName": {
+      "message": "Grok Media Downloader"
+   },
+   "batchDeleteCancel": {
+      "message": "Cancel"
+   },
+   "batchDeleteClose": {
+      "message": "Close"
+   },
+   "batchDeleteComplete": {
+      "message": "✅ Successfully deleted $1 items",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "batchDeleteCompleteWithFail": {
+      "message": "✅ Completed: $1 deleted, $2 failed",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "batchDeleteConfirm": {
+      "message": "Confirm Delete"
+   },
+   "batchDeleteConfirmMsg": {
+      "message": "You are about to delete $1 selected items.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "batchDeleteConfirmTitle": {
+      "message": "⚠️ Confirm Delete"
+   },
+   "batchDeleteOptionDelete": {
+      "message": "Delete posts permanently"
+   },
+   "batchDeleteOptionDeleteDesc": {
+      "message": "Posts will be unfavorited AND deleted"
+   },
+   "batchDeleteOptionUnfavorite": {
+      "message": "Remove from favorites only"
+   },
+   "batchDeleteOptionUnfavoriteDesc": {
+      "message": "Posts will be unfavorited but not deleted"
+   },
+   "batchDeletePleaseWait": {
+      "message": "Please wait..."
+   },
+   "batchDeleteProgress": {
+      "message": "Deleting... $1/$2",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "batchDeleteWarning": {
+      "message": "⚠️ This action cannot be undone!"
+   },
+   "batchSelectDelete": {
+      "message": "🗑️ Delete"
+   },
+   "batchSelectDeselectAll": {
+      "message": "Deselect All"
+   },
+   "batchSelectSelectAll": {
+      "message": "Select All"
+   },
+   "batchSelectSelected": {
+      "message": "Selected: $1 / $2",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "btnBatchSelectDelete": {
+      "message": "Batch Select & Delete"
+   },
+   "btnBuyLicense": {
+      "message": "Buy License"
+   },
+   "btnClearHistory": {
+      "message": "Reset Download History (will re-download all files)"
+   },
+   "btnClearState": {
+      "message": "Clear Download Preview List"
+   },
+   "btnClearStream": {
+      "message": "Clear Captured"
+   },
+   "btnCompact": {
+      "message": "Less"
+   },
+   "btnContinueDownload": {
+      "description": "Button label shown when a previous download was interrupted and can be resumed",
+      "message": "▶ Continue Download"
+   },
+   "btnDownloadStream": {
+      "message": "📥 Download Captured"
+   },
+   "btnExpand": {
+      "message": "More"
+   },
+   "btnExport": {
+      "message": "📤 Export Data"
+   },
+   "btnGenerate": {
+      "message": "1. Generate List"
+   },
+   "btnGenerateLoading": {
+      "message": "Generating..."
+   },
+   "btnImport": {
+      "message": "📥 Import Data"
+   },
+   "btnRemoveFav": {
+      "message": "🗑️ Remove Old"
+   },
+   "btnRemoveFavGenerating": {
+      "message": "Generating List..."
+   },
+   "btnRemoveFavLoading": {
+      "message": "Removing..."
+   },
+   "btnStart": {
+      "message": "2. Start Download"
+   },
+   "btnStartDone": {
+      "message": "✅ Completed"
+   },
+   "btnStartLoading": {
+      "message": "Downloading..."
+   },
+   "btnStopDownload": {
+      "message": "⏹ Stop Download"
+   },
+   "btnStopUpgrade": {
+      "message": "⏹ Upgrading ($1/$2), Stop?",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "btnUpgradeHD": {
+      "message": "🚀 Upgrade to HD"
+   },
+   "checkboxDeletePost": {
+      "message": "Also delete posts"
+   },
+   "dataManageTitle": {
+      "message": "Data Management (Pro):"
+   },
+   "dateFilterTitle": {
+      "message": "Date Filter (Pro):"
+   },
+   "downloadAll": {
+      "message": "Download All"
+   },
+   "downloadModeProject": {
+      "message": "Group by Project"
+   },
+   "downloadModeProjectDesc": {
+      "message": "Group source image + generated videos in project folders"
+   },
+   "downloadModeProjectHint": {
+      "message": "💡 Already downloaded files will be skipped. To see complete files in project folders, clear download history first."
+   },
+   "downloadModeStandard": {
+      "message": "Standard"
+   },
+   "downloadModeStandardDesc": {
+      "message": "Separate folders for images and videos"
+   },
+   "downloadModeTitle": {
+      "message": "📂 Download Mode"
+   },
+   "filterDateRange": {
+      "message": "Date Range"
+   },
+   "filterInfoTitle": {
+      "message": "📋 Current Filters:"
+   },
+   "filterLastHours": {
+      "message": "Last"
+   },
+   "footerImages": {
+      "message": "Images:"
+   },
+   "footerManualSetup": {
+      "message": "browser default download path"
+   },
+   "footerOfficialWebsite": {
+      "message": "Official Website"
+   },
+   "footerPath": {
+      "message": "📁 Path:"
+   },
+   "footerVersion": {
+      "message": "v$VERSION$ | Powered by Kario LLC",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "footerVideos": {
+      "message": "Videos:"
+   },
+   "footerViewLogs": {
+      "message": "View Logs"
+   },
+   "fromDateLabel": {
+      "message": "From:"
+   },
+   "hdPriorityDesc": {
+      "message": "Download HD when available, SD as fallback"
+   },
+   "hdPriorityLabel": {
+      "message": "✨ HD Priority"
+   },
+   "hdUpgradeDesc": {
+      "message": "Automatically upgrade favorite videos to HD quality."
+   },
+   "hdUpgradeHoursUnit": {
+      "message": "hours"
+   },
+   "hdUpgradeTimeFilterLabel": {
+      "message": "Only upgrade videos from the last"
+   },
+   "hdUpgradeTitle": {
+      "message": "✨ HD Upgrade (Pro):"
+   },
+   "hoursUnitMedia": {
+      "message": "hours of images/videos"
+   },
+   "licenseActivateBtn": {
+      "message": "Activate"
+   },
+   "licenseActivated": {
+      "message": "Activated"
+   },
+   "licensePlaceholder": {
+      "message": "Enter License Key"
+   },
+   "licenseTitle": {
+      "message": "🔑 License Status"
+   },
+   "licenseVerifying": {
+      "message": "Verifying..."
+   },
+   "mediaTypeImages": {
+      "message": "🖼️ Images"
+   },
+   "mediaTypeTitle": {
+      "message": "Select Media Types:"
+   },
+   "mediaTypeVideos": {
+      "message": "🎬 Videos (Pro)"
+   },
+   "msgActivateError": {
+      "message": "Activation Error"
+   },
+   "msgActivateFailed": {
+      "message": "❌ Activation Failed"
+   },
+   "msgActivateSuccess": {
+      "message": "✅ Activated! Thank you for your support"
+   },
+   "msgAllDownloaded": {
+      "message": "All files have been downloaded previously.\n\n📊 Stats:\n  Images: $1\n  Videos: $2\n\nNo files were downloaded this time.\n\nTo re-download, please clear history first.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgBuyPro": {
+      "message": "Get Pro for full features"
+   },
+   "msgClearFailed": {
+      "message": "Clear failed"
+   },
+   "msgClearHistoryFailed": {
+      "message": "Clear history failed"
+   },
+   "msgConfirmClearHistory": {
+      "message": "⚠️ Reset Download History?\n\nThis will cause ALL previously downloaded files to be re-downloaded.\nThis action cannot be undone!\n\nAre you sure you want to continue?"
+   },
+   "msgConfirmClearState": {
+      "message": "Clear current state?\n\n(Download history will NOT be cleared)"
+   },
+   "msgConfirmClearStream": {
+      "message": "Clear all captured stream images?"
+   },
+   "msgConfirmDeletePost": {
+      "message": "⚠️ WARNING: You selected 'Also delete posts'.\nThe posts will be PERMANENTLY DELETED from Grok."
+   },
+   "msgConfirmDownload": {
+      "message": "Start automatic download?\n\nImages will be batch downloaded. Videos will be downloaded by visiting pages one by one.\nDo not close the browser."
+   },
+   "msgConfirmRemove": {
+      "message": "⚠️ Remove favorites before $DATE$?\n\n📊 Stats:\n  Total: $TOTAL$\n  To Remove: $REMOVE$\n  Keep: $KEEP$\n\nThis will visit each page to un-favorite.\nDo not close browser.\n\nCannot be undone!",
+      "placeholders": {
+         "date": {
+            "content": "$1"
+         },
+         "keep": {
+            "content": "$4"
+         },
+         "remove": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgConfirmRemoveRange": {
+      "message": "⚠️ Remove favorites in range: $RANGE$?\n\n📊 Stats:\n  Total: $TOTAL$\n  To Remove: $REMOVE$\n  Keep: $KEEP$\n\nThis will visit each page to un-favorite.\nDo not close browser.\n\nCannot be undone!",
+      "placeholders": {
+         "keep": {
+            "content": "$4"
+         },
+         "range": {
+            "content": "$1"
+         },
+         "remove": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDateAll": {
+      "message": "All Dates"
+   },
+   "msgDateRange": {
+      "message": "Date: $FROM$ ~ $TO$",
+      "placeholders": {
+         "from": {
+            "content": "$1"
+         },
+         "to": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDownloadCancelConfirm": {
+      "message": "⚠️ Download in progress\n\nPhase: $PHASE$\nProgress: $CURRENT$/$TOTAL$\n\nDo you want to cancel?",
+      "placeholders": {
+         "current": {
+            "content": "$2"
+         },
+         "phase": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$3"
+         }
+      }
+   },
+   "msgDownloadCancelled": {
+      "message": "Download has been cancelled"
+   },
+   "msgDownloadComplete": {
+      "message": "🎉 Complete! Success: $DOWNLOADED$/$TOTAL$",
+      "placeholders": {
+         "downloaded": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDownloadConfirmHdPriority": {
+      "message": "📊 Download Summary\n\n🖼️ Images: $1 to download ($2 already done)\n🎬 Videos: $3 to download ($4 already done)\n    ├ ✨ HD: $5\n    ├ 🎥 720p: $6\n    └ 📦 SD: $7\n\nDo not close the browser.\nStart download?",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         },
+         "3": {
+            "content": "$3"
+         },
+         "4": {
+            "content": "$4"
+         },
+         "5": {
+            "content": "$5"
+         },
+         "6": {
+            "content": "$6"
+         },
+         "7": {
+            "content": "$7"
+         }
+      }
+   },
+   "msgDownloadConfirmProject": {
+      "message": "📊 Download Summary\n\n📂 Projects: $1 to download ($2 already done)\n\nDo not close the browser.\nStart download?",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgDownloadConfirmStandard": {
+      "message": "📊 Download Summary\n\n🖼️ Images: $1 to download ($2 already done)\n🎬 SD Videos: $3 to download ($4 already done)\n🎥 720p Videos: $5 to download ($6 already done)\n✨ HD Videos: $7 to download ($8 already done)\n\nDo not close the browser.\nStart download?",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         },
+         "3": {
+            "content": "$3"
+         },
+         "4": {
+            "content": "$4"
+         },
+         "5": {
+            "content": "$5"
+         },
+         "6": {
+            "content": "$6"
+         },
+         "7": {
+            "content": "$7"
+         },
+         "8": {
+            "content": "$8"
+         }
+      }
+   },
+   "msgDownloadScanning": {
+      "message": "Scanning..."
+   },
+   "msgDownloading": {
+      "message": "Downloading..."
+   },
+   "msgEnterLicenseKey": {
+      "message": "Please enter License Key"
+   },
+   "msgExportFailed": {
+      "message": "Export failed"
+   },
+   "msgExportSuccess": {
+      "message": "✅ Data exported! Contains $COUNT$ records",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgFilterChanged": {
+      "message": "⚠️ Filters changed, please regenerate list"
+   },
+   "msgFoundMedia": {
+      "message": "Success! Found $CONTENT$",
+      "placeholders": {
+         "content": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgGenerateFailed": {
+      "message": "Generation Failed"
+   },
+   "msgGenerateListProgress": {
+      "description": "Real-time progress shown on Generate List button during API scanning",
+      "message": "Scanning... $COUNT$ items found",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgGenerating": {
+      "message": "Generating list, please wait..."
+   },
+   "msgHistoryCleared": {
+      "message": "History cleared"
+   },
+   "msgImportFailed": {
+      "message": "Import failed"
+   },
+   "msgImportSuccess": {
+      "message": "✅ Data imported! Added $NEW$ records\nTotal: $BEFORE$ → $AFTER$",
+      "placeholders": {
+         "after": {
+            "content": "$3"
+         },
+         "before": {
+            "content": "$2"
+         },
+         "new": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgNoItemsToRemove": {
+      "message": "✅ No favorites before $DATE$\n\nTotal: $TOTAL$",
+      "placeholders": {
+         "date": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgNoItemsToRemoveRange": {
+      "message": "✅ No favorites in range: $RANGE$\n\nTotal: $TOTAL$",
+      "placeholders": {
+         "range": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgNoResponse": {
+      "message": "❌ No response, please refresh and try again"
+   },
+   "msgOperationFailed": {
+      "message": "❌ Operation failed"
+   },
+   "msgPhaseImages": {
+      "message": "🖼️ Downloading Images"
+   },
+   "msgPhaseVideos": {
+      "message": "🎬 Downloading Videos"
+   },
+   "msgRefreshRetry": {
+      "message": "Please refresh the page and try again"
+   },
+   "msgRemoveComplete": {
+      "message": "✅ Remove complete! Success: $SUCCESS$/$TOTAL$",
+      "placeholders": {
+         "success": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgRemovingProgress": {
+      "message": "Removing $CURRENT$/$TOTAL$...",
+      "placeholders": {
+         "current": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgSelectDate": {
+      "message": "Please select a date"
+   },
+   "msgSelectMediaType": {
+      "message": "Please select at least one media type"
+   },
+   "msgStartDownload": {
+      "message": "Download started!"
+   },
+   "msgStartFailed": {
+      "message": "Start Failed"
+   },
+   "msgStartRemove": {
+      "message": "Removing $COUNT$ favorites...",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgStartRemoveFailed": {
+      "message": "Start remove failed"
+   },
+   "msgStateCleared": {
+      "message": "State cleared"
+   },
+   "msgStreamLimitReached": {
+      "message": "⚠️ Capture limit reached ($LIMIT$ images). Please download and clear to continue.",
+      "placeholders": {
+         "limit": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgStreamStarted": {
+      "message": "Capture Started! Scroll to capture images."
+   },
+   "msgStreamStopped": {
+      "message": "Capture Stopped"
+   },
+   "msgUpgradeCancelConfirm": {
+      "message": "⚠️ HD upgrade is in progress ($CURRENT$/$TOTAL$)\n\nDo you want to cancel?",
+      "placeholders": {
+         "current": {
+            "content": "$1"
+         },
+         "total": {
+            "content": "$2"
+         }
+      }
+   },
+   "msgUpgradeCancelled": {
+      "message": "HD upgrade has been cancelled"
+   },
+   "msgUpgradeComplete": {
+      "message": "✅ Upgrade Complete! Upgraded: $UPGRADED$/$TOTAL$",
+      "placeholders": {
+         "total": {
+            "content": "$2"
+         },
+         "upgraded": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeConfirm": {
+      "message": "📊 Scan Results\n\nTotal videos: $TOTAL$\nAlready HD: $ALREADY_HD$\nNeed upgrade: $NEED_UPGRADE$\n\nStart upgrade?",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "need_upgrade": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeConfirmFiltered": {
+      "message": "📊 Scan Results\n\nTotal videos: $TOTAL$\nAlready HD: $ALREADY_HD$\nNeed upgrade (all): $NEED_UPGRADE$\nFiltered (last $HOURS$h): $FILTERED$\n\nStart upgrade for $FILTERED$ videos?",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "filtered": {
+            "content": "$4"
+         },
+         "hours": {
+            "content": "$5"
+         },
+         "need_upgrade": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeFailed": {
+      "message": "Upgrade Failed"
+   },
+   "msgUpgradeNoNeed": {
+      "message": "✅ All videos are already HD!\n\nTotal videos: $TOTAL$\nAlready HD: $ALREADY_HD$",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeNoNeedFiltered": {
+      "message": "✅ No videos need upgrade in the last $HOURS$ hours.\n\nTotal videos: $TOTAL$\nAlready HD: $ALREADY_HD$\nNeed upgrade (all): $NEED_UPGRADE$\n\nTry increasing the time range or uncheck the filter.",
+      "placeholders": {
+         "already_hd": {
+            "content": "$2"
+         },
+         "hours": {
+            "content": "$4"
+         },
+         "need_upgrade": {
+            "content": "$3"
+         },
+         "total": {
+            "content": "$1"
+         }
+      }
+   },
+   "msgUpgradeScanning": {
+      "message": "Scanning Favorites..."
+   },
+   "msgUpgrading": {
+      "message": "Upgrading..."
+   },
+   "msgVideoProRequired": {
+      "message": "Video download is a Pro feature"
+   },
+   "msgWrongPage": {
+      "message": "Please use this extension on Grok Imagine Favorites page."
+   },
+   "msgWrongPageFav": {
+      "message": "Please use this on the Favorites page"
+   },
+   "msgWrongPageLink": {
+      "message": "Go to Favorites →"
+   },
+   "popupTitle": {
+      "message": "🎬 Grok Media Downloader"
+   },
+   "proFeatureLock": {
+      "message": "🔒 Pro Feature"
+   },
+   "promptAsFilenameDesc": {
+      "message": "Use prompt text in filename (e.g., img_20250119_a_cat_sitting.jpg)"
+   },
+   "promptAsFilenameLabel": {
+      "message": "📝 Use Prompt as Filename"
+   },
+   "queueAddItemTitle": {
+      "message": "Add Item"
+   },
+   "queueAddMaxRetries": {
+      "message": "Max Retries"
+   },
+   "queueAddPostId": {
+      "message": "Post ID or URL"
+   },
+   "queueAddPrompt": {
+      "message": "Prompt"
+   },
+   "queueAddTarget": {
+      "message": "Target Success"
+   },
+   "queueBatchAddTitle": {
+      "message": "Batch Add Recent"
+   },
+   "queueBatchBtnAdd": {
+      "message": "Add Recent to Queue"
+   },
+   "queueBatchTimeRange": {
+      "message": "Time Range"
+   },
+   "queueBtnAdd": {
+      "message": "Add"
+   },
+   "queueBtnClearAll": {
+      "message": "Clear All"
+   },
+   "queueBtnClearPending": {
+      "message": "Clear Pending"
+   },
+   "queueBtnClearStats": {
+      "message": "Clear Stats"
+   },
+   "queueBtnPause": {
+      "message": "Pause"
+   },
+   "queueBtnResume": {
+      "message": "Resume"
+   },
+   "queueBtnStart": {
+      "message": "Start"
+   },
+   "queueBtnStop": {
+      "message": "Stop"
+   },
+   "queueConfirmClearAll": {
+      "message": "Delete all items in queue?"
+   },
+   "queueConfirmClearPending": {
+      "message": "Delete all pending items?"
+   },
+   "queueConfirmClearStats": {
+      "message": "Clear all prompt stats?"
+   },
+   "queueDefaultRetries": {
+      "message": "Default Max Retries"
+   },
+   "queueDefaultRetriesLabel": {
+      "message": "Default Max Retries:"
+   },
+   "queueDefaultTarget": {
+      "message": "Default Target"
+   },
+   "queueDefaultTargetLabel": {
+      "message": "Default Target Success:"
+   },
+   "queueEmptyState": {
+      "message": "No items in queue. Add items from post detail pages."
+   },
+   "queueItemsTitle": {
+      "message": "Queue Items"
+   },
+   "queueNoStats": {
+      "message": "No prompt stats yet"
+   },
+   "queuePromptStatsTitle": {
+      "message": "Prompt Stats"
+   },
+   "queueRateLimited": {
+      "message": "429 Too Many Requests — please wait and try again"
+   },
+   "queueResolution": {
+      "message": "Resolution"
+   },
+   "queueSettingsTitle": {
+      "message": "Settings"
+   },
+   "queueStatusError": {
+      "message": "Error"
+   },
+   "queueStatusIdle": {
+      "message": "Idle"
+   },
+   "queueStatusPaused": {
+      "message": "Paused"
+   },
+   "queueStatusRunning": {
+      "message": "Running"
+   },
+   "queueTitle": {
+      "message": "Video Gen Queue"
+   },
+   "queueUpgradeHint": {
+      "message": "Free limit reached. Upgrade to Pro for unlimited video generation."
+   },
+   "queueUsage": {
+      "message": "Usage"
+   },
+   "queueUsageHint": {
+      "message": "Open a post on Favorites, tap 🎯 to configure and add to queue — or batch add recent posts below."
+   },
+   "queueUsageLimitReached": {
+      "message": "Free usage limit reached (50). Upgrade to Pro for unlimited use."
+   },
+   "queueVideoLength": {
+      "message": "Duration"
+   },
+   "rateLimitPaused": {
+      "description": "Shown when download is paused due to rate limit",
+      "message": "⏸️ Paused after $1 videos (rate limit protection). Click Start Download to continue.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "rateLimitWarning": {
+      "description": "Warning shown when video count exceeds rate limit threshold",
+      "message": "⚠️ Over $1 videos to download. Will auto-pause every $1 videos to avoid rate limits.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "removeAll": {
+      "message": "Remove All"
+   },
+   "removeBeforeLabel": {
+      "message": "Remove before:"
+   },
+   "removeFavTitle": {
+      "message": "⚠️ Bulk Remove (Pro):"
+   },
+   "resumeProgress": {
+      "description": "Shown next to download button when there is an incomplete download",
+      "message": "📥 $1/$2 completed, click to continue",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "saveMetadataDesc": {
+      "message": "Save .json file with image/video info (prompt, resolution, etc.)"
+   },
+   "saveMetadataLabel": {
+      "message": "📋 Save Metadata"
+   },
+   "sectionBulkRemove": {
+      "message": "⚠️ Bulk Remove"
+   },
+   "sectionClearActions": {
+      "message": "🧹 Clear Actions"
+   },
+   "sectionDataManage": {
+      "message": "💾 Data Management"
+   },
+   "sectionDateFilter": {
+      "message": "📅 Date Filter"
+   },
+   "sectionHdUpgrade": {
+      "message": "✨ HD Upgrade"
+   },
+   "sectionLicense": {
+      "message": "🔑 License"
+   },
+   "sectionMediaType": {
+      "message": "🎬 Media Types"
+   },
+   "sectionQueueSettings": {
+      "message": "🎯 Queue Settings"
+   },
+   "sectionSettings": {
+      "message": "⚙️ Settings"
+   },
+   "sectionStatus": {
+      "message": "📊 Status"
+   },
+   "sectionStreamCapture": {
+      "message": "🌊 Stream Capture"
+   },
+   "settingsPathFrames": {
+      "message": "🎞️ Story Frames:"
+   },
+   "settingsPathImages": {
+      "message": "🖼️ Favorite Images:"
+   },
+   "settingsPathNote": {
+      "message": "📁 Paths are relative to browser's default download folder"
+   },
+   "settingsPathProjects": {
+      "message": "📂 Project Downloads:"
+   },
+   "settingsPathStream": {
+      "message": "📹 Stream Capture:"
+   },
+   "settingsPathVideos": {
+      "message": "🎬 Favorite Videos:"
+   },
+   "settingsSave": {
+      "message": "💾 Save Paths"
+   },
+   "settingsSaved": {
+      "message": "✓ Paths saved!"
+   },
+   "status720pVideos": {
+      "message": "🎥 720p Videos"
+   },
+   "statusDownloadingImages": {
+      "message": "🖼️ Downloading Images ($1/$2)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "statusDownloadingProjects": {
+      "message": "📂 Downloading Projects ($1/$2)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "statusDownloadingVideos": {
+      "message": "🎬 Downloading Videos ($1/$2)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "statusHdVideos": {
+      "message": "✨ HD Videos"
+   },
+   "statusImageDownloaded": {
+      "message": "🖼️ Downloaded"
+   },
+   "statusImageHistory": {
+      "message": "🖼️ Image History"
+   },
+   "statusImages": {
+      "message": "🖼️ Images"
+   },
+   "statusPhase": {
+      "message": "Current Phase"
+   },
+   "statusPhaseComplete": {
+      "message": "✅ Complete"
+   },
+   "statusPhaseProject": {
+      "message": "📂 Project"
+   },
+   "statusPhaseStandard": {
+      "message": "📦 Standard"
+   },
+   "statusPhaseSummary": {
+      "message": "🖼️ $1 / 🎬 SD $2 / 🎥 720p $3 / ✨ HD $4",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         },
+         "3": {
+            "content": "$3"
+         },
+         "4": {
+            "content": "$4"
+         }
+      }
+   },
+   "statusProgress": {
+      "message": "Progress"
+   },
+   "statusProjects": {
+      "message": "📂 Projects"
+   },
+   "statusSdVideos": {
+      "message": "🎬 SD Videos"
+   },
+   "statusTotalImages": {
+      "message": "🖼️ Total Images"
+   },
+   "statusTotalSlashDown": {
+      "message": "Total / Downloaded / Need"
+   },
+   "statusTotalVideos": {
+      "message": "🎬 Total Videos"
+   },
+   "statusVideoDownloaded": {
+      "message": "🎬 Downloaded"
+   },
+   "statusVideoHistory": {
+      "message": "🎬 Video History"
+   },
+   "storyModeAddToStory": {
+      "message": "Add to Story Mode"
+   },
+   "storyModeAnalyzing": {
+      "message": "Analyzing video..."
+   },
+   "storyModeCannotGetUrl": {
+      "message": "Cannot get video URL.\n\nIf dragging from Favorites page, please click the \"Add to Story Mode\" button on the video."
+   },
+   "storyModeClearAll": {
+      "message": "Clear All"
+   },
+   "storyModeClearConfirm": {
+      "message": "This will clear the entire storyboard. Continue?"
+   },
+   "storyModeConfirmNewProject": {
+      "message": "Start a new project? This will clear all videos in the storyboard."
+   },
+   "storyModeContinueEdit": {
+      "message": "Continue Editing"
+   },
+   "storyModeDone": {
+      "message": "Done!"
+   },
+   "storyModeDownloadFrame": {
+      "message": "Download Frame"
+   },
+   "storyModeDownloadVideo": {
+      "message": "Download Video"
+   },
+   "storyModeDropOrClick": {
+      "message": "Drop or click to add video"
+   },
+   "storyModeDropSubtext": {
+      "message": "Local file or drag from Grok Post"
+   },
+   "storyModeDropVideo": {
+      "message": "Drop video here"
+   },
+   "storyModeEmptyState": {
+      "message": "Drop a video above to start building your storyboard"
+   },
+   "storyModeErrorOccurred": {
+      "message": "An error occurred"
+   },
+   "storyModeExportProRequired": {
+      "message": "Export Final Video is a Pro feature. Please activate your license to use this feature."
+   },
+   "storyModeExportSuccess": {
+      "message": "Video exported successfully!"
+   },
+   "storyModeExportVideo": {
+      "message": "Export Final Video"
+   },
+   "storyModeExtractingFrames": {
+      "message": "Extracting frames..."
+   },
+   "storyModeFetchingVideo": {
+      "message": "Fetching video from Grok..."
+   },
+   "storyModeFooter": {
+      "message": "Grok AI Video Extension Workflow"
+   },
+   "storyModeGenerate": {
+      "message": "Generate"
+   },
+   "storyModeIncludeAudio": {
+      "message": "Include audio track"
+   },
+   "storyModeInitializing": {
+      "message": "Initializing..."
+   },
+   "storyModeLastFrame": {
+      "message": "Last Frame"
+   },
+   "storyModeLastFrameClip": {
+      "message": "Last Frame - Clip $CLIP$",
+      "placeholders": {
+         "clip": {
+            "content": "$1"
+         }
+      }
+   },
+   "storyModeLoadingVideo": {
+      "message": "Loading video $NUM$...",
+      "placeholders": {
+         "num": {
+            "content": "$1"
+         }
+      }
+   },
+   "storyModeMasterVideo": {
+      "message": "Master Video"
+   },
+   "storyModeNewProject": {
+      "message": "Start New Project"
+   },
+   "storyModeNoFrameAlert": {
+      "message": "No frame available. Add a video first."
+   },
+   "storyModeNormalizingVideo": {
+      "message": "Normalizing video $NUM$...",
+      "placeholders": {
+         "num": {
+            "content": "$1"
+         }
+      }
+   },
+   "storyModeOpeningTabs": {
+      "message": "Opening tabs... $1/$2",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "storyModePreparingVideos": {
+      "message": "Preparing videos..."
+   },
+   "storyModeProcessing": {
+      "message": "Processing..."
+   },
+   "storyModePromptAlert": {
+      "message": "Please enter a prompt for video generation."
+   },
+   "storyModePromptOptional": {
+      "message": "Optional — AI generates if empty"
+   },
+   "storyModePromptPlaceholder": {
+      "message": "Enter prompt for video generation..."
+   },
+   "storyModeReadingFile": {
+      "message": "Reading video file..."
+   },
+   "storyModeResolutionMismatch": {
+      "message": "⚠️ Resolution Mismatch Warning\n\nThe following segments have different resolution from Master ($MASTER_RES$):\n$MISMATCH_LIST$\n\nThese segments will be scaled to match Master resolution, which may result in black borders.\n\nContinue?",
+      "placeholders": {
+         "master_res": {
+            "content": "$1"
+         },
+         "mismatch_list": {
+            "content": "$2"
+         }
+      }
+   },
+   "storyModeSendFrame": {
+      "message": "Send Frame & Generate Video"
+   },
+   "storyModeStartingMerge": {
+      "message": "Starting merge..."
+   },
+   "storyModeStorage": {
+      "message": "Storage"
+   },
+   "storyModeStoringVideo": {
+      "message": "Storing video..."
+   },
+   "storyModeStoryboard": {
+      "message": "Storyboard"
+   },
+   "storyModeTitle": {
+      "message": "Story Mode Helper"
+   },
+   "storyModeTryAgain": {
+      "message": "Try Again"
+   },
+   "storyModeUnknownSpecs": {
+      "message": "Unknown specs"
+   },
+   "storyModeVideos": {
+      "message": "Video(s)"
+   },
+   "streamCaptureHint": {
+      "message": "💡 Works on grok.com/imagine — auto-captures images as Grok generates them in real-time. Click \"Download Captured\" to save."
+   },
+   "streamCaptureTitle": {
+      "message": "🌊 Stream Capture (Pro)"
+   },
+   "streamCapturedCount": {
+      "message": "Captured: $COUNT$",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "streamToggleLabel": {
+      "message": "Enable"
+   },
+   "toDateLabel": {
+      "message": "To:"
+   }
+}

@@ -1,0 +1,198 @@
+{
+   "addFolderButton": {
+      "description": "Button hover text to add a new folder.",
+      "message": "添加文件夹"
+   },
+   "addPromptButton": {
+      "description": "Button hover text to add a new prompt.",
+      "message": "添加提示"
+   },
+   "allPrompts": {
+      "description": "Option for showing all prompts.",
+      "message": "所有提示"
+   },
+   "cancelButton": {
+      "description": "Generic cancel button text.",
+      "message": "取消"
+   },
+   "closeSettings": {
+      "description": "Button text to close the settings view.",
+      "message": "关闭设置"
+   },
+   "collapseAll": {
+      "description": "Button text to collapse all prompts.",
+      "message": "全部收起"
+   },
+   "confirmDeleteFolder": {
+      "description": "Confirmation message for deleting a folder.",
+      "message": "您确定要删除此文件夹吗？此文件夹中的提示不会被删除！"
+   },
+   "confirmDeletePrompt": {
+      "description": "Confirmation message for deleting a prompt.",
+      "message": "您确定要删除此提示吗？"
+   },
+   "copiedButton": {
+      "description": "Text shown after copying.",
+      "message": "已复制"
+   },
+   "copyButton": {
+      "description": "Copy button text.",
+      "message": "复制"
+   },
+   "deleteButton": {
+      "description": "Generic delete button text.",
+      "message": "删除"
+   },
+   "editButton": {
+      "description": "Generic edit button text.",
+      "message": "编辑"
+   },
+   "enterNewFolderName": {
+      "description": "Prompt message for entering a new folder name.",
+      "message": "输入新的文件夹名称："
+   },
+   "expandAll": {
+      "description": "Button text to expand all prompts.",
+      "message": "全部展开"
+   },
+   "exportPrompts": {
+      "description": "Button text to export prompts.",
+      "message": "将提示导出为 CSV"
+   },
+   "extDescription": {
+      "description": "The description of the extension.",
+      "message": "在个人数据库中复制、编辑和保存您的提示模板，并在大多数 AI/LLM 网站上使用它们"
+   },
+   "extName": {
+      "description": "The name of the extension.",
+      "message": "XXL 提示管理器，适用于 DeepSeek、Kimi、Qwen、ChatGPT、Claude、Perplexity、Grok、等！"
+   },
+   "extShortName": {
+      "description": "The short name of the extension.",
+      "message": "XXL 提示管理器"
+   },
+   "folderNamePlaceholder": {
+      "description": "Placeholder for new folder name input.",
+      "message": "输入文件夹名称"
+   },
+   "hideButton": {
+      "description": "Button text to hide the add prompt form.",
+      "message": "隐藏"
+   },
+   "iconDragTip": {
+      "description": "Tip about dragging the icon to reposition it.",
+      "message": "拖动图标上下移动以重新定位"
+   },
+   "importErrorNoTitlePrompt": {
+      "description": "Error message when CSV for import is missing columns.",
+      "message": "CSV 文件必须包含“Title”和“Prompt”列。"
+   },
+   "importErrorParse": {
+      "description": "Error message when CSV for import is empty or cannot be parsed.",
+      "message": "无法解析 CSV 文件或文件为空。"
+   },
+   "importPrompts": {
+      "description": "Button text to import prompts.",
+      "message": "从 CSV 导入提示"
+   },
+   "importSuccess": {
+      "description": "Success message after importing prompts from CSV.",
+      "message": "成功导入提示！"
+   },
+   "keyboardShortcuts": {
+      "description": "Header for keyboard shortcuts section in settings.",
+      "message": "键盘快捷键"
+   },
+   "newPromptPlaceholder": {
+      "description": "Placeholder for new prompt text area.",
+      "message": "添加新提示"
+   },
+   "privatePromptsTab": {
+      "description": "Tab title for private prompts.",
+      "message": "私人提示"
+   },
+   "promptTitlePlaceholder": {
+      "description": "Placeholder for new prompt title input.",
+      "message": "输入提示标题"
+   },
+   "publicPromptsComingSoon": {
+      "description": "Info text for public prompts tab.",
+      "message": "\u003Cb>3000+\u003C/b> 公共提示 \u003Cbr>\u003Cbr> - 即将推出 -"
+   },
+   "publicPromptsTab": {
+      "description": "Tab title for public prompts.",
+      "message": "公共提示"
+   },
+   "rateExtension": {
+      "description": "Button text to rate the extension.",
+      "message": "给我们评分"
+   },
+   "saveButton": {
+      "description": "Generic save button text.",
+      "message": "保存"
+   },
+   "searchPromptsPlaceholder": {
+      "description": "Placeholder for search input.",
+      "message": "搜索提示"
+   },
+   "selectFolder": {
+      "description": "Default option in folder select dropdown.",
+      "message": "选择一个文件夹"
+   },
+   "shareExtension": {
+      "description": "Button text for sharing.",
+      "message": "分享"
+   },
+   "shortcutClose": {
+      "description": "Description for close/escape shortcut.",
+      "message": "关闭"
+   },
+   "shortcutSearch": {
+      "description": "Description for search shortcut.",
+      "message": "切换搜索"
+   },
+   "shortcutToggleSidebar": {
+      "description": "Description for toggle sidebar shortcut.",
+      "message": "切换侧边栏"
+   },
+   "showIconSwitch": {
+      "description": "Switch to show icon on LLMs.",
+      "message": "显示图标"
+   },
+   "showIconSwitchOff": {
+      "description": "Show text if icon is swichted turned off.",
+      "message": "别忘了在工具栏中固定扩展程序（拼图图标）。您也可以使用 Alt+P 打开侧边栏！"
+   },
+   "sidebarHeader": {
+      "description": "Header in the sidebar.",
+      "message": "XXL 提示管理器"
+   },
+   "sortAZ": {
+      "description": "Sort option for alphabetical order.",
+      "message": "A-Z"
+   },
+   "sortBy": {
+      "description": "Label for sort dropdown.",
+      "message": "排序"
+   },
+   "sortNewest": {
+      "description": "Sort option for newest first.",
+      "message": "最新"
+   },
+   "sortOldest": {
+      "description": "Sort option for oldest first.",
+      "message": "最旧"
+   },
+   "sortZA": {
+      "description": "Sort option for reverse alphabetical order.",
+      "message": "Z-A"
+   },
+   "supportExtension": {
+      "description": "Button text for support.",
+      "message": "支持"
+   },
+   "untitledPrompt": {
+      "description": "Default title for a prompt.",
+      "message": "无标题"
+   }
+}

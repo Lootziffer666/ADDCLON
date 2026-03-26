@@ -1,0 +1,198 @@
+{
+   "addFolderButton": {
+      "description": "Button hover text to add a new folder.",
+      "message": "Klasör ekle"
+   },
+   "addPromptButton": {
+      "description": "Button hover text to add a new prompt.",
+      "message": "Prompt ekle"
+   },
+   "allPrompts": {
+      "description": "Option for showing all prompts.",
+      "message": "Tüm Promptlar"
+   },
+   "cancelButton": {
+      "description": "Generic cancel button text.",
+      "message": "İPTAL"
+   },
+   "closeSettings": {
+      "description": "Button text to close the settings view.",
+      "message": "AYARLARI KAPAT"
+   },
+   "collapseAll": {
+      "description": "Button text to collapse all prompts.",
+      "message": "Tümünü Daralt"
+   },
+   "confirmDeleteFolder": {
+      "description": "Confirmation message for deleting a folder.",
+      "message": "Bu klasörü silmek istediğinizden emin misiniz? Bu klasördeki promptlar silinmeyecek!"
+   },
+   "confirmDeletePrompt": {
+      "description": "Confirmation message for deleting a prompt.",
+      "message": "Bu promptu silmek istediğinizden emin misiniz?"
+   },
+   "copiedButton": {
+      "description": "Text shown after copying.",
+      "message": "KOPYALANDI"
+   },
+   "copyButton": {
+      "description": "Copy button text.",
+      "message": "KOPYALA"
+   },
+   "deleteButton": {
+      "description": "Generic delete button text.",
+      "message": "SİL"
+   },
+   "editButton": {
+      "description": "Generic edit button text.",
+      "message": "DÜZENLE"
+   },
+   "enterNewFolderName": {
+      "description": "Prompt message for entering a new folder name.",
+      "message": "Yeni klasör adını girin:"
+   },
+   "expandAll": {
+      "description": "Button text to expand all prompts.",
+      "message": "Tümünü Genişlet"
+   },
+   "exportPrompts": {
+      "description": "Button text to export prompts.",
+      "message": "Promptları CSV olarak dışa aktar"
+   },
+   "extDescription": {
+      "description": "The description of the extension.",
+      "message": "Prompt şablonlarınızı kişisel bir veritabanına kopyalayın, düzenleyin ve kaydedin ve çoğu AI/LLM web sitesinde kullanın"
+   },
+   "extName": {
+      "description": "The name of the extension.",
+      "message": "ChatGPT, Claude, Gemini, Perplexity, Grok için XXL Prompt Yöneticisi!"
+   },
+   "extShortName": {
+      "description": "The short name of the extension.",
+      "message": "XXL Prompt Yöneticisi"
+   },
+   "folderNamePlaceholder": {
+      "description": "Placeholder for new folder name input.",
+      "message": "Klasör adını girin"
+   },
+   "hideButton": {
+      "description": "Button text to hide the add prompt form.",
+      "message": "GİZLE"
+   },
+   "iconDragTip": {
+      "description": "Tip about dragging the icon to reposition it.",
+      "message": "Simgeyi yeniden konumlandırmak için yukarı veya aşağı sürükleyin"
+   },
+   "importErrorNoTitlePrompt": {
+      "description": "Error message when CSV for import is missing columns.",
+      "message": "CSV dosyası \"Title\" ve \"Prompt\" sütunlarını içermelidir."
+   },
+   "importErrorParse": {
+      "description": "Error message when CSV for import is empty or cannot be parsed.",
+      "message": "CSV dosyası ayrıştırılamadı veya boş."
+   },
+   "importPrompts": {
+      "description": "Button text to import prompts.",
+      "message": "Promptları CSV'den içe aktar"
+   },
+   "importSuccess": {
+      "description": "Success message after importing prompts from CSV.",
+      "message": "Promptlar başarıyla içe aktarıldı!"
+   },
+   "keyboardShortcuts": {
+      "description": "Header for keyboard shortcuts section in settings.",
+      "message": "Klavye Kısayolları"
+   },
+   "newPromptPlaceholder": {
+      "description": "Placeholder for new prompt text area.",
+      "message": "Yeni prompt ekle"
+   },
+   "privatePromptsTab": {
+      "description": "Tab title for private prompts.",
+      "message": "Özel Promptlar"
+   },
+   "promptTitlePlaceholder": {
+      "description": "Placeholder for new prompt title input.",
+      "message": "Prompt başlığını girin"
+   },
+   "publicPromptsComingSoon": {
+      "description": "Info text for public prompts tab.",
+      "message": "\u003Cb>3000+\u003C/b> Genel Promptlar \u003Cbr>\u003Cbr> - Çok yakında -"
+   },
+   "publicPromptsTab": {
+      "description": "Tab title for public prompts.",
+      "message": "Genel Promptlar"
+   },
+   "rateExtension": {
+      "description": "Button text to rate the extension.",
+      "message": "Bize bir değerlendirme bırakın"
+   },
+   "saveButton": {
+      "description": "Generic save button text.",
+      "message": "KAYDET"
+   },
+   "searchPromptsPlaceholder": {
+      "description": "Placeholder for search input.",
+      "message": "Promptları ara"
+   },
+   "selectFolder": {
+      "description": "Default option in folder select dropdown.",
+      "message": "Bir klasör seçin"
+   },
+   "shareExtension": {
+      "description": "Button text for sharing.",
+      "message": "Paylaş"
+   },
+   "shortcutClose": {
+      "description": "Description for close/escape shortcut.",
+      "message": "Kapat"
+   },
+   "shortcutSearch": {
+      "description": "Description for search shortcut.",
+      "message": "Aramayı aç/kapat"
+   },
+   "shortcutToggleSidebar": {
+      "description": "Description for toggle sidebar shortcut.",
+      "message": "Kenar çubuğunu aç/kapat"
+   },
+   "showIconSwitch": {
+      "description": "Switch to show icon on LLMs.",
+      "message": "Simgeyi göster"
+   },
+   "showIconSwitchOff": {
+      "description": "Show text if icon is swichted off",
+      "message": "Uzantıyı araç çubuğuna sabitlemeyi unutmayın (yapboz simgesi). Kenar çubuğunu açmak için Alt+P de kullanabilirsiniz!"
+   },
+   "sidebarHeader": {
+      "description": "Header in the sidebar.",
+      "message": "XXL Prompt Yöneticisi"
+   },
+   "sortAZ": {
+      "description": "Sort option for alphabetical order.",
+      "message": "A-Z"
+   },
+   "sortBy": {
+      "description": "Label for sort dropdown.",
+      "message": "Sırala"
+   },
+   "sortNewest": {
+      "description": "Sort option for newest first.",
+      "message": "En yeni"
+   },
+   "sortOldest": {
+      "description": "Sort option for oldest first.",
+      "message": "En eski"
+   },
+   "sortZA": {
+      "description": "Sort option for reverse alphabetical order.",
+      "message": "Z-A"
+   },
+   "supportExtension": {
+      "description": "Button text for support.",
+      "message": "Destek"
+   },
+   "untitledPrompt": {
+      "description": "Default title for a prompt.",
+      "message": "Başlıksız"
+   }
+}

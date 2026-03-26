@@ -1,0 +1,198 @@
+{
+   "addFolderButton": {
+      "description": "Button hover text to add a new folder.",
+      "message": "फ़ोल्डर जोड़ें"
+   },
+   "addPromptButton": {
+      "description": "Button hover text to add a new prompt.",
+      "message": "प्रॉम्प्ट जोड़ें"
+   },
+   "allPrompts": {
+      "description": "Option for showing all prompts.",
+      "message": "सभी प्रॉम्प्ट"
+   },
+   "cancelButton": {
+      "description": "Generic cancel button text.",
+      "message": "रद्द करें"
+   },
+   "closeSettings": {
+      "description": "Button text to close the settings view.",
+      "message": "सेटिंग्स बंद करें"
+   },
+   "collapseAll": {
+      "description": "Button text to collapse all prompts.",
+      "message": "सभी संक्षिप्त करें"
+   },
+   "confirmDeleteFolder": {
+      "description": "Confirmation message for deleting a folder.",
+      "message": "क्या आप वाकई इस फ़ोल्डर को हटाना चाहते हैं? इस फ़ोल्डर में प्रॉम्प्ट नहीं हटाए जाएंगे!"
+   },
+   "confirmDeletePrompt": {
+      "description": "Confirmation message for deleting a prompt.",
+      "message": "क्या आप वाकई इस प्रॉम्प्ट को हटाना चाहते हैं?"
+   },
+   "copiedButton": {
+      "description": "Text shown after copying.",
+      "message": "कॉपी किया गया"
+   },
+   "copyButton": {
+      "description": "Copy button text.",
+      "message": "कॉपी करें"
+   },
+   "deleteButton": {
+      "description": "Generic delete button text.",
+      "message": "हटाएं"
+   },
+   "editButton": {
+      "description": "Generic edit button text.",
+      "message": "संपादित करें"
+   },
+   "enterNewFolderName": {
+      "description": "Prompt message for entering a new folder name.",
+      "message": "नया फ़ोल्डर नाम दर्ज करें:"
+   },
+   "expandAll": {
+      "description": "Button text to expand all prompts.",
+      "message": "सभी विस्तृत करें"
+   },
+   "exportPrompts": {
+      "description": "Button text to export prompts.",
+      "message": "प्रॉम्प्ट को CSV के रूप में निर्यात करें"
+   },
+   "extDescription": {
+      "description": "The description of the extension.",
+      "message": "अपने प्रॉम्प्ट टेम्प्लेट को एक व्यक्तिगत डेटाबेस में कॉपी, संपादित और सहेजें और अधिकांश AI/LLM वेबसाइटों पर उनका उपयोग करें"
+   },
+   "extName": {
+      "description": "The name of the extension.",
+      "message": "XXL प्रॉम्प्ट मैनेजर ChatGPT, Claude, Gemini, Perplexity और अन्य के लिए!"
+   },
+   "extShortName": {
+      "description": "The short name of the extension.",
+      "message": "XXL प्रॉम्प्ट मैनेजर"
+   },
+   "folderNamePlaceholder": {
+      "description": "Placeholder for new folder name input.",
+      "message": "फ़ोल्डर का नाम दर्ज करें"
+   },
+   "hideButton": {
+      "description": "Button text to hide the add prompt form.",
+      "message": "छिपाएं"
+   },
+   "iconDragTip": {
+      "description": "Tip about dragging the icon to reposition it.",
+      "message": "आइकन को ऊपर या नीचे खींचकर उसकी स्थिति बदलें"
+   },
+   "importErrorNoTitlePrompt": {
+      "description": "Error message when CSV for import is missing columns.",
+      "message": "CSV फ़ाइल में \"शीर्षक\" और \"प्रॉम्प्ट\" कॉलम होने चाहिए।"
+   },
+   "importErrorParse": {
+      "description": "Error message when CSV for import is empty or cannot be parsed.",
+      "message": "CSV फ़ाइल को पार्स नहीं किया जा सका या यह खाली है।"
+   },
+   "importPrompts": {
+      "description": "Button text to import prompts.",
+      "message": "CSV से प्रॉम्प्ट आयात करें"
+   },
+   "importSuccess": {
+      "description": "Success message after importing prompts from CSV.",
+      "message": "प्रॉम्प्ट सफलतापूर्वक आयात किए गए!"
+   },
+   "keyboardShortcuts": {
+      "description": "Header for keyboard shortcuts section in settings.",
+      "message": "कीबोर्ड शॉर्टकट"
+   },
+   "newPromptPlaceholder": {
+      "description": "Placeholder for new prompt text area.",
+      "message": "नया प्रॉम्प्ट जोड़ें"
+   },
+   "privatePromptsTab": {
+      "description": "Tab title for private prompts.",
+      "message": "निजी प्रॉम्प्ट"
+   },
+   "promptTitlePlaceholder": {
+      "description": "Placeholder for new prompt title input.",
+      "message": "प्रॉम्प्ट शीर्षक दर्ज करें"
+   },
+   "publicPromptsComingSoon": {
+      "description": "Info text for public prompts tab.",
+      "message": "\u003Cb>3000+\u003C/b> सार्वजनिक प्रॉम्प्ट \u003Cbr>\u003Cbr> - जल्द ही आ रहा है -"
+   },
+   "publicPromptsTab": {
+      "description": "Tab title for public prompts.",
+      "message": "सार्वजनिक प्रॉम्प्ट"
+   },
+   "rateExtension": {
+      "description": "Button text to rate the extension.",
+      "message": "हमें एक समीक्षा दें"
+   },
+   "saveButton": {
+      "description": "Generic save button text.",
+      "message": "सहेजें"
+   },
+   "searchPromptsPlaceholder": {
+      "description": "Placeholder for search input.",
+      "message": "प्रॉम्प्ट खोजें"
+   },
+   "selectFolder": {
+      "description": "Default option in folder select dropdown.",
+      "message": "एक फ़ोल्डर चुनें"
+   },
+   "shareExtension": {
+      "description": "Button text for sharing.",
+      "message": "साझा करें"
+   },
+   "shortcutClose": {
+      "description": "Description for close/escape shortcut.",
+      "message": "बंद करें"
+   },
+   "shortcutSearch": {
+      "description": "Description for search shortcut.",
+      "message": "खोज टॉगल करें"
+   },
+   "shortcutToggleSidebar": {
+      "description": "Description for toggle sidebar shortcut.",
+      "message": "साइडबार टॉगल करें"
+   },
+   "showIconSwitch": {
+      "description": "Switch to show icon on LLMs.",
+      "message": "आइकन दिखाएं"
+   },
+   "showIconSwitchOff": {
+      "description": "Show text if icon is swichted off",
+      "message": "टूलबार में एक्सटेंशन को पिन करना न भूलें (पज़ल आइकन)। साइडबार खोलने के लिए Alt+P भी उपयोग कर सकते हैं!"
+   },
+   "sidebarHeader": {
+      "description": "Header in the sidebar.",
+      "message": "XXL प्रॉम्प्ट मैनेजर"
+   },
+   "sortAZ": {
+      "description": "Sort option for alphabetical order.",
+      "message": "A-Z"
+   },
+   "sortBy": {
+      "description": "Label for sort dropdown.",
+      "message": "क्रमबद्ध"
+   },
+   "sortNewest": {
+      "description": "Sort option for newest first.",
+      "message": "नवीनतम"
+   },
+   "sortOldest": {
+      "description": "Sort option for oldest first.",
+      "message": "सबसे पुराना"
+   },
+   "sortZA": {
+      "description": "Sort option for reverse alphabetical order.",
+      "message": "Z-A"
+   },
+   "supportExtension": {
+      "description": "Button text for support.",
+      "message": "सहायता"
+   },
+   "untitledPrompt": {
+      "description": "Default title for a prompt.",
+      "message": "शीर्षकहीन"
+   }
+}
